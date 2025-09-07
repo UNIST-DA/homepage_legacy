@@ -250,3 +250,8 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 .icon-emoji{font-size:18px;line-height:1}
 .news-item{display:grid;grid-template-columns:120px 1fr;align-items:center}
 .news-date{text-align:center;font-weight:600}
+.hero-title,
+.hero-desc,
+.hero-kicker {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
