@@ -681,3 +681,32 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
 @media (max-width: 860px){
   .hero .slide.fill{ height: 56vh; min-height: 320px; }
 }
+/* Hero slide with blurred background fill */
+.hero .slide.fill {
+  position: relative;
+  overflow: hidden;
+  background: #000; /* fallback */
+}
+
+/* blurred background layer */
+.hero .slide.fill::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(40px) brightness(.7);
+  transform: scale(1.2);
+  z-index: 0;
+}
+
+/* 원본 이미지는 중앙 contain */
+.hero .slide.fill > img,
+.hero .slide.fill > video {
+  position: relative;
+  z-index: 1;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
