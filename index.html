@@ -5,54 +5,49 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
 ---
 
 <!-- ===================== Hero ===================== -->
-<section class="hero hero--boxed" aria-label="Lab highlights">
+<section class="hero hero--boxed hero--full" aria-label="Lab highlights">
   <div class="carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Hero carousel">
     <div class="slides no-crop" id="heroSlides">
-      <!-- Video (cover 유지) -->
+      <!-- 비디오: cover 유지 -->
       <div class="slide cover-video">
         <video autoplay muted playsinline preload="metadata">
           <source src="{{ '/assets/main/Welcome_DA_LAB.mp4' | relative_url }}" type="video/mp4">
         </video>
       </div>
 
-      <!-- Images: 세로 100% contain + 좌우 블러 채움 -->
+      <!-- 이미지: 세로 100% + 좌우 블러 채움(fill + --img) -->
       <div class="slide fill" style="--img: url('{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}')">
         <img src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 1">
       </div>
-
       <div class="slide fill" style="--img: url('{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}')">
         <img src="{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 2">
       </div>
-
       <div class="slide fill" style="--img: url('{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}')">
         <img src="{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 3">
       </div>
-
       <div class="slide fill" style="--img: url('{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}')">
         <img src="{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}" alt="Lab hero 4">
       </div>
-
       <div class="slide fill" style="--img: url('{{ '/assets/main/교수님_마이크_1.png' | relative_url }}')">
         <img src="{{ '/assets/main/교수님_마이크_1.png' | relative_url }}" alt="Lab hero 5">
       </div>
-
       <div class="slide fill" style="--img: url('{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}')">
         <img src="{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}" alt="Lab hero 6">
       </div>
     </div>
 
     <!-- 화살표 -->
-    <div class="nav-arrows" aria-hidden="false">
+    <div class="nav-arrows">
       <button class="arrow" id="heroPrev" aria-label="Previous">‹</button>
       <button class="arrow" id="heroNext" aria-label="Next">›</button>
     </div>
 
-    <!-- 오버레이 텍스트 (맨 위) -->
-    <div class="hero-overlay" aria-hidden="false">
+    <!-- 오버레이 텍스트 -->
+    <div class="hero-overlay">
       <div class="hero-copy">
         <div class="hero-kicker">Data Analytics Lab @ UNIST</div>
         <h1 class="hero-title">Industrial Statistics · Quality Engineering · Machine Learning</h1>
-        <p class="hero-desc">We research AI for Quality Engineering, System Monitoring &amp; Anomaly Detection, and Time‑Series Representation.</p>
+        <p class="hero-desc">We research AI for Quality Engineering, System Monitoring &amp; Anomaly Detection, and Time-Series Representation.</p>
       </div>
     </div>
 
@@ -76,7 +71,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <a class="pill" href="https://ie.unist.ac.kr/" target="_blank" rel="noopener">UNIST · Industrial Engineering</a>
         <h3 style="margin:10px 0 6px">Data Analytics Lab</h3>
         <p>UNIST 산업공학과 데이터애널리틱스 연구실은 데이터 기반 품질향상과 지능형 제조를 위한 통계적·기계학습 방법론을 연구합니다. 실제 산업 데이터를 통해 실효성 있는 모델을 만들고, 신뢰 가능한 의사결정을 지원합니다.</p>
-        <p class="muted">We build interpretable, reliable AI systems for quality engineering, process monitoring, and time‑series understanding.</p>
+        <p class="muted">We build interpretable, reliable AI systems for quality engineering, process monitoring, and time-series understanding.</p>
       </div>
       <div class="card card-pad" style="grid-column: span 5">
         <h4 style="margin:0 0 10px">Interests</h4>
@@ -89,7 +84,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <div class="area">
           <div>• Artificial Intelligence in Quality Engineering</div>
           <div>• System Monitoring &amp; Anomaly Detection</div>
-          <div>• Time‑Series Representation</div>
+          <div>• Time-Series Representation</div>
         </div>
       </div>
     </div>
@@ -133,7 +128,6 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     </div>
 
     <div class="grid">
-      <!-- Seminar -->
       <div class="card card-pad" style="grid-column: span 4">
         <h4 style="margin:6px 0">Lab Seminar</h4>
         <ul style="margin:8px 0 12px; padding-left:18px">
@@ -146,7 +140,6 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <a href="{{ '/activity/Lab%20Seminar/' | relative_url }}">View all →</a>
       </div>
 
-      <!-- News -->
       <div class="card card-pad" style="grid-column: span 4">
         <h4 style="margin:6px 0">Lab News</h4>
         <ul style="margin:8px 0 12px; padding-left:18px">
@@ -159,7 +152,6 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <a href="{{ '/activity/Lab%20News/' | relative_url }}">View all →</a>
       </div>
 
-      <!-- Events -->
       <div class="card card-pad" style="grid-column: span 4">
         <h4 style="margin:6px 0">Lab Events</h4>
         <ul style="margin:8px 0 12px; padding-left:18px">
@@ -232,12 +224,11 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- === Hero carousel script (arrows + dots + autoplay + swipe/drag) === -->
+<!-- === Hero carousel: arrows + dots + autoplay(+video-once), swipe/drag === -->
 <script>
 (function(){
   const carousel = document.getElementById('heroCarousel');
@@ -247,7 +238,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   const prev   = document.getElementById('heroPrev');
   const next   = document.getElementById('heroNext');
   const dotsEl = document.getElementById('heroDots');
-  const slides = track ? track.querySelectorAll('.slide') : [];
+  const slides = track ? track.querySelectorAll('.slide') : [];  // ← slide만!
   if(!slides || !slides.length) return;
 
   let i = 0, N = slides.length, timer = null, hover = false;
@@ -355,12 +346,8 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     const movedRatio = Math.abs(dx) / width;
     dragging = false;
     track.classList.remove('dragging');
-    if (movedRatio > THRESH) {
-      goto(dx < 0 ? i+1 : i-1);
-    } else {
-      update(0);
-      scheduleNext();
-    }
+    if (movedRatio > THRESH) goto(dx < 0 ? i+1 : i-1);
+    else { update(0); scheduleNext(); }
     track.releasePointerCapture?.(e.pointerId);
   };
 
