@@ -538,3 +538,37 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
 @media (max-width:860px){
   .hero .slide{ height:56vh !important; min-height:320px; }
 }
+/* ===== HERO: vertical contain + blurred side fill (final override) ===== */
+
+/* 컨트롤/텍스트는 항상 최상단 */
+.hero-overlay,
+.hero-ctrl,
+.nav-arrows{
+  position: relative;
+  z-index: 10; /* 컨트롤이 무엇보다 위에 오도록 충분히 높게 */
+}
+
+/* 그라데이션/블러 레이어는 항상 바닥 */
+.slide::after{ z-index: 0 !important; pointer-events: none; }
+.hero .slide.fill::before{ z-index: 0 !important; pointer-events: none; }
+
+/* 이미지 슬라이드: 세로 100% + 가로 자동 = 잘림 없음 */
+.hero .slides.no-crop .slide.fill > img,
+.hero .slides.no-crop .slide.fill > video{
+  position: relative;
+  z-index: 1;
+  height: 100% !important;
+  width: auto !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+
+/* 비디오 슬라이드는 기존처럼 꽉 채우기(cover) */
+.hero .slides.no-crop .cover-video > video{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
