@@ -8,20 +8,38 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
 <section class="hero hero--boxed" aria-label="Lab highlights">
   <div class="carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Hero carousel">
     <div class="slides no-crop" id="heroSlides">
-      <!-- 업로드할 이미지 5장 (없으면 남겨둬도 됨) -->
+      <!-- 비디오 슬라이드 -->
       <div class="slide cover-video">
         <video autoplay muted playsinline preload="metadata">
           <source src="{{ '/assets/main/Welcome_DA_LAB.mp4' | relative_url }}" type="video/mp4">
         </video>
       </div>
-      <div class="slide"><img src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 1"></div>
-      <div class="slide"><img src="{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 2"></div>
-      <div class="slide"><img src="{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 3"></div>
-      <div class="slide"><img src="{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}" alt="Lab hero 4"></div>
-      <div class="slide"><img src="{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}" alt="Lab hero 5"></div>
-      <div class="slide"><img src="{{ '/assets/main/교수님_마이크_1.png' | relative_url }}" alt="Lab hero 6"></div>
-      <div class="slide"><img src="{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}" alt="Lab hero 7"></div>
-    </div>
+    
+      <!-- 이미지 슬라이드 (fill + --img 추가) -->
+      <div class="slide fill" style="--img: url('{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}')">
+        <img src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 1">
+      </div>
+    
+      <div class="slide fill" style="--img: url('{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}')">
+        <img src="{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 2">
+      </div>
+    
+      <div class="slide fill" style="--img: url('{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}')">
+        <img src="{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 3">
+      </div>
+    
+      <div class="slide fill" style="--img: url('{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}')">
+        <img src="{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}" alt="Lab hero 4">
+      </div>
+    
+      <div class="slide fill" style="--img: url('{{ '/assets/main/교수님_마이크_1.png' | relative_url }}')">
+        <img src="{{ '/assets/main/교수님_마이크_1.png' | relative_url }}" alt="Lab hero 5">
+      </div>
+    
+      <div class="slide fill" style="--img: url('{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}')">
+        <img src="{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}" alt="Lab hero 6">
+      </div>
+  </div>
 
     <!-- 화살표 -->
     <div class="nav-arrows">
