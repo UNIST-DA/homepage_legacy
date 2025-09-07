@@ -762,3 +762,53 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
   .hero .slide{ height: 56vh !important; min-height: 320px; }
 }
 
+/* =========================================================
+   HERO — Vertical-fit + Blurred side fill (no-crop 전용)
+   - 원본 비율 유지(잘림 없음)
+   - 세로 100%로 맞추고, 가로 여백은 같은 이미지 블러로 채움
+   - 기존 cover 규칙을 안전하게 덮어쓰기(더 높은 특이도 + !important)
+   - 첫 슬라이드가 video인 .cover-video 는 그대로 둠(cover 유지)
+   ========================================================= */
+
+.hero .slides.no-crop .slide{
+  /* 프레임 설정 */
+  display:flex; align-items:center; justify-content:center;
+  background:#000;               /* 좌우 레터박스 색 */
+  overflow:hidden;
+}
+
+/* 이미지/비디오를 '세로 100% + 가로 자동'으로 (잘림 없음) */
+.hero .slides.no-crop .slide:not(.cover-video) img,
+.hero .slides.no-crop .slide:not(.cover-video) video{
+  height:100% !important;
+  width:auto !important;
+  max-height:100% !important;
+  max-width:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:transparent !important;
+}
+
+/* 같은 이미지를 배경으로 깔아 블러로 여백 채우기 */
+.hero .slides.no-crop .slide.fill{
+  position:relative;
+}
+.hero .slides.no-crop .slide.fill::before{
+  content:""; position:absolute; inset:0; z-index:0;
+  background-image:var(--img);
+  background-size:cover;
+  background-position:center;
+  filter:blur(32px) brightness(.8);
+  transform:scale(1.15);
+}
+
+/* 원본 이미지는 위층에 */
+.hero .slides.no-crop .slide.fill > img,
+.hero .slides.no-crop .slide.fill > video{
+  position:relative; z-index:1;
+}
+
+/* 모바일 높이 보정(필요 시 값만 조정) */
+@media (max-width:860px){
+  .hero .slides.no-crop .slide{ min-height:320px; }
+}
