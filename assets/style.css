@@ -637,3 +637,47 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
 @media (max-width: 860px){
   .hero .slide{ height: 56vh !important; min-height: 320px; }
 }
+/* ===== HERO: blurred fill background + centered original (no crop) ===== */
+.hero .slide.fill {
+  position: relative;
+  overflow: hidden;
+  height: 62vh;                  /* 필요 시 70~100vh로 조절 */
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  background: #000;              /* 비상시(이미지 못 불러올 때) 색 */
+}
+
+/* 뒤쪽: 같은 이미지를 덮어놓고 크게 + 블러 → 여백을 자연스럽게 채움 */
+.hero .slide.fill::before{
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center center;
+  filter: blur(24px) brightness(.9);
+  transform: scale(1.15);        /* 가장자리까지 확실히 채우기 */
+}
+
+/* 앞쪽: 원본은 정중앙에 contain으로 (잘림 없음) */
+.hero .slide.fill > img,
+.hero .slide.fill > video{
+  position: relative; z-index: 1;
+  height: 100%;           /* 세로 꽉 차게 */
+  width: auto;            /* 가로는 비율대로 */
+  object-fit: contain;    /* 안전망 */
+  object-position: center center;
+  background: transparent;
+}
+
+/* 풀폭(좌우 여백 제거)은 유지 */
+.hero.hero--boxed .carousel{
+  width: 100vw; max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0; border: 0; box-shadow: none;
+}
+
+@media (max-width: 860px){
+  .hero .slide.fill{ height: 56vh; min-height: 320px; }
+}
