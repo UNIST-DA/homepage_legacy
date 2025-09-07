@@ -58,6 +58,53 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     <div class="hero-ctrl" id="heroDots" aria-label="Slide controls"></div>
   </div>
 </section>
+<style id="hero-final-override">
+/* 풀폭 유지 (박스형을 확실히 덮음) */
+.hero.hero--boxed .carousel{
+  width:100vw !important;
+  max-width:100vw !important;
+  margin-left:calc(50% - 50vw) !important;
+  margin-right:calc(50% - 50vw) !important;
+  border:0 !important; border-radius:0 !important; box-shadow:none !important;
+}
+
+/* 프레임 높이 + 중앙 정렬 */
+.hero .slide{
+  height:62vh !important; min-height:420px;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden; background:#000;
+}
+
+/* 블러 배경은 항상 바닥 */
+.hero .slide.fill::before{
+  content:""; position:absolute; inset:0; z-index:0 !important;
+  background-image:var(--img);
+  background-size:cover; background-position:center;
+  filter:blur(32px) brightness(.84); transform:scale(1.15);
+  pointer-events:none;
+}
+
+/* 전역 그라데이션도 컨트롤을 가리지 않게 */
+.slide::after{ z-index:0 !important; pointer-events:none; }
+
+/* 원본 이미지는 세로 100% + 잘림 없음 (cover를 강제무시) */
+.hero .slides.no-crop .slide.fill > img,
+.hero .slides.no-crop .slide.fill > video{
+  position:relative; z-index:1;
+  height:100% !important; width:auto !important; max-height:100% !important;
+  object-fit:contain !important; object-position:center center !important;
+  background:transparent !important;
+}
+
+/* 비디오는 그대로 꽉 채우기 */
+.hero .slides.no-crop .cover-video > video{
+  width:100% !important; height:100% !important;
+  object-fit:cover !important; object-position:center center !important;
+}
+
+/* 오버레이/점/화살표는 항상 최상단 */
+.hero-overlay, .hero-ctrl, .nav-arrows{ position:relative; z-index:10 !important; }
+</style>
 
 
 <!-- ===================== About ===================== -->
