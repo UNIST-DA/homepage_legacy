@@ -268,3 +268,22 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 .hero-kicker {
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
+/* === Hero video: keep original aspect (contain) + white bars === */
+.slides.no-crop .cover-video {
+  background:#fff;               /* 좌우/상하 빈영역 흰색 */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slides.no-crop .cover-video > video{
+  max-width:100%;
+  max-height:100%;
+  width:auto !important;         /* 비율 유지 */
+  height:auto !important;        /* 비율 유지 */
+  object-fit:contain !important; /* 원본 비율로 전체 보이기 */
+  background:#fff !important;
+}
+
+/* 비디오 슬라이드에는 어두운 오버레이 제거 (흰색 바를 가리지 않도록) */
+.cover-video::after{ display:none !important; }
