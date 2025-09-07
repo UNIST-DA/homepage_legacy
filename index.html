@@ -15,7 +15,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         </video>
       </div>
 
-      <!-- 이미지: 세로 100% + 좌우 블러 채움(fill + --img) -->
+      <!-- 이미지: 세로 100% + 좌우 블러 채움 (fill + --img) -->
       <div class="slide fill" style="--img: url('{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}')">
         <img src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 1">
       </div>
@@ -55,6 +55,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     <div class="hero-ctrl" id="heroDots" aria-label="Slide controls"></div>
   </div>
 </section>
+
 
 <!-- ===================== About ===================== -->
 <section id="about" class="about">
@@ -228,7 +229,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   </div>
 </section>
 
-<!-- === Hero carousel: arrows + dots + autoplay(+video-once), swipe/drag === -->
+<!-- === Hero carousel (arrows + dots + autoplay + swipe/drag) === -->
 <script>
 (function(){
   const carousel = document.getElementById('heroCarousel');
@@ -238,7 +239,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   const prev   = document.getElementById('heroPrev');
   const next   = document.getElementById('heroNext');
   const dotsEl = document.getElementById('heroDots');
-  const slides = track ? track.querySelectorAll('.slide') : [];  // ← slide만!
+  const slides = track ? track.querySelectorAll('.slide') : [];
   if(!slides || !slides.length) return;
 
   let i = 0, N = slides.length, timer = null, hover = false;
@@ -316,6 +317,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     if(e.key==='ArrowRight') goto(i+1);
   });
 
+  // === Swipe/Drag ===
   const THRESH = 0.18;
   let dragging = false, startX = 0, startY = 0, width = 1;
 
@@ -323,8 +325,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     if (e.pointerType === 'mouse' && e.button !== 0) return;
     width = carousel.clientWidth || 1;
     dragging = true;
-    startX = e.clientX;
-    startY = e.clientY;
+    startX = e.clientX; startY = e.clientY;
     track.classList.add('dragging');
     track.setPointerCapture?.(e.pointerId);
     hover = true; setTimeout(()=>hover=false, 1200);
@@ -335,19 +336,25 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     if (!dragging) return;
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
-    if (Math.abs(dy) > Math.abs(dx)) return;
+    if (Math.abs(dy) > Math.abs(dx)) return;  // 세로 스크롤 우선
     const offsetPct = (dx / width) * 100;
-    update(offsetPct);
+    update(offsetPct);                        // 손가락 따라오기
   };
 
   const onPointerUp = (e) => {
     if (!dragging) return;
     const dx = e.clientX - startX;
     const movedRatio = Math.abs(dx) / width;
+
     dragging = false;
     track.classList.remove('dragging');
-    if (movedRatio > THRESH) goto(dx < 0 ? i+1 : i-1);
-    else { update(0); scheduleNext(); }
+
+    if (movedRatio > THRESH) {
+      goto(dx < 0 ? i+1 : i-1);               // 스냅
+    } else {
+      update(0);                              // 스냅백
+      scheduleNext();
+    }
     track.releasePointerCapture?.(e.pointerId);
   };
 
