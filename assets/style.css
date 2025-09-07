@@ -480,6 +480,52 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
   grid-template-columns: 120px 1fr; /* 왼쪽 날짜, 오른쪽 내용 */
   align-items: center;              /* 세로 중앙 정렬 */
 }
+/* =========================================================
+   HERO FULL-BLEED & COVER (override)
+   - 히어로를 브라우저 가로폭(100vw)으로 확장
+   - 이미지/영상은 프레임을 'cover'로 꽉 채우기
+   - 아래 섹션 레이아웃은 기존 그대로 유지
+   ========================================================= */
+
+/* 1) hero--boxed라 하더라도 '풀폭'으로 확장 */
+.hero.hero--boxed .carousel{
+  width: 100vw;
+  max-width: 100vw;
+  /* 중앙 기준으로 좌우 여백(거터) 제거: 화면 가장자리까지 확장 */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;        /* 모서리 둥글기/보더/그림자 제거(풀폭 느낌) */
+  border: 0;
+  box-shadow: none;
+}
+
+/* 2) 슬라이드 프레임 높이(필요시 100vh 로) */
+.hero .slide{
+  height: 62vh;            /* 원하면 70vh ~ 100vh 로 조절 */
+  min-height: 420px;
+}
+
+/* 3) 이미지/영상은 항상 프레임을 꽉 채우도록 (letterbox 방지) */
+.hero .slide img,
+.hero .slide video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* 핵심: 비율 유지하며 꽉 채움 (일부 영역 크롭) */
+  max-width: none;
+  max-height: none;
+  background: transparent;
+}
+
+/* (no-crop 클래스를 써도 위 규칙이 이깁니다) */
+.hero .slides.no-crop .slide img,
+.hero .slides.no-crop .slide video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none;
+  max-height: none;
+  background: transparent;
+}
 
 .news-date {
   text-align: center; /* 가로 중앙 */
