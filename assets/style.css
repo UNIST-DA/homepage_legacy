@@ -572,3 +572,61 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
   object-fit: cover !important;
   object-position: center center !important;
 }
+/* ===== 기본 토큰/레이아웃은 생략 (기존 것 유지) ===== */
+
+/* Hero 풀폭 */
+.hero.hero--boxed .carousel{
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 슬라이드 프레임 */
+.hero .slide{
+  height: 62vh !important;
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: #000;
+}
+
+/* 배경 블러 */
+.hero .slide.fill .bg-blur{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: blur(36px) brightness(.85);
+  transform: scale(1.18);
+  z-index: 0;
+}
+
+/* 원본 중앙 contain */
+.hero .slide.fill .hero-img{
+  position: relative;
+  z-index: 1;
+  height: 100% !important;
+  width: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+
+/* 비디오도 contain */
+.hero .slide.cover-video video{
+  height: 100% !important;
+  width: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+
+/* 점/화살표 스타일 (기존 유지) */
+.dot{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.6); border:1px solid rgba(255,255,255,.8); cursor:pointer}
+.dot.active{background:#fff}
+.nav-arrows{position:absolute; inset:0; display:flex; justify-content:space-between; align-items:center; padding:0 8px
