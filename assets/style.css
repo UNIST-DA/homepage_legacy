@@ -818,3 +818,10 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
   position: relative;
   z-index: 5;   /* 블러 배경(::before, z=0)보다 위 */
 }
+/* Hero overlay / controls 항상 맨 위 */
+.hero-overlay,
+.hero-ctrl,
+.nav-arrows{
+  position: relative;
+  z-index: 5;
+}
