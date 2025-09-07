@@ -422,28 +422,3 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   buildDots(); update(0); scheduleNext();
 })();
 </script>
-<script>
-/* 이미지 슬라이드에 blurred fill 배경 자동 적용 */
-(function(){
-  const slides = document.querySelectorAll('#heroSlides .slide');
-  slides.forEach(slide => {
-    const img = slide.querySelector('img');
-    if (img && img.src) {
-      // CSS 변수로 배경 이미지 전달
-      slide.style.setProperty('--img', `url("${img.src}")`);
-      slide.classList.add('fill');
-    }
-  });
-})();
-</script>
-<script>
-/* 모든 이미지 슬라이드에 fill 클래스 + --img 변수 적용 */
-document.addEventListener("DOMContentLoaded", function(){
-  document.querySelectorAll('#heroSlides .slide img').forEach(slideImg => {
-    const slide = slideImg.closest('.slide');
-    slide.classList.add('fill');
-    slide.style.setProperty('--img', `url(${slideImg.src})`);
-  });
-});
-</script>
-
