@@ -287,3 +287,13 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 
 /* 비디오 슬라이드에는 어두운 오버레이 제거 (흰색 바를 가리지 않도록) */
 .cover-video::after{ display:none !important; }
+
+/* Activity 카드: 내용 위, View all은 하단 고정 */
+.card.card-pad{
+  display:flex;
+  flex-direction:column;
+}
+.card.card-pad .view-all{
+  margin-top:auto;          /* 아래로 밀기 */
+  display:inline-block;
+}
