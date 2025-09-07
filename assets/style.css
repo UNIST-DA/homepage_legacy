@@ -177,7 +177,10 @@ html[data-theme="dark"] .theme-toggle .moon{display:block}
   content:""; position:absolute; inset:0;
   background:linear-gradient(0deg,rgba(0,27,84,.55),rgba(0,27,84,.35) 35%,rgba(0,27,84,0));
 }
-.slide img, .slide video{ width:100%; height:100%; object-fit:cover }
+.slide:not(.fill):not(.cover-video) img,
+.slide:not(.fill):not(.cover-video) video{
+  width:100%; height:100%; object-fit:cover;
+}
 
 .hero-overlay{position:absolute; inset:0; display:flex; align-items:flex-end; z-index:1; pointer-events:none}
 .hero-copy{width:100%; max-width:var(--w); margin:0 auto; padding:24px 20px 40px; color:#fff}
@@ -339,3 +342,15 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
 
 /* (E) 컨트롤/텍스트는 항상 최상단 */
 .hero-overlay, .hero-ctrl, .nav-arrows{ z-index:20 !important; }
+/* fill 슬라이드: 세로 100% + 비율 유지 (잘림 없음) */
+.slides.no-crop .slide.fill > img,
+.slides.no-crop .slide.fill > video{
+  position:relative; z-index:2;
+  height:100% !important;
+  width:auto !important;
+  max-height:100% !important;
+  max-width:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:transparent !important;
+}
