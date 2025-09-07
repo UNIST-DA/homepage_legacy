@@ -489,7 +489,6 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
    HERO — Blurred fill background + centered original
    ========================================================= */
 
-/* 히어로를 풀폭으로 확장 */
 .hero.hero--boxed .carousel{
   width:100vw !important;
   max-width:100vw !important;
@@ -498,22 +497,22 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
   border:0 !important; border-radius:0 !important; box-shadow:none !important;
 }
 
-/* 슬라이드 프레임 */
 .hero .slide{
   height:62vh !important; min-height:420px;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden; background:#000; position:relative;
 }
 
-/* fill: 블러 배경 레이어 */
+/* 블러 배경 */
 .hero .slide.fill::before{
   content:""; position:absolute; inset:0; z-index:0;
   background-image:var(--img);
   background-size:cover; background-position:center;
   filter:blur(32px) brightness(.8); transform:scale(1.15);
+  pointer-events:none;
 }
 
-/* 원본 이미지는 세로 100% contain */
+/* 원본은 세로 100% contain */
 .hero .slide.fill > img,
 .hero .slide.fill > video{
   position:relative; z-index:1;
@@ -529,44 +528,13 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
   background:transparent !important;
 }
 
-/* 컨트롤/오버레이는 항상 위로 */
+/* 컨트롤/텍스트 위로 */
 .hero-overlay, .hero-ctrl, .nav-arrows{ position:relative; z-index:5; }
 
-/* 모바일 높이 보정 */
+/* 그라데이션이 위에 올라오지 않도록 */
+.slide::after{ z-index:0; pointer-events:none; }
+
+/* 모바일 높이 */
 @media (max-width:860px){
   .hero .slide{ height:56vh !important; min-height:320px; }
 }
-/* =========================================================
-   HERO — Blurred side fill + vertical contain (images only)
-   ========================================================= */
-
-/* 슬라이드 프레임은 그대로, 필요 요소만 오버레이 */
-.hero .slide.fill{ position:relative; overflow:hidden; background:#000; }
-
-/* 블러 배경: 같은 이미지를 덮어 배경 채움 */
-.hero .slide.fill::before{
-  content:""; position:absolute; inset:0; z-index:0;
-  background-image:var(--img);
-  background-size:cover; background-position:center;
-  filter:blur(32px) brightness(.85);
-  transform:scale(1.15);
-  pointer-events:none;
-}
-
-/* 원본 이미지는 세로 100% contain (잘림 없음) */
-.slides.no-crop .slide.fill > img,
-.slides.no-crop .slide.fill > video{
-  position:relative; z-index:1;
-  height:100% !important; width:auto !important; max-height:100% !important;
-  object-fit:contain !important; object-position:center center !important;
-  background:transparent !important;
-}
-
-/* 비디오 슬라이드는 cover 유지(기존 동작 그대로) */
-.slides.no-crop .cover-video > video{
-  width:100% !important; height:100% !important;
-  object-fit:cover !important; object-position:center center !important;
-}
-
-/* 오버레이/도트/화살표는 항상 최상단 */
-.hero-overlay, .hero-ctrl, .nav-arrows{ position:relative; z-index:5; }
