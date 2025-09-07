@@ -811,3 +811,11 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
 @media (max-width:860px){
   .hero .slides.no-crop .slide{ min-height:320px; }
 }
+
+/* === Hero overlay / controls 항상 맨 위로 오도록 보정 === */
+.hero-overlay,
+.hero-ctrl,
+.nav-arrows {
+  position: relative;
+  z-index: 5;   /* 블러 배경(::before, z=0)보다 위 */
+}
