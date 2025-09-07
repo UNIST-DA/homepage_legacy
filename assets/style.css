@@ -134,8 +134,21 @@ html[data-theme="dark"] .theme-toggle .moon{display:block}
 
 /* === NO-CROP 모드의 기본 규칙(비디오/필 슬라이드는 제외) */
 .slides.no-crop .slide:not(.fill):not(.cover-video) img,
-.slides.no-crop .slide:not(.fill):not(.cover-video) video{
-  max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;background:#fff;
+.slides.no-crop .cover-video {
+  background:#fff;   /* 좌우 남는 부분 흰색 */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slides.no-crop .cover-video > video {
+  max-width:100%;
+  max-height:100%;
+  width:auto !important;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fff !important; /* 혹시 비디오 자체 여백에도 흰색 */
 }
 
 /* ★ 이미지 슬라이드: 좌우 블러 배경 + 원본은 'contain'으로 전체 보이기 */
