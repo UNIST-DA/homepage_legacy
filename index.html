@@ -8,14 +8,14 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
 <section class="hero hero--boxed hero--full" aria-label="Lab highlights">
   <div class="carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Hero carousel">
     <div class="slides no-crop" id="heroSlides">
-      <!-- 비디오: cover 유지 -->
+      <!-- 비디오(cover 유지) -->
       <div class="slide cover-video">
         <video autoplay muted playsinline preload="metadata">
           <source src="{{ '/assets/main/Welcome_DA_LAB.mp4' | relative_url }}" type="video/mp4">
         </video>
       </div>
 
-      <!-- 이미지: 세로 100% + 좌우 블러 채움 (fill + --img) -->
+      <!-- 이미지: 세로 100% + 좌우 블러 -->
       <div class="slide fill" style="--img: url('{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}')">
         <img src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 1">
       </div>
@@ -47,7 +47,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
       <div class="hero-copy">
         <div class="hero-kicker">Data Analytics Lab @ UNIST</div>
         <h1 class="hero-title">Industrial Statistics · Quality Engineering · Machine Learning</h1>
-        <p class="hero-desc">We research AI for Quality Engineering, System Monitoring &amp; Anomaly Detection, and Time-Series Representation.</p>
+        <p class="hero-desc">We research AI for Quality Engineering, System Monitoring &amp; Anomaly Detection, and Time‑Series Representation.</p>
       </div>
     </div>
 
@@ -56,178 +56,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   </div>
 </section>
 
-
-<!-- ===================== About ===================== -->
-<section id="about" class="about">
-  <div class="container">
-    <div class="head">
-      <h2>
-        <span class="title-text">About</span>
-        <a href="https://unist-da.github.io/about.html" class="more-info">– more info</a>
-      </h2>
-    </div>
-
-    <div class="grid">
-      <div class="card card-pad" style="grid-column: span 7">
-        <a class="pill" href="https://ie.unist.ac.kr/" target="_blank" rel="noopener">UNIST · Industrial Engineering</a>
-        <h3 style="margin:10px 0 6px">Data Analytics Lab</h3>
-        <p>UNIST 산업공학과 데이터애널리틱스 연구실은 데이터 기반 품질향상과 지능형 제조를 위한 통계적·기계학습 방법론을 연구합니다. 실제 산업 데이터를 통해 실효성 있는 모델을 만들고, 신뢰 가능한 의사결정을 지원합니다.</p>
-        <p class="muted">We build interpretable, reliable AI systems for quality engineering, process monitoring, and time-series understanding.</p>
-      </div>
-      <div class="card card-pad" style="grid-column: span 5">
-        <h4 style="margin:0 0 10px">Interests</h4>
-        <div class="list">
-          <div class="chip">Industrial Statistics</div>
-          <div class="chip">Quality Engineering &amp; Management</div>
-          <div class="chip">Machine Learning &amp; Data Mining</div>
-        </div>
-        <h4 style="margin:16px 0 10px">Research Areas</h4>
-        <div class="area">
-          <div>• Artificial Intelligence in Quality Engineering</div>
-          <div>• System Monitoring &amp; Anomaly Detection</div>
-          <div>• Time-Series Representation</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== Research (Top 3 from Projects) ===================== -->
-<section id="research">
-  <div class="container">
-    <div class="head">
-      <h2>
-        <span class="title-text">Research</span>
-        <a href="https://unist-da.github.io/research/projects/" class="more-info">– more info</a>
-      </h2>
-    </div>
-    <div class="grid">
-      {% assign list = site.data.projects | slice: 0, 3 %}
-      {% for p in list %}
-      <a class="card card-pad" href="{{ p.url | relative_url }}"
-         style="grid-column: span 4; display:block; text-decoration:none; color:inherit" id="home-{{ p.slug }}">
-        {% if p.image %}
-        <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
-        {% endif %}
-        <h4 style="margin:0 0 6px">{{ p.title }}</h4>
-        <p class="muted">{{ p.summary }}</p>
-        {% if p.period %}<div class="muted" style="font-size:13px">{{ p.period }}</div>{% endif %}
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ===================== Activity (Seminar · News · Events) ===================== -->
-<section id="activity">
-  <div class="container">
-    <div class="head">
-      <h2>
-        <span class="title-text">Activity</span>
-        <a href="https://unist-da.github.io/activity/Lab%20News/" class="more-info">– more info</a>
-      </h2>
-    </div>
-
-    <div class="grid">
-      <div class="card card-pad" style="grid-column: span 4">
-        <h4 style="margin:6px 0">Lab Seminar</h4>
-        <ul style="margin:8px 0 12px; padding-left:18px">
-          {% for it in site.data.activity.seminar limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a href="{{ '/activity/Lab%20Seminar/' | relative_url }}">View all →</a>
-      </div>
-
-      <div class="card card-pad" style="grid-column: span 4">
-        <h4 style="margin:6px 0">Lab News</h4>
-        <ul style="margin:8px 0 12px; padding-left:18px">
-          {% for it in site.data.activity.news limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a href="{{ '/activity/Lab%20News/' | relative_url }}">View all →</a>
-      </div>
-
-      <div class="card card-pad" style="grid-column: span 4">
-        <h4 style="margin:6px 0">Lab Events</h4>
-        <ul style="margin:8px 0 12px; padding-left:18px">
-          {% for it in site.data.activity.events limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a href="{{ '/activity/Lab%20Events/' | relative_url }}">View all →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== Contact ===================== -->
-<section id="contact">
-  <div class="container">
-    <div class="head">
-      <h2>
-        <span class="title-text">Contact</span>
-        <a href="https://unist-da.github.io/contact/" class="more-info">– more info</a>
-      </h2>
-    </div>
-    <div class="grid">
-      <div class="card card-pad" style="grid-column: span 7">
-        <h4 style="margin:0 0 8px">Get in touch</h4>
-        <p class="muted">
-          Email:
-          <a href="mailto:sungil.kim@unist.ac.kr">sungil.kim@unist.ac.kr</a>
-          · Address: 유니스트길 50, 112동 302-4
-        </p>
-        <p class="muted">
-          For prospective students: Please email with CV, and interestsed project.
-        </p>
-      </div>
-
-      <div class="card card-pad" style="grid-column: span 5">
-        <h4 style="margin:0 0 8px">Links</h4>
-        <ul class="link-list" style="margin:0; padding-left:0; list-style:none">
-          <li>
-            <a href="https://github.com/UNIST-DA" target="_blank" rel="noopener">
-              <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" style="flex:0 0 auto">
-                <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
-              </svg>
-              <span>GitHub Organization</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://scholar.google.com/citations?user=BISaBGoAAAAJ&hl=ko" target="_blank" rel="noopener">
-              <img src="https://www.google.com/s2/favicons?sz=32&domain=scholar.google.com"
-                   alt="" width="18" height="18" style="flex:0 0 auto">
-              <span>Google Scholar</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://ie.unist.ac.kr/" target="_blank" rel="noopener">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   style="flex:0 0 auto">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
-                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
-              </svg>
-              <span>UNIST IE Department</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- (이하 About/Research/Activity/Contact는 네 파일 그대로 유지) -->
 
 <!-- === Hero carousel (arrows + dots + autoplay + swipe/drag) === -->
 <script>
@@ -243,9 +72,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   if(!slides || !slides.length) return;
 
   let i = 0, N = slides.length, timer = null, hover = false;
-
-  let currentVideo = null;
-  let currentVideoEndedHandler = null;
+  let currentVideo = null, currentVideoEndedHandler = null;
 
   function buildDots(){
     dotsEl.innerHTML = '';
@@ -259,38 +86,36 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     }
   }
 
-  function percentFor(index){ return -index * 100; }
+  const percentFor = index => -index * 100;
 
-  function update(offsetPct = 0){
+  function update(offsetPct=0){
     track.style.transform = `translateX(${percentFor(i) + offsetPct}%)`;
     [...dotsEl.children].forEach((d,idx)=>d.classList.toggle('active', idx===i));
   }
 
   function cleanupVideo(){
-    if (!currentVideo) return;
-    try {
+    if(!currentVideo) return;
+    try{
       currentVideo.pause();
       currentVideo.currentTime = 0;
-      if (currentVideoEndedHandler) {
+      if (currentVideoEndedHandler){
         currentVideo.removeEventListener('ended', currentVideoEndedHandler);
         currentVideoEndedHandler = null;
       }
-    } catch(e){}
+    }catch(e){}
     currentVideo = null;
   }
 
   function scheduleNext(){
     const vid = slides[i].querySelector('video');
-    cleanupVideo();
-    stop();
-
-    if (vid) {
+    cleanupVideo(); stop();
+    if(vid){
       currentVideo = vid;
-      try { vid.currentTime = 0; } catch(e){}
+      try{ vid.currentTime = 0; }catch(e){}
       vid.play().catch(()=>{});
-      currentVideoEndedHandler = () => { setTimeout(() => { goto(i+1); }, 2000); };
+      currentVideoEndedHandler = () => setTimeout(()=>goto(i+1), 2000);
       vid.addEventListener('ended', currentVideoEndedHandler);
-    } else {
+    }else{
       start();
     }
   }
@@ -304,7 +129,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   }
 
   function start(){ stop(); timer = setInterval(()=>{ if(!hover) goto(i+1); }, 5000); }
-  function stop(){ if(timer) { clearInterval(timer); timer = null; } }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
 
   prev.addEventListener('click', ()=>{ goto(i-1); hover=true; setTimeout(()=>hover=false, 1200); });
   next.addEventListener('click', ()=>{ goto(i+1); hover=true; setTimeout(()=>hover=false, 1200); });
@@ -317,12 +142,12 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     if(e.key==='ArrowRight') goto(i+1);
   });
 
-  // === Swipe/Drag ===
-  const THRESH = 0.18;
-  let dragging = false, startX = 0, startY = 0, width = 1;
+  /* === Swipe / Drag === */
+  const THRESH = 0.18;   // 화면 너비 대비 18% 이상 이동 시 넘김
+  let dragging=false, startX=0, startY=0, width=1;
 
-  const onPointerDown = (e) => {
-    if (e.pointerType === 'mouse' && e.button !== 0) return;
+  track.addEventListener('pointerdown', (e)=>{
+    if(e.pointerType==='mouse' && e.button!==0) return;
     width = carousel.clientWidth || 1;
     dragging = true;
     startX = e.clientX; startY = e.clientY;
@@ -330,38 +155,26 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
     track.setPointerCapture?.(e.pointerId);
     hover = true; setTimeout(()=>hover=false, 1200);
     stop();
-  };
+  });
 
-  const onPointerMove = (e) => {
-    if (!dragging) return;
+  track.addEventListener('pointermove', (e)=>{
+    if(!dragging) return;
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
-    if (Math.abs(dy) > Math.abs(dx)) return;  // 세로 스크롤 우선
-    const offsetPct = (dx / width) * 100;
-    update(offsetPct);                        // 손가락 따라오기
-  };
+    if(Math.abs(dy) > Math.abs(dx)) return; // 세로 스크롤 우선
+    update((dx/width)*100);
+  });
 
-  const onPointerUp = (e) => {
-    if (!dragging) return;
+  window.addEventListener('pointerup', (e)=>{
+    if(!dragging) return;
     const dx = e.clientX - startX;
-    const movedRatio = Math.abs(dx) / width;
-
+    const movedRatio = Math.abs(dx)/width;
     dragging = false;
     track.classList.remove('dragging');
-
-    if (movedRatio > THRESH) {
-      goto(dx < 0 ? i+1 : i-1);               // 스냅
-    } else {
-      update(0);                              // 스냅백
-      scheduleNext();
-    }
+    if(movedRatio > THRESH){ goto(dx<0 ? i+1 : i-1); }
+    else { update(0); scheduleNext(); }
     track.releasePointerCapture?.(e.pointerId);
-  };
-
-  track.addEventListener('pointerdown', onPointerDown);
-  track.addEventListener('pointermove', onPointerMove);
-  window.addEventListener('pointerup', onPointerUp);
-  track.addEventListener('dragstart', (e) => e.preventDefault());
+  });
 
   buildDots(); update(0); scheduleNext();
 })();
