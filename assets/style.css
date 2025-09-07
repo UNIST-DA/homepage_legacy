@@ -536,3 +536,37 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
 @media (max-width:860px){
   .hero .slide{ height:56vh !important; min-height:320px; }
 }
+/* =========================================================
+   HERO — Blurred side fill + vertical contain (images only)
+   ========================================================= */
+
+/* 슬라이드 프레임은 그대로, 필요 요소만 오버레이 */
+.hero .slide.fill{ position:relative; overflow:hidden; background:#000; }
+
+/* 블러 배경: 같은 이미지를 덮어 배경 채움 */
+.hero .slide.fill::before{
+  content:""; position:absolute; inset:0; z-index:0;
+  background-image:var(--img);
+  background-size:cover; background-position:center;
+  filter:blur(32px) brightness(.85);
+  transform:scale(1.15);
+  pointer-events:none;
+}
+
+/* 원본 이미지는 세로 100% contain (잘림 없음) */
+.slides.no-crop .slide.fill > img,
+.slides.no-crop .slide.fill > video{
+  position:relative; z-index:1;
+  height:100% !important; width:auto !important; max-height:100% !important;
+  object-fit:contain !important; object-position:center center !important;
+  background:transparent !important;
+}
+
+/* 비디오 슬라이드는 cover 유지(기존 동작 그대로) */
+.slides.no-crop .cover-video > video{
+  width:100% !important; height:100% !important;
+  object-fit:cover !important; object-position:center center !important;
+}
+
+/* 오버레이/도트/화살표는 항상 최상단 */
+.hero-overlay, .hero-ctrl, .nav-arrows{ position:relative; z-index:5; }
