@@ -825,3 +825,55 @@ html[data-theme="dark"] #galaxy-canvas{ opacity:1; }
   position: relative;
   z-index: 5;
 }
+/* ===== HERO: full-bleed + vertical contain + blurred side fill ===== */
+
+/* 1) 풀폭으로 확장 (기존 박스형 규칙 무효화) */
+.hero.hero--boxed .carousel{
+  width:100vw !important;
+  max-width:100vw !important;
+  margin-left:calc(50% - 50vw) !important;
+  margin-right:calc(50% - 50vw) !important;
+  border:0 !important; border-radius:0 !important; box-shadow:none !important;
+}
+
+/* 2) 프레임 높이 + 중앙 정렬 */
+.hero .slide{
+  height:62vh !important; min-height:420px;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden; background:#000; position:relative;
+}
+
+/* 3) no-crop 슬라이드: 원본은 세로 100%, 가로 자동(잘림 없음) */
+.hero .slides.no-crop .slide:not(.cover-video) img,
+.hero .slides.no-crop .slide:not(.cover-video) video{
+  height:100% !important; width:auto !important; max-height:100% !important;
+  object-fit:contain !important; object-position:center center !important;
+  background:transparent !important;
+}
+
+/* 4) 비디오 슬라이드는 기존처럼 꽉 채우기 */
+.hero .slides.no-crop .cover-video video{
+  width:100% !important; height:100% !important;
+  object-fit:cover !important; object-position:center center !important;
+  background:transparent !important;
+}
+
+/* 5) 블러 채우기 레이어 (같은 이미지를 배경으로) */
+.hero .slide.fill::before{
+  content:""; position:absolute; inset:0; z-index:0;
+  background-image:var(--img);
+  background-size:cover; background-position:center;
+  filter:blur(32px) brightness(.8); transform:scale(1.15);
+}
+
+/* 6) 원본 이미지는 위층 */
+.hero .slide.fill > img,
+.hero .slide.fill > video{
+  position:relative; z-index:1;
+}
+
+/* 7) 컨트롤/텍스트 항상 최상단 */
+.hero-overlay, .hero-ctrl, .nav-arrows{ position:relative; z-index:5; }
+
+/* 8) 그라데이션 오버레이는 컨트롤을 가리지 않도록 */
+.slide::after{ z-index:0; pointer-events:none; }
