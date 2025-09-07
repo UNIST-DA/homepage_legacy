@@ -8,36 +8,42 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
 <section class="hero hero--boxed" aria-label="Lab highlights">
   <div class="carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Hero carousel">
     <div class="slides no-crop" id="heroSlides">
-      <!-- (그대로) 비디오 -->
+      <!-- Video slide -->
       <div class="slide cover-video">
         <video autoplay muted playsinline preload="metadata">
           <source src="{{ '/assets/main/Welcome_DA_LAB.mp4' | relative_url }}" type="video/mp4">
         </video>
       </div>
-    
-      <!-- ↓↓↓ 아래처럼 각 이미지 슬라이드를 fill + --img 로 교체 ↓↓↓ -->
-      <div class="slide fill" style="--img: url('{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}')">
-        <img src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 1">
+
+      <!-- Image slides (bg-blur + hero-img) -->
+      <div class="slide fill">
+        <img class="bg-blur" src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" aria-hidden="true">
+        <img class="hero-img" src="{{ '/assets/main/승수_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 1">
       </div>
-    
-      <div class="slide fill" style="--img: url('{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}')">
-        <img src="{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 2">
+
+      <div class="slide fill">
+        <img class="bg-blur" src="{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}" aria-hidden="true">
+        <img class="hero-img" src="{{ '/assets/main/성진_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 2">
       </div>
-    
-      <div class="slide fill" style="--img: url('{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}')">
-        <img src="{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 3">
+
+      <div class="slide fill">
+        <img class="bg-blur" src="{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}" aria-hidden="true">
+        <img class="hero-img" src="{{ '/assets/main/찬범_산공학회발표_1.jpg' | relative_url }}" alt="Lab hero 3">
       </div>
-    
-      <div class="slide fill" style="--img: url('{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}')">
-        <img src="{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}" alt="Lab hero 4">
+
+      <div class="slide fill">
+        <img class="bg-blur" src="{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}" aria-hidden="true">
+        <img class="hero-img" src="{{ '/assets/main/혜진_미국학회발표_1.jpg' | relative_url }}" alt="Lab hero 4">
       </div>
-    
-      <div class="slide fill" style="--img: url('{{ '/assets/main/교수님_마이크_1.png' | relative_url }}')">
-        <img src="{{ '/assets/main/교수님_마이크_1.png' | relative_url }}" alt="Lab hero 5">
+
+      <div class="slide fill">
+        <img class="bg-blur" src="{{ '/assets/main/교수님_마이크_1.png' | relative_url }}" aria-hidden="true">
+        <img class="hero-img" src="{{ '/assets/main/교수님_마이크_1.png' | relative_url }}" alt="Lab hero 5">
       </div>
-    
-      <div class="slide fill" style="--img: url('{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}')">
-        <img src="{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}" alt="Lab hero 6">
+
+      <div class="slide fill">
+        <img class="bg-blur" src="{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}" aria-hidden="true">
+        <img class="hero-img" src="{{ '/assets/main/교수님_IB_Faculty_crop.png' | relative_url }}" alt="Lab hero 6">
       </div>
     </div>
 
@@ -51,60 +57,13 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
       <div class="hero-copy">
         <div class="hero-kicker">Data Analytics Lab @ UNIST</div>
         <h1 class="hero-title">Industrial Statistics · Quality Engineering · Machine Learning</h1>
-        <p class="hero-desc">We research AI for Quality Engineering, System Monitoring &amp; Anomaly Detection, and Time‑Series Representation.</p>
+        <p class="hero-desc">We research AI for Quality Engineering, System Monitoring &amp; Anomaly Detection, and Time-Series Representation.</p>
       </div>
     </div>
 
     <div class="hero-ctrl" id="heroDots" aria-label="Slide controls"></div>
   </div>
 </section>
-<style id="hero-final-override">
-/* 풀폭 유지 (박스형을 확실히 덮음) */
-.hero.hero--boxed .carousel{
-  width:100vw !important;
-  max-width:100vw !important;
-  margin-left:calc(50% - 50vw) !important;
-  margin-right:calc(50% - 50vw) !important;
-  border:0 !important; border-radius:0 !important; box-shadow:none !important;
-}
-
-/* 프레임 높이 + 중앙 정렬 */
-.hero .slide{
-  height:62vh !important; min-height:420px;
-  display:flex; align-items:center; justify-content:center;
-  position:relative; overflow:hidden; background:#000;
-}
-
-/* 블러 배경은 항상 바닥 */
-.hero .slide.fill::before{
-  content:""; position:absolute; inset:0; z-index:0 !important;
-  background-image:var(--img);
-  background-size:cover; background-position:center;
-  filter:blur(32px) brightness(.84); transform:scale(1.15);
-  pointer-events:none;
-}
-
-/* 전역 그라데이션도 컨트롤을 가리지 않게 */
-.slide::after{ z-index:0 !important; pointer-events:none; }
-
-/* 원본 이미지는 세로 100% + 잘림 없음 (cover를 강제무시) */
-.hero .slides.no-crop .slide.fill > img,
-.hero .slides.no-crop .slide.fill > video{
-  position:relative; z-index:1;
-  height:100% !important; width:auto !important; max-height:100% !important;
-  object-fit:contain !important; object-position:center center !important;
-  background:transparent !important;
-}
-
-/* 비디오는 그대로 꽉 채우기 */
-.hero .slides.no-crop .cover-video > video{
-  width:100% !important; height:100% !important;
-  object-fit:cover !important; object-position:center center !important;
-}
-
-/* 오버레이/점/화살표는 항상 최상단 */
-.hero-overlay, .hero-ctrl, .nav-arrows{ position:relative; z-index:10 !important; }
-</style>
 
 
 <!-- ===================== About ===================== -->
@@ -122,7 +81,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <a class="pill" href="https://ie.unist.ac.kr/" target="_blank" rel="noopener">UNIST · Industrial Engineering</a>
         <h3 style="margin:10px 0 6px">Data Analytics Lab</h3>
         <p>UNIST 산업공학과 데이터애널리틱스 연구실은 데이터 기반 품질향상과 지능형 제조를 위한 통계적·기계학습 방법론을 연구합니다. 실제 산업 데이터를 통해 실효성 있는 모델을 만들고, 신뢰 가능한 의사결정을 지원합니다.</p>
-        <p class="muted">We build interpretable, reliable AI systems for quality engineering, process monitoring, and time‑series understanding.</p>
+        <p class="muted">We build interpretable, reliable AI systems for quality engineering, process monitoring, and time-series understanding.</p>
       </div>
       <div class="card card-pad" style="grid-column: span 5">
         <h4 style="margin:0 0 10px">Interests</h4>
@@ -135,14 +94,14 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <div class="area">
           <div>• Artificial Intelligence in Quality Engineering</div>
           <div>• System Monitoring &amp; Anomaly Detection</div>
-          <div>• Time‑Series Representation</div>
+          <div>• Time-Series Representation</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== Research (Top 3 from Projects) ===================== -->
+<!-- ===================== Research (Top 3) ===================== -->
 <section id="research">
   <div class="container">
     <div class="head">
@@ -168,7 +127,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
   </div>
 </section>
 
-<!-- ===================== Activity (Seminar · News · Events) ===================== -->
+<!-- ===================== Activity ===================== -->
 <section id="activity">
   <div class="container">
     <div class="head">
@@ -184,9 +143,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <h4 style="margin:6px 0">Lab Seminar</h4>
         <ul style="margin:8px 0 12px; padding-left:18px">
           {% for it in site.data.activity.seminar limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
+          <li><strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a></li>
           {% endfor %}
         </ul>
         <a href="{{ '/activity/Lab%20Seminar/' | relative_url }}">View all →</a>
@@ -197,9 +154,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <h4 style="margin:6px 0">Lab News</h4>
         <ul style="margin:8px 0 12px; padding-left:18px">
           {% for it in site.data.activity.news limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
+          <li><strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a></li>
           {% endfor %}
         </ul>
         <a href="{{ '/activity/Lab%20News/' | relative_url }}">View all →</a>
@@ -210,9 +165,7 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
         <h4 style="margin:6px 0">Lab Events</h4>
         <ul style="margin:8px 0 12px; padding-left:18px">
           {% for it in site.data.activity.events limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
+          <li><strong>{{ it.date }}</strong> — <a href="{{ it.url | relative_url }}">{{ it.title }}</a></li>
           {% endfor %}
         </ul>
         <a href="{{ '/activity/Lab%20Events/' | relative_url }}">View all →</a>
@@ -234,238 +187,90 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
       <div class="card card-pad" style="grid-column: span 7">
         <h4 style="margin:0 0 8px">Get in touch</h4>
         <p class="muted">
-          Email:
-          <a href="mailto:sungil.kim@unist.ac.kr">sungil.kim@unist.ac.kr</a>
+          Email: <a href="mailto:sungil.kim@unist.ac.kr">sungil.kim@unist.ac.kr</a>
           · Address: 유니스트길 50, 112동 302-4
         </p>
-        <p class="muted">
-          For prospective students: Please email with CV, and interestsed project.
-        </p>
+        <p class="muted">For prospective students: Please email with CV, and interested project.</p>
       </div>
-
       <div class="card card-pad" style="grid-column: span 5">
         <h4 style="margin:0 0 8px">Links</h4>
         <ul class="link-list" style="margin:0; padding-left:0; list-style:none">
-          <li>
-            <a href="https://github.com/UNIST-DA" target="_blank" rel="noopener">
-              <!-- GitHub 로고 -->
-              <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" style="flex:0 0 auto">
-                <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38
-                         0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                         -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95
-                         0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27
-                         1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                         0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
-              </svg>
-              <span>GitHub Organization</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://scholar.google.com/citations?user=BISaBGoAAAAJ&hl=ko" target="_blank" rel="noopener">
-              <img src="https://www.google.com/s2/favicons?sz=32&domain=scholar.google.com"
-                   alt="" width="18" height="18" style="flex:0 0 auto">
-              <span>Google Scholar</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://ie.unist.ac.kr/" target="_blank" rel="noopener">
-              <!-- 대체: 지구본 아이콘 -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   style="flex:0 0 auto">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
-                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
-              </svg>
-              <span>UNIST IE Department</span>
-            </a>
-          </li>
+          <li><a href="https://github.com/UNIST-DA" target="_blank" rel="noopener">GitHub Organization</a></li>
+          <li><a href="https://scholar.google.com/citations?user=BISaBGoAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://ie.unist.ac.kr/" target="_blank" rel="noopener">UNIST IE Department</a></li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- === Hero swipe/drag (gallery-like: follow + snap) === -->
-<style>
-/* 제스처 우선권 + 드래그 피드백 */
-#heroSlides{
-  touch-action: pan-y;   /* 세로 스크롤은 브라우저, 가로 스와이프는 우리가 처리 */
-  cursor: grab;
-  user-select: none;
-  transition: transform .35s ease;  /* 스냅 애니메이션 */
-}
-#heroSlides.dragging{ transition: none; } /* 드래그 중 즉시 반응 */
-#heroSlides:active{ cursor: grabbing; }
-#heroSlides img, #heroSlides video{
-  pointer-events: none;
-  -webkit-user-drag: none;
-  user-drag: none;
-}
-/* 오버레이가 제스처 가로채지 않게 */
-.hero-overlay{ pointer-events: none; }
-.nav-arrows{ pointer-events: none; }
-.nav-arrows .arrow{ pointer-events: auto; }
-</style>
-
+<!-- === Hero Carousel JS === -->
 <script>
-/* === Hero carousel: arrows + dots + autoplay(+video-once), swipe/drag === */
 (function(){
   const carousel = document.getElementById('heroCarousel');
   if(!carousel) return;
-
   const track  = document.getElementById('heroSlides');
   const prev   = document.getElementById('heroPrev');
   const next   = document.getElementById('heroNext');
   const dotsEl = document.getElementById('heroDots');
-  const slides = track ? track.querySelectorAll('.slide') : [];
-  if(!slides || !slides.length) return;
+  const slides = track ? track.children : [];
+  if(!slides.length) return;
 
   let i = 0, N = slides.length, timer = null, hover = false;
-
-  // 현재 슬라이드의 <video> 핸들링을 위해 참조 저장
-  let currentVideo = null;
-  let currentVideoEndedHandler = null;
+  let currentVideo = null, currentVideoEndedHandler = null;
 
   function buildDots(){
     dotsEl.innerHTML = '';
     for(let k=0;k<N;k++){
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'dot' + (k===i ? ' active' : '');
-      b.setAttribute('aria-label', `Go to slide ${k+1}`);
-      b.addEventListener('click', ()=>goto(k));
+      const b=document.createElement('button');
+      b.type='button';
+      b.className='dot'+(k===i?' active':'');
+      b.addEventListener('click',()=>goto(k));
       dotsEl.appendChild(b);
     }
   }
-
-  function percentFor(index){ return -index * 100; }
-
-  function update(offsetPct = 0){
-    track.style.transform = `translateX(${percentFor(i) + offsetPct}%)`;
-    [...dotsEl.children].forEach((d,idx)=>d.classList.toggle('active', idx===i));
+  function percentFor(index){return -index*100;}
+  function update(offsetPct=0){
+    track.style.transform=`translateX(${percentFor(i)+offsetPct}%)`;
+    [...dotsEl.children].forEach((d,idx)=>d.classList.toggle('active',idx===i));
   }
-
   function cleanupVideo(){
-    if (!currentVideo) return;
-    try {
-      currentVideo.pause();
-      currentVideo.currentTime = 0;
-      if (currentVideoEndedHandler) {
-        currentVideo.removeEventListener('ended', currentVideoEndedHandler);
-        currentVideoEndedHandler = null;
-      }
-    } catch(e){}
-    currentVideo = null;
+    if(!currentVideo) return;
+    try{currentVideo.pause();currentVideo.currentTime=0;
+      if(currentVideoEndedHandler){
+        currentVideo.removeEventListener('ended',currentVideoEndedHandler);
+        currentVideoEndedHandler=null;
+      }}catch(e){}
+    currentVideo=null;
   }
-
   function scheduleNext(){
-    // 비디오는 한 번만 재생 → 끝나고 2초 후 다음 슬라이드
-    const vid = slides[i].querySelector('video');
-    cleanupVideo();
-    stop(); // 기존 일반 타이머 제거
-
-    if (vid) {
-      currentVideo = vid;
-      // 일부 브라우저에서 수동 이동 시 재생 지점 보정
-      try { vid.currentTime = 0; } catch(e){}
-      // 자동재생 시도(무음이면 대체로 허용)
-      vid.play().catch(()=>{ /* autoplay 제한 시 그냥 정지 상태 유지 */ });
-
-      currentVideoEndedHandler = () => {
-        // 비디오가 끝나면 2초 대기 후 다음 슬라이드
-        setTimeout(() => { goto(i+1); }, 2000);
-      };
-      vid.addEventListener('ended', currentVideoEndedHandler);
-    } else {
-      // 일반 이미지 슬라이드: 5초마다 자동 이동
-      start();
-    }
+    const vid=slides[i].querySelector('video');
+    cleanupVideo(); stop();
+    if(vid){
+      currentVideo=vid;
+      try{vid.currentTime=0;}catch(e){}
+      vid.play().catch(()=>{});
+      currentVideoEndedHandler=()=>{setTimeout(()=>{goto(i+1);},2000);};
+      vid.addEventListener('ended',currentVideoEndedHandler);
+    } else start();
   }
-
   function goto(k){
-    // 슬라이드 바꾸기 전에 비디오 정리
     cleanupVideo();
-
-    i = (k+N) % N;
-    track.classList.remove('dragging');   // 스냅 애니메이션 ON
-    update(0);
-
-    // 새 슬라이드 상황에 맞게 다음 이동 예약
-    scheduleNext();
+    i=(k+N)%N;
+    track.classList.remove('dragging');
+    update(0); scheduleNext();
   }
-
-  function start(){ stop(); timer = setInterval(()=>{ if(!hover) goto(i+1); }, 5000); }
-  function stop(){ if(timer) { clearInterval(timer); timer = null; } }
-
-  // 화살표
-  prev.addEventListener('click', ()=>{ goto(i-1); hover=true; setTimeout(()=>hover=false, 1200); });
-  next.addEventListener('click', ()=>{ goto(i+1); hover=true; setTimeout(()=>hover=false, 1200); });
-  carousel.addEventListener('mouseenter', ()=>hover=true);
-  carousel.addEventListener('mouseleave', ()=>hover=false);
-
-  // 키보드 내비
-  carousel.setAttribute('tabindex','0');
-  carousel.addEventListener('keydown', (e)=>{
-    if(e.key==='ArrowLeft') goto(i-1);
-    if(e.key==='ArrowRight') goto(i+1);
-  });
-
-  // === Swipe/Drag (follow finger + snap) ===
-  const THRESH = 0.18;   // 화면 너비 대비 18% 이상이면 넘김
-  let dragging = false, startX = 0, startY = 0, width = 1;
-
-  const onPointerDown = (e) => {
-    if (e.pointerType === 'mouse' && e.button !== 0) return;
-    width = carousel.clientWidth || 1;
-    dragging = true;
-    startX = e.clientX;
-    startY = e.clientY;
-    track.classList.add('dragging');          // transition off
-    track.setPointerCapture?.(e.pointerId);
-    hover = true; setTimeout(()=>hover=false, 1200);
-    stop(); // 드래그 중에는 자동이동 멈춤
-  };
-
-  const onPointerMove = (e) => {
-    if (!dragging) return;
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-    if (Math.abs(dy) > Math.abs(dx)) return;  // 세로 스크롤 우선
-    const offsetPct = (dx / width) * 100;     // px → %
-    update(offsetPct);                        // 손가락 따라오기
-  };
-
-  const onPointerUp = (e) => {
-    if (!dragging) return;
-    const dx = e.clientX - startX;
-    const movedRatio = Math.abs(dx) / width;
-
-    dragging = false;
-    track.classList.remove('dragging');       // transition on
-
-    if (movedRatio > THRESH) {
-      goto(dx < 0 ? i+1 : i-1);               // 스냅
-    } else {
-      update(0);                              // 원위치 스냅백
-      // 드래그 취소 시에도 현재 슬라이드 타입(비디오/이미지)에 맞게 다시 예약
-      scheduleNext();
-    }
-    track.releasePointerCapture?.(e.pointerId);
-  };
-
-  track.addEventListener('pointerdown', onPointerDown);
-  track.addEventListener('pointermove', onPointerMove);
-  window.addEventListener('pointerup', onPointerUp);
-
-  // 이미지 기본 드래그 방지
-  track.addEventListener('dragstart', (e) => e.preventDefault());
-
-  // 초기 렌더링 및 예약
+  function start(){stop(); timer=setInterval(()=>{if(!hover)goto(i+1);},5000);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  prev.addEventListener('click',()=>{goto(i-1);hover=true;setTimeout(()=>hover=false,1200);});
+  next.addEventListener('click',()=>{goto(i+1);hover=true;setTimeout(()=>hover=false,1200);});
+  carousel.addEventListener('mouseenter',()=>hover=true);
+  carousel.addEventListener('mouseleave',()=>hover=false);
+  const THRESH=0.18; let dragging=false,startX=0,startY=0,width=1;
+  track.addEventListener('pointerdown',(e)=>{if(e.pointerType==='mouse'&&e.button!==0)return;width=carousel.clientWidth||1;dragging=true;startX=e.clientX;startY=e.clientY;track.classList.add('dragging');track.setPointerCapture?.(e.pointerId);hover=true;setTimeout(()=>hover=false,1200);stop();});
+  track.addEventListener('pointermove',(e)=>{if(!dragging)return;const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.abs(dy)>Math.abs(dx))return;const offsetPct=(dx/width)*100;update(offsetPct);});
+  window.addEventListener('pointerup',(e)=>{if(!dragging)return;const dx=e.clientX-startX;const movedRatio=Math.abs(dx)/width;dragging=false;track.classList.remove('dragging');if(movedRatio>THRESH){goto(dx<0?i+1:i-1);}else{update(0);scheduleNext();}track.releasePointerCapture?.(e.pointerId);});
+  track.addEventListener('dragstart',(e)=>e.preventDefault());
   buildDots(); update(0); scheduleNext();
 })();
 </script>
