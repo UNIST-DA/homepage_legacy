@@ -348,3 +348,23 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 #activity .view-all:hover {
   transform: translateY(-2px);   /* 살짝 위로 */
 }
+/* Contact 섹션 - 이메일 링크 효과 */
+#contact a[href^="mailto:"] {
+  font-weight: 600; /* 평상시도 살짝 강조 */
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+#contact a[href^="mailto:"]:hover {
+  color: var(--primary);         /* 파란색으로 강조 */
+  transform: translateY(-2px);   /* 살짝 위로 */
+}
+
+/* Contact 섹션 - 링크 리스트 효과 (GitHub, Scholar, IE Dept) */
+#contact .link-list a {
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-weight: 600; /* 볼드 처리 */
+}
+#contact .link-list a:hover {
+  color: var(--primary);         /* hover 시 색상 변경 */
+  transform: translateY(-2px);   /* 살짝 위로 */
+}
