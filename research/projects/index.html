@@ -47,21 +47,22 @@ permalink: /research/projects/
     background:#f3f4f6;
   }
 
-  /* title 더 크게 */
   .proj-title{ margin:0 0 8px; font-size:20px; font-weight:700; line-height:1.4; }
 
-  /* category + organizer 텍스트 스타일 */
-  .proj-meta-text{
-    margin:6px 0 0;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    font-size:13px;
-    font-weight:400;   /* 얇게 */
-    color:#0f1c48;     /* 남색 */
+  /* category + organizer pill */
+  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .meta-pill{
+    display:inline-flex; align-items:center;
+    padding:2px 8px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:400;
+    background:#e9f0fb;
+    color:#0f1c48;
+    border:1px solid transparent;
   }
 
-  /* period는 별도 줄 */
+  /* period 줄 (달력 아이콘 + 텍스트) */
   .proj-period{
     display:flex; 
     align-items:center; 
@@ -77,8 +78,8 @@ permalink: /research/projects/
     stroke:#0f1c48;
   }
 
-  /* summary 조금 더 작게 */
-  .proj-summary{ margin:6px 0 0; color:#6b7280; font-size:10px; }
+  /* summary 더 작게 */
+  .proj-summary{ margin:6px 0 0; color:#6b7280; font-size:12px; line-height:1.4; }
 
   @media (max-width: 860px){
     .proj-card{ grid-column: span 12; }
@@ -96,6 +97,7 @@ permalink: /research/projects/
         {%- assign card_category  = page_match.category  | default: p.category -%}
         {%- assign card_period    = page_match.period    | default: p.period -%}
         {%- assign card_organizer = page_match.organizer | default: p.organizer -%}
+        {%- assign card_tags      = page_match.tags      | default: p.tags -%}
         {%- assign card_image     = page_match.image     | default: p.image -%}
 
         <a
@@ -110,18 +112,13 @@ permalink: /research/projects/
 
           <h3 class="proj-title">{{ card_title }}</h3>
 
-          <!-- Category + Organizer (plain text with middle dot) -->
-          <div class="proj-meta-text">
+          <!-- Category + Organizer pill -->
+          <div class="proj-meta">
             {%- if card_category -%}
-              <span>{{ card_category }}</span>
+              <span class="meta-pill">{{ card_category }}</span>
             {%- endif -%}
-          
-            {%- if card_category and card_organizer -%}
-              <span>&middot;</span>
-            {%- endif -%}
-          
             {%- if card_organizer -%}
-              <span>{{ card_organizer }}</span>
+              <span class="meta-pill">{{ card_organizer }}</span>
             {%- endif -%}
           </div>
 
@@ -139,6 +136,15 @@ permalink: /research/projects/
 
           {%- if card_summary -%}
             <p class="proj-summary">{{ card_summary }}</p>
+          {%- endif -%}
+
+          <!-- 태그 칩 (옵션) -->
+          {%- if card_tags and card_tags.size > 0 -%}
+            <p class="muted" style="margin:8px 0 0">
+              {%- for t in card_tags -%}
+                <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">{{ t }}</span>
+              {%- endfor -%}
+            </p>
           {%- endif -%}
         </a>
       {%- endfor -%}
