@@ -3,12 +3,11 @@ layout: default
 ---
 
 {%- comment -%}
-Project detail layout (page-driven, no data file):
+Project detail layout (page-driven):
 - Title + Summary
-- Organizer, Period, Category 모두 pill 스타일 박스로 표시
-- Tags는 연한 회색 칩
-- Hero image + caption
-- Body content
+- Organizer / Period / Category → 모두 pill 박스
+- Tags (연한 회색 칩)
+- Hero image & caption: 제거 (이미지는 md 본문에서 직접 figure로 넣음)
 {%- endcomment -%}
 
 {%- assign title_fallback = page.title | default: page.slug | default: 'Untitled Project' -%}
@@ -38,7 +37,7 @@ Project detail layout (page-driven, no data file):
     padding:6px 14px;
     border-radius:999px;
     font-size:13px;
-    font-weight:550;
+    font-weight:600;
     background:#e9f0fb;
     color:#0f1c48;
     border:1px solid transparent;
@@ -56,8 +55,6 @@ Project detail layout (page-driven, no data file):
   }
 
   .proj-sep{ height:1px; background:#f0f2f5; border:0; margin:16px 0 24px; }
-  .proj-hero-img{ width:100%; height:auto; border-radius:10px; object-fit:cover; margin:0 0 8px; }
-  .proj-caption{ margin:4px 0 18px; color:#6b7280; font-size:14px; }
 
   @media (max-width: 720px){
     .proj-wrap{ padding:0 2px; }
@@ -67,16 +64,14 @@ Project detail layout (page-driven, no data file):
 <main class="container">
   <article class="proj-wrap">
 
-    <!-- Row: Organizer + Period + Category -->
+    <!-- Row: Organizer + Period + Category → pill -->
     <div class="proj-meta">
       {%- if page.organizer -%}
         <span class="meta-pill">{{ page.organizer }}</span>
       {%- endif -%}
-
       {%- if page.period -%}
         <span class="meta-pill">{{ page.period }}</span>
       {%- endif -%}
-
       {%- if page.category -%}
         <span class="meta-pill">{{ page.category }}</span>
       {%- endif -%}
@@ -93,13 +88,7 @@ Project detail layout (page-driven, no data file):
 
     <hr class="proj-sep">
 
-    <!-- Hero image & caption -->
-    {%- if page.image -%}
-      <img class="proj-hero-img" src="{{ page.image | relative_url }}" alt="{{ title_fallback }}">
-      {%- if page.image_caption -%}<p class="proj-caption">{{ page.image_caption }}</p>{%- endif -%}
-    {%- endif -%}
-
-    <!-- Project body (.md content) -->
+    <!-- Body: 이미지/캡션은 md 본문에서 figure로 직접 넣기 -->
     <div class="prose">
       {{ content }}
     </div>
