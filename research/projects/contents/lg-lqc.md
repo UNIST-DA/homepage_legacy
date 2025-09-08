@@ -1,10 +1,28 @@
 ---
 layout: project
 slug: lg-lqc
-permalink: /research/projects/contents/lg-lqc/
-title: Domain-Knowledge-Informed Functional Outlier Detection for Line Quality Control Systems
-
+title: "LG LQC (Line Quality Control)"
+summary: "Detect latent defects on production lines by fusing domain knowledge with functional outlier detection."
+organizer: "LG Electronics"
+period: "2021–2024"
+category: "Artificial Intelligence in Quality Engineering"
+tags:
+  - Functional Data Analysis
+  - Sequential Transformations
+  - Outlier Detection
+  - Manufacturing AI
+  - Quality Inspection
+  - Refrigerator Compressor
+image: /assets/research/projects/lg-lqc-fig6.png
+image_caption: "Proposed monitoring framework integrating domain knowledge with functional outlier detection (Figure 2)."
+# 선택: 상세 링크들 (있으면 사용)
+# url: /research/projects/contents/lg-lqc/
+# external: https://example.com
+# repo: https://github.com/your/repo
+# links:
+#   - { label: "Slide", url: "https://…" }
 ---
+
 
 ## Background
 Background를 작성해주세요
