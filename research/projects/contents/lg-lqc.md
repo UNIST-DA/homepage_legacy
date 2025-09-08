@@ -2,7 +2,7 @@
 layout: project
 slug: lg-lqc
 permalink: /research/projects/contents/lg-lqc/
-# title 생략 시 _data/projects.yml 의 title 사용
+title: LG LQC (Line Quality Control)
 ---
 
 LG LQC 프로젝트 상세 내용:
