@@ -384,9 +384,10 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 /* 헤더 옆 배치용(남아 있어도 문제 없음) */
 .head h2 .more-info{ margin-left:10px; }
 
-/* Contact 왼쪽 카드 하단-오른쪽 고정 */
-.more-info-bottom{
-  margin-top: auto;          /* 카드 하단으로 밀기 */
-  align-self: flex-end;      /* 오른쪽 정렬 */
-  font-weight: 700;          /* 살짝 강조 (원하면 빼도 됨) */
+/* Contact 카드 내부 more info를 오른쪽 위로 */
+.more-info-top {
+  align-self: flex-end;     /* 오른쪽 정렬 */
+  font-weight: 700;
+  margin-bottom: 8px;       /* 아래 내용과 간격 */
 }
+
