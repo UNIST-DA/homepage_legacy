@@ -13,6 +13,7 @@ tags:
   - Manufacturing AI
   - Quality Inspection
   - Refrigerator Compressor
+permalink: /research/projects/contents/lg-lqc/
 image: /assets/research/projects/lg-lqc-fig6.png
 image_caption: "Proposed monitoring framework integrating domain knowledge with functional outlier detection (Figure 2)."
 ---
