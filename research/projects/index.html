@@ -49,13 +49,33 @@ permalink: /research/projects/
   .proj-title{ margin:0 0 8px; font-size:18px; line-height:1.35; }
 
   /* 개별 페이지와 유사한 메타 스타일 */
-  .proj-meta{ margin:0 0 8px; display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
-  .cat-badge{
-    display:inline-flex; align-items:center; padding:6px 14px;
-    border-radius:999px; font-size:13px; font-weight:600;
-    background:#e9f0fb; color:#0f1c48; border:1px solid transparent;
+  .proj-meta{ 
+  margin:0 0 8px; 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:12px; 
+  align-items:center; 
+  font-size:13px;
   }
-  .proj-period{ color:#6b7280; font-size:13px; }
+  /* 카테고리 텍스트 (#으로 시작) */
+  .proj-category{
+    color:#0f1c48;
+    font-weight:600;
+  }
+  /* 기간 (아이콘 + 텍스트) */
+  .proj-period{
+    display:flex; 
+    align-items:center; 
+    gap:6px;
+    color:#6b7280;
+    font-size:13px;
+  }
+  .proj-period svg{
+    width:14px; 
+    height:14px; 
+    flex:0 0 auto; 
+    stroke:#0f1c48;
+  }
 
   .proj-summary{ margin:0; color:#6b7280; }
 
@@ -80,11 +100,23 @@ permalink: /research/projects/
 
           <h3 class="proj-title">{{ p.title }}</h3>
 
-          <!-- category 배지 + period 텍스트 (개별 페이지와 유사) -->
-          <div class="proj-meta">
-            {%- if p.category -%}<span class="cat-badge">{{ p.category }}</span>{%- endif -%}
-            {%- if p.period -%}<span class="proj-period">{{ p.period }}</span>{%- endif -%}
-          </div>
+            <!-- 카드 안 -->
+            <div class="proj-meta">
+              {%- if p.category -%}
+                <span class="proj-category">#{{ p.category }}</span>
+              {%- endif -%}
+            
+              {%- if p.period -%}
+                <span class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  {{ p.period }}
+                </span>
+              {%- endif -%}
+            </div>
 
           {%- if p.summary -%}
             <p class="proj-summary">{{ p.summary }}</p>
