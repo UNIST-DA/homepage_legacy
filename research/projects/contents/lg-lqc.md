@@ -15,14 +15,7 @@ tags:
   - Refrigerator Compressor
 image: /assets/research/projects/lg-lqc-fig6.png
 image_caption: "Proposed monitoring framework integrating domain knowledge with functional outlier detection (Figure 2)."
-# 선택: 상세 링크들 (있으면 사용)
-# url: /research/projects/contents/lg-lqc/
-# external: https://example.com
-# repo: https://github.com/your/repo
-# links:
-#   - { label: "Slide", url: "https://…" }
 ---
-
 
 ## Background
 Background를 작성해주세요
