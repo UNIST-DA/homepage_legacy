@@ -46,19 +46,17 @@ permalink: /research/projects/
     margin-bottom:10px;
     background:#f3f4f6;
   }
-  .proj-title{ margin:0 0 6px; font-size:18px; line-height:1.35; }
-  .proj-meta{ margin:0 0 6px; color:#6b7280; font-size:13px; }
-  .proj-tags{ margin:0 0 8px; }
-  .proj-tag{
-    display:inline-block;
-    border:1px solid #e5e7eb;
-    border-radius:999px;
-    padding:2px 8px;
-    margin:0 6px 6px 0;
-    font-size:12px;
-    color:#6b7280;
-    background:transparent;
+  .proj-title{ margin:0 0 8px; font-size:18px; line-height:1.35; }
+
+  /* 개별 페이지와 유사한 메타 스타일 */
+  .proj-meta{ margin:0 0 8px; display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+  .cat-badge{
+    display:inline-flex; align-items:center; padding:6px 14px;
+    border-radius:999px; font-size:13px; font-weight:600;
+    background:#e9f0fb; color:#0f1c48; border:1px solid transparent;
   }
+  .proj-period{ color:#6b7280; font-size:13px; }
+
   .proj-summary{ margin:0; color:#6b7280; }
 
   @media (max-width: 860px){
@@ -82,18 +80,11 @@ permalink: /research/projects/
 
           <h3 class="proj-title">{{ p.title }}</h3>
 
-          <p class="proj-meta">
-            {%- if p.period -%}{{ p.period }}{%- endif -%}
-            {%- if p.category -%}{%- if p.period -%} · {%- endif -%}{{ p.category }}{%- endif -%}
-          </p>
-
-          {%- if p.tags and p.tags.size > 0 -%}
-            <p class="proj-tags">
-              {%- for tag in p.tags -%}
-                <span class="proj-tag">{{ tag }}</span>
-              {%- endfor -%}
-            </p>
-          {%- endif -%}
+          <!-- category 배지 + period 텍스트 (개별 페이지와 유사) -->
+          <div class="proj-meta">
+            {%- if p.category -%}<span class="cat-badge">{{ p.category }}</span>{%- endif -%}
+            {%- if p.period -%}<span class="proj-period">{{ p.period }}</span>{%- endif -%}
+          </div>
 
           {%- if p.summary -%}
             <p class="proj-summary">{{ p.summary }}</p>
