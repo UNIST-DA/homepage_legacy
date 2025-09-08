@@ -1,27 +1,49 @@
 ---
 layout: project
+
 slug: scsc-fuel-opt
 permalink: /research/projects/contents/scsc-fuel-opt/
-title: Fuel Consumption Prediction & Optimization (SCSC)
+image: /assets/research/projects/main-scsc-fuel-opt.png
+
+title: "Fuel Consumption Prediction & Optimization"
+summary: "Summary this project."
+organizer: "SCSC"
+period: "2023.00 - "
+category: "Artificial Intelligence in Quality Engineering"
+tags:
+  - Fuel Optimization
+  - Green Logistics
+  - Maritime Analytics
+
 ---
 
-SCSC 선박 연료 소비 예측 및 최적화 프로젝트 상세 내용:
+
+<!-- 이미지 삽입 방법 (링크 및 크기 조절 가능) -->
+
+<figure style="margin:20px 0;text-align:center">
+  <img src="{{ '/assets/research/projects/main-scsc-fuel-opt.png' | relative_url }}" 
+       alt="Monitoring framework integrating domain knowledge" 
+       style="display:block;margin:0 auto;width:60%;border-radius:8px;">
+  <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
+    Figure 1. Proposed monitoring framework integrating domain knowledge with functional outlier detection.
+  </figcaption>
+</figure>
+
+
+<!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
 
 ## Background
-국제 해운 산업에서는 연료 비용과 탄소 배출이 핵심 과제로 대두되고 있으며,  
-탄소중립 규제 대응과 친환경 운항 전략 수립이 시급합니다.
+Background 작성해주세요
 
 ## Goals
-- AIS, 기상·해류, 엔진 센서 데이터를 통합한 연료 소비 예측 모델 구축  
-- 최적 운항 경로 및 속도 제안으로 연료 절감 및 탄소 배출 최소화  
-- 친환경 해운 및 운임 최적화를 위한 데이터 기반 의사결정 도구 개발  
+- Goal 1
+- Goal 2
+- Goal 3
 
 ## Methods
-- **Data Fusion:** AIS 항적·속도 + 환경 데이터(기상·해류) + 엔진 센서 데이터 통합  
-- **Modeling:** 시계열 표현 학습 및 머신러닝/딥러닝 기반 연료 소비 예측  
-- **Optimization:** 예측 결과를 활용한 eco-routing 및 속도·경로 최적화  
+- **Method**와 관련된 설명
 
 ## Deliverables
-- 연료 소비 예측 PoC 모델 및 백테스트 리포트  
-- 운항 최적화 시뮬레이션 결과  
-- 학술 논문 및 국제 학회 발표
+- 학회 발표 등등
+
+--- <!-- 이건 구분선 -->
