@@ -4,7 +4,6 @@
 - slug: lg-lqc
   title: "LG LQC (Line Quality Control)"
   summary: "Detect latent defects on production lines by fusing domain knowledge with functional outlier detection."
-  organizer: "LG Electronics"
   period: "2021–2024"
   category: "Artificial Intelligence in Quality Engineering"
   tags:
@@ -15,12 +14,6 @@
     - Quality Inspection
     - Refrigerator Compressor
   image: /assets/research/projects/lg-lqc-fig6.png
-  image_caption: Proposed monitoring framework integrating domain knowledge with functional outlier detection (Figure 2).
-  url: /research/projects/contents/lg-lqc/
-  description: >
-    Overview. 생산 라인 검사에서 잠재 결함을 사전 식별하기 위해,
-    함수형 데이터 해석 + 도메인 지식(temporal/directional/structural)을 통합한
-    이상치 탐지 프레임워크를 개발.
 
 - slug: scsc-fuel-opt
   title: Fuel Consumption Prediction & Optimization (SCSC)
