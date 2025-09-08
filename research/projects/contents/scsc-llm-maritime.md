@@ -5,11 +5,11 @@ slug: scsc-llm-maritime
 permalink: /research/projects/contents/scsc-llm-maritime/
 image: /assets/research/projects/main-scsc-llm-maritime.png
 
-title: "LLM Agent for Maritime Data Analysis"
-summary: "Summary 작성해주세요"
-organizer: "SCSC"
-period: "2024.00 - "
-category: "System Monitoring & Anomaly Detection"
+title: LLM Agent for Maritime Data Analysis
+summary: Summary 작성해주세요
+organizer: SCSC
+period: 2024.00 - 
+category: System Monitoring & Anomaly Detection
 tags:
   - LLM
   - RAG
