@@ -3,7 +3,7 @@ layout: project
 
 slug: scsc-llm-maritime
 permalink: /research/projects/contents/scsc-llm-maritime/
-image: /assets/research/projects/main-scsc-llm-maritime.png
+image: /assets/research/projects/none.png
 
 title: LLM Agent for Maritime Data Analysis
 summary: Summary 작성해주세요
