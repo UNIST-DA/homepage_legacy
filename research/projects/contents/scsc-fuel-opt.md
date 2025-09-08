@@ -3,7 +3,7 @@ layout: project
 
 slug: scsc-fuel-opt
 permalink: /research/projects/contents/scsc-fuel-opt/
-image: /assets/research/projects/main-scsc-fuel-opt.png
+image: /assets/research/projects/none.png
 
 title: Fuel Consumption Prediction & Optimization
 summary: Summary 작성해주세요
