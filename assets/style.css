@@ -368,3 +368,25 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   color: var(--primary);         /* hover 시 색상 변경 */
   transform: translateY(-2px);   /* 살짝 위로 */
 }
+/* 공통 more-info 링크 스타일 + hover lift (헤더 밖에서도 사용) */
+.more-info{
+  display:inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  transition: transform .2s ease, color .2s ease;
+  white-space: nowrap;
+}
+.more-info:hover{
+  transform: translateY(-2px);
+  color: var(--primary);
+}
+
+/* 헤더 옆 배치용(남아 있어도 문제 없음) */
+.head h2 .more-info{ margin-left:10px; }
+
+/* Contact 왼쪽 카드 하단-오른쪽 고정 */
+.more-info-bottom{
+  margin-top: auto;          /* 카드 하단으로 밀기 */
+  align-self: flex-end;      /* 오른쪽 정렬 */
+  font-weight: 700;          /* 살짝 강조 (원하면 빼도 됨) */
+}
