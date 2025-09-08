@@ -46,26 +46,31 @@ permalink: /research/projects/
     margin-bottom:10px;
     background:#f3f4f6;
   }
-  .proj-title{ margin:0 0 8px; font-size:18px; line-height:1.35; }
 
-  .proj-meta{ 
-    margin:0 0 8px; 
-    display:flex; 
-    flex-wrap:wrap; 
-    gap:12px; 
-    align-items:center; 
+  /* title 더 크게 */
+  .proj-title{ margin:0 0 8px; font-size:20px; font-weight:700; line-height:1.4; }
+
+  /* category + organizer pill 스타일 */
+  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .meta-pill{
+    display:inline-flex; align-items:center;
+    padding:6px 14px;
+    border-radius:999px;
     font-size:13px;
-  }
-  .proj-category{
+    font-weight:550;
+    background:#e9f0fb;
     color:#0f1c48;
-    font-weight:600;
+    border:1px solid transparent;
   }
+
+  /* period는 별도 줄 */
   .proj-period{
     display:flex; 
     align-items:center; 
     gap:6px;
     color:#6b7280;
     font-size:13px;
+    margin-top:6px;
   }
   .proj-period svg{
     width:14px; 
@@ -74,7 +79,8 @@ permalink: /research/projects/
     stroke:#0f1c48;
   }
 
-  .proj-summary{ margin:0; color:#6b7280; }
+  /* summary 조금 더 작게 */
+  .proj-summary{ margin:6px 0 0; color:#6b7280; font-size:13px; }
 
   @media (max-width: 860px){
     .proj-card{ grid-column: span 12; }
@@ -87,11 +93,12 @@ permalink: /research/projects/
       {%- for p in site.data.projects -%}
         {%- assign page_match = site.pages | where: "slug", p.slug | first -%}
 
-        {%- assign card_title    = page_match.title    | default: p.title -%}
-        {%- assign card_summary  = page_match.summary  | default: p.summary -%}
-        {%- assign card_category = page_match.category | default: p.category -%}
-        {%- assign card_period   = page_match.period   | default: p.period -%}
-        {%- assign card_image    = page_match.image    | default: p.image -%}
+        {%- assign card_title     = page_match.title     | default: p.title -%}
+        {%- assign card_summary   = page_match.summary   | default: p.summary -%}
+        {%- assign card_category  = page_match.category  | default: p.category -%}
+        {%- assign card_period    = page_match.period    | default: p.period -%}
+        {%- assign card_organizer = page_match.organizer | default: p.organizer -%}
+        {%- assign card_image     = page_match.image     | default: p.image -%}
 
         <a
           class="proj-card"
@@ -105,21 +112,27 @@ permalink: /research/projects/
 
           <h3 class="proj-title">{{ card_title }}</h3>
 
+          <!-- Category + Organizer pill -->
           <div class="proj-meta">
             {%- if card_category -%}
-              <span class="proj-category">#{{ card_category }}</span>
+              <span class="meta-pill">{{ card_category }}</span>
             {%- endif -%}
-            {%- if card_period -%}
-              <span class="proj-period">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" 
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
-                </svg>
-                {{ card_period }}
-              </span>
+            {%- if card_organizer -%}
+              <span class="meta-pill">{{ card_organizer }}</span>
             {%- endif -%}
           </div>
+
+          <!-- Period 줄 -->
+          {%- if card_period -%}
+            <div class="proj-period">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                   stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+              </svg>
+              {{ card_period }}
+            </div>
+          {%- endif -%}
 
           {%- if card_summary -%}
             <p class="proj-summary">{{ card_summary }}</p>
