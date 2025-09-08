@@ -38,14 +38,6 @@ milestone:
     title: M.S./Ph.D. Combined Program, Industrial Engineering
     note: |
       Ulsan National Institute of Science and Technology (UNIST), Data Analytics Lab
-  <!--
-  - start: 2023.09
-    end: 2024.08
-    title: LG Electronics · LQC Project
-    note: |
-      Developed anomaly detection models for multivariate time-series sensor data
-      Addressed data imbalance and label noise with domain-knowledge filtering
-    -->
   - start: 2023.06
     end: 2024.08
     title: Undergraduate Intern
