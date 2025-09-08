@@ -391,3 +391,22 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   margin-bottom: 8px;       /* 아래 내용과 간격 */
 }
 
+/* Contact 카드: 제목과 more info를 같은 라인 좌/우 정렬 */
+.contact-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:8px;
+}
+
+/* 우측 more info 스타일 + hover lift */
+.more-info-inline{
+  font-weight:700;
+  color:var(--muted);
+  text-decoration:none;
+  transition:transform .2s ease, color .2s ease;
+}
+.more-info-inline:hover{
+  transform:translateY(-2px);
+  color:var(--primary);
+}
