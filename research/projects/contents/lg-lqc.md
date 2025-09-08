@@ -6,14 +6,14 @@ permalink: /research/projects/contents/lg-lqc/
 image: /assets/research/projects/lg-lqc-fig6.png
 
 title: "LG LQC (Line Quality Control)"
-summary: "Summary this project."
+summary: "Summary 작성해주세요"
 organizer: "LG Electronics"
 period: "2021.00 – 2024.00"
 category: "Artificial Intelligence in Quality Engineering"
 tags:
-  - tag 1
-  - tag 2
-  - tag 3
+  - Outlier Detection
+  - Manufacturing AI
+  - Quality Inspection
 
 ---
 
@@ -25,7 +25,7 @@ tags:
        alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
-    Figure 1. Proposed monitoring framework integrating domain knowledge with functional outlier detection.
+    Figure 1. 이미지 설명을 적어주세요
   </figcaption>
 </figure>
 
