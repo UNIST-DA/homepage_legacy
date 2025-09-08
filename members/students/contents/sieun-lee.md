@@ -69,10 +69,3 @@ milestone:
 
 ---
 
-### Current Work
-- This is an **example!!** 
-  
-### Notes for Collaboration
-1. This is an **example!!** 
-2. This is an **example!!** 
-3. This is an **example!!** 
