@@ -25,7 +25,7 @@ tags:
        alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
-    Figure 1. Proposed monitoring framework integrating domain knowledge with functional outlier detection.
+    Figure 1. 이미지 설명을 적어주세요
   </figcaption>
 </figure>
 
