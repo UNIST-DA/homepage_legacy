@@ -303,3 +303,11 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   padding: 6px 12px;      /* (선택) 버튼 여백 */
   white-space: nowrap;    /* 줄바꿈 방지 */
 }
+/* 카드 안의 pill 버튼은 가로로 늘어나지 않게 */
+.card.card-pad > .pill{
+  align-self: flex-start;          /* stretch 방지 (핵심) */
+  display: inline-flex !important; /* 글자만큼 */
+  width: auto !important;
+  max-width: max-content;          /* 내용 너비만큼 */
+  white-space: nowrap;
+}
