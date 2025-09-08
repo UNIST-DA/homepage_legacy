@@ -24,9 +24,13 @@ Project detail layout (page-driven, no URLs):
       <p class="muted" style="margin:0">{{ page.summary }}</p>
     {%- endif -%}
 
-    {%- if page.organizer -%}
-      <p class="muted" style="margin:6px 0 0">
-        <span style="font-weight:600;color:#6b7280;">Organizer</span> : {{ page.organizer }}
+    {%- assign organizer = page.organizer -%}
+    {%- assign period = page.period -%}
+    {%- if organizer or period -%}
+      <p style="margin:6px 0 0; font-weight:600; color:#0f1c48;">
+        {%- if organizer -%}{{ organizer }}{%- endif -%}
+        {%- if organizer and period -%} / {%- endif -%}
+        {%- if period -%}{{ period }}{%- endif -%}
       </p>
     {%- endif -%}
   </div>
