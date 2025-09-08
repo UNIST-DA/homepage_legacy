@@ -297,3 +297,9 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   margin-top:auto;          /* 아래로 밀기 */
   display:inline-block;
 }
+.pill {
+  display: inline-flex;   /* 글자 길이만큼만 차지 */
+  width: auto;            /* 고정폭 제거 */
+  padding: 6px 12px;      /* (선택) 버튼 여백 */
+  white-space: nowrap;    /* 줄바꿈 방지 */
+}
