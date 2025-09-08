@@ -3,13 +3,26 @@ layout: default
 ---
 
 {%- comment -%}
-  Project detail layout (clean vertical; organizer/participants + tags split).
-  Each project page (.md) should set `slug:` in front matter,
-  which matches an item in `_data/projects.yml`.
+  Project detail layout (clean vertical; organizer moved under summary,
+  participants removed; category as colored badge with period next to it).
 {%- endcomment -%}
 
 {%- assign project = site.data.projects | where: "slug", page.slug | first -%}
 {%- assign title_fallback = page.title | default: (project and project.title) | default: page.slug -%}
+
+{%- assign organizer = page.organizer | default: (project and project.organizer) -%}
+{%- assign category  = page.category  | default: (project and project.category) -%}
+{%- assign period    = page.period    | default: (project and project.period) -%}
+{%- assign tags      = page.tags      | default: (project and project.tags) -%}
+{%- assign cover_img = page.image     | default: (project and project.image) -%}
+{%- assign cover_cap = page.image_caption | default: (project and project.image_caption) -%}
+
+{%- comment -%}
+  Optional: set category color via page.category_color or project.category_color.
+  Fallback color is indigo-ish.
+{%- endcomment -%}
+{%- assign category_color = page.category_color | default: (project and project.category_color) | default: '#E0E7FF' -%}
+{%- assign category_text  = page.category_text_color | default: (project and project.category_text_color) | default: '#1F2937' -%}
 
 <div class="page-hero">
   <div class="container">
@@ -21,66 +34,62 @@ layout: default
     {%- if project and project.summary -%}
       <p class="muted" style="margin:0">{{ project.summary }}</p>
     {%- endif -%}
+    {%- if organizer -%}
+      <p class="proj-organizer"><span class="label">Organizer</span>{{ organizer }}</p>
+    {%- endif -%}
   </div>
 </div>
 
 <style>
-  /* ===== minimal project page ===== */
+  /* ===== minimal project page (reworked) ===== */
   .proj-wrap{ max-width:900px; margin:0 auto; }
-  .proj-meta{ margin:10px 0 0; display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center; }
-  .pill{ display:inline-flex; align-items:center; gap:6px; padding:2px 10px; border:1px solid #e5e7eb; border-radius:999px; font-size:12px; color:#374151; background:#fff; }
-  .pill-label{ color:#6b7280; font-weight:500; margin-right:-2px; }
-  .pill-compact{ padding:2px 8px; }
+  .proj-topline{ margin:14px 0 8px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+
+  .cat-badge{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:4px 10px; border-radius:999px; font-size:12px; font-weight:600;
+    background: var(--cat-bg); color: var(--cat-fg);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
   .proj-period{ color:#6b7280; font-size:13px; }
-  /* tags line (ghost/transparent chips) */
-  .proj-tags{ margin:6px 0 18px; display:flex; flex-wrap:wrap; gap:6px; }
-  .tag-ghost{ display:inline-flex; align-items:center; padding:2px 8px; border:1px solid #e5e7eb; border-radius:999px; font-size:12px; color:#6b7280; background:transparent; }
+
+  .proj-tags{ margin:10px 0 18px; display:flex; flex-wrap:wrap; gap:6px; }
+  .tag-ghost{
+    display:inline-flex; align-items:center; padding:2px 8px;
+    border:1px solid #e5e7eb; border-radius:999px; font-size:12px; color:#6b7280; background:transparent;
+  }
 
   .proj-sep{ height:1px; background:#f0f2f5; border:0; margin:14px 0 24px; }
   .proj-hero-img{ width:100%; height:auto; border-radius:10px; object-fit:cover; margin:0 0 8px; }
   .proj-caption{ margin:4px 0 18px; color:#6b7280; font-size:14px; }
+
   .proj-links{ margin:22px 0 0; padding:0; list-style:none; }
   .proj-links li+li{ margin-top:6px; }
   .proj-links a{ text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:8px; }
-  .proj-links svg{ flex:0 0 auto }
-  @media (max-width: 720px){
+
+  .proj-organizer{ margin:8px 0 0; color:#374151; font-size:14px; }
+  .proj-organizer .label{ color:#6b7280; font-weight:500; margin-right:6px; }
+
+  @media (max-width:720px){
     .proj-wrap{ padding:0 2px; }
   }
 </style>
 
 <main class="container">
   {%- if project -%}
-  <article class="proj-wrap">
+  <article class="proj-wrap" style="--cat-bg: {{ category_color }}; --cat-fg: {{ category_text }};">
 
-    <!-- Meta row 1: Organizer / Participants / Category / Period -->
-    <div class="proj-meta">
-      {%- assign organizer = page.organizer | default: project.organizer -%}
-      {%- assign participants = page.participants | default: project.participants -%}
-      {%- assign category = page.category   | default: project.category -%}
-      {%- assign period   = page.period     | default: project.period -%}
-
-      {%- if organizer -%}
-        <span class="pill"><span class="pill-label">Organizer</span>{{ organizer }}</span>
-      {%- endif -%}
-
-      {%- if participants and participants.size -%}
-        <span class="pill">
-          <span class="pill-label">Participants</span>
-          {{ participants | join: ", " }}
-        </span>
-      {%- endif -%}
-
+    <!-- Top line: Category badge + Period -->
+    <div class="proj-topline">
       {%- if category -%}
-        <span class="pill pill-compact">{{ category }}</span>
+        <span class="cat-badge">{{ category }}</span>
       {%- endif -%}
-
       {%- if period -%}
         <span class="proj-period">{{ period }}</span>
       {%- endif -%}
     </div>
 
-    <!-- Meta row 2: Tags (transparent chips) -->
-    {%- assign tags = page.tags | default: project.tags -%}
+    <!-- Tags (transparent chips) -->
     {%- if tags and tags.size > 0 -%}
       <div class="proj-tags">
         {%- for t in tags -%}
@@ -91,16 +100,14 @@ layout: default
 
     <hr class="proj-sep">
 
-    {%- if project.image or page.image -%}
-      <img class="proj-hero-img"
-           src="{{ (page.image | default: project.image) | relative_url }}"
-           alt="{{ project.title | default: title_fallback }}">
-      {%- if project.image_caption or page.image_caption -%}
-        <p class="proj-caption">{{ page.image_caption | default: project.image_caption }}</p>
+    {%- if cover_img -%}
+      <img class="proj-hero-img" src="{{ cover_img | relative_url }}" alt="{{ project.title | default: title_fallback }}">
+      {%- if cover_cap -%}
+        <p class="proj-caption">{{ cover_cap }}</p>
       {%- endif -%}
     {%- endif -%}
 
-    <!-- Project body (.md content) -->
+    <!-- Project body -->
     <div class="prose">
       {{ content }}
     </div>
