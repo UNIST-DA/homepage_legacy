@@ -48,21 +48,19 @@ permalink: /research/projects/
   }
   .proj-title{ margin:0 0 8px; font-size:18px; line-height:1.35; }
 
-  /* 개별 페이지와 유사한 메타 스타일 */
+  /* 메타 텍스트 (카테고리 텍스트 + 달력 아이콘 기간) */
   .proj-meta{ 
-  margin:0 0 8px; 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:12px; 
-  align-items:center; 
-  font-size:13px;
+    margin:0 0 8px; 
+    display:flex; 
+    flex-wrap:wrap; 
+    gap:12px; 
+    align-items:center; 
+    font-size:13px;
   }
-  /* 카테고리 텍스트 (#으로 시작) */
   .proj-category{
     color:#0f1c48;
     font-weight:600;
   }
-  /* 기간 (아이콘 + 텍스트) */
   .proj-period{
     display:flex; 
     align-items:center; 
@@ -88,35 +86,42 @@ permalink: /research/projects/
   <section>
     <div class="proj-grid">
       {%- for p in site.data.projects -%}
+        {%- comment -%}
+        md(front matter)의 image가 있으면 그걸 우선 사용,
+        없으면 projects.yml의 image를 사용한다.
+        동일 slug의 페이지를 찾아서 page_image를 읽는다.
+        {%- endcomment -%}
+        {%- assign page_match = site.pages | where: "slug", p.slug | first -%}
+        {%- assign page_image = page_match.image -%}
+        {%- assign card_image = page_image | default: p.image -%}
+
         <a
           class="proj-card"
           href="{{ '/research/projects/contents/' | append: p.slug | append: '/' | relative_url }}"
           id="{{ p.slug }}"
           data-slug="{{ p.slug }}"
         >
-          {%- if p.image -%}
-            <img class="proj-thumb" src="{{ p.image | relative_url }}" alt="{{ p.title }}">
+          {%- if card_image -%}
+            <img class="proj-thumb" src="{{ card_image | relative_url }}" alt="{{ p.title }}">
           {%- endif -%}
 
           <h3 class="proj-title">{{ p.title }}</h3>
 
-            <!-- 카드 안 -->
-            <div class="proj-meta">
-              {%- if p.category -%}
-                <span class="proj-category">#{{ p.category }}</span>
-              {%- endif -%}
-            
-              {%- if p.period -%}
-                <span class="proj-period">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                       stroke-width="2" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" 
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
-                  </svg>
-                  {{ p.period }}
-                </span>
-              {%- endif -%}
-            </div>
+          <div class="proj-meta">
+            {%- if p.category -%}
+              <span class="proj-category">#{{ p.category }}</span>
+            {%- endif -%}
+            {%- if p.period -%}
+              <span class="proj-period">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                     stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" 
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                </svg>
+                {{ p.period }}
+              </span>
+            {%- endif -%}
+          </div>
 
           {%- if p.summary -%}
             <p class="proj-summary">{{ p.summary }}</p>
