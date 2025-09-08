@@ -31,7 +31,7 @@ layout: default
     {%- assign organizer = page.organizer | default: project.organizer -%}
     {%- if organizer -%}
       <p class="muted" style="margin:6px 0 0">
-        <span style="font-weight:600;color:#6b7280;">Organizer</span> · {{ organizer }}
+        <span style="font-weight:600;color:#6b7280;">Organizer</span> : {{ organizer }}
       </p>
     {%- endif -%}
   </div>
@@ -39,7 +39,10 @@ layout: default
 
 <style>
   /* ===== Project page styles ===== */
-  .proj-wrap{ max-width:900px; margin:0 auto; }
+  .proj-wrap{
+    width:100%;
+    margin:0 auto;
+  }
   .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
 
   /* Colored category badge */
