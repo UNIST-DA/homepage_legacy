@@ -3,8 +3,12 @@ layout: default
 ---
 
 {%- comment -%}
-  Project detail layout (clean vertical; organizer moved under summary,
-  participants removed; category as colored badge with period next to it).
+  Project detail layout (v2)
+  - participants 제거
+  - category: 고정 색 배지
+  - period: 배지 오른쪽
+  - organizer: summary 아래 텍스트
+  - tags: 투명 칩 유지
 {%- endcomment -%}
 
 {%- assign project = site.data.projects | where: "slug", page.slug | first -%}
@@ -16,13 +20,6 @@ layout: default
 {%- assign tags      = page.tags      | default: (project and project.tags) -%}
 {%- assign cover_img = page.image     | default: (project and project.image) -%}
 {%- assign cover_cap = page.image_caption | default: (project and project.image_caption) -%}
-
-{%- comment -%}
-  Optional: set category color via page.category_color or project.category_color.
-  Fallback color is indigo-ish.
-{%- endcomment -%}
-{%- assign category_color = page.category_color | default: (project and project.category_color) | default: '#E0E7FF' -%}
-{%- assign category_text  = page.category_text_color | default: (project and project.category_text_color) | default: '#1F2937' -%}
 
 <div class="page-hero">
   <div class="container">
@@ -41,7 +38,12 @@ layout: default
 </div>
 
 <style>
-  /* ===== minimal project page (reworked) ===== */
+  /* ===== project page (unified badge color) ===== */
+  :root{
+    --cat-bg: #EEF2FF;   /* 통일 배경색 */
+    --cat-fg: #3730A3;   /* 통일 텍스트색 */
+  }
+
   .proj-wrap{ max-width:900px; margin:0 auto; }
   .proj-topline{ margin:14px 0 8px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 
@@ -77,7 +79,7 @@ layout: default
 
 <main class="container">
   {%- if project -%}
-  <article class="proj-wrap" style="--cat-bg: {{ category_color }}; --cat-fg: {{ category_text }};">
+  <article class="proj-wrap">
 
     <!-- Top line: Category badge + Period -->
     <div class="proj-topline">
@@ -107,7 +109,7 @@ layout: default
       {%- endif -%}
     {%- endif -%}
 
-    <!-- Project body -->
+    <!-- Project body (.md content) -->
     <div class="prose">
       {{ content }}
     </div>
