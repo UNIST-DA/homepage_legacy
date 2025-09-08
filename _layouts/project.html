@@ -5,8 +5,8 @@ layout: default
 {%- comment -%}
 Project detail layout (page-driven, no data file):
 - Title + Summary
-- Category badge + Organizer/Period (옆에)
-- Tags as transparent chips
+- Organizer, Period, Category 모두 pill 스타일 박스로 표시
+- Tags는 연한 회색 칩
 - Hero image + caption
 - Body content
 {%- endcomment -%}
@@ -30,10 +30,10 @@ Project detail layout (page-driven, no data file):
 
 <style>
   .proj-wrap{ width:100%; margin:0 auto; }
-  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
 
-  /* 카테고리 배지 */
-  .cat-badge{
+  /* 메타 pill 스타일 */
+  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .meta-pill{
     display:inline-flex; align-items:center;
     padding:6px 14px;
     border-radius:999px;
@@ -42,13 +42,6 @@ Project detail layout (page-driven, no data file):
     background:#e9f0fb;
     color:#0f1c48;
     border:1px solid transparent;
-  }
-
-  /* Organizer + Period 텍스트 */
-  .proj-org-period{
-    font-size:13px;
-    font-weight:600;
-    color:#0f1c48;
   }
 
   /* 태그 (연한 회색 칩) */
@@ -74,18 +67,18 @@ Project detail layout (page-driven, no data file):
 <main class="container">
   <article class="proj-wrap">
 
-    <!-- Row: Category badge + Organizer/Period -->
+    <!-- Row: Organizer + Period + Category -->
     <div class="proj-meta">
-      {%- if page.category -%}
-        <span class="cat-badge">{{ page.category }}</span>
+      {%- if page.organizer -%}
+        <span class="meta-pill">{{ page.organizer }}</span>
       {%- endif -%}
 
-      {%- if page.organizer or page.period -%}
-        <span class="proj-org-period">
-          {%- if page.organizer -%}{{ page.organizer }}{%- endif -%}
-          {%- if page.organizer and page.period -%} / {%- endif -%}
-          {%- if page.period -%}{{ page.period }}{%- endif -%}
-        </span>
+      {%- if page.period -%}
+        <span class="meta-pill">{{ page.period }}</span>
+      {%- endif -%}
+
+      {%- if page.category -%}
+        <span class="meta-pill">{{ page.category }}</span>
       {%- endif -%}
     </div>
 
