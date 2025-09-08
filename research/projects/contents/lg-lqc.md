@@ -24,9 +24,9 @@ image_caption: "Proposed monitoring framework integrating domain knowledge with 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/lg-lqc-fig6.png' | relative_url }}" 
        alt="Monitoring framework integrating domain knowledge" 
-       style="width:75%;border-radius:8px;">
+       style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
-    Figure 1. 이미지 캡션도 달 수 있어요.
+    Figure 1. Proposed monitoring framework integrating domain knowledge with functional outlier detection.
   </figcaption>
 </figure>
 
