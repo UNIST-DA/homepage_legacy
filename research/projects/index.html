@@ -50,17 +50,15 @@ permalink: /research/projects/
   /* title 더 크게 */
   .proj-title{ margin:0 0 8px; font-size:20px; font-weight:700; line-height:1.4; }
 
-  /* category + organizer pill 스타일 */
-  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
-  .meta-pill{
-    display:inline-flex; align-items:center;
-    padding:2px 8px;
-    border-radius:999px;
-    font-size:11px;
-    font-weight:600;
-    background:#e9f0fb;
-    color:#0f1c48;
-    border:1px solid transparent;
+  /* category + organizer 텍스트 스타일 */
+  .proj-meta-text{
+    margin:6px 0 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:13px;
+    font-weight:400;   /* 얇게 */
+    color:#0f1c48;     /* 남색 */
   }
 
   /* period는 별도 줄 */
@@ -112,13 +110,13 @@ permalink: /research/projects/
 
           <h3 class="proj-title">{{ card_title }}</h3>
 
-          <!-- Category + Organizer pill -->
-          <div class="proj-meta">
+          <!-- Category + Organizer (plain text) -->
+          <div class="proj-meta-text">
             {%- if card_category -%}
-              <span class="meta-pill">{{ card_category }}</span>
+              <span>{{ card_category }}</span>
             {%- endif -%}
             {%- if card_organizer -%}
-              <span class="meta-pill">{{ card_organizer }}</span>
+              <span>{{ card_organizer }}</span>
             {%- endif -%}
           </div>
 
