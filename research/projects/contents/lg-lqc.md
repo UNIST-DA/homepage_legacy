@@ -9,7 +9,7 @@ title: Domain-Knowledge-Informed Functional Outlier Detection for Line Quality C
 summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
 organizer: LG Electronics
 period: 2021.00 – 2024.00
-category: Artificial Intelligence in Quality Engineering
+category: AI in Quality Engineering
 tags:
   - Outlier Detection
   - Manufacturing AI
