@@ -3,23 +3,13 @@ layout: default
 ---
 
 {%- comment -%}
-  Project detail layout (v2)
-  - participants 제거
-  - category: 고정 색 배지
-  - period: 배지 오른쪽
-  - organizer: summary 아래 텍스트
-  - tags: 투명 칩 유지
+  Project detail layout (vertical; organizer under summary, category badge + period row, transparent tags).
+  Each project page (.md) should set `slug:` in front matter,
+  which matches an item in `_data/projects.yml`.
 {%- endcomment -%}
 
 {%- assign project = site.data.projects | where: "slug", page.slug | first -%}
 {%- assign title_fallback = page.title | default: (project and project.title) | default: page.slug -%}
-
-{%- assign organizer = page.organizer | default: (project and project.organizer) -%}
-{%- assign category  = page.category  | default: (project and project.category) -%}
-{%- assign period    = page.period    | default: (project and project.period) -%}
-{%- assign tags      = page.tags      | default: (project and project.tags) -%}
-{%- assign cover_img = page.image     | default: (project and project.image) -%}
-{%- assign cover_cap = page.image_caption | default: (project and project.image_caption) -%}
 
 <div class="page-hero">
   <div class="container">
@@ -31,48 +21,39 @@ layout: default
     {%- if project and project.summary -%}
       <p class="muted" style="margin:0">{{ project.summary }}</p>
     {%- endif -%}
+
+    {%- assign organizer = page.organizer | default: project.organizer -%}
     {%- if organizer -%}
-      <p class="proj-organizer"><span class="label">Organizer</span>{{ organizer }}</p>
+      <p class="muted" style="margin:6px 0 0"><span style="font-weight:600;color:#6b7280;">Organizer</span> · {{ organizer }}</p>
     {%- endif -%}
   </div>
 </div>
 
 <style>
-  /* ===== project page (unified badge color) ===== */
-  :root{
-    --cat-bg: #EEF2FF;   /* 통일 배경색 */
-    --cat-fg: #3730A3;   /* 통일 텍스트색 */
-  }
-
+  /* ===== minimal project page ===== */
   .proj-wrap{ max-width:900px; margin:0 auto; }
-  .proj-topline{ margin:14px 0 8px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-
+  /* meta row: category badge + period */
+  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; }
   .cat-badge{
-    display:inline-flex; align-items:center; gap:6px;
-    padding:4px 10px; border-radius:999px; font-size:12px; font-weight:600;
-    background: var(--cat-bg); color: var(--cat-fg);
-    border: 1px solid rgba(0,0,0,0.04);
+    display:inline-flex; align-items:center; padding:4px 10px; border-radius:8px;
+    font-size:12px; font-weight:600; letter-spacing:.2px;
+    background:#e6f0ff; color:#1d4ed8; /* blue-tinted filled badge */
+    border:1px solid #dbe7ff;
   }
   .proj-period{ color:#6b7280; font-size:13px; }
 
+  /* tags line (ghost/transparent chips) */
   .proj-tags{ margin:10px 0 18px; display:flex; flex-wrap:wrap; gap:6px; }
-  .tag-ghost{
-    display:inline-flex; align-items:center; padding:2px 8px;
-    border:1px solid #e5e7eb; border-radius:999px; font-size:12px; color:#6b7280; background:transparent;
-  }
+  .tag-ghost{ display:inline-flex; align-items:center; padding:2px 8px; border:1px solid #e5e7eb; border-radius:999px; font-size:12px; color:#6b7280; background:transparent; }
 
   .proj-sep{ height:1px; background:#f0f2f5; border:0; margin:14px 0 24px; }
   .proj-hero-img{ width:100%; height:auto; border-radius:10px; object-fit:cover; margin:0 0 8px; }
   .proj-caption{ margin:4px 0 18px; color:#6b7280; font-size:14px; }
-
   .proj-links{ margin:22px 0 0; padding:0; list-style:none; }
   .proj-links li+li{ margin-top:6px; }
   .proj-links a{ text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:8px; }
-
-  .proj-organizer{ margin:8px 0 0; color:#374151; font-size:14px; }
-  .proj-organizer .label{ color:#6b7280; font-weight:500; margin-right:6px; }
-
-  @media (max-width:720px){
+  .proj-links svg{ flex:0 0 auto }
+  @media (max-width: 720px){
     .proj-wrap{ padding:0 2px; }
   }
 </style>
@@ -81,17 +62,22 @@ layout: default
   {%- if project -%}
   <article class="proj-wrap">
 
-    <!-- Top line: Category badge + Period -->
-    <div class="proj-topline">
+    <!-- Meta row: Category badge + Period -->
+    <div class="proj-meta">
+      {%- assign category = page.category | default: project.category -%}
+      {%- assign period   = page.period   | default: project.period -%}
+
       {%- if category -%}
         <span class="cat-badge">{{ category }}</span>
       {%- endif -%}
+
       {%- if period -%}
         <span class="proj-period">{{ period }}</span>
       {%- endif -%}
     </div>
 
     <!-- Tags (transparent chips) -->
+    {%- assign tags = page.tags | default: project.tags -%}
     {%- if tags and tags.size > 0 -%}
       <div class="proj-tags">
         {%- for t in tags -%}
@@ -102,10 +88,12 @@ layout: default
 
     <hr class="proj-sep">
 
-    {%- if cover_img -%}
-      <img class="proj-hero-img" src="{{ cover_img | relative_url }}" alt="{{ project.title | default: title_fallback }}">
-      {%- if cover_cap -%}
-        <p class="proj-caption">{{ cover_cap }}</p>
+    {%- if project.image or page.image -%}
+      <img class="proj-hero-img"
+           src="{{ (page.image | default: project.image) | relative_url }}"
+           alt="{{ project.title | default: title_fallback }}">
+      {%- if project.image_caption or page.image_caption -%}
+        <p class="proj-caption">{{ page.image_caption | default: project.image_caption }}</p>
       {%- endif -%}
     {%- endif -%}
 
