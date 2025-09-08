@@ -3,10 +3,12 @@ layout: default
 ---
 
 {%- comment -%}
-Project detail layout (page-driven, no URLs):
-- 모든 메타는 page.* 에서만 읽음
-- title, summary, organizer, category, period, tags, image, image_caption 만 사용
-- 어떤 url(내부/외부/레포/리스트)도 렌더링하지 않음
+Project detail layout (page-driven, no data file):
+- Title + Summary
+- Category badge + Organizer/Period (옆에)
+- Tags as transparent chips
+- Hero image + caption
+- Body content
 {%- endcomment -%}
 
 {%- assign title_fallback = page.title | default: page.slug | default: 'Untitled Project' -%}
@@ -23,66 +25,76 @@ Project detail layout (page-driven, no URLs):
     {%- if page.summary -%}
       <p class="muted" style="margin:0">{{ page.summary }}</p>
     {%- endif -%}
-
-    {%- assign organizer = page.organizer -%}
-    {%- assign period = page.period -%}
-    {%- if organizer or period -%}
-      <p style="margin:6px 0 0; font-weight:600; color:#0f1c48;">
-        {%- if organizer -%}{{ organizer }}{%- endif -%}
-        {%- if organizer and period -%} / {%- endif -%}
-        {%- if period -%}{{ period }}{%- endif -%}
-      </p>
-    {%- endif -%}
   </div>
 </div>
 
 <style>
   .proj-wrap{ width:100%; margin:0 auto; }
-  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+  .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
 
-  /* 카테고리 배지: tag와 동일한 크기 */
+  /* 카테고리 배지 */
   .cat-badge{
-    display:inline-block;
+    display:inline-flex; align-items:center;
+    padding:6px 14px;
     border-radius:999px;
-    padding:4px 14px;
     font-size:13px;
     font-weight:600;
     background:#e9f0fb;
     color:#0f1c48;
+    border:1px solid transparent;
   }
-  .proj-period{ color:#6b7280; font-size:13px; }
 
+  /* Organizer + Period 텍스트 */
+  .proj-org-period{
+    font-size:13px;
+    font-weight:600;
+    color:#0f1c48;
+  }
+
+  /* 태그 (연한 회색 칩) */
   .proj-tags{ margin:10px 0 20px; display:flex; flex-wrap:wrap; gap:6px; }
   .tag-ghost{
     display:inline-flex; align-items:center; padding:2px 8px;
-    border:1px solid #9ca3af; border-radius:999px; font-size:12px; color:#9ca3af; background:transparent;
+    border:1px solid #d1d5db;
+    border-radius:999px;
+    font-size:12px;
+    color:#9ca3af;
+    background:#f9fafb;
   }
 
   .proj-sep{ height:1px; background:#f0f2f5; border:0; margin:16px 0 24px; }
   .proj-hero-img{ width:100%; height:auto; border-radius:10px; object-fit:cover; margin:0 0 8px; }
   .proj-caption{ margin:4px 0 18px; color:#6b7280; font-size:14px; }
 
-  .proj-warn{
-    margin:12px 0; padding:10px 12px; border:1px dashed #eab308; border-radius:10px;
-    background:#fffbeb; color:#92400e; font-size:13px;
+  @media (max-width: 720px){
+    .proj-wrap{ padding:0 2px; }
   }
-
-  @media (max-width: 720px){ .proj-wrap{ padding:0 2px; } }
 </style>
 
 <main class="container">
   <article class="proj-wrap">
 
-    <!-- Row: Category badge + Period -->
+    <!-- Row: Category badge + Organizer/Period -->
     <div class="proj-meta">
-      {%- if page.category -%}<span class="cat-badge">{{ page.category }}</span>{%- endif -%}
-      {%- if page.period   -%}<span class="proj-period">{{ page.period }}</span>{%- endif -%}
+      {%- if page.category -%}
+        <span class="cat-badge">{{ page.category }}</span>
+      {%- endif -%}
+
+      {%- if page.organizer or page.period -%}
+        <span class="proj-org-period">
+          {%- if page.organizer -%}{{ page.organizer }}{%- endif -%}
+          {%- if page.organizer and page.period -%} / {%- endif -%}
+          {%- if page.period -%}{{ page.period }}{%- endif -%}
+        </span>
+      {%- endif -%}
     </div>
 
     <!-- Tags -->
     {%- if page.tags and page.tags.size > 0 -%}
       <div class="proj-tags">
-        {%- for t in page.tags -%}<span class="tag-ghost">{{ t }}</span>{%- endfor -%}
+        {%- for t in page.tags -%}
+          <span class="tag-ghost">{{ t }}</span>
+        {%- endfor -%}
       </div>
     {%- endif -%}
 
@@ -92,23 +104,12 @@ Project detail layout (page-driven, no URLs):
     {%- if page.image -%}
       <img class="proj-hero-img" src="{{ page.image | relative_url }}" alt="{{ title_fallback }}">
       {%- if page.image_caption -%}<p class="proj-caption">{{ page.image_caption }}</p>{%- endif -%}
-    {%- else -%}
-      <div class="proj-warn">No <code>image</code> set in front matter. Set <code>image: /assets/…</code></div>
     {%- endif -%}
 
-    <!-- Body -->
+    <!-- Project body (.md content) -->
     <div class="prose">
       {{ content }}
     </div>
-
-    {%- unless page.category and page.period and page.image -%}
-      <div class="proj-warn">
-        Missing fields →
-        {%- unless page.category -%} <code>category</code>{% endunless -%}
-        {%- unless page.period -%} {{ page.category and ',' }} <code>period</code>{% endunless -%}
-        {%- unless page.image -%} {{ (page.category or page.period) and ',' }} <code>image</code>{% endunless -%}
-      </div>
-    {%- endunless -%}
 
   </article>
 </main>
