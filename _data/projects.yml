@@ -5,7 +5,6 @@
   title: "LG LQC (Line Quality Control)"
   summary: "Detect latent defects on production lines by fusing domain knowledge with functional outlier detection."
   organizer: "LG Electronics"
-  participants: ["학생1", "학생2"]
   period: "2021–2024"
   category: "Artificial Intelligence in Quality Engineering"
   tags:
