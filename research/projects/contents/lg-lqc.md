@@ -5,11 +5,11 @@ slug: lg-lqc
 permalink: /research/projects/contents/lg-lqc/
 image: /assets/research/projects/lg-lqc-fig6.png
 
-title: "LG LQC (Line Quality Control)"
-summary: "Summary 작성해주세요"
-organizer: "LG Electronics"
-period: "2021.00 – 2024.00"
-category: "Artificial Intelligence in Quality Engineering"
+title: Domain-Knowledge-Informed Functional Outlier Detection for Line Quality Control Systems
+summary: Summary 작성해주세요
+organizer: LG Electronics
+period: 2021.00 – 2024.00
+category: Artificial Intelligence in Quality Engineering
 tags:
   - Outlier Detection
   - Manufacturing AI
