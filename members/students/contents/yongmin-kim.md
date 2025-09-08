@@ -8,7 +8,7 @@ role: Combined Master-Doctor
 period: "2024.09 —"
 photo: /assets/members/students/yongmin-kim.jpg
 
-email: 
+email: kyoungm0709@unist.ac.kr
 links:
   - label: Google Scholar
     url: 
@@ -20,12 +20,20 @@ links:
     url: 
 
 tags:
-  - tags
+  - "Anomaly Detection"
+  - "Time-Series Data"
+  - "Meta-Learning"
 
 about: I'm 
 
 interests:
-  - interests
+  - Explaining anomalies at the mechanism/law level via causal discovery and system identification
+  - Handling irregular/missing time series & imputation (Neural ODE/CDE)
+  - Mechanism-driven anomaly detection in time series (causal discovery, system ID)
+  - Context- & constraint-aware AD for maritime (weather, route rules, resource limits)
+  - Meta-learning for rapid domain/task adaptation (few-shot, transfer across vessels/processes)
+
+Privacy-preserving analytics & robust, decision-centric evaluation (TLDP/VLDP, synthetic anomalies)
     
 milestone:
   - start: 2025.09
@@ -37,7 +45,7 @@ milestone:
 ---
 
 ### Current Work
-- This is an **example!!** 
+- Anomaly detection on AIS data using policy extraction
   
 ### Notes for Collaboration
 1. This is an **example!!** 
