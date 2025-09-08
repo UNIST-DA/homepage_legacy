@@ -311,3 +311,16 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   max-width: max-content;          /* 내용 너비만큼 */
   white-space: nowrap;
 }
+.head h2 .more-info {
+  font-size: 14px;
+  margin-left: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease; /* 애니메이션 */
+  display: inline-block; /* transform 적용하려면 inline-block 필요 */
+}
+
+.head h2 .more-info:hover {
+  transform: translateY(-2px); /* 위로 2px 떠오름 */
+  color: var(--primary);       /* (선택) hover 시 색도 살짝 강조 */
+}
