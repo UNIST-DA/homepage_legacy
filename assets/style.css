@@ -324,3 +324,27 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   transform: translateY(-2px); /* 위로 2px 떠오름 */
   color: var(--primary);       /* (선택) hover 시 색도 살짝 강조 */
 }
+/* Research 카드에만 hover 효과 */
+#research .card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+#research .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+}
+
+/* Activity 카드 hover 효과 제거 (덮어쓰기) */
+#activity .card {
+  transform: none !important;
+  box-shadow: var(--shadow-lg); /* 기본 그림자 유지 */
+}
+
+/* Activity의 View all 링크 스타일 */
+#activity .view-all {
+  font-weight: 700;              /* Bold */
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+#activity .view-all:hover {
+  transform: translateY(-2px);   /* 살짝 위로 */
+}
