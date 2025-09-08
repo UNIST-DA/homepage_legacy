@@ -1,21 +1,20 @@
 ---
 layout: project
+
 slug: lg-lqc
-title: "LG LQC (Line Quality Control)"
-summary: "Detect latent defects on production lines by fusing domain knowledge with functional outlier detection."
-organizer: "LG Electronics"
-period: "2021–2024"
-category: "Artificial Intelligence in Quality Engineering"
-tags:
-  - Functional Data Analysis
-  - Sequential Transformations
-  - Outlier Detection
-  - Manufacturing AI
-  - Quality Inspection
-  - Refrigerator Compressor
 permalink: /research/projects/contents/lg-lqc/
 image: /assets/research/projects/lg-lqc-fig6.png
-image_caption: "Proposed monitoring framework integrating domain knowledge with functional outlier detection (Figure 2)."
+
+title: "LG LQC (Line Quality Control)"
+summary: "Summary this project."
+organizer: "LG Electronics"
+period: "2021.00 – 2024.00"
+category: "Artificial Intelligence in Quality Engineering"
+tags:
+  - tag 1
+  - tag 2
+  - tag 3
+
 ---
 
 
@@ -31,9 +30,10 @@ image_caption: "Proposed monitoring framework integrating domain knowledge with 
 </figure>
 
 ---
+<!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
 
 ## Background
-Background 작성해주세요 (모든 항목 영어로 작성)
+Background 작성해주세요
 
 ## Goals
 - Goal 1
