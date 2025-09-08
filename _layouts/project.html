@@ -5,9 +5,10 @@ layout: default
 {%- comment -%}
 Project detail layout (page-driven):
 - Title + Summary
-- Organizer / Period / Category → 모두 pill 박스
+- Organizer / Category → pill 박스 (윗줄)
+- Period → 달력 아이콘 + 텍스트 (아랫줄, index와 동일 스타일)
 - Tags (연한 회색 칩)
-- Hero image & caption: 제거 (이미지는 md 본문에서 직접 figure로 넣음)
+- Hero image & caption: 제거 (이미지는 md 본문에서 figure로 직접 삽입)
 {%- endcomment -%}
 
 {%- assign title_fallback = page.title | default: page.slug | default: 'Untitled Project' -%}
@@ -30,7 +31,7 @@ Project detail layout (page-driven):
 <style>
   .proj-wrap{ width:100%; margin:0 auto; }
 
-  /* 메타 pill 스타일 */
+  /* 윗줄: organizer, category pill */
   .proj-meta{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
   .meta-pill{
     display:inline-flex; align-items:center;
@@ -43,15 +44,29 @@ Project detail layout (page-driven):
     border:1px solid transparent;
   }
 
+  /* 아랫줄: period (달력 아이콘 + 텍스트) */
+  .proj-period{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#6b7280;
+    font-size:13px;
+    margin-top:6px;
+  }
+  .proj-period svg{
+    width:14px;
+    height:14px;
+    flex:0 0 auto;
+    stroke:#0f1c48;
+  }
+
   /* 태그 (연한 회색 칩) */
   .proj-tags{ margin:10px 0 20px; display:flex; flex-wrap:wrap; gap:6px; }
   .tag-ghost{
     display:inline-flex; align-items:center; padding:2px 8px;
     border:1px solid #d1d5db;
-    border-radius:999px;
-    font-size:12px;
-    color:#9ca3af;
-    background:transparent;
+    border-radius:999px; font-size:12px;
+    color:#9ca3af; background:transparent;
   }
 
   .proj-sep{ height:1px; background:#f0f2f5; border:0; margin:16px 0 24px; }
@@ -64,18 +79,26 @@ Project detail layout (page-driven):
 <main class="container">
   <article class="proj-wrap">
 
-    <!-- Row: Organizer + Period + Category → pill -->
+    <!-- 윗줄: Organizer + Category (pill) -->
     <div class="proj-meta">
       {%- if page.organizer -%}
         <span class="meta-pill">{{ page.organizer }}</span>
-      {%- endif -%}
-      {%- if page.period -%}
-        <span class="meta-pill">{{ page.period }}</span>
       {%- endif -%}
       {%- if page.category -%}
         <span class="meta-pill">{{ page.category }}</span>
       {%- endif -%}
     </div>
+
+    <!-- 아랫줄: Period (달력 아이콘 + 텍스트) -->
+    {%- if page.period -%}
+      <div class="proj-period">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+        </svg>
+        {{ page.period }}
+      </div>
+    {%- endif -%}
 
     <!-- Tags -->
     {%- if page.tags and page.tags.size > 0 -%}
@@ -88,7 +111,7 @@ Project detail layout (page-driven):
 
     <hr class="proj-sep">
 
-    <!-- Body: 이미지/캡션은 md 본문에서 figure로 직접 넣기 -->
+    <!-- Body: 이미지는 md 본문에서 figure로 직접 넣기 -->
     <div class="prose">
       {{ content }}
     </div>
