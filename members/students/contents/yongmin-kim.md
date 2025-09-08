@@ -24,30 +24,39 @@ tags:
   - "Time-Series Data"
   - "Meta-Learning"
 
-about: I'm 
+about: I'm a M.S./Ph.D. combined student in Industrial Engineering at UNIST researching mechanism-aware anomaly detection on irregular time-series via behavior cloning and meta-learning, with a focus on context/constraint-aware, real-world systems.
 
 interests:
-  - Explaining anomalies at the mechanism/law level via causal discovery and system identification
-  - Handling irregular/missing time series & imputation (Neural ODE/CDE)
-  - Mechanism-driven anomaly detection in time series (causal discovery, system ID)
-  - Context- & constraint-aware AD for maritime (weather, route rules, resource limits)
-  - Meta-learning for rapid domain/task adaptation (few-shot, transfer across vessels/processes)
-
-Privacy-preserving analytics & robust, decision-centric evaluation (TLDP/VLDP, synthetic anomalies)
+  - Irregularly sampled time-series data analysis
+  - Time-series anomaly detection (context/constraint-aware)
+  - Mechanism-based detection via behavior cloning (policy/sequence modeling)
+  - Meta-learning for rapid cross-domain/task adaptation
     
 milestone:
-  - start: 2025.09
-    end: 2025.09
-    title: title
+  - start: 2024.09
+    end:
+    title: M.S./Ph.D. Combined Program, Industrial Engineering
     note: |
-      notes
-      notes
+      Ulsan National Institute of Science and Technology (UNIST), Data Analytics Lab
+  <!--
+  - start: 2023.09
+    end: 2024.08
+    title: LG Electronics · LQC Project
+    note: |
+      Developed anomaly detection models for multivariate time-series sensor data
+      Addressed data imbalance and label noise with domain-knowledge filtering
+    -->
+  - start: 2023.06
+    end: 2024.08
+    title: Undergraduate Intern
+    note: |
+      Ulsan National Institute of Science and Technology (UNIST), Data Analytics Lab
+  - start: 2021.03
+    end: 2024.08
+    title: B.S. in Industrial Engineering
+    note: |
+      Ulsan National Institute of Science and Technology (UNIST)
 ---
 
 ### Current Work
 - Anomaly detection on AIS data using policy extraction
-  
-### Notes for Collaboration
-1. This is an **example!!** 
-2. This is an **example!!** 
-3. This is an **example!!** 
