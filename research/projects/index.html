@@ -110,11 +110,16 @@ permalink: /research/projects/
 
           <h3 class="proj-title">{{ card_title }}</h3>
 
-          <!-- Category + Organizer (plain text) -->
+          <!-- Category + Organizer (plain text with middle dot) -->
           <div class="proj-meta-text">
             {%- if card_category -%}
               <span>{{ card_category }}</span>
             {%- endif -%}
+          
+            {%- if card_category and card_organizer -%}
+              <span>&middot;</span>
+            {%- endif -%}
+          
             {%- if card_organizer -%}
               <span>{{ card_organizer }}</span>
             {%- endif -%}
