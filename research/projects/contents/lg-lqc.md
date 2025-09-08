@@ -29,7 +29,7 @@ tags:
   </figcaption>
 </figure>
 
----
+
 <!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
 
 ## Background
@@ -43,5 +43,6 @@ Background 작성해주세요
 ## Methods
 - Method와 관련된 설명
 
+--- <!-- 이건 구분선 -->
 
 
