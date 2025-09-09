@@ -22,18 +22,21 @@ links:
 tags:
   - tags
 
-about: I'm 
+about: I'm a M.S/Ph.D. combined student in Industrial Engineering at UNIST data analytics lab.
 
 interests:
-  - interests
+  - Time series analysis
     
 milestone:
-  - start: 2025.09
-    end: 2025.09
-    title: title
-    note: |
-      notes
-      notes
+  - start: 2024.09
+    end: 
+    title: Combined M.S/Ph.D. in Industrial Engineering 
+    note: Ulsan National Institute of Science and Technology (UNIST)
+
+  - start: 2021.02
+    end: 2024.02
+    title: B.S. in Industrial Engineering
+    note: Konkuk university
 ---
 
 ### Current Work
