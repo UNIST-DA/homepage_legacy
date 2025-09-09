@@ -3,25 +3,60 @@
   url: /research/projects/contents/lg-lqc/
   image: /assets/research/projects/main-lg-lqc.png
   summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
-  period: 2021–2024
+  period: 2021 – 2024
 
 - slug: scsc-fuel-opt
   title: "Fuel Consumption Prediction & Optimization (SCSC)"
   url: /research/projects/contents/scsc-fuel-opt/
   image: /assets/research/projects/main-scsc-fuel.png
   summary: Predict and optimize fuel consumption by integrating AIS, weather, and engine sensors.
-  period: 2023–
+  period: 2023 –
 
 - slug: scsc-llm-maritime
   title: "LLM Agent for Maritime Data Analysis (SCSC)"
   url: /research/projects/contents/scsc-llm-maritime/
   image: /assets/research/projects/main-llm-maritime.png
   summary: Automating quality analysis and risk detection in large-scale AIS & maritime data with LLMs.
-  period: 2024–
+  period: 2024 –
 
 - slug: df-ts-drift
   title: "Domain-free Time-Series Drift Management"
   url: /research/projects/contents/df-ts-drift/
   image: /assets/research/projects/main-ts-drift.png
   summary: Robust detection and management of time-series distribution drift without domain constraints.
-  period: 2024–
+  period: 2024 –
+
+- slug: maritime-ad
+  title: "Maritime Anomaly Detection"
+  url: /research/projects/contents/maritime-ad/
+  image: /assets/research/projects/maritime-ad.png
+  summary: 
+  period: 2000 -
+
+- slug: lqc-od
+  title: "Domain Knowledge-Informed Functional Outlier Detection for LQC"
+  url: /research/projects/contents/lqc-od/
+  image: /assets/research/projects/lqc-od.png
+  summary: 
+  period: 2000 -
+
+- slug: cnn-gas
+  title: "CNN based Gas Mixture Classification"
+  url: /research/projects/contents/cnn-gas/
+  image: /assets/research/projects/cnn-gas.png
+  summary: 
+  period: 2000 -
+
+- slug: piston-lc
+  title: "Deep Learning Approach for Behavior of Piston of Linear Compressor"
+  url: /research/projects/contents/piston-lc/
+  image: /assets/research/projects/piston-lc.png
+  summary: 
+  period: 2000 -
+
+- slug: tao-eye-detect
+  title: "Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs"
+  url: /research/projects/contents/tao-eye-detect/
+  image: /assets/research/projects/tao-eye-detect.png
+  summary: 
+  period: 2000 -
