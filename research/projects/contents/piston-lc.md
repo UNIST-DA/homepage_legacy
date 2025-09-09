@@ -9,11 +9,12 @@ title: Deep Learning Approach for Behavior of Piston of Linear Compressor
 summary: 
 organizer: 
 period: 2021.00 – 2024.00
-category: 
+category: Time-Series Representation Learning
 tags:
-  - tag 1
-  - tag 2
-  - tag 3
+  - Refrigerator Compressor
+  - MLP
+  - Sensorless Technology
+  - Precision Control
 
 ---
 
