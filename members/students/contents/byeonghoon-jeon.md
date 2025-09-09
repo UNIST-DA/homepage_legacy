@@ -22,27 +22,23 @@ links:
 tags:
   - tags
 
-about: I'm a M.S/Ph.D. combined student in Industrial Engineering at UNIST data analytics lab.
+about: I'm a M.S/Ph.D. combined student in Industrial Engineering at UNIST data analytics lab. I am interested in spatio-temporal time-seires data analysis, and in leveraging generative models for missing value imputation and forecasting.
 
 interests:
   - Time series analysis
+  - Generative AI
     
 milestone:
   - start: 2024.09
     end: 
-    title: Combined M.S/Ph.D. in Industrial Engineering 
+    title: M.S./Ph.D. Combined Program, Industrial Engineering
     note: Ulsan National Institute of Science and Technology (UNIST)
 
   - start: 2021.02
     end: 2024.02
     title: B.S. in Industrial Engineering
-    note: Konkuk university
+    note: Konkuk University
 ---
 
 ### Current Work
-- This is an **example!!** 
-  
-### Notes for Collaboration
-1. This is an **example!!** 
-2. This is an **example!!** 
-3. This is an **example!!** 
+- Analyze AIS data considering weather conditions. 
