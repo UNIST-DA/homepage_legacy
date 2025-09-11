@@ -18,13 +18,6 @@ tags:
 
 ---
 
-<figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/piston-lc-1.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
-       style="display:block;margin:0 auto;width:60%;border-radius:8px;">
-</figure>
-
-
 <!-- Motivation, Goal, Methodology는 필수 작성 (전체 영어) -->
 
 ## Motivation
@@ -33,7 +26,6 @@ tags:
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/piston-lc-2.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
@@ -45,7 +37,6 @@ Build an automated data collection system which can measure current, voltage, an
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/piston-lc-3.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
@@ -55,6 +46,5 @@ Build an automated data collection system which can measure current, voltage, an
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/piston-lc-1.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
