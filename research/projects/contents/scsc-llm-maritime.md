@@ -8,7 +8,7 @@ image: /assets/research/projects/scsc-llm-maritime-1.png
 title: LLM Agent for Maritime Data Analysis
 summary: This project develops a Hybrid Prompt Agent that enables natural-language analysis of maritime AIS data by combining query classification with dynamic prompting.
 organizer: SCSC
-period: 2024.06 - 2025.08
+period: 2025.06 - 2025.08
 category: System Monitoring & Anomaly Detection
 tags:
   - LLM Agent
