@@ -17,10 +17,11 @@ tags:
 
 ---
 
-<!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
+<!-- Motivation, Goal, Methodology는 필수 작성 (전체 영어) -->
 
 ## Motivation
-The impact of congestion caused by the accident is transmitted to subsequent roads, and this congestion propagation is delayed and manifested on some subsequent roads.
+- The impact of congestion caused by the accident is transmitted to subsequent roads, and this congestion propagation is delayed and manifested on some subsequent roads.
+- Unpredictable delayed event, lack of histofical irregular event data make the pattern of traffic congestion propagation difficult.
 
 ## Goal
 To identify and quantify the propagation mechanisms and time-lag effects of accident-induced non-recurrent traffic congestion.
@@ -31,18 +32,10 @@ To identify and quantify the propagation mechanisms and time-lag effects of acci
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/traffic-cong-2.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
-  <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
-    Figure 1. 이미지 설명을 적어주세요
-  </figcaption>
 </figure>
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/traffic-cong-1.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
-  <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
-    Figure 1. 이미지 설명을 적어주세요
-  </figcaption>
 </figure>
