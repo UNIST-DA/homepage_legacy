@@ -30,17 +30,17 @@ tags:
 </figure>
 
 
-<!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
+<!-- Motivation, Goal, Methodology는 필수 작성 (전체 영어) -->
 
-## Problem
-Background 작성해주세요
+## Motivation
+Motivation 작성해주세요
 
-## Methods
+## Goal
 - Goal 1
 - Goal 2
 - Goal 3
 
-## Contributions
+## Methodology
 - Method와 관련된 설명
 
 --- 
