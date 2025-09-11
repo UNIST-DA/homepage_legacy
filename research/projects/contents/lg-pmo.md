@@ -5,7 +5,7 @@ slug: lg-pmo
 permalink: /research/projects/contents/lg-pmo/
 image: /assets/research/projects/lg-pmo-1.png
 
-title: Developing data-driven user satisfaction metrics for ThinQ contents in LG Upgradable home appliances
+title: Developing data-driven user engagement metrics for contents(functions) in Updatable home appliances
 summary: Developing a new metric for measuring customer satisfaction based on user activity data
 organizer: LG Electronics
 period: 2023.06 – 2024.05
