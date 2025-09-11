@@ -1,8 +1,8 @@
 - slug: lg-lqc
-  title: "LQC"
+  title: "Fault Detection via Domain-Knowledge-Based Training Data Refinement"
   url: /research/projects/contents/lg-lqc/
   image: /assets/research/projects/lg-lqc-1.png
-  summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
+  summary: A domain knowledge–based data refinement methodology for detecting defective products that cannot be filtered out in the LQC process.
   period: 2023.07 – 2024.10
 
 - slug: lg-pmo
