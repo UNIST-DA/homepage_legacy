@@ -3,7 +3,7 @@ layout: project
 
 slug: tao-eye-detect
 permalink: /research/projects/contents/tao-eye-detect/
-image: /assets/research/projects/tao-eye-detect.png
+image: /assets/research/projects/tao-eye-detect-1.png
 
 title: Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs
 summary: 
@@ -18,7 +18,7 @@ tags:
 ---
 
 
-<!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
+<!-- Motivation, Goal, Methodology는 필수 작성 (전체 영어) -->
 
 ## Motivation
 - Thyroid eye disease is one of the representative complications of thyroid function.
@@ -31,13 +31,7 @@ To develop an AI system for early monitoring and diagnosis of thyroid eye diseas
 ## Methodology
 Utilizing the power of Deep Learning, we aims to detect all present diseases from eye images.
 
-<!-- 이미지 삽입 방법 (링크 및 크기 조절 가능) -->
-
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/tao-eye-detect.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
+  <img src="{{ '/assets/research/projects/tao-eye-detect-1.png' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
-  <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
-    Active Thyroid-Associated Orbitopathy Detection
-  </figcaption>
 </figure>
