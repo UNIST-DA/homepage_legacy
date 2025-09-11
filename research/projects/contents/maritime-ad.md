@@ -6,8 +6,8 @@ permalink: /research/projects/contents/maritime-ad/
 image: /assets/research/projects/maritime-ad-1.png
 
 title: Maritime Anomaly Detection
-summary: 
-organizer: 
+summary: 작성중
+organizer: 작성중
 period: 2021.00 – 2024.00
 category: System Monitoring & Anomaly Detection
 tags:
@@ -33,12 +33,10 @@ The maritime industry is one of key component of global economy. It can be defin
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/maritime-ad-1.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/maritime-ad-2.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
