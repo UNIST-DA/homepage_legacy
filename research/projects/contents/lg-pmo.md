@@ -23,9 +23,6 @@ tags:
 ## Motivation
 In non-contractual settings, it is difficult to measure customer satisfaction as real churn is not directly observable. Furthermore, many existing metrics fail to accurately capture true user satisfaction.
 
-## Goal
-Goal 1
-
 ## Methodology
 Utilizing survival analysis techniques (e.g., the Kaplan-Meier estimator) to measure customer retention.
 
