@@ -19,7 +19,6 @@ tags:
 ---
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/lqc-od-1.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
