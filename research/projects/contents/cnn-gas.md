@@ -6,8 +6,8 @@ permalink: /research/projects/contents/cnn-gas/
 image: /assets/research/projects/cnn-gas-1.png
 
 title: CNN based Gas Mixture Classification
-summary: 
-organizer: 
+summary: 작성중
+organizer: 작성중
 period: 2021.00 – 2024.00
 category: Time‑Series Representation Learning
 tags:
@@ -29,13 +29,11 @@ An electronic nose is a device intended to detect odors or flavors. "Electronic 
 
 ## Methodology
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/cnn-gas-2.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
+  <img src="{{ '/assets/research/projects/cnn-gas-2.png' | relative_url }}"  
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/cnn-gas-1.png' | relative_url }}" 
-       alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
