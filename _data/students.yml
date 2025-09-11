@@ -142,12 +142,12 @@
   projects: []
   order: 100
 
-- slug: yejin-cho
-  name: Yejin-Cho
+- slug: yejin-jo
+  name: Yejin-Jo
   role: Intern
   period: "2025.07 —"
-  photo: /assets/members/students/yejin-cho.jpg
-  url: /members/students/contents/yejin-cho/
+  photo: /assets/members/students/yejin-jo.jpg
+  url: /members/students/contents/yejin-jo/
   summary: 
   email:
   website:
@@ -174,4 +174,18 @@
   projects: []
   order: 120
 
-
+- slug: uiyeob-kim
+  name: Uiyeob Kim
+  role: Intern
+  period: "2025.09 —"
+  photo: /assets/members/students/uiyeob-kim.jpg
+  url: /members/students/contents/uiyeob-kim/
+  summary: 
+  email:
+  website:
+  github:
+  scholar:
+  linkedin:
+  cv:
+  projects: []
+  order: 130
