@@ -18,7 +18,7 @@ tags:
 
 ---
 
-<!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
+<!-- Motivation, Goal, Methodology는 필수 작성 (전체 영어) -->
 
 ## Motivation
 An electronic nose is a device intended to detect odors or flavors. "Electronic sensing" or "e-sensing" technologies have undergone important developments from a technical and commercial point of view.
