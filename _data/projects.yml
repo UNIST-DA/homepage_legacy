@@ -3,74 +3,74 @@
   url: /research/projects/contents/lg-lqc/
   image: /assets/research/projects/lg-lqc-1.png
   summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
-  period: 2021 – 2024
+  period: 2021.00 – 2024.00
 
 - slug: scsc-fuel-opt
   title: "Fuel Consumption Prediction & Optimization (SCSC)"
   url: /research/projects/contents/scsc-fuel-opt/
   image: /assets/research/projects/none.png
   summary: Predict and optimize fuel consumption by integrating AIS, weather, and engine sensors.
-  period: 2023 –
+  period: 2023.00 –
 
 - slug: scsc-llm-maritime
   title: "LLM Agent for Maritime Data Analysis (SCSC)"
   url: /research/projects/contents/scsc-llm-maritime/
   image: /assets/research/projects/none.png
   summary: Automating quality analysis and risk detection in large-scale AIS & maritime data with LLMs.
-  period: 2024 –
+  period: 2024.00 –
 
 - slug: df-ts-drift
   title: "Domain-free Time-Series Drift Management"
   url: /research/projects/contents/df-ts-drift/
   image: /assets/research/projects/none.png
   summary: Robust detection and management of time-series distribution drift without domain constraints.
-  period: 2024 –
+  period: 2025.03–2028.02
 
 - slug: maritime-ad
   title: "Maritime Anomaly Detection"
   url: /research/projects/contents/maritime-ad/
   image: /assets/research/projects/maritime-ad-1.png
-  summary: 작성중
-  period: 2000 -
+  summary: An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.
+  period: 2000.00 - 2000.00
 
 - slug: lqc-od
   title: "Domain Knowledge-Informed Functional Outlier Detection for LQC"
   url: /research/projects/contents/lqc-od/
   image: /assets/research/projects/lqc-od-1.png
-  summary: 작성중
-  period: 2000 -
+  summary: An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.
+  period: 2000.00 - 2000.00
 
 - slug: cnn-gas
   title: "CNN based Gas Mixture Classification"
   url: /research/projects/contents/cnn-gas/
   image: /assets/research/projects/cnn-gas-1.png
-  summary: 작성중
-  period: 2000 -
+  summary: A CNN-based multi-channel time-series analysis method is proposed for accurate classification of gas mixtures using electronic nose sensor data.
+  period: 2000.00 - 2000.00
 
 - slug: piston-lc
   title: "Deep Learning Approach for Behavior of Piston of Linear Compressor"
   url: /research/projects/contents/piston-lc/
   image: /assets/research/projects/piston-lc-1.png
-  summary: 작성중
-  period: 2000 -
+  summary: Deep learning–based sensorless control of linear compressor pistons with over 90% performance improvement.
+  period: 2000.00 - 2000.00
 
 - slug: tao-eye-detect
   title: "Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs"
   url: /research/projects/contents/tao-eye-detect/
   image: /assets/research/projects/tao-eye-detect-1.png
-  summary: 작성중
-  period: 2000 -
+  summary: Developing a deep learning–based AI system for early monitoring and diagnosis of thyroid eye disease to enable timely treatment before irreversible damage.
+  period: 2000.00 - 2000.00
 
 - slug: traffic-cong
   title: "Prediction of Traffic Congestion Propagation"
   url: /research/projects/contents/traffic-cong/
   image: /assets/research/projects/traffic-cong-1.png
-  summary: 작성중
-  period: 2000 -
+  summary: Modeling and quantifying time-lagged accident-induced congestion using causal inference and bootstrap uncertainty analysis.
+  period: 2000.00 - 2000.00
 
 - slug: lg-pmo
   title: "Developing data-driven user satisfaction metrics for ThinQ contents in LG Upgradable home appliances"
   url: /research/projects/contents/lg-pmo/
   image: /assets/research/projects/lg-pmo-1.png
   summary: Developing a new metric for measuring customer satisfaction based on user activity data
-  period: 2023.06 - 2024.05
+  period: 2000.00 - 2000.00
