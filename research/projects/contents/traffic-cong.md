@@ -6,14 +6,14 @@ permalink: /research/projects/contents/traffic-cong/
 image: /assets/research/projects/traffic-cong-1.png
 
 title: Prediction of Traffic Congestion Propagation
-summary: 작성중
+summary: Modeling and quantifying the time-lagged propagation of accident-induced non-recurrent traffic congestion using causal inference and bootstrap-based uncertainty analysis.
 organizer: 작성중
 period: 2021.00 – 2024.00
-category: 
+category: Time-Series Representation Learning
 tags:
-  - tag 1
-  - tag 2
-  - tag 3
+  - Non-recurrent Congestion
+  - Propagation Mechanism
+  - Bootstrap Uncertainty
 
 ---
 
