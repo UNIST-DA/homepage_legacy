@@ -81,7 +81,7 @@ permalink: /members/alumni/
 </style>
 
 <main class="container">
-  {% assign items = site.data.alumni | sort: 'order' %}
+  {%- assign items_sorted = site.data.alumni | sort: 'grad_year' | reverse -%}
 
   {%- comment -%}
     역할 분류 규칙:
@@ -91,21 +91,50 @@ permalink: /members/alumni/
   {%- endcomment -%}
 
   <!-- Ph.D. -->
-  <section id="postdoc" class="alumni-wrap">
+  <section id="phd" class="alumni-wrap">
     <div class="container">
       <div class="head">
         <h2><span class="title-text">Ph.D.</span></h2>
       </div>
+
       <div class="alumni-grid">
-        {% assign has_postdoc = false %}
-        {% for a in items %}
+        {% assign has_phd = false %}
+        {% assign last_year = '' %}
+        {% for a in items_sorted %}
           {% assign r = a.role | default: '' | downcase %}
           {% if r contains 'ph.d.' %}
-            {% assign has_postdoc = true %}
+            {% assign has_phd = true %}
+            {% assign y = a.grad_year | default: 'Unknown' %}
+            {% if y != last_year %}
+              <h3 class="year-head">{{ y }}</h3>
+              {% assign last_year = y %}
+            {% endif %}
+
             <article class="alumni-card" id="alumni-{{ a.slug }}">
               {% if a.photo %}<img src="{{ a.photo | relative_url }}" alt="{{ a.name }}" class="alumni-photo" loading="lazy" decoding="async">{% endif %}
-              <h3 class="alumni-name">{{ a.name }}</h3>
-              {% if a.role %}<p class="alumni-role">{{ a.role }}</p>{% endif %}
+              <h3 class="alumni-name">
+                {{ a.name }}
+                <span class="alumni-icons" style="display:inline-flex; gap:6px; margin-left:6px;">
+                  {% if a.linkedin %}
+                    <a href="{{ a.linkedin }}" class="alumni-icon" target="_blank" rel="noopener" aria-label="{{ a.name }} on LinkedIn">
+                      <!-- LinkedIn -->
+                      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                  {% assign homepage_url = a.homepage | default: a.website %}
+                  {% if homepage_url %}
+                    <a href="{{ homepage_url }}" class="alumni-icon" target="_blank" rel="noopener" aria-label="{{ a.name }} personal website">
+                      <!-- Globe -->
+                      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+                        <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm6.93 7H16.7a12.8 12.8 0 0 0-1.7-4.03A8.03 8.03 0 0 1 18.93 9ZM12 4c.93 0 2.53 1.9 3.4 5H8.6C9.47 5.9 11.07 4 12 4ZM7.3 9H5.07A8.03 8.03 0 0 1 9 4.97 12.8 12.8 0 0 0 7.3 9Zm0 6H5.07A8.03 8.03 0 0 1 9 19.03 12.8 12.8 0 0 0 7.3 15Zm1.3 0h6.8c-.87 3.1-2.47 5-3.4 5s-2.53-1.9-3.4-5Zm9.33 0A12.8 12.8 0 0 1 16.7 19.03 8.03 8.03 0 0 0 18.93 15ZM20 12c0 .7-.07 1.37-.2 2H4.2A8.1 8.1 0 0 1 4 12c0-.7.07-1.37.2-2h15.6c.13.63.2 1.3.2 2Z"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                </span>
+              </h3>
+              {% if a.role %}<p class="alumni-role">{{ a.role }} · {{ a.grad_year }}</p>{% endif %}
               {% if a.current_position %}
                 <p class="alumni-first">
                   <strong>Current position:</strong> {{ a.current_position }}
@@ -120,27 +149,54 @@ permalink: /members/alumni/
             </article>
           {% endif %}
         {% endfor %}
-        {% if has_postdoc == false %}<p class="muted">No postdoctoral alumni listed yet.</p>{% endif %}
+        {% if has_phd == false %}<p class="muted">No Ph.D. alumni listed yet.</p>{% endif %}
       </div>
     </div>
   </section>
-  
+
   <!-- M.S. -->
   <section id="ms" class="alumni-wrap">
     <div class="container">
       <div class="head">
         <h2><span class="title-text">M.S.</span></h2>
       </div>
+
       <div class="alumni-grid">
         {% assign has_ms = false %}
-        {% for a in items %}
+        {% assign last_year = '' %}
+        {% for a in items_sorted %}
           {% assign r = a.role | default: '' | downcase %}
           {% if r contains 'm.s.' %}
             {% assign has_ms = true %}
+            {% assign y = a.grad_year | default: 'Unknown' %}
+            {% if y != last_year %}
+              <h3 class="year-head">{{ y }}</h3>
+              {% assign last_year = y %}
+            {% endif %}
+
             <article class="alumni-card" id="alumni-{{ a.slug }}">
               {% if a.photo %}<img src="{{ a.photo | relative_url }}" alt="{{ a.name }}" class="alumni-photo" loading="lazy" decoding="async">{% endif %}
-              <h3 class="alumni-name">{{ a.name }}</h3>
-              {% if a.role %}<p class="alumni-role">{{ a.role }}</p>{% endif %}
+              <h3 class="alumni-name">
+                {{ a.name }}
+                <span class="alumni-icons" style="display:inline-flex; gap:6px; margin-left:6px;">
+                  {% if a.linkedin %}
+                    <a href="{{ a.linkedin }}" class="alumni-icon" target="_blank" rel="noopener" aria-label="{{ a.name }} on LinkedIn">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                  {% assign homepage_url = a.homepage | default: a.website %}
+                  {% if homepage_url %}
+                    <a href="{{ homepage_url }}" class="alumni-icon" target="_blank" rel="noopener" aria-label="{{ a.name }} personal website">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+                        <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm6.93 7H16.7a12.8 12.8 0 0 0-1.7-4.03A8.03 8.03 0 0 1 18.93 9ZM12 4c.93 0 2.53 1.9 3.4 5H8.6C9.47 5.9 11.07 4 12 4ZM7.3 9H5.07A8.03 8.03 0 0 1 9 4.97 12.8 12.8 0 0 0 7.3 9Zm0 6H5.07A8.03 8.03 0 0 1 9 19.03 12.8 12.8 0 0 0 7.3 15Zm1.3 0h6.8c-.87 3.1-2.47 5-3.4 5s-2.53-1.9-3.4-5Zm9.33 0A12.8 12.8 0 0 1 16.7 19.03 8.03 8.03 0 0 0 18.93 15ZM20 12c0 .7-.07 1.37-.2 2H4.2A8.1 8.1 0 0 1 4 12c0-.7.07-1.37.2-2h15.6c.13.63.2 1.3.2 2Z"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                </span>
+              </h3>
+              {% if a.role %}<p class="alumni-role">{{ a.role }} · {{ a.grad_year }}</p>{% endif %}
               {% if a.current_position %}
                 <p class="alumni-first">
                   <strong>Current position:</strong> {{ a.current_position }}
@@ -155,27 +211,54 @@ permalink: /members/alumni/
             </article>
           {% endif %}
         {% endfor %}
-        {% if has_ms == false %}<p class="muted">No MS alumni listed yet.</p>{% endif %}
+        {% if has_ms == false %}<p class="muted">No M.S. alumni listed yet.</p>{% endif %}
       </div>
     </div>
   </section>
 
   <!-- Interns -->
-  <section id="intern" class="alumni-wrap">
+  <section id="interns" class="alumni-wrap">
     <div class="container">
       <div class="head">
         <h2><span class="title-text">Interns</span></h2>
       </div>
+
       <div class="alumni-grid">
         {% assign has_intern = false %}
-        {% for a in items %}
+        {% assign last_year = '' %}
+        {% for a in items_sorted %}
           {% assign r = a.role | default: '' | downcase %}
           {% if r contains 'intern' %}
             {% assign has_intern = true %}
+            {% assign y = a.grad_year | default: 'Unknown' %}
+            {% if y != last_year %}
+              <h3 class="year-head">{{ y }}</h3>
+              {% assign last_year = y %}
+            {% endif %}
+
             <article class="alumni-card" id="alumni-{{ a.slug }}">
               {% if a.photo %}<img src="{{ a.photo | relative_url }}" alt="{{ a.name }}" class="alumni-photo" loading="lazy" decoding="async">{% endif %}
-              <h3 class="alumni-name">{{ a.name }}</h3>
-              {% if a.role %}<p class="alumni-role">{{ a.role }}</p>{% endif %}
+              <h3 class="alumni-name">
+                {{ a.name }}
+                <span class="alumni-icons" style="display:inline-flex; gap:6px; margin-left:6px;">
+                  {% if a.linkedin %}
+                    <a href="{{ a.linkedin }}" class="alumni-icon" target="_blank" rel="noopener" aria-label="{{ a.name }} on LinkedIn">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                  {% assign homepage_url = a.homepage | default: a.website %}
+                  {% if homepage_url %}
+                    <a href="{{ homepage_url }}" class="alumni-icon" target="_blank" rel="noopener" aria-label="{{ a.name }} personal website">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+                        <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm6.93 7H16.7a12.8 12.8 0 0 0-1.7-4.03A8.03 8.03 0 0 1 18.93 9ZM12 4c.93 0 2.53 1.9 3.4 5H8.6C9.47 5.9 11.07 4 12 4ZM7.3 9H5.07A8.03 8.03 0 0 1 9 4.97 12.8 12.8 0 0 0 7.3 9Zm0 6H5.07A8.03 8.03 0 0 1 9 19.03 12.8 12.8 0 0 0 7.3 15Zm1.3 0h6.8c-.87 3.1-2.47 5-3.4 5s-2.53-1.9-3.4-5Zm9.33 0A12.8 12.8 0 0 1 16.7 19.03 8.03 8.03 0 0 0 18.93 15ZM20 12c0 .7-.07 1.37-.2 2H4.2A8.1 8.1 0 0 1 4 12c0-.7.07-1.37.2-2h15.6c.13.63.2 1.3.2 2Z"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                </span>
+              </h3>
+              {% if a.role %}<p class="alumni-role">{{ a.role }} · {{ a.grad_year }}</p>{% endif %}
               {% if a.current_position %}
                 <p class="alumni-first">
                   <strong>Current position:</strong> {{ a.current_position }}
@@ -195,3 +278,4 @@ permalink: /members/alumni/
     </div>
   </section>
 </main>
+

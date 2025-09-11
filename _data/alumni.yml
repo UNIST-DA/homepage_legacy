@@ -1,29 +1,33 @@
-# Alumni data for /members/students/ (cards only, no links)
-
 - slug: byungkook-koo
   name: "Byungkook Koo"
   role: "M.S."
+  grad_year: 2024
   current_position: "TBA"
+  linkedin: "https://www.linkedin.com/in/byungkook-koo/"
   photo: /assets/members/alumni/byungkook-koo.jpg
   order: 10
 
 - slug: jiin-kwak
   name: "Jiin Kwak"
   role: "M.S."
-  current_position: "LG Electronics"
+  grad_year: 2023
+  current_position: "Data Scientist, LG Electronics"
+  linkedin: "https://www.linkedin.com/in/ji-in-kwak-762788200/"
   photo: /assets/members/alumni/jiin-kwak.jpg
   order: 20
 
 - slug: juhui-lee
   name: "Juhui Lee"
   role: "M.S."
-  current_position: "THYROSCOPE Inc."
+  grad_year: 2021
+  current_position: "Data Scientist, THYROSCOPE Inc."
   photo: /assets/members/alumni/juhui-lee.jpg
   order: 30
 
 - slug: juyeong-lee
   name: "Juyeong Lee"
   role: "M.S."
+  grad_year: 2021
   current_position: "QRAFT"
   photo: /assets/members/alumni/juyeong-lee.jpg
   order: 40
@@ -31,48 +35,59 @@
 - slug: namu-kim
   name: "Namu Kim"
   role: "Intern"
-  current_position: "POSCO"
+  grad_year: 2020
+  current_position: "AI Researcher, KT"
+  linkedin: "https://www.linkedin.com/in/namu-kim-tree-kim/"
   photo: /assets/members/alumni/namu-kim.jpg
   order: 50
 
 - slug: yongkyung-oh
   name: "YongKyung Oh"
   role: "Ph.D."
+  grad_year: 2023
   current_position: "Postdoc, UCLA"
+  current_link: "http://yongkyung-oh.github.io/"
   photo: /assets/members/alumni/yongkyung-oh.jpg
   order: 60
 
 - slug: giheon-koh
   name: "Giheon Koh"
   role: "M.S."
-  current_position: "LG Display"
+  grad_year: 2023
+  current_position: "AI Researcher, LG Display"
+  linkedin: "https://www.linkedin.com/in/giheon-koh/"
   photo: /assets/members/alumni/giheon-koh.jpg
   order: 70
 
 - slug: gyeongjun-kim
   name: "Gyeongjun Kim"
   role: "M.S."
-  current_position: "CJ Logistics"
+  grad_year: 2023
+  current_position: "Data Scientist, CJ Logistics"
   photo: /assets/members/alumni/gyeongjun-kim.jpg
   order: 80
 
 - slug: heesun-kim
   name: "Heesun Kim"
   role: "M.S."
-  current_position: "LG Electronics"
+  grad_year: 2024
+  current_position: "Professional Researcher, LG Electronics"
   photo: /assets/members/alumni/heesun-kim.jpg
   order: 90
 
 - slug: jaemin-park
   name: "Jaemin Park"
   role: "M.S."
-  current_position: "THYROSCOPE Inc."
+  grad_year: 2020
+  current_position: "CEO, THYROSCOPE Inc."
+  linkedin: "https://www.linkedin.com/in/jaemy-park/"
   photo: /assets/members/alumni/jaemin-park.jpg
   order: 100
 
 - slug: jitae-yoo
   name: "Jitae Yoo"
   role: "M.S."
+  grad_year: 2023
   current_position: "LX Hausys"
   photo: /assets/members/alumni/jitae-yoo.jpg
   order: 110
@@ -80,28 +95,32 @@
 - slug: jonghwan-moon
   name: "JongHwan Moon"
   role: "M.S."
-  current_position: "LG Electronics"
+  grad_year: 2023
+  current_position: "Data Scientist, LG Electronics"
   photo: /assets/members/alumni/jonghwan-moon.jpg
   order: 120
 
 - slug: kwonin-yoon
   name: "Kwonin Yoon"
   role: "M.S."
-  current_position: "LG Electronics"
+  grad_year: 2022
+  current_position: "Data Scientist, LG Electronics"
   photo: /assets/members/alumni/kwonin-yoon.jpg
   order: 130
 
 - slug: jaehun-cho
   name: "Jaehun Cho"
   role: "M.S."
-  current_position: ""
+  grad_year: 2025
+  current_position: "TBA"
+  linkedin: "https://www.linkedin.com/in/jaehun-cho-80796a2a6/"
   photo: /assets/members/alumni/jaehun-cho.jpg
   order: 140
 
 - slug: taewon-kang
   name: "Taewon Kang"
   role: "M.S."
-  current_position: ""
+  grad_year: 2025
+  current_position: "Engineer, Posco Future M"
   photo: /assets/members/alumni/taewon-kang.jpg
   order: 150
-
