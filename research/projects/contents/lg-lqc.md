@@ -3,7 +3,7 @@ layout: project
 
 slug: lg-lqc
 permalink: /research/projects/contents/lg-lqc/
-image: /assets/research/projects/main-lg-lqc.png
+image: /assets/research/projects/lg-lqc-1.png
 
 title: Domain-Knowledge-Informed Functional Outlier Detection for Line Quality Control Systems
 summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
