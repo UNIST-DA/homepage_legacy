@@ -5,6 +5,20 @@
   summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
   period: 2021.00 – 2024.00
 
+- slug: lg-pmo
+  title: "Developing data-driven user satisfaction metrics for ThinQ contents in LG Upgradable home appliances"
+  url: /research/projects/contents/lg-pmo/
+  image: /assets/research/projects/lg-pmo-1.png
+  summary: Developing a new metric for measuring customer satisfaction based on user activity data
+  period: 2023.06 - 2024.05
+
+- slug: maritime-ad
+  title: "Maritime Anomaly Detection"
+  url: /research/projects/contents/maritime-ad/
+  image: /assets/research/projects/maritime-ad-1.png
+  summary: An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.
+  period: 2000.00 - 2000.00
+
 - slug: scsc-fuel-opt
   title: "Fuel Consumption Prediction & Optimization (SCSC)"
   url: /research/projects/contents/scsc-fuel-opt/
@@ -25,13 +39,6 @@
   image: /assets/research/projects/none.png
   summary: Robust detection and management of time-series distribution drift without domain constraints.
   period: 2025.03–2028.02
-
-- slug: maritime-ad
-  title: "Maritime Anomaly Detection"
-  url: /research/projects/contents/maritime-ad/
-  image: /assets/research/projects/maritime-ad-1.png
-  summary: An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.
-  period: 2000.00 - 2000.00
 
 - slug: lqc-od
   title: "Domain Knowledge-Informed Functional Outlier Detection for LQC"
@@ -68,9 +75,3 @@
   summary: Modeling and quantifying time-lagged accident-induced congestion using causal inference and bootstrap uncertainty analysis.
   period: 2000.00 - 2000.00
 
-- slug: lg-pmo
-  title: "Developing data-driven user satisfaction metrics for ThinQ contents in LG Upgradable home appliances"
-  url: /research/projects/contents/lg-pmo/
-  image: /assets/research/projects/lg-pmo-1.png
-  summary: Developing a new metric for measuring customer satisfaction based on user activity data
-  period: 2023.06 - 2024.05
