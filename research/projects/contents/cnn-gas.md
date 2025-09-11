@@ -21,10 +21,10 @@ tags:
 <!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
 
 ## Motivation
-An electronic nose is a device intended to detect odors or flavors. "electronic sensing" or "e-sensing" technologies have undergone important developments from a technical and commervial point of view
+An electronic nose is a device intended to detect odors or flavors. "Electronic sensing" or "e-sensing" technologies have undergone important developments from a technical and commercial point of view.
 
 ## Goal
-- To develop an anlysis method for classifying the mixture gas
+- To develop an anlysis method for classifying the mixture gas.
 - CNN(Convolution Neural Network) based time-series analysis method is proposed.
 
 ## Methodology
