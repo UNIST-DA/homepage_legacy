@@ -8,7 +8,7 @@ image: /assets/research/projects/main-lg-lqc.png
 title: Domain-Knowledge-Informed Functional Outlier Detection for Line Quality Control Systems
 summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
 organizer: LG Electronics
-period: 2021.00 – 2024.00
+period: 2021.00 - 2024.00
 category: AI in Quality Engineering
 tags:
   - Outlier Detection
