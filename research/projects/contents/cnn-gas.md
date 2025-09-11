@@ -3,7 +3,7 @@ layout: project
 
 slug: cnn-gas
 permalink: /research/projects/contents/cnn-gas/
-image: /assets/research/projects/cnn-gas.png
+image: /assets/research/projects/cnn-gas-1.png
 
 title: CNN based Gas Mixture Classification
 summary: 
@@ -18,10 +18,6 @@ tags:
 
 ---
 
-
-<!-- 이미지 삽입 방법 (링크 및 크기 조절 가능) -->
-
-
 <!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
 
 ## Motivation
@@ -33,11 +29,13 @@ An electronic nose is a device intended to detect odors or flavors. "electronic 
 
 ## Methodology
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/cnn-gas.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/cnn-gas-2.png' | relative_url }}" 
        alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
-  <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
-    
-  </figcaption>
 </figure>
 
+<figure style="margin:20px 0;text-align:center">
+  <img src="{{ '/assets/research/projects/cnn-gas-1.png' | relative_url }}" 
+       alt="Monitoring framework integrating domain knowledge" 
+       style="display:block;margin:0 auto;width:60%;border-radius:8px;">
+</figure>
