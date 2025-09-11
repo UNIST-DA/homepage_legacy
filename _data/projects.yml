@@ -1,28 +1,28 @@
 - slug: lg-lqc
   title: "LG LQC (Line Quality Control)"
   url: /research/projects/contents/lg-lqc/
-  image: /assets/research/projects/main-lg-lqc.png
+  image: /assets/research/projects/lg-lqc-1.png
   summary: Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.
   period: 2021 – 2024
 
 - slug: scsc-fuel-opt
   title: "Fuel Consumption Prediction & Optimization (SCSC)"
   url: /research/projects/contents/scsc-fuel-opt/
-  image: /assets/research/projects/main-scsc-fuel.png
+  image: /assets/research/projects/none.png
   summary: Predict and optimize fuel consumption by integrating AIS, weather, and engine sensors.
   period: 2023 –
 
 - slug: scsc-llm-maritime
   title: "LLM Agent for Maritime Data Analysis (SCSC)"
   url: /research/projects/contents/scsc-llm-maritime/
-  image: /assets/research/projects/main-llm-maritime.png
+  image: /assets/research/projects/none.png
   summary: Automating quality analysis and risk detection in large-scale AIS & maritime data with LLMs.
   period: 2024 –
 
 - slug: df-ts-drift
   title: "Domain-free Time-Series Drift Management"
   url: /research/projects/contents/df-ts-drift/
-  image: /assets/research/projects/main-ts-drift.png
+  image: /assets/research/projects/none.png
   summary: Robust detection and management of time-series distribution drift without domain constraints.
   period: 2024 –
 
@@ -66,4 +66,11 @@
   url: /research/projects/contents/traffic-cong/
   image: /assets/research/projects/traffic-cong-1.png
   summary: 작성중
+  period: 2000 -
+
+- slug: lg-pmo
+  title: "Developing data-driven user satisfaction metrics for ThinQ contents in LG Upgradable home appliances"
+  url: /research/projects/contents/lg-pmo/
+  image: /assets/research/projects/lg-pmo-1.png
+  summary: Developing a new metric for measuring customer satisfaction based on user activity data
   period: 2000 -
