@@ -29,34 +29,41 @@
 - slug: maritime-ad
   title: "Maritime Anomaly Detection"
   url: /research/projects/contents/maritime-ad/
-  image: /assets/research/projects/maritime-ad.png
-  summary: 
+  image: /assets/research/projects/maritime-ad-1.png
+  summary: 작성중
   period: 2000 -
 
 - slug: lqc-od
   title: "Domain Knowledge-Informed Functional Outlier Detection for LQC"
   url: /research/projects/contents/lqc-od/
-  image: /assets/research/projects/lqc-od.png
-  summary: 
+  image: /assets/research/projects/lqc-od-1.png
+  summary: 작성중
   period: 2000 -
 
 - slug: cnn-gas
   title: "CNN based Gas Mixture Classification"
   url: /research/projects/contents/cnn-gas/
-  image: /assets/research/projects/cnn-gas.png
-  summary: 
+  image: /assets/research/projects/cnn-gas-1.png
+  summary: 작성중
   period: 2000 -
 
 - slug: piston-lc
   title: "Deep Learning Approach for Behavior of Piston of Linear Compressor"
   url: /research/projects/contents/piston-lc/
-  image: /assets/research/projects/piston-lc.png
-  summary: 
+  image: /assets/research/projects/piston-lc-1.png
+  summary: 작성중
   period: 2000 -
 
 - slug: tao-eye-detect
   title: "Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs"
   url: /research/projects/contents/tao-eye-detect/
-  image: /assets/research/projects/tao-eye-detect.png
-  summary: 
+  image: /assets/research/projects/tao-eye-detect-1.png
+  summary: 작성중
+  period: 2000 -
+
+- slug: traffic-cong
+  title: "Prediction of Traffic Congestion Propagation"
+  url: /research/projects/contents/traffic-cong/
+  image: /assets/research/projects/traffic-cong-1.png
+  summary: 작성중
   period: 2000 -
