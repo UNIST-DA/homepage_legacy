@@ -27,11 +27,11 @@
   period: 2023.00 –
 
 - slug: scsc-llm-maritime
-  title: "LLM Agent for Maritime Data Analysis (SCSC)"
+  title: "Hybrid Prompt Agent for Conversational Maritime AIS Data Analysis"
   url: /research/projects/contents/scsc-llm-maritime/
-  image: /assets/research/projects/none.png
-  summary: Automating quality analysis and risk detection in large-scale AIS & maritime data with LLMs.
-  period: 2024.00 –
+  image: /assets/research/projects/scsc-llm-maritime-1.png
+  summary: This project develops a Hybrid Prompt Agent that enables natural-language analysis of maritime AIS data by combining query classification with dynamic prompting.
+  period: 2024.06 – 2025.08
 
 - slug: df-ts-drift
   title: "Domain-free Time-Series Drift Management"
