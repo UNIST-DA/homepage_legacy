@@ -6,7 +6,7 @@ permalink: /research/projects/contents/scsc-fuel-opt/
 image: /assets/research/projects/none.png
 
 title: Fuel Consumption Prediction & Optimization
-summary: Summary 작성해주세요
+summary: 작성중
 organizer: SCSC
 period: 2023.00 - 
 category: Time-Series Representation
