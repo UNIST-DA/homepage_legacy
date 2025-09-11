@@ -7,8 +7,8 @@ image: /assets/research/projects/piston-lc-1.png
 
 title: Deep Learning Approach for Behavior of Piston of Linear Compressor
 summary: Deep learning–based sensorless control of linear compressor pistons with over 90% performance improvement.
-organizer: 작성중
-period: 2000.00 – 2000.00
+# organizer: 작성중
+period: 2022.12 – 2023.12
 category: Time-Series Representation Learning
 tags:
   - Refrigerator Compressor
