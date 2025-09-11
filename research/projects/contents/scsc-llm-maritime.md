@@ -34,7 +34,7 @@ Motivation 작성해주세요
 <!-- 이미지 삽입 방법 (링크 및 크기 조절 가능) -->
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/scsc-llm-maritime-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/none.png' | relative_url }}" 
        alt="Monitoring framework integrating domain knowledge" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
