@@ -6,14 +6,15 @@ permalink: /research/projects/contents/tao-eye-detect/
 image: /assets/research/projects/tao-eye-detect-1.png
 
 title: Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs
-summary: 
-organizer: 
+summary: Developing a deep learning–based AI system for early monitoring and diagnosis of thyroid eye disease to enable timely treatment before irreversible damage.
+organizer: 작성중
 period: 2021.00 – 2024.00
-category: 
+category: System Monitoring & Anomaly Detection
 tags:
-  - tag 1
-  - tag 2
-  - tag 3
+  - TED
+  - CAS
+  - Early Diagnosis
+  - Ophthalmology Imaging
 
 ---
 
