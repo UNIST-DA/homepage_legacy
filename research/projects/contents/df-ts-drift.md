@@ -7,7 +7,7 @@ image: /assets/research/projects/none.png
 
 title: Domain-free Time-Series Drift Management
 summary: Development of domain-independent time-series drift monitoring, detection, and correction technology with a toolkit/platform software.
-organizer: 작성중
+organizer: Mid-Career Researcher Program, National Research Foundation of Korea (NRF)
 period: 2025.03–2028.02
 category: Artificial Intelligence in Quality Engineering
 tags:
