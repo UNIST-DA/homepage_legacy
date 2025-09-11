@@ -52,7 +52,7 @@
   url: /research/projects/contents/cnn-gas/
   image: /assets/research/projects/cnn-gas-1.png
   summary: A CNN-based multi-channel time-series analysis method is proposed for accurate classification of gas mixtures using electronic nose sensor data.
-  period: 2000.00 - 2000.00
+  period: 2020.03 - 2020.07
 
 - slug: piston-lc
   title: "Deep Learning Approach for Behavior of Piston of Linear Compressor"
@@ -73,5 +73,5 @@
   url: /research/projects/contents/traffic-cong/
   image: /assets/research/projects/traffic-cong-1.png
   summary: Modeling and quantifying time-lagged accident-induced congestion using causal inference and bootstrap uncertainty analysis.
-  period: 2000.00 - 2000.00
+  period: 2020.11 - 2022.10
 
