@@ -8,7 +8,7 @@ image: /assets/research/projects/lqc-od-1.png
 title: Domain Knowledge-Informed Functional Outlier Detection for LQC
 summary: An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.
 organizer: 작성중
-period: 2021.00 – 2024.00
+period: 2000.00 – 2000.00
 category: System Monitoring & Anomaly Detection
 tags:
   - Manufacturing
