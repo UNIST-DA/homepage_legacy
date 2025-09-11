@@ -33,13 +33,6 @@
   summary: This project develops a Hybrid Prompt Agent that enables natural-language analysis of maritime AIS data by combining query classification with dynamic prompting.
   period: 2025.06 – 2025.08
 
-- slug: df-ts-drift
-  title: "Domain-free Time-Series Drift Management"
-  url: /research/projects/contents/df-ts-drift/
-  image: /assets/research/projects/none.png
-  summary: Robust detection and management of time-series distribution drift without domain constraints.
-  period: 2025.03–2028.02
-
 - slug: lqc-od
   title: "Domain Knowledge-Informed Functional Outlier Detection for LQC"
   url: /research/projects/contents/lqc-od/
