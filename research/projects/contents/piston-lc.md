@@ -6,8 +6,8 @@ permalink: /research/projects/contents/piston-lc/
 image: /assets/research/projects/piston-lc-1.png
 
 title: Deep Learning Approach for Behavior of Piston of Linear Compressor
-summary: 
-organizer: 
+summary: 작성중
+organizer: 작성중
 period: 2021.00 – 2024.00
 category: Time-Series Representation Learning
 tags:
