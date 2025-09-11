@@ -6,8 +6,8 @@ permalink: /research/projects/contents/lqc-od/
 image: /assets/research/projects/lqc-od.png
 
 title: Domain Knowledge-Informed Functional Outlier Detection for LQC
-summary: 
-organizer: 
+summary: 작성중
+organizer: 작성중
 period: 2021.00 – 2024.00
 category: System Monitoring & Anomaly Detection
 tags:
