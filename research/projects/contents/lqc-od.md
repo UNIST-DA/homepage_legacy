@@ -23,10 +23,10 @@ tags:
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
-<!-- Background, Goals, Methods는 필수 작성 (전체 영어) -->
+<!-- Motivation, Goal, Methodology는 필수 작성 (전체 영어) -->
 
 ## Motivation
-- In the manufactureing process, time-series data are collected from multi-sensors and used for quality control.
+- In the manufacturing process, time-series data are collected from multi-sensors and used for quality control.
 - In the line quality control system (LQC) process, weak failures that are difficult to detect with conventional detection methods occur.
 
 ## Goal
@@ -34,4 +34,4 @@ tags:
 
 ## Methodology
 - The ST maximizes the time-series pattern of a tiny anomaly sample through various calculation.
-- We utilize domain knowledge of failure patterns to defiine new derivatives and combine them with ST to improve their performance.
+- We utilize domain knowledge of failure patterns to define new derivatives and combine them with ST to improve their performance.
