@@ -7,8 +7,8 @@ image: /assets/research/projects/maritime-ad-1.png
 
 title: Maritime Anomaly Detection
 summary: A statistical approach for route planning and anomaly detection to enhance maritime situational awareness.
-organizer: 작성중
-period: 2020.01 – 2024.00
+# organizer: 작성중
+period: 2020.01 – 2022.01
 category: System Monitoring & Anomaly Detection
 tags:
   - Route Planning
