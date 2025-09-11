@@ -6,7 +6,7 @@ permalink: /research/projects/contents/lqc-od/
 image: /assets/research/projects/lqc-od-1.png
 
 title: Domain Knowledge-Informed Functional Outlier Detection for LQC
-summary: 작성중
+summary: We propose a Sequential Transformation (ST)–based methodology, enhanced with domain knowledge of failure patterns, to detect tiny anomalies in manufacturing time-series data.
 organizer: 작성중
 period: 2021.00 – 2024.00
 category: System Monitoring & Anomaly Detection
