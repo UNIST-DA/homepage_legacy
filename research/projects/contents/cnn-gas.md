@@ -7,7 +7,7 @@ image: /assets/research/projects/cnn-gas-1.png
 
 title: CNN based Gas Mixture Classification
 summary: A CNN-based multi-channel time-series analysis method is proposed for accurate classification of gas mixtures using electronic nose sensor data.
-# organizer: 작성중
+organizer: Ulsan Industry-University Convergence Campus
 period: 2020.03 - 2020.07
 category: Time‑Series Representation Learning
 tags:
