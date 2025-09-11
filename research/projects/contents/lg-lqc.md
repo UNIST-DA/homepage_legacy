@@ -11,9 +11,9 @@ organizer: LG Electronics
 period: 2023.07 - 2024.10
 category: System Monitoring & Anomaly Detection
 tags:
-  - Outlier Detection
-  - Manufacturing AI
-  - Quality Inspection
+  - Anomaly Detection
+  - Quality Control
+  - Rule-based Data Refinement
 
 ---
 
