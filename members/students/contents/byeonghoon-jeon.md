@@ -8,19 +8,20 @@ role: Combined Master-Doctor
 photo: /assets/members/students/byeonghoon-jeon.jpg
 period: "2024.09 —"
 
-email: 
+email: bhjeon@unist.ac.kr
 links:
   - label: Google Scholar
     url: 
   - label: GitHub
-    url: 
+    url: https://github.com/nanbhi/project
   - label: LinkedIn
     url: 
   - label: CV
     url: 
 
 tags:
-  - tags
+  - Time series analysis
+  - Generative AI
 
 about: I'm a M.S/Ph.D. combined student in Industrial Engineering at UNIST data analytics lab. I am interested in spatio-temporal time-seires data analysis, and in leveraging generative models for missing value imputation and forecasting.
 
