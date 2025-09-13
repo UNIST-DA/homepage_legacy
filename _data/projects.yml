@@ -19,13 +19,6 @@
   summary: An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.
   period: 2020.01 - 2022.01
 
-- slug: scsc-fuel-opt
-  title: "Fuel Consumption Prediction & Optimization (SCSC)"
-  url: /research/projects/contents/scsc-fuel-opt/
-  image: /assets/research/projects/none.png
-  summary: Predict and optimize fuel consumption by integrating AIS, weather, and engine sensors.
-  period: 2023.00 –
-
 - slug: scsc-llm-maritime
   title: "Hybrid Prompt Agent for Conversational Maritime AIS Data Analysis"
   url: /research/projects/contents/scsc-llm-maritime/
@@ -74,3 +67,38 @@
   image: /assets/research/projects/none.png
   summary: Modeling and quantifying time-lagged accident-induced congestion using causal inference and bootstrap uncertainty analysis.
   period: 2024.10 - 
+
+- slug: quasar-detect
+  title: Real Time Changing-State Quasar Detection
+  url: /research/projects/contents/quasar-detect/
+  image: /assets/research/projects/quasar-detect-1.png
+  summary: Real-Time Detection of Changing-State Quasars using a Mixture Density Network
+  period: 2021.01 – 2025.12
+
+- slug: thyroid-dose
+  title: Personalized Dose Determination for Patients with Thyroid Hormone Disorders
+  url: /research/projects/contents/thyroid-dose/
+  image: /assets/research/projects/thyroid-dose-1.png
+  summary: Optimal and Personalized Dose Determination for Patients with Thyroid Hormone Disorders Using Deep Learning-Based Survival Analysis
+  period: 2022.01 – 2025.12
+
+- slug: scsc-ais-risk
+  title: Risk-Aware Imitation Learning with Environmental Context for AIS
+  url: /research/projects/contents/scsc-ais-risk/
+  image: /assets/research/projects/scsc-ais-risk-1.png
+  summary: Imitation-learning anomaly detection for AIS is improved by adding environmental data (wind, waves), so the model can tell apart risky vessel behavior from safe weather-driven detours.
+  period: 2025.08 –
+
+- slug: scsc-fuel-est
+  title: Fuel Consumption Estimation for Maritime Energy Efficiency
+  url: /research/projects/contents/scsc-fuel-est/
+  image: /assets/research/projects/scsc-fuel-est-1.png
+  summary: Data-driven surrogate model that infers fuel burn from AIS and environmental context - no engine sensors required. 
+  period: 2024.09 –
+
+- slug: scsc-fuel-pred
+  title: Physics-Informed AI for Robust Ship Fuel Consumption Prediction
+  url: /research/projects/contents/scsc-fuel-pred/
+  image: /assets/research/projects/scsc-fuel-pred-1.png
+  summary: Development of a Ship Fuel Consumption Prediction Model Considering Environmental Factors
+  period: 2023.01 – 2030.12
