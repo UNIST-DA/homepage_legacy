@@ -17,18 +17,16 @@ tags:
 
 ---
 
-<!-- Motivation, Goal, Methodology는 필수 작성 (전체 영어) -->
+<!-- Motivation, Methodology, Contribution 는 필수 작성 (전체 영어) -->
 
 ## Motivation
 Motivation 작성해주세요
 
-## Goal
-- Goal 1
-- Goal 2
-- Goal 3
-
 ## Methodology
 - Method와 관련된 설명
+
+## Contribution
+- Contribution
 
 <!-- 이미지 삽입 방법 (링크 및 크기 조절 가능) -->
 
