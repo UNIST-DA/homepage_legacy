@@ -19,7 +19,9 @@ tags:
 ---
 
 ## Motivation
-Most imitation-learning approaches to anomaly detection rely only on vessel trajectories. Without environmental context, hazard-avoidance maneuvers are often misclassified as anomalies.
+- Most imitation-learning approaches to anomaly detection rely only on vessel trajectories.
+- Without environmental context, hazard-avoidance maneuvers are often misclassified as anomalies.
+- By enhancing imitation-learning–based anomaly detection with environmental context (e.g., wind, waves), the model can better distinguish unsafe vessel actions from safe, weather-driven detours.
 
 <figure style="margin:20px 0;text-align:center">
   <img src="{{ '/assets/research/projects/scsc-ais-risk-1.png' | relative_url }}" 
