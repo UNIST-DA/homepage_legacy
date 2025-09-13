@@ -5,7 +5,7 @@ slug: quasar-detect
 permalink: /research/projects/contents/quasar-detect/
 image: /assets/research/projects/quasar-detect-1.png
 
-title: Real Time Changing- State Quasar Detection
+title: Real Time Changing-State Quasar Detection
 summary: Real-Time Detection of Changing-State Quasars using a Mixture Density Network
 organizer: AI HUB
 period: 2021.01 – 2025.12
