@@ -3,7 +3,7 @@ layout: project
 
 slug: scsc-fuel-est
 permalink: /research/projects/contents/scsc-fuel-est/
-image: /assets/research/projects/scsc-fuel-est-1.png
+image: /assets/research/projects/none.png
 
 title: Fuel Consumption Estimation for Maritime Energy Efficiency
 summary: Data-driven surrogate model that infers fuel burn from AIS and environmental context - no engine sensors required. 
