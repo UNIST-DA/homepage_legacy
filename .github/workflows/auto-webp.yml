@@ -2,9 +2,9 @@ name: Auto convert images to WebP
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]         # 기본 브랜치가 master면 master로
+    branches: [ main ]
 permissions:
-  contents: write              # 커밋/푸시 권한
+  contents: write
 
 jobs:
   webp:
@@ -19,27 +19,38 @@ jobs:
           sudo apt-get install -y webp imagemagick
 
       - name: Convert JPG/PNG to WebP with auto-rotate (overwrite)
+        shell: bash
         run: |
-          set -e
+          set -euo pipefail
           TMPDIR=".autowebp_tmp"
           mkdir -p "$TMPDIR"
-          find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) \
-            -not -path "./.git/*" -not -path "./node_modules/*" -print0 |
+
+          # ImageMagick 바이너리 이름 감지 (v7=magick, v6=convert)
+          if command -v magick >/dev/null 2>&1; then
+            IM=magick
+          else
+            IM=convert
+          fi
+
+          # 파이프 대신 프로세스 서브스티튜션으로 Broken pipe 방지
           while IFS= read -r -d '' f; do
             out="${f%.*}.webp"
             tmp="$TMPDIR/tmp.png"
-            # 1) 방향 메타를 픽셀에 반영(autorotate) + 메타 제거
-            magick "$f" -auto-orient -strip "$tmp"
-            # 2) webp 생성 (PNG는 무손실, 사진류는 q=80 권장)
-            if echo "$f" | grep -qi '\.png$'; then
+
+            # 1) EXIF 회전 반영 + 메타 제거
+            "$IM" "$f" -auto-orient -strip "$tmp"
+
+            # 2) webp 생성 (PNG는 무손실, 사진류는 q=80)
+            if [[ "$f" =~ \.png$ ]]; then
               rm -f "$out"; cwebp -lossless -z 9 -m 6 "$tmp" -o "$out"
             else
               rm -f "$out"; cwebp -q 80 "$tmp" -o "$out"
             fi
             echo "made: $out"
-          done
+          done < <(find . -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) \
+                    -not -path './.git/*' -not -path './node_modules/*' -print0)
 
-      # (선택) PNG 아이콘/로고는 경로를 바꾸지 않으려면 아래처럼 JPG/JPEG만 치환
+      # JPG/JPEG만 경로 치환 (PNG 아이콘/로고는 유지)
       - name: Rewrite .jpg links to .webp in code files
         run: |
           set -e
