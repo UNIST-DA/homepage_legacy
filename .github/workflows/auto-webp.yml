@@ -1,57 +1,55 @@
 name: Auto convert images to WebP
-
 on:
-  workflow_dispatch:      # 필요시 수동 실행 버튼
+  workflow_dispatch:
   push:
-    branches: [ main ]    # 기본 브랜치가 master면 master로 바꾸기
+    branches: [ main ]         # 기본 브랜치가 master면 master로
+permissions:
+  contents: write              # 커밋/푸시 권한
 
 jobs:
   webp:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        with: { fetch-depth: 0 }
 
       - name: Install tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y webp
+          sudo apt-get install -y webp imagemagick
 
-      - name: Convert JPG/PNG to WebP (keep originals)
+      - name: Convert JPG/PNG to WebP with auto-rotate (overwrite)
         run: |
           set -e
-          # jpg/jpeg/png 모두 webp로 변환 (원본은 그대로 둠)
+          TMPDIR=".autowebp_tmp"
+          mkdir -p "$TMPDIR"
           find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) \
-            -not -path "./.git/*" -not -path "./node_modules/*" -print0 \
-          | while IFS= read -r -d '' f; do
-              out="${f%.*}.webp"
-              # 이미 webp가 있으면 건너뛰기
-              [ -f "$out" ] && continue
-              ext="${f##*.}"
-              if echo "$ext" | grep -qi png; then
-                # PNG는 로고/아이콘 품질 보존 위해 무손실
-                cwebp -lossless -z 9 -m 6 "$f" -o "$out"
-              else
-                # 사진류는 용량 절감(필요하면 -q 값 조절)
-                cwebp -q 75 "$f" -o "$out"
-              fi
-              echo "made: $out"
-            done
+            -not -path "./.git/*" -not -path "./node_modules/*" -print0 |
+          while IFS= read -r -d '' f; do
+            out="${f%.*}.webp"
+            tmp="$TMPDIR/tmp.png"
+            # 1) 방향 메타를 픽셀에 반영(autorotate) + 메타 제거
+            magick "$f" -auto-orient -strip "$tmp"
+            # 2) webp 생성 (PNG는 무손실, 사진류는 q=80 권장)
+            if echo "$f" | grep -qi '\.png$'; then
+              rm -f "$out"; cwebp -lossless -z 9 -m 6 "$tmp" -o "$out"
+            else
+              rm -f "$out"; cwebp -q 80 "$tmp" -o "$out"
+            fi
+            echo "made: $out"
+          done
 
-      - name: Rewrite .jpg/.png links to .webp in code files
+      # (선택) PNG 아이콘/로고는 경로를 바꾸지 않으려면 아래처럼 JPG/JPEG만 치환
+      - name: Rewrite .jpg links to .webp in code files
         run: |
           set -e
-          # 사이트 소스(추가하고 싶은 확장자 있으면 뒤에 더 붙여도 됨)
           git ls-files -z '*.html' '*.htm' '*.md' '*.markdown' '*.css' '*.js' '*.jsx' '*.tsx' \
-          | xargs -0 -I{} bash -c \
-              'sed -i -E "s/\.(jpg|jpeg|png)\b/.webp/gI" "$1"' _ {}
+          | xargs -0 -I{} bash -c 'sed -i -E "s/\.(jpg|jpeg)\b/.webp/gI" "$1"' _ {}
 
       - name: Commit & push changes
         run: |
           git config user.name  "webp-bot"
           git config user.email "actions@github.com"
           git add -A
-          git commit -m "chore: convert images to WebP & rewrite references" || exit 0
+          git commit -m "fix: autorotate images before webp + rewrite refs" || exit 0
           git push
-
