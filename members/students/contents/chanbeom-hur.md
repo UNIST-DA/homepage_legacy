@@ -5,7 +5,7 @@ permalink: /members/students/contents/chanbeom-hur/
 title: Chanbeom Hur
 name: Chanbeom Hur
 role: MS Student
-photo: /assets/members/students/chanbeom-hur.jpg
+photo: /assets/members/students/chanbeom-hur.webp
 period: "2025.03 —"
 
 email: back2thebaz1c@unist.ac.kr

@@ -3,7 +3,7 @@ layout: project
 
 slug: maritime-ad
 permalink: /research/projects/contents/maritime-ad/
-image: /assets/research/projects/maritime-ad-1.png
+image: /assets/research/projects/maritime-ad-1.webp
 
 title: Maritime Anomaly Detection
 summary: A statistical approach for route planning and anomaly detection to enhance maritime situational awareness.
@@ -32,11 +32,11 @@ The maritime industry is one of key component of global economy. It can be defin
 - Detect spatial and temporal Anomaly
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/maritime-ad-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/maritime-ad-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/maritime-ad-2.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/maritime-ad-2.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>

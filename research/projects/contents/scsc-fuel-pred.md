@@ -3,7 +3,7 @@ layout: project
 
 slug: scsc-fuel-pred
 permalink: /research/projects/contents/scsc-fuel-pred/
-image: /assets/research/projects/scsc-fuel-pred-1.png
+image: /assets/research/projects/scsc-fuel-pred-1.webp
 
 title: Physics-Informed AI for Robust Ship Fuel Consumption Prediction
 summary: Development of a Ship Fuel Consumption Prediction Model Considering Environmental Factors
@@ -22,7 +22,7 @@ tags:
 For optimal route generation that considers the environment, it is necessary to develop a fuel consumption model that reflects environmental information.
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/scsc-fuel-pred-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/scsc-fuel-pred-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
     -	Proposing Optimization Techniques for Global Supply Chains Considering Safety and Environment

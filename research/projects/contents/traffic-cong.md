@@ -3,7 +3,7 @@ layout: project
 
 slug: traffic-cong
 permalink: /research/projects/contents/traffic-cong/
-image: /assets/research/projects/traffic-cong-1.png
+image: /assets/research/projects/traffic-cong-1.webp
 
 title: Prediction of Traffic Congestion Propagation
 summary: Modeling and quantifying time-lagged accident-induced congestion using causal inference and bootstrap uncertainty analysis.
@@ -31,11 +31,11 @@ To identify and quantify the propagation mechanisms and time-lag effects of acci
 - Identify the statistical causal relationship between the accident road and the subsequent road, and use the bootstrap method to quantify uncertainties about lags that delay congestion propagation.
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/traffic-cong-2.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/traffic-cong-2.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/traffic-cong-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/traffic-cong-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>

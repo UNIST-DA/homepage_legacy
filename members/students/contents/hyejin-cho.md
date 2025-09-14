@@ -6,7 +6,7 @@ title: Hyejin Cho
 name: Hyejin Cho
 role: MS Student
 period: "2023.03 —"
-photo: /assets/members/students/hyejin-cho.jpg
+photo: /assets/members/students/hyejin-cho.webp
 
 email: hyejin.cho@unist.ac.kr
 links:

@@ -3,7 +3,7 @@ layout: project
 
 slug: quasar-detect
 permalink: /research/projects/contents/quasar-detect/
-image: /assets/research/projects/quasar-detect-1.png
+image: /assets/research/projects/quasar-detect-1.webp
 
 title: Real Time Changing-State Quasar Detection
 summary: Real-Time Detection of Changing-State Quasars using a Mixture Density Network
@@ -27,7 +27,7 @@ A method for reliably detecting changes in the light curves of quasars (QSO) in 
 - Detect outliers when data deviating from normal probability is input and define this as a changing state.
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/quasar-detect-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/quasar-detect-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
@@ -37,6 +37,6 @@ A method for reliably detecting changes in the light curves of quasars (QSO) in 
 - Understanding and exploring supermassive black holes
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/quasar-detect-2.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/quasar-detect-2.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>

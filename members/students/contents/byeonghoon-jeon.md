@@ -5,7 +5,7 @@ permalink: /members/students/contents/byeonghoon-jeon/
 title: Byeonghoon Jeon
 name: Byeonghoon Jeon
 role: Combined Master-Doctor
-photo: /assets/members/students/byeonghoon-jeon.jpg
+photo: /assets/members/students/byeonghoon-jeon.webp
 period: "2024.09 —"
 
 email: bhjeon@unist.ac.kr

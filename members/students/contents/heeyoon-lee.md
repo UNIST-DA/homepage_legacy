@@ -6,7 +6,7 @@ title: Heeyoon Lee
 name: Heeyoon Lee
 role: MS Student
 period: "2025.09 —"
-photo: /assets/members/students/heeyoon-lee.jpg
+photo: /assets/members/students/heeyoon-lee.webp
 
 email: heeyoonrobot@unist.ac.kr
 links:

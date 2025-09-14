@@ -3,7 +3,7 @@ layout: project
 
 slug: scsc-ais-risk
 permalink: /research/projects/contents/scsc-ais-risk/
-image: /assets/research/projects/scsc-ais-risk-1.png
+image: /assets/research/projects/scsc-ais-risk-1.webp
 
 title: Risk-Aware Imitation Learning with Environmental Context for AIS
 summary: Imitation-learning anomaly detection for AIS is improved by adding environmental data (wind, waves), so the model can tell apart risky vessel behavior from safe weather-driven detours.
@@ -24,7 +24,7 @@ tags:
 - By enhancing imitation-learning–based anomaly detection with environmental context (e.g., wind, waves), the model can better distinguish unsafe vessel actions from safe, weather-driven detours.
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/scsc-ais-risk-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/scsc-ais-risk-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
     Representative image of OIL-AD, which serves as the reference for this preliminary research.

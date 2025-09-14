@@ -3,7 +3,7 @@ layout: project
 
 slug: throid-dose
 permalink: /research/projects/contents/throid-dose/
-image: /assets/research/projects/throid-dose-1.png
+image: /assets/research/projects/throid-dose-1.webp
 
 title: Personalized Dose Determination for Patients with Thyroid Hormone Disorders
 summary: Optimal and Personalized Dose Determination for Patients with Thyroid Hormone Disorders Using Deep Learning-Based Survival Analysis
@@ -25,7 +25,7 @@ A drawback of traditional thyroid hormone therapy is the difficulty in determini
 - In the testing phase, **only first patient data** is fed into the model to calculate different cumulative incidence functions for **different dose levels.** The dose with the highest value is recommended as the **optimal initial dose.**
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/throid-dose-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/throid-dose-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 

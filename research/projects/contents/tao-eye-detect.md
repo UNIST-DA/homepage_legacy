@@ -3,7 +3,7 @@ layout: project
 
 slug: tao-eye-detect
 permalink: /research/projects/contents/tao-eye-detect/
-image: /assets/research/projects/tao-eye-detect-1.png
+image: /assets/research/projects/tao-eye-detect-1.webp
 
 title: Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs
 summary: Developing a deep learning–based AI system for early monitoring and diagnosis of thyroid eye disease to enable timely treatment before irreversible damage.
@@ -33,6 +33,6 @@ To develop an AI system for early monitoring and diagnosis of thyroid eye diseas
 Utilizing the power of Deep Learning, we aims to detect all present diseases from eye images.
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/tao-eye-detect-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/tao-eye-detect-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>

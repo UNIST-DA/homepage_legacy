@@ -6,7 +6,7 @@ title: Seongjin Kim
 name: Seongjin Kim
 role: MS Student
 period: "2024.03 —"
-photo: /assets/members/students/seongjin-kim.jpg
+photo: /assets/members/students/seongjin-kim.webp
 
 email: kimsj7597@unist.ac.kr
 links:

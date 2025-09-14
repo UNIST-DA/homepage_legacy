@@ -3,7 +3,7 @@ layout: project
 
 slug: lg-lqc
 permalink: /research/projects/contents/lg-lqc/
-image: /assets/research/projects/lg-lqc-1.png
+image: /assets/research/projects/lg-lqc-1.webp
 
 title: Fault Detection via Domain-Knowledge-Based Training Data Refinement
 summary: A domain knowledge–based data refinement methodology for detecting defective products that cannot be filtered out in the LQC process.
@@ -29,7 +29,7 @@ Based on domain knowledge, the conditions of abnormal patterns are specified, an
 Before data refinement, defective products were rarely detected; after refinement, more than 80% of them were identified. The model also learned to distinguish abnormal data from normal data more effectively.
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/lg-lqc-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/lg-lqc-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
     A general process for detecting product defects through Line Quality Control.

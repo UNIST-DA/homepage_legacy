@@ -6,7 +6,7 @@ title: SeungSu Kam
 name: SeungSu Kam
 role: Combined Master-Doctor
 period: "2022.02—"
-photo: /assets/members/students/seungsu-kam.jpg
+photo: /assets/members/students/seungsu-kam.webp
 
 email: 
 links:

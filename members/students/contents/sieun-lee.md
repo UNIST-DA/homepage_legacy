@@ -6,7 +6,7 @@ title: Sieun Lee
 name: Sieun Lee
 role: MS Student
 period: "2025.03 —"
-photo: /assets/members/students/sieun-lee.jpg
+photo: /assets/members/students/sieun-lee.webp
 
 email: sieun5548@unist.ac.kr
 links:

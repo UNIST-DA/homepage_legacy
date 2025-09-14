@@ -3,7 +3,7 @@ layout: project
 
 slug: scsc-llm-maritime
 permalink: /research/projects/contents/scsc-llm-maritime/
-image: /assets/research/projects/scsc-llm-maritime-1.png
+image: /assets/research/projects/scsc-llm-maritime-1.webp
 
 title: LLM Agent for Maritime Data Analysis
 summary: This project develops a Hybrid Prompt Agent that enables natural-language analysis of maritime AIS data by combining query classification with dynamic prompting.
@@ -32,7 +32,7 @@ A two-stage agent: first classify query types (fact/aggregation vs. inference/an
 - Balanced improvements in accuracy, reasoning, and efficiency
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/scsc-llm-maritime-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/scsc-llm-maritime-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
     Hybrid Prompt Agent workflow with AIS tracks and analysis results

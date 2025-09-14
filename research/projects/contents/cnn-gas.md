@@ -3,7 +3,7 @@ layout: project
 
 slug: cnn-gas
 permalink: /research/projects/contents/cnn-gas/
-image: /assets/research/projects/cnn-gas-1.png
+image: /assets/research/projects/cnn-gas-1.webp
 
 title: CNN based Gas Mixture Classification
 summary: A CNN-based multi-channel time-series analysis method is proposed for accurate classification of gas mixtures using electronic nose sensor data.
@@ -29,11 +29,11 @@ An electronic nose is a device intended to detect odors or flavors. "Electronic 
 
 ## Methodology
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/cnn-gas-2.png' | relative_url }}"  
+  <img src="{{ '/assets/research/projects/cnn-gas-2.webp' | relative_url }}"  
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/cnn-gas-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/cnn-gas-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>

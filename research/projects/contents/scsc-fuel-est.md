@@ -3,7 +3,7 @@ layout: project
 
 slug: scsc-fuel-est
 permalink: /research/projects/contents/scsc-fuel-est/
-image: /assets/research/projects/none.png
+image: /assets/research/projects/none.webp
 
 title: Fuel Consumption Estimation for Maritime Energy Efficiency
 summary: Data-driven surrogate model that infers fuel burn from AIS and environmental context - no engine sensors required. 
@@ -33,7 +33,7 @@ Maritime operations face growing pressure to improve sustainability, with regula
 <!-- 이미지 삽입 방법 (링크 및 크기 조절 가능) -->
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/none.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/none.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
   <figcaption style="margin-top:8px;font-size:14px;color:#6b7280;">
     Figure 1. 이미지 설명을 적어주세요

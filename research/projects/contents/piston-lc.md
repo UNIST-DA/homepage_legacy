@@ -3,7 +3,7 @@ layout: project
 
 slug: piston-lc
 permalink: /research/projects/contents/piston-lc/
-image: /assets/research/projects/piston-lc-1.png
+image: /assets/research/projects/piston-lc-1.webp
 
 title: Deep Learning Approach for Behavior of Piston of Linear Compressor
 summary: Deep learning–based sensorless control of linear compressor pistons with over 90% performance improvement.
@@ -26,7 +26,7 @@ tags:
 - Cooling is determined by distance and position of piston movement
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/piston-lc-2.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/piston-lc-2.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
@@ -37,7 +37,7 @@ Precision control of piston and sensorless technology required
 Build an automated data collection system which can measure current, voltage, and stroke
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/piston-lc-3.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/piston-lc-3.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
@@ -46,6 +46,6 @@ Build an automated data collection system which can measure current, voltage, an
 - Contribution: More than 90% performance improvement
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/piston-lc-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/piston-lc-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>

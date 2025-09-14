@@ -6,7 +6,7 @@ title: Yongmin Kim
 name: Yongmin Kim
 role: Combined Master-Doctor
 period: "2024.09 —"
-photo: /assets/members/students/yongmin-kim.jpg
+photo: /assets/members/students/yongmin-kim.webp
 
 email: kyoungm0709@unist.ac.kr
 links:

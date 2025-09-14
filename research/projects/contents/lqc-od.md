@@ -3,7 +3,7 @@ layout: project
 
 slug: lqc-od
 permalink: /research/projects/contents/lqc-od/
-image: /assets/research/projects/lqc-od-1.png
+image: /assets/research/projects/lqc-od-1.webp
 
 title: Domain Knowledge-Informed Functional Outlier Detection for LQC
 summary: An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.
@@ -18,7 +18,7 @@ tags:
 
 ---
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/lqc-od-1.png' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/lqc-od-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
 
