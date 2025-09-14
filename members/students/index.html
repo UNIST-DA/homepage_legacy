@@ -203,7 +203,7 @@ permalink: /members/students/
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">{{ s.name }}</h3>
                   {% if s.role or s.period %}
-                    <p class="muted">
+                    <p class="muted" style="margin: 0 0 6px; font-size: 14px">
                       {% if s.role %}{{ s.role }}{% endif %}
                       {% if s.period %}{% if s.role %} · {% endif %}{{ s.period }}{% endif %}
                     </p>
