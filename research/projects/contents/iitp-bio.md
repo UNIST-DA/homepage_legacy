@@ -3,7 +3,7 @@ layout: project
 
 slug: iitp-bio
 permalink: /research/projects/contents/iitp-bio/
-image: /assets/research/projects/iitp-bio.webp
+image: /assets/research/projects/iitp-bio-1.webp
 
 title: Development of a robust and generalizable foundation model for bioelectrical signals
 summary: Foundation model development tailored to the unique characteristics of bioelectrical signal acquisition
@@ -27,6 +27,6 @@ Developing a foundation model that takes into account the unique characteristics
 This enables the development of a wide range of solutions.
 
 <figure style="margin:20px 0;text-align:center">
-  <img src="{{ '/assets/research/projects/iitp-bio.webp' | relative_url }}" 
+  <img src="{{ '/assets/research/projects/iitp-bio-1.webp' | relative_url }}" 
        style="display:block;margin:0 auto;width:60%;border-radius:8px;">
 </figure>
