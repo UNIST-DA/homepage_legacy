@@ -104,47 +104,39 @@ permalink: /research/projects/
     <div class="proj-grid">
 
       {%- comment -%}
-      1) 모든 프로젝트의 period 끝값 추출 → 진행중("")은 9999.99 처리
+      1) 모든 프로젝트의 period 시작값 추출
+         - "YYYY.MM - YYYY.MM" 형태에서 좌측(시작)만 뽑아 start_key로 사용
       {%- endcomment -%}
-      {%- assign end_keys = "" | split: "" -%}
+      {%- assign start_keys = "" | split: "" -%}
       {%- for p in site.data.projects -%}
         {%- assign parts = p.period | split: " - " -%}
-        {%- assign end_raw = parts[1] | strip -%}
-        {%- if end_raw == "" -%}
-          {%- assign end_key = "9999.99" -%}
-        {%- else -%}
-          {%- assign end_key = end_raw -%}
-        {%- endif -%}
-        {%- assign end_keys = end_keys | push: end_key -%}
+        {%- assign start_key = parts[0] | strip -%}
+        {%- assign start_keys = start_keys | push: start_key -%}
       {%- endfor -%}
-
+      
       {%- comment -%}
       2) 중복 제거 → 정렬 → 최신순(reverse)
+         - "YYYY.MM" 포맷이면 문자열 정렬로도 시간순 정렬이 맞게 됩니다.
       {%- endcomment -%}
-      {%- assign end_keys = end_keys | uniq | sort | reverse -%}
-
+      {%- assign start_keys = start_keys | uniq | sort | reverse -%}
+      
       {%- comment -%}
       3) 키 순서대로 다시 순회하며 카드 렌더링
       {%- endcomment -%}
-      {%- for key in end_keys -%}
+      {%- for key in start_keys -%}
         {%- for p in site.data.projects -%}
           {%- assign parts = p.period | split: " - " -%}
-          {%- assign end_raw = parts[1] | strip -%}
-          {%- if end_raw == "" -%}
-            {%- assign end_key = "9999.99" -%}
-          {%- else -%}
-            {%- assign end_key = end_raw -%}
-          {%- endif -%}
-          {%- if end_key == key -%}
+          {%- assign start_key = parts[0] | strip -%}
+          {%- if start_key == key -%}
             {%- assign page_match = site.pages | where: "slug", p.slug | first -%}
-
+      
             {%- assign card_title     = page_match.title     | default: p.title -%}
             {%- assign card_summary   = page_match.summary   | default: p.summary -%}
             {%- assign card_category  = page_match.category  | default: p.category -%}
             {%- assign card_period    = page_match.period    | default: p.period -%}
             {%- assign card_organizer = page_match.organizer | default: p.organizer -%}
             {%- assign card_image     = page_match.image     | default: p.image -%}
-
+      
             <a
               class="proj-card"
               href="{{ '/research/projects/contents/' | append: p.slug | append: '/' | relative_url }}"
@@ -154,9 +146,9 @@ permalink: /research/projects/
               {%- if card_image -%}
                 <img class="proj-thumb" src="{{ card_image | relative_url }}" alt="{{ card_title }}">
               {%- endif -%}
-
+      
               <h3 class="proj-title">{{ card_title }}</h3>
-
+      
               <div class="proj-meta">
                 {%- if card_category -%}
                   <span class="meta-pill">{{ card_category }}</span>
@@ -165,7 +157,7 @@ permalink: /research/projects/
                   <span class="meta-pill">{{ card_organizer }}</span>
                 {%- endif -%}
               </div>
-
+      
               {%- if card_period -%}
                 <div class="proj-period">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -176,7 +168,7 @@ permalink: /research/projects/
                   {{ card_period }}
                 </div>
               {%- endif -%}
-
+      
               {%- if card_summary -%}
                 <p class="proj-summary">{{ card_summary }}</p>
               {%- endif -%}
