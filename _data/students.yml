@@ -4,14 +4,23 @@
   period: "2022.02—"
   photo: /assets/members/students/seungsu-kam.jpg
   url: /members/students/contents/seungsu-kam/
-  summary: Neural Differential Equation, Anomaly Detection, Irregularly-Sampled Time Series
+  
   email: lewki83@unist.ac.kr
-  website: https://seungsukam.github.io/
-  github: https://github.com/SEUNGSUKAM
-  scholar: https://scholar.google.co.kr/citations?hl=ko&user=yP1DmawAAAAJ
-  linkedin: www.linkedin.com/in/seungsu-kam-5b232327b
-  cv:
-  projects: [astronomical time series anomaly detection(AI HUB), Longitudinal Multi-risk Survival Analysis(TIPS)]
+  links:
+  - label: Google Scholar
+    url: https://scholar.google.co.kr/citations?hl=ko&user=yP1DmawAAAAJ
+  - label: GitHub
+    url: https://github.com/SEUNGSUKAM
+  - label: LinkedIn
+    url: www.linkedin.com/in/seungsu-kam-5b232327b
+  - label: homepage
+    url: https://seungsukam.github.io/
+    
+  tags:
+  - Irregularly sampled time series
+  - Neural differential equations
+  - Anomaly detection
+  - Longitudinal survival analysis
   order: 10
 
 - slug: hyejin-cho
@@ -20,14 +29,21 @@
   period: "2023.03 —"
   photo: /assets/members/students/hyejin-cho.jpg
   url: /members/students/contents/hyejin-cho/
-  summary: Industrial Statistics, Data-driven Business Strategy, Machine Learning and Deep Learning
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+
+  email: hyejin.cho@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/hyejiinc/
+    - label: CV
+      url: 
+  
+  tags:
+    - "Time-Series Analysis"
+    - "Data-driven Business Strategy"
   order: 20
 
 - slug: seongjin-kim
@@ -36,14 +52,22 @@
   period: "2024.03 —"
   photo: /assets/members/students/seongjin-kim.jpg
   url: /members/students/contents/seongjin-kim/
-  summary: Domain-Specific RAG, Time-Series Anomaly Detection, Root Cause Analysis
+
   email: kimsj7597@unist.ac.kr
-  website:
-  github: https://github.com/Sicari1/SeongJin-Kim
-  scholar: https://scholar.google.com/citations?user=jt983zsAAAAJ&hl=ko&oi=sra
-  linkedin: www.linkedin.com/in/seongjin-kim-3205a2223
-  cv: https://drive.google.com/file/d/1_JLYbniWsPzl-FIYtIhDFPJUnjcgm_Hn/view?usp=drive_link
-  projects: [LG-LQC, SCSC]
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=jt983zsAAAAJ&hl=ko&oi=sra
+    - label: GitHub
+      url: https://github.com/Sicari1/SeongJin-Kim
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/seongjin-kim-3205a2223
+    - label: CV
+      url: https://drive.google.com/file/d/1_JLYbniWsPzl-FIYtIhDFPJUnjcgm_Hn/view?usp=drive_link
+  
+  tags:
+    - "Domain-Specific RAG"
+    - "Time-Series Anomaly Detection"
+    - "Large Language Models"
   order: 30
 
 - slug: yongmin-kim
@@ -53,13 +77,21 @@
   photo: /assets/members/students/yongmin-kim.jpg
   url: /members/students/contents/yongmin-kim/
   summary: Anomaly Detection, Time Series Classification, Quality Engineering and Management
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  email: kyoungm0709@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - "Anomaly Detection"
+    - "Time-Series Data"
+    - "Meta-Learning"
   order: 40
 
 - slug: byeonghoon-jeon
@@ -69,13 +101,21 @@
   photo: /assets/members/students/byeonghoon-jeon.jpg
   url: /members/students/contents/byeonghoon-jeon/
   summary: Multimodal learning, Multivariate Time Series Modeling
-  email:
-  website: 
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  
+  email: bhjeon@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: https://github.com/nanbhi/project
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - Time series analysis
+    - Generative AI
   order: 50
 
 - slug: chanbeom-hur
@@ -101,13 +141,22 @@
   photo: /assets/members/students/sieun-lee.jpg
   url: /members/students/contents/sieun-lee/
   summary: Anomaly Detection, Time Series Classification
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+
+  email: sieun5548@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: https://github.com/sieun-00
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/sieun-lee-5ba02b345/
+    - label: CV
+      url: 
+  
+  tags:
+    - "Missingness"
+    - "Time-Series Imputation"
+    - "Diffusion Models"
   order: 70
 
 - slug: heeyoon-lee
@@ -117,13 +166,21 @@
   photo: /assets/members/students/heeyoon-lee.jpg
   url: /members/students/contents/heeyoon-lee/
   summary: Anomaly Detection, Time Series Classification
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  email: heeyoonrobot@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - "Time Series Imputation"
+    - "Statistical Analysis with Missing Data"
+    - "Deep learning based Data Imputation"
   order: 80
 
 - slug: jungwoo-yoo
@@ -132,14 +189,19 @@
   period: "2025.04 —"
   photo: /assets/members/students/jungwoo-yoo.jpg
   url: /members/students/
-  summary: 
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  email: 
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - 
   order: 100
 
 - slug: yejin-jo
@@ -148,14 +210,19 @@
   period: "2025.07 —"
   photo: /assets/members/students/yejin-cho.jpg
   url: /members/students/
-  summary: 
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  email: 
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - 
   order: 110
 
 - slug: jihyun-ko
@@ -164,14 +231,19 @@
   period: "2025.08 —"
   photo: /assets/members/students/jihyun-ko.jpg
   url: /members/students/
-  summary: 
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  email: 
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - 
   order: 120
 
 - slug: euiyeob-kim
@@ -180,12 +252,17 @@
   period: "2025.09 —"
   photo: /assets/members/students/euiyeob-kim.jpg
   url: /members/students/
-  summary: 
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  email: 
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - 
   order: 130
