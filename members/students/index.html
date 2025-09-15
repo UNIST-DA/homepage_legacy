@@ -82,10 +82,21 @@ permalink: /members/students/
     padding: 2px 10px; font-size: 12px; line-height: 1.6;
     color: #374151; background: #fff; text-decoration: none; white-space: nowrap;
   }
-  .student-links .chip:hover { box-shadow: 0 1px 6px rgba(0,0,0,.06); }
-
-  /* 비활성 칩 스타일 */
-  .student-links .chip--disabled { pointer-events: none; opacity: .6; cursor: default; }
+  /* 학생 카드 링크: 교수님 페이지 pill 스타일 매칭 */
+  .stud-pills{
+    list-style:none; padding:0; margin:6px 0 0;
+    display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center;
+    position:relative; z-index:2;  /* stretched-link( z-index:1 ) 위로 */
+  }
+  .stud-pills li{ margin:0; padding:0; }
+  .stud-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    border:1px solid #e5e7eb; border-radius:999px;
+    padding:6px 12px; font-size:14px;
+    color:#374151; background:#fff; text-decoration:none;
+  }
+  .stud-pill:hover{ background:#f9fafb; }
+  .stud-pill img, .stud-pill svg{ width:18px; height:18px; flex:0 0 auto; }
 </style>
 
 <main class="container">
@@ -149,109 +160,94 @@ permalink: /members/students/
                   {% endif %}
 
                   {% if s.links %}
-                    <div style="margin-top:12px; position:relative; z-index:2;">
-                      <ul style="list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:6px;">
+                    {%- comment -%} 아이콘 {%- endcomment -%}
+                    {% assign globe_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20'/%3E%3C/svg%3E" %}
+                    {% assign house_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-5h6v5'/%3E%3C/svg%3E" %}
                   
-                        {%- comment -%} Buckets for ordered output {%- endcomment -%}
-                        {% capture out_scholar %}{% endcapture %}
-                        {% capture out_github %}{% endcapture %}
-                        {% capture out_linkedin %}{% endcapture %}
-                        {% capture out_cv %}{% endcapture %}
-                        {% capture out_others %}{% endcapture %}
+                    {%- comment -%} 버킷: Scholar → GitHub → LinkedIn → CV → Others {%- endcomment -%}
+                    {% capture out_scholar %}{% endcapture %}
+                    {% capture out_github %}{% endcapture %}
+                    {% capture out_linkedin %}{% endcapture %}
+                    {% capture out_cv %}{% endcapture %}
+                    {% capture out_others %}{% endcapture %}
                   
-                        {%- comment -%} Icons {%- endcomment -%}
-                        {% assign globe_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20'/%3E%3C/svg%3E" %}
-                        {% assign house_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-5h6v5'/%3E%3C/svg%3E" %}
+                    {% for link in s.links %}
+                      {% assign url_raw = link.url | default: link.href | default: "" | strip %}
+                      {% if url_raw == "" %}{% continue %}{% endif %}
+                      {% assign label = link.label | default: link.title | default: url_raw %}
+                      {% assign label_lc = label | downcase %}
+                      {% assign host = url_raw | replace:'https://','' | replace:'http://','' | split:'/' | first | downcase %}
                   
-                        {%- comment -%} YAML links(single pass). Skip empty URLs. {%- endcomment -%}
-                        {% for link in s.links %}
-                          {% assign url = link.url | default: link.href | default: "" | strip %}
-                          {% unless url == "" %}
-                            {% assign label = link.label | default: link.title | default: url %}
-                            {% assign label_lc = label | downcase %}
-                            {% assign host = url | replace:'https://','' | replace:'http://','' | split:'/' | first | downcase %}
+                      {%- comment -%} 외부/내부 판별 (www.*도 외부 처리) {%- endcomment -%}
+                      {%- assign p4 = url_raw | slice: 0,4 | downcase -%}
+                      {%- assign p2 = url_raw | slice: 0,2 -%}
+                      {% if p4 == 'http' or p2 == '//' or p4 == 'www.' %}
+                        {% assign link_href = url_raw %}
+                        {% assign is_external = true %}
+                      {% else %}
+                        {% assign link_href = url_raw | relative_url %}
+                        {% assign is_external = false %}
+                      {% endif %}
                   
-                            {%- comment -%} Scholar {%- endcomment -%}
-                            {% if (label_lc contains 'scholar') or (host contains 'scholar.google.') %}
-                              {% capture out_scholar %}
-                                {{ out_scholar }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
+                      {% if (label_lc contains 'scholar') or (host contains 'scholar.google.') %}
+                        {% capture out_scholar %}
+                          {{ out_scholar }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc contains 'github') or (host contains 'github.com') %}
+                        {% capture out_github %}
+                          {{ out_github }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://github.com/favicon.ico" alt="GitHub">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc contains 'linkedin') or (host contains 'linkedin.com') %}
+                        {% capture out_linkedin %}
+                          {{ out_linkedin }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc == 'cv') or (label_lc contains 'curriculum') or (label_lc contains 'vita') %}
+                        {% capture out_cv %}
+                          {{ out_cv }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="{{ house_icon }}" alt="CV">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% else %}
+                        {% capture out_others %}
+                          {{ out_others }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="{{ globe_icon }}" alt="">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% endif %}
+                    {% endfor %}
                   
-                            {%- comment -%} GitHub (없으면 자동 생략) {%- endcomment -%}
-                            {% elsif (label_lc contains 'github') or (host contains 'github.com') %}
-                              {% capture out_github %}
-                                {{ out_github }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://github.com/favicon.ico" alt="GitHub" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} LinkedIn {%- endcomment -%}
-                            {% elsif (label_lc contains 'linkedin') or (host contains 'linkedin.com') %}
-                              {% capture out_linkedin %}
-                                {{ out_linkedin }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} CV = house icon {%- endcomment -%}
-                            {% elsif (label_lc == 'cv') or (label_lc contains 'curriculum') or (label_lc contains 'vita') %}
-                              {% capture out_cv %}
-                                {{ out_cv }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="{{ house_icon }}" alt="CV" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} Others = globe {%- endcomment -%}
-                            {% else %}
-                              {% capture out_others %}
-                                {{ out_others }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="{{ globe_icon }}" alt="" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                            {% endif %}
-                          {% endunless %}
-                        {% endfor %}
-                  
-                        {%- comment -%} Order: Scholar → GitHub → LinkedIn → CV → Others {%- endcomment -%}
+                    {% assign combined = '' %}
+                    {% capture combined %}{{ out_scholar }}{{ out_github }}{{ out_linkedin }}{{ out_cv }}{{ out_others }}{% endcapture %}
+                    {% unless combined == '' %}
+                      <ul class="stud-pills">
                         {{ out_scholar }}
                         {{ out_github }}
                         {{ out_linkedin }}
                         {{ out_cv }}
                         {{ out_others }}
                       </ul>
-                    </div>
+                    {% endunless %}
                   {% endif %}
                 </div>
               </article>
@@ -323,109 +319,94 @@ permalink: /members/students/
                   {% endif %}
 
                   {% if s.links %}
-                    <div style="margin-top:12px; position:relative; z-index:2;">
-                      <ul style="list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:6px;">
+                    {%- comment -%} 아이콘 {%- endcomment -%}
+                    {% assign globe_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20'/%3E%3C/svg%3E" %}
+                    {% assign house_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-5h6v5'/%3E%3C/svg%3E" %}
                   
-                        {%- comment -%} Buckets for ordered output {%- endcomment -%}
-                        {% capture out_scholar %}{% endcapture %}
-                        {% capture out_github %}{% endcapture %}
-                        {% capture out_linkedin %}{% endcapture %}
-                        {% capture out_cv %}{% endcapture %}
-                        {% capture out_others %}{% endcapture %}
+                    {%- comment -%} 버킷: Scholar → GitHub → LinkedIn → CV → Others {%- endcomment -%}
+                    {% capture out_scholar %}{% endcapture %}
+                    {% capture out_github %}{% endcapture %}
+                    {% capture out_linkedin %}{% endcapture %}
+                    {% capture out_cv %}{% endcapture %}
+                    {% capture out_others %}{% endcapture %}
                   
-                        {%- comment -%} Icons {%- endcomment -%}
-                        {% assign globe_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20'/%3E%3C/svg%3E" %}
-                        {% assign house_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-5h6v5'/%3E%3C/svg%3E" %}
+                    {% for link in s.links %}
+                      {% assign url_raw = link.url | default: link.href | default: "" | strip %}
+                      {% if url_raw == "" %}{% continue %}{% endif %}
+                      {% assign label = link.label | default: link.title | default: url_raw %}
+                      {% assign label_lc = label | downcase %}
+                      {% assign host = url_raw | replace:'https://','' | replace:'http://','' | split:'/' | first | downcase %}
                   
-                        {%- comment -%} YAML links(single pass). Skip empty URLs. {%- endcomment -%}
-                        {% for link in s.links %}
-                          {% assign url = link.url | default: link.href | default: "" | strip %}
-                          {% unless url == "" %}
-                            {% assign label = link.label | default: link.title | default: url %}
-                            {% assign label_lc = label | downcase %}
-                            {% assign host = url | replace:'https://','' | replace:'http://','' | split:'/' | first | downcase %}
+                      {%- comment -%} 외부/내부 판별 (www.*도 외부 처리) {%- endcomment -%}
+                      {%- assign p4 = url_raw | slice: 0,4 | downcase -%}
+                      {%- assign p2 = url_raw | slice: 0,2 -%}
+                      {% if p4 == 'http' or p2 == '//' or p4 == 'www.' %}
+                        {% assign link_href = url_raw %}
+                        {% assign is_external = true %}
+                      {% else %}
+                        {% assign link_href = url_raw | relative_url %}
+                        {% assign is_external = false %}
+                      {% endif %}
                   
-                            {%- comment -%} Scholar {%- endcomment -%}
-                            {% if (label_lc contains 'scholar') or (host contains 'scholar.google.') %}
-                              {% capture out_scholar %}
-                                {{ out_scholar }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
+                      {% if (label_lc contains 'scholar') or (host contains 'scholar.google.') %}
+                        {% capture out_scholar %}
+                          {{ out_scholar }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc contains 'github') or (host contains 'github.com') %}
+                        {% capture out_github %}
+                          {{ out_github }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://github.com/favicon.ico" alt="GitHub">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc contains 'linkedin') or (host contains 'linkedin.com') %}
+                        {% capture out_linkedin %}
+                          {{ out_linkedin }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc == 'cv') or (label_lc contains 'curriculum') or (label_lc contains 'vita') %}
+                        {% capture out_cv %}
+                          {{ out_cv }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="{{ house_icon }}" alt="CV">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% else %}
+                        {% capture out_others %}
+                          {{ out_others }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="{{ globe_icon }}" alt="">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% endif %}
+                    {% endfor %}
                   
-                            {%- comment -%} GitHub (없으면 자동 생략) {%- endcomment -%}
-                            {% elsif (label_lc contains 'github') or (host contains 'github.com') %}
-                              {% capture out_github %}
-                                {{ out_github }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://github.com/favicon.ico" alt="GitHub" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} LinkedIn {%- endcomment -%}
-                            {% elsif (label_lc contains 'linkedin') or (host contains 'linkedin.com') %}
-                              {% capture out_linkedin %}
-                                {{ out_linkedin }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} CV = house icon {%- endcomment -%}
-                            {% elsif (label_lc == 'cv') or (label_lc contains 'curriculum') or (label_lc contains 'vita') %}
-                              {% capture out_cv %}
-                                {{ out_cv }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="{{ house_icon }}" alt="CV" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} Others = globe {%- endcomment -%}
-                            {% else %}
-                              {% capture out_others %}
-                                {{ out_others }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="{{ globe_icon }}" alt="" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                            {% endif %}
-                          {% endunless %}
-                        {% endfor %}
-                  
-                        {%- comment -%} Order: Scholar → GitHub → LinkedIn → CV → Others {%- endcomment -%}
+                    {% assign combined = '' %}
+                    {% capture combined %}{{ out_scholar }}{{ out_github }}{{ out_linkedin }}{{ out_cv }}{{ out_others }}{% endcapture %}
+                    {% unless combined == '' %}
+                      <ul class="stud-pills">
                         {{ out_scholar }}
                         {{ out_github }}
                         {{ out_linkedin }}
                         {{ out_cv }}
                         {{ out_others }}
                       </ul>
-                    </div>
+                    {% endunless %}
                   {% endif %}
                 </div>
               </article>
@@ -497,109 +478,94 @@ permalink: /members/students/
                   {% endif %}
 
                   {% if s.links %}
-                    <div style="margin-top:12px; position:relative; z-index:2;">
-                      <ul style="list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:6px;">
+                    {%- comment -%} 아이콘 {%- endcomment -%}
+                    {% assign globe_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20'/%3E%3C/svg%3E" %}
+                    {% assign house_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-5h6v5'/%3E%3C/svg%3E" %}
                   
-                        {%- comment -%} Buckets for ordered output {%- endcomment -%}
-                        {% capture out_scholar %}{% endcapture %}
-                        {% capture out_github %}{% endcapture %}
-                        {% capture out_linkedin %}{% endcapture %}
-                        {% capture out_cv %}{% endcapture %}
-                        {% capture out_others %}{% endcapture %}
+                    {%- comment -%} 버킷: Scholar → GitHub → LinkedIn → CV → Others {%- endcomment -%}
+                    {% capture out_scholar %}{% endcapture %}
+                    {% capture out_github %}{% endcapture %}
+                    {% capture out_linkedin %}{% endcapture %}
+                    {% capture out_cv %}{% endcapture %}
+                    {% capture out_others %}{% endcapture %}
                   
-                        {%- comment -%} Icons {%- endcomment -%}
-                        {% assign globe_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20'/%3E%3C/svg%3E" %}
-                        {% assign house_icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-5h6v5'/%3E%3C/svg%3E" %}
+                    {% for link in s.links %}
+                      {% assign url_raw = link.url | default: link.href | default: "" | strip %}
+                      {% if url_raw == "" %}{% continue %}{% endif %}
+                      {% assign label = link.label | default: link.title | default: url_raw %}
+                      {% assign label_lc = label | downcase %}
+                      {% assign host = url_raw | replace:'https://','' | replace:'http://','' | split:'/' | first | downcase %}
                   
-                        {%- comment -%} YAML links(single pass). Skip empty URLs. {%- endcomment -%}
-                        {% for link in s.links %}
-                          {% assign url = link.url | default: link.href | default: "" | strip %}
-                          {% unless url == "" %}
-                            {% assign label = link.label | default: link.title | default: url %}
-                            {% assign label_lc = label | downcase %}
-                            {% assign host = url | replace:'https://','' | replace:'http://','' | split:'/' | first | downcase %}
+                      {%- comment -%} 외부/내부 판별 (www.*도 외부 처리) {%- endcomment -%}
+                      {%- assign p4 = url_raw | slice: 0,4 | downcase -%}
+                      {%- assign p2 = url_raw | slice: 0,2 -%}
+                      {% if p4 == 'http' or p2 == '//' or p4 == 'www.' %}
+                        {% assign link_href = url_raw %}
+                        {% assign is_external = true %}
+                      {% else %}
+                        {% assign link_href = url_raw | relative_url %}
+                        {% assign is_external = false %}
+                      {% endif %}
                   
-                            {%- comment -%} Scholar {%- endcomment -%}
-                            {% if (label_lc contains 'scholar') or (host contains 'scholar.google.') %}
-                              {% capture out_scholar %}
-                                {{ out_scholar }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
+                      {% if (label_lc contains 'scholar') or (host contains 'scholar.google.') %}
+                        {% capture out_scholar %}
+                          {{ out_scholar }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc contains 'github') or (host contains 'github.com') %}
+                        {% capture out_github %}
+                          {{ out_github }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://github.com/favicon.ico" alt="GitHub">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc contains 'linkedin') or (host contains 'linkedin.com') %}
+                        {% capture out_linkedin %}
+                          {{ out_linkedin }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% elsif (label_lc == 'cv') or (label_lc contains 'curriculum') or (label_lc contains 'vita') %}
+                        {% capture out_cv %}
+                          {{ out_cv }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="{{ house_icon }}" alt="CV">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% else %}
+                        {% capture out_others %}
+                          {{ out_others }}
+                          <li>
+                            <a class="stud-pill" href="{{ link_href }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>
+                              <img src="{{ globe_icon }}" alt="">{{ label }}
+                            </a>
+                          </li>
+                        {% endcapture %}
+                      {% endif %}
+                    {% endfor %}
                   
-                            {%- comment -%} GitHub (없으면 자동 생략) {%- endcomment -%}
-                            {% elsif (label_lc contains 'github') or (host contains 'github.com') %}
-                              {% capture out_github %}
-                                {{ out_github }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://github.com/favicon.ico" alt="GitHub" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} LinkedIn {%- endcomment -%}
-                            {% elsif (label_lc contains 'linkedin') or (host contains 'linkedin.com') %}
-                              {% capture out_linkedin %}
-                                {{ out_linkedin }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} CV = house icon {%- endcomment -%}
-                            {% elsif (label_lc == 'cv') or (label_lc contains 'curriculum') or (label_lc contains 'vita') %}
-                              {% capture out_cv %}
-                                {{ out_cv }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="{{ house_icon }}" alt="CV" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                  
-                            {%- comment -%} Others = globe {%- endcomment -%}
-                            {% else %}
-                              {% capture out_others %}
-                                {{ out_others }}
-                                <li style="display:flex;align-items:center;gap:6px;">
-                                  <img src="{{ globe_icon }}" alt="" width="18" height="18" style="flex:0 0 18px">
-                                  {% if s.slug == 'Intern' %}
-                                    <span style="opacity:.6;cursor:default;">{{ label }}</span>
-                                  {% else %}
-                                    <a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a>
-                                  {% endif %}
-                                </li>
-                              {% endcapture %}
-                            {% endif %}
-                          {% endunless %}
-                        {% endfor %}
-                  
-                        {%- comment -%} Order: Scholar → GitHub → LinkedIn → CV → Others {%- endcomment -%}
+                    {% assign combined = '' %}
+                    {% capture combined %}{{ out_scholar }}{{ out_github }}{{ out_linkedin }}{{ out_cv }}{{ out_others }}{% endcapture %}
+                    {% unless combined == '' %}
+                      <ul class="stud-pills">
                         {{ out_scholar }}
                         {{ out_github }}
                         {{ out_linkedin }}
                         {{ out_cv }}
                         {{ out_others }}
                       </ul>
-                    </div>
+                    {% endunless %}
                   {% endif %}
                 </div>
               </article>
