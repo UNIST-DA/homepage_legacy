@@ -17,10 +17,10 @@
     url: https://seungsukam.github.io/
     
   tags:
-  - Irregularly sampled time series
-  - Neural differential equations
-  - Anomaly detection
-  - Longitudinal survival analysis
+    - Irregularly sampled time series
+    - Neural differential equations
+    - Anomaly detection
+    - Longitudinal survival analysis
   order: 10
 
 - slug: hyejin-cho
