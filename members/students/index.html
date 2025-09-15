@@ -300,8 +300,28 @@ permalink: /members/students/
                       {% if s.period %}{% if s.role %} · {% endif %}{{ s.period }}{% endif %}
                     </p>
                   {% endif %}
-                  {% if s.summary %}
-                    <p class="muted" style="margin:0 0 8px">{{ s.summary }}</p>
+                  {%- comment -%}
+                    summary 속성은 제거됨. tags 배열을 콤마로 join해서 summary처럼 한 줄로 표시.
+                    (과도기 대비: summary가 남아 있으면 fallback)
+                  {%- endcomment -%}
+                  {% assign summary_text = nil %}
+                  {% if s.tags and s.tags.size > 0 %}
+                    {% assign summary_text = s.tags | join: ', ' %}
+                  {% elsif s.summary %}
+                    {% assign summary_text = s.summary %}
+                  {% endif %}
+                  {%- comment -%}
+                    summary 속성은 제거됨. tags 배열을 콤마로 join해서 summary처럼 한 줄로 표시.
+                    (과도기 대비: summary가 남아 있으면 fallback)
+                  {%- endcomment -%}
+                  {% assign summary_text = nil %}
+                  {% if s.tags and s.tags.size > 0 %}
+                    {% assign summary_text = s.tags | join: ', ' %}
+                  {% elsif s.summary %}
+                    {% assign summary_text = s.summary %}
+                  {% endif %}
+                  {% if summary_text %}
+                    <p class="muted" style="margin:0 0 8px">{{ summary_text }}</p>
                   {% endif %}
 
                   {%- comment -%} students/contents/<slug>.md에서 links 가져오기 {%- endcomment -%}
@@ -459,8 +479,18 @@ permalink: /members/students/
                       {% if s.period %}{% if s.role %} · {% endif %}{{ s.period }}{% endif %}
                     </p>
                   {% endif %}
-                  {% if s.summary %}
-                    <p class="muted" style="margin:0 0 8px">{{ s.summary }}</p>
+                  {%- comment -%}
+                    summary 속성은 제거됨. tags 배열을 콤마로 join해서 summary처럼 한 줄로 표시.
+                    (과도기 대비: summary가 남아 있으면 fallback)
+                  {%- endcomment -%}
+                  {% assign summary_text = nil %}
+                  {% if s.tags and s.tags.size > 0 %}
+                    {% assign summary_text = s.tags | join: ', ' %}
+                  {% elsif s.summary %}
+                    {% assign summary_text = s.summary %}
+                  {% endif %}
+                  {% if summary_text %}
+                    <p class="muted" style="margin:0 0 8px">{{ summary_text }}</p>
                   {% endif %}
 
                   {%- comment -%} students/contents/<slug>.md에서 links 가져오기 {%- endcomment -%}
