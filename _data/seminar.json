@@ -1,5 +1,17 @@
 [
   {
+    "date": "2025-09-05",
+    "title": "Multiple Imputation for Missing Data",
+    "slug": "2025-09-05-multiple-imputation-for-missing-data",
+    "url": "https://www.notion.so/264046396f7e8070b523c5b6c5eb8d73",
+    "category": "Lab Seminar",
+    "presenter": "이희윤",
+    "keywords": [
+      "imputation",
+      "Statistics"
+    ]
+  },
+  {
     "date": "2025-08-25",
     "title": "A Deep-Learning-Based Surrogate Model for Thermal Signature Prediction in Laser Metal Deposition (IEEE T-ASE 2023)",
     "slug": "2025-08-25-a-deep-learning-based-surrogate-model-for-thermal-signature-prediction-in-laser-metal-deposition-ieee-t-ase-2023",
