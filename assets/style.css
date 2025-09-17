@@ -434,3 +434,13 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 @media (hover: none) {
   .has-dd:hover > .dropdown { display: none; }
 }
+.has-dd > .dropdown { display: none; }
+.has-dd.open > .dropdown { display: block; }
+
+/* 데스크탑 hover 유지 */
+.has-dd:hover > .dropdown { display: block; }
+
+/* 모바일에서는 hover 비활성화 (토글만 유효) */
+@media (hover: none) {
+  .has-dd:hover > .dropdown { display: none; }
+}
