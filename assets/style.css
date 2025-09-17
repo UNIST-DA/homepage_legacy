@@ -424,3 +424,13 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 }
 .has-dd > .dropdown { display: none; }
 .has-dd.open > .dropdown { display: block; }
+.has-dd > .dropdown { display: none; }
+.has-dd.open > .dropdown { display: block; }
+
+/* 데스크탑 hover 유지 */
+.has-dd:hover > .dropdown { display: block; }
+
+/* 모바일에선 hover 비활성 */
+@media (hover: none) {
+  .has-dd:hover > .dropdown { display: none; }
+}
