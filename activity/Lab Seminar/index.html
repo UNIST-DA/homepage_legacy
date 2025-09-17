@@ -101,7 +101,7 @@ permalink: /activity/Lab%20Seminar/
 
               <div>
                 <p class="news-title">
-                  {% if it.category %}<span class="pill">{{ it.category }}</span>{% endif %}
+                  {% if it.category %}<span class="pill pill--{{ it.category | slugify }}">{{ it.category }}</span>{% endif %}
                   {{ it.title }}  <!-- 제목 링크 없음 -->
                 </p>
 
