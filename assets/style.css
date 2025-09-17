@@ -444,3 +444,27 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 @media (hover: none) {
   .has-dd:hover > .dropdown { display: none; }
 }
+/* 기본 숨김/표시 */
+.has-dd { position: relative; }
+.has-dd > .dropdown { display: none; position: absolute; z-index: 9999; }
+.has-dd.open > .dropdown { display: block; }
+
+/* 데스크톱: hover로 열림 */
+@media (hover: hover) and (pointer: fine) {
+  .has-dd:hover > .dropdown { display: block; }
+}
+
+/* 모바일: hover 무력화 → JS 토글만 */
+@media (hover: none), (pointer: coarse) {
+  .has-dd:hover > .dropdown { display: none; }
+}
+
+/* 버튼을 링크처럼 보이게 */
+.dd-trigger {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
