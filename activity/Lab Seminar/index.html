@@ -9,9 +9,17 @@ permalink: /activity/Lab%20Seminar/
   /* 작은 카테고리 칩만 유지 */
   .pill{
     display:inline-block; margin-right:8px; padding:2px 8px; border-radius:999px;
-    font-size:.78rem; border:1px solid rgba(99,102,241,.30); background:rgba(99,102,241,.10);
+    font-size:.78rem;
+    --pill: 99,102,241;                 /* 기본 indigo */
+    color: rgb(var(--pill));
+    border:1px solid rgba(var(--pill), .30);
+    background: rgba(var(--pill), .10);
   }
 
+  
+  /* 카테고리별 색 지정 */
+  .pill--lab-seminar{ --pill: 99,102,241; }   /* indigo */
+  .pill--paper-review{ --pill: 16,185,129; }  /* emerald */
   /* 행 레이아웃: 좌(날짜+본문) | 우(노션 아이콘) */
 /* 행 레이아웃: 좌(날짜+본문) | 우(노션 아이콘) */
   .news-item{
@@ -101,7 +109,9 @@ permalink: /activity/Lab%20Seminar/
 
               <div>
                 <p class="news-title">
-                  {% if it.category %}<span class="pill pill--{{ it.category | slugify }}">{{ it.category }}</span>{% endif %}
+                  {% if it.category %}
+                    <span class="pill pill--{{ it.category | slugify }}">{{ it.category }}</span>
+                  {% endif %}
                   {{ it.title }}  <!-- 제목 링크 없음 -->
                 </p>
 
