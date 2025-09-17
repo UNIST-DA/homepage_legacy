@@ -287,3 +287,68 @@
   }
 })();
 </script>
+<script>
+(function () {
+  const nav = document.getElementById('navbar');
+  if (!nav) return;
+
+  // 모바일/터치 판정: hover 없음 OR 포인터가 coarse
+  const isTouchLike = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  if (!isTouchLike) return; // 데스크탑은 기존 동작 유지
+
+  const parents = nav.querySelectorAll('.has-dd');
+  if (!parents.length) return;
+
+  // 유틸
+  const closeAll = () => {
+    parents.forEach(li => {
+      li.classList.remove('open');
+      const trg = li.querySelector(':scope > a, :scope > button');
+      if (trg) trg.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  parents.forEach(li => {
+    const trigger = li.querySelector(':scope > a, :scope > button');
+    const dropdown = li.querySelector(':scope > .dropdown');
+    if (!trigger || !dropdown) return;
+
+    trigger.setAttribute('aria-expanded', 'false');
+
+    // 글자를 눌러도 "항상" 펼치기만 (이동 금지)
+    const openOnly = (e) => {
+      // iOS 안전: pointerdown/touchstart에서 먼저 막기
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isOpen = li.classList.contains('open');
+      if (!isOpen) {
+        closeAll();
+        li.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      } else {
+        // 열려있다면 닫기(토글)
+        li.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    };
+
+    // 모바일에서 확실히 잡기 위해 두 이벤트 모두
+    trigger.addEventListener('pointerdown', openOnly, { passive: false });
+    trigger.addEventListener('click', openOnly, { passive: false });
+
+    // 드롭다운 내부 클릭 시(하위 항목 선택) 닫기
+    dropdown.addEventListener('click', () => closeAll());
+  });
+
+  // 바깥 영역 탭하면 닫기
+  document.addEventListener('pointerdown', (e) => {
+    if (!nav.contains(e.target)) closeAll();
+  }, { passive: true });
+
+  // ESC로 닫기(하드웨어 키보드 연결 등)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll();
+  });
+})();
+</script>
