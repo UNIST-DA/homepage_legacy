@@ -352,3 +352,102 @@
   });
 })();
 </script>
+<script>
+(function () {
+  const nav = document.getElementById('navbar');
+  if (!nav) return;
+
+  // 모바일/터치 환경 판정 (아이폰/아이패드 안전)
+  const isTouchLike =
+    window.matchMedia('(hover: none), (pointer: coarse)').matches ||
+    'ontouchstart' in window;
+
+  if (!isTouchLike) return; // 데스크탑은 기존 hover 동작 유지
+
+  const parents = Array.from(nav.querySelectorAll('.has-dd'));
+  if (!parents.length) return;
+
+  // 상태 유틸
+  const closeAll = () => {
+    parents.forEach(li => {
+      li.classList.remove('open');
+      const trg = li.querySelector(':scope > a, :scope > button');
+      if (trg) trg.setAttribute('aria-expanded', 'false');
+      li._openedOnce = false; // 첫 탭 이후 상태 리셋
+    });
+  };
+
+  const getTrigger = (el) => el?.closest('.has-dd > a, .has-dd > button');
+  const getParentLI = (el) => el?.closest('.has-dd');
+
+  // 첫 탭은 "항상" 펼치기만 하고 이동 금지:
+  // 캡처 단계에서 선제적으로 막아 iOS 네비게이션을 차단
+  const onPointerDownCapture = (e) => {
+    const trg = getTrigger(e.target);
+    if (!trg) return;
+    const li = getParentLI(trg);
+    if (!li) return;
+
+    const isOpen = li.classList.contains('open');
+
+    if (!isOpen) {
+      // 닫혀 있으면: 무조건 펼치기 & 이동 금지
+      e.preventDefault();
+      e.stopPropagation();
+      closeAll();
+      li.classList.add('open');
+      trg.setAttribute('aria-expanded', 'true');
+      li._openedOnce = true; // 한번은 펼쳤다
+    } else {
+      // 이미 열려 있으면: 이번엔 이동 허용 (두 번째 탭)
+      // pointerdown은 막지 않고 통과시켜 click이 동작하도록 둠
+    }
+  };
+
+  // 혹시 click 단계에서도 기본 동작이 진행될 수 있어 가드 추가
+  const onClickCapture = (e) => {
+    const trg = getTrigger(e.target);
+    if (!trg) return;
+    const li = getParentLI(trg);
+    if (!li) return;
+
+    const isOpen = li.classList.contains('open');
+
+    if (!isOpen) {
+      // 이 경우는 pointerdown에서 이미 열렸어야 함.
+      // 안전하게 한 번 더 차단.
+      e.preventDefault();
+      e.stopPropagation();
+      closeAll();
+      li.classList.add('open');
+      trg.setAttribute('aria-expanded', 'true');
+      li._openedOnce = true;
+    } else {
+      // 열려 있으면: 두 번째 탭 → 이동 허용 (막지 않음)
+    }
+  };
+
+  // 드롭다운 안의 항목을 누르면 닫기 (시각적 정리)
+  parents.forEach(li => {
+    const dd = li.querySelector(':scope > .dropdown');
+    const trg = li.querySelector(':scope > a, :scope > button');
+    if (trg) trg.setAttribute('aria-expanded', 'false');
+    if (dd) {
+      dd.addEventListener('click', () => closeAll());
+    }
+  });
+
+  // 바깥을 탭하면 닫기
+  document.addEventListener('pointerdown', (e) => {
+    if (!nav.contains(e.target)) closeAll();
+  }, { passive: true });
+
+  // 핵심: 캡처 단계에서 선제 차단 (iOS 네비 방지)
+  document.addEventListener('pointerdown', onPointerDownCapture, { capture: true, passive: false });
+  document.addEventListener('click', onClickCapture, { capture: true, passive: false });
+
+  // ESC로 닫기 (키보드 연결 시)
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+
+})();
+</script>
