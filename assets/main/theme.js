@@ -207,3 +207,83 @@
     });
   }
 })();
+<script>
+(function () {
+  // 터치/포인터 환경 감지
+  const isHoverCapable = window.matchMedia('(hover: hover)').matches;
+  const nav = document.getElementById('navbar');
+  const items = nav ? nav.querySelectorAll('.has-dd') : [];
+
+  if (!nav || !items.length) return;
+
+  // 데스크탑(hover 가능) → 아무 것도 안 함 (기존 동작 유지)
+  if (isHoverCapable) return;
+
+  // 모바일(hover 불가) → 클릭(탭)으로 제어
+  items.forEach(li => {
+    const trigger = li.querySelector(':scope > a, :scope > button');
+    const dropdown = li.querySelector(':scope > .dropdown');
+    if (!trigger || !dropdown) return;
+
+    // 접근성 상태 초기화
+    trigger.setAttribute('aria-expanded', 'false');
+
+    // 첫 탭: 펼치기만 / 두 번째 탭: 이동
+    let armed = false; // 첫 탭 후 “무장” 상태
+
+    trigger.addEventListener('click', (e) => {
+      const isOpen = li.classList.contains('open');
+
+      // 아직 안 열려 있으면, 열고 이동 막기
+      if (!isOpen) {
+        e.preventDefault();
+        closeAll(items);
+        li.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+        armed = true; // 다음 탭에 이동 허용
+        return;
+      }
+
+      // 이미 열려있고, armed면 이동 허용(두 번째 탭)
+      if (armed) {
+        armed = false; // 이동 후 초기화될 것
+        return; // 기본 동작(링크 이동)
+      }
+
+      // 이미 열려있고 armed가 아니면(예외 케이스), 토글처럼 동작
+      e.preventDefault();
+      li.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', li.classList.contains('open') ? 'true' : 'false');
+    });
+
+    // 드롭다운 안에서도 링크 누르면 닫히도록 (이동 전 시각적 정리)
+    dropdown.addEventListener('click', () => {
+      closeAll(items);
+    });
+  });
+
+  // 바깥 클릭 시 닫기
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('navbar');
+    if (!nav) return;
+    if (!nav.contains(e.target)) {
+      closeAll(items);
+    }
+  });
+
+  // ESC로 닫기
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll(items);
+  });
+
+  function closeAll(list) {
+    list.forEach(li => {
+      if (li.classList.contains('open')) {
+        li.classList.remove('open');
+        const trg = li.querySelector(':scope > a, :scope > button');
+        if (trg) trg.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
