@@ -89,16 +89,9 @@
   summary: Imitation-learning anomaly detection for AIS is improved by adding environmental data (wind, waves), so the model can tell apart risky vessel behavior from safe weather-driven detours.
   period: 2025.08 –
 
-- slug: scsc-fuel-est
-  title: Fuel Consumption Estimation for Maritime Energy Efficiency
-  url: /research/projects/contents/scsc-fuel-est/
-  image: /assets/research/projects/scsc-fuel-est-1.png
-  summary: Data-driven surrogate model that infers fuel burn from AIS and environmental context - no engine sensors required. 
-  period: 2024.09 –
-
 - slug: scsc-fuel-pred
   title: Physics-Informed AI for Robust Ship Fuel Consumption Prediction
   url: /research/projects/contents/scsc-fuel-pred/
-  image: /assets/research/projects/scsc-fuel-pred-1.png
+  image:  /assets/research/projects/scsc-fuel-est-1.png
   summary: Development of a Ship Fuel Consumption Prediction Model Considering Environmental Factors
-  period: 2023.01 – 2030.12
+  period: 2024.03 – 
