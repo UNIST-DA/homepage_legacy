@@ -44,6 +44,14 @@
     
       // click만 사용 (중복 토글 방지)
       document.addEventListener('click', onClick, true);
+
+      // Safari 대응: 상위 앵커 기본 이동 확실히 차단
+      document.querySelectorAll('#navbar .has-dd > a').forEach(a => {
+        a.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); }, true);
+        a.setAttribute('href', 'javascript:void(0)');
+        a.setAttribute('aria-haspopup', 'true');
+        if(!a.hasAttribute('aria-expanded')) a.setAttribute('aria-expanded', 'false');
+        });
     })();
     </script>
 </body>
