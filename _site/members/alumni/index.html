@@ -128,7 +128,11 @@
     transition: box-shadow .15s ease, transform .15s ease;
   }
   .alumni-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,.06); }
-  
+  .year-block { margin: 18px 0 10px; }
+  .year-head { margin: 0 0 10px; font-weight: 700; color:#111827; }
+  .alumni-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:20px; }
+  .alumni-links { margin-top:8px; display:flex; gap:10px; }
+  .alumni-icon svg { display:block; }
   /* 내부 요소 */
   .alumni-photo {
     width: 120px; height: 120px;
@@ -166,392 +170,72 @@
   }
 </style>
 
-<main class="container">
-  <!-- Ph.D. -->
-  <section id="postdoc" class="alumni-wrap">
+<main class="container"><!-- Ph.D. -->
+  <section id="phd" class="alumni-wrap">
     <div class="container">
-      <div class="head">
-        <h2><span class="title-text">Ph.D.</span></h2>
-      </div>
-      <div class="alumni-grid">
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-yongkyung-oh">
-              <img src="/assets/members/alumni/yongkyung-oh.webp" alt="YongKyung Oh" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">YongKyung Oh</h3>
-              <p class="alumni-role">Ph.D.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> Postdoc at UCLA
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-        
-      </div>
-    </div>
+      <div class="head"><h2><span class="title-text">Ph.D.</span></h2></div><div class="year-block">
+            <h3 class="year-head">2023</h3>
+            <div class="alumni-grid"><article class="alumni-card" id="alumni-yongkyung-oh"><img src="/assets/members/alumni/yongkyung-oh.jpg" alt="YongKyung Oh" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">YongKyung Oh</h3><p class="alumni-role">Ph.D. · 2023</p><p class="alumni-first"><strong>Current position:</strong> Postdoc, UCLA<a href="http://yongkyung-oh.github.io/" class="link-emoji" target="_blank" rel="noopener" aria-label="Open current position link">🔗</a></p></article></div>
+          </div></div>
   </section>
-  
+
   <!-- M.S. -->
   <section id="ms" class="alumni-wrap">
     <div class="container">
-      <div class="head">
-        <h2><span class="title-text">M.S.</span></h2>
-      </div>
-      <div class="alumni-grid">
-        
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-byungkook-koo">
-              <img src="/assets/members/alumni/byungkook-koo.webp" alt="Byungkook Koo" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Byungkook Koo</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> 
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-jiin-kwak">
-              <img src="/assets/members/alumni/jiin-kwak.webp" alt="Jiin Kwak" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Jiin Kwak</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> LG Electronics
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-juhui-lee">
-              <img src="/assets/members/alumni/juhui-lee.webp" alt="Juhui Lee" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Juhui Lee</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> THYROSCOPE Inc.
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-juyeong-lee">
-              <img src="/assets/members/alumni/juyeong-lee.webp" alt="Juyeong Lee" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Juyeong Lee</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> QRAFT
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-giheon-koh">
-              <img src="/assets/members/alumni/giheon-koh.webp" alt="Giheon Koh" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Giheon Koh</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> LG Display
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-gyeongjun-kim">
-              <img src="/assets/members/alumni/gyeongjun-kim.webp" alt="Gyeongjun Kim" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Gyeongjun Kim</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> CJ Logistics
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-heesun-kim">
-              <img src="/assets/members/alumni/heesun-kim.webp" alt="Heesun Kim" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Heesun Kim</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> LG Electronics
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-jaemin-park">
-              <img src="/assets/members/alumni/jaemin-park.webp" alt="Jaemin Park" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Jaemin Park</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> THYROSCOPE Inc.
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-jitae-yoo">
-              <img src="/assets/members/alumni/jitae-yoo.webp" alt="Jitae Yoo" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Jitae Yoo</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> LX Hausys
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-jonghwan-moon">
-              <img src="/assets/members/alumni/jonghwan-moon.webp" alt="JongHwan Moon" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">JongHwan Moon</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> LG Electronics
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-kwonin-yoon">
-              <img src="/assets/members/alumni/kwonin-yoon.webp" alt="Kwonin Yoon" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Kwonin Yoon</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> LG Electronics
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-jaehun-cho">
-              <img src="/assets/members/alumni/jaehun-cho.webp" alt="Jaehun Cho" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Jaehun Cho</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> 
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-taewon-kang">
-              <img src="/assets/members/alumni/taewon-kang.webp" alt="Taewon Kang" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Taewon Kang</h3>
-              <p class="alumni-role">M.S.</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> 
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-        
-      </div>
-    </div>
+      <div class="head"><h2><span class="title-text">M.S.</span></h2></div><div class="year-block">
+            <h3 class="year-head">2025</h3>
+            <div class="alumni-grid"><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-taewon-kang"><img src="/assets/members/alumni/taewon-kang.jpg" alt="Taewon Kang" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Taewon Kang</h3><p class="alumni-role">M.S. · 2025</p><p class="alumni-first"><strong>Current position:</strong> Engineer, Posco Future M</p></article><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-jaehun-cho"><img src="/assets/members/alumni/jaehun-cho.jpg" alt="Jaehun Cho" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Jaehun Cho</h3><p class="alumni-role">M.S. · 2025</p><p class="alumni-first"><strong>Current position:</strong> TBA</p><div class="alumni-links"><a href="https://www.linkedin.com/in/jaehun-cho-80796a2a6/" class="alumni-icon" target="_blank" rel="noopener" aria-label="Jaehun Cho on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/></svg>
+                          </a></div></article></div>
+          </div><div class="year-block">
+            <h3 class="year-head">2024</h3>
+            <div class="alumni-grid"><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-heesun-kim"><img src="/assets/members/alumni/heesun-kim.jpg" alt="Heesun Kim" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Heesun Kim</h3><p class="alumni-role">M.S. · 2024</p><p class="alumni-first"><strong>Current position:</strong> Professional Researcher, LG Electronics</p></article><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-byungkook-koo"><img src="/assets/members/alumni/byungkook-koo.jpg" alt="Byungkook Koo" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Byungkook Koo</h3><p class="alumni-role">M.S. · 2024</p><p class="alumni-first"><strong>Current position:</strong> TBA</p><div class="alumni-links"><a href="https://www.linkedin.com/in/byungkook-koo/" class="alumni-icon" target="_blank" rel="noopener" aria-label="Byungkook Koo on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/></svg>
+                          </a></div></article></div>
+          </div><div class="year-block">
+            <h3 class="year-head">2023</h3>
+            <div class="alumni-grid"><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-jiin-kwak"><img src="/assets/members/alumni/jiin-kwak.jpg" alt="Jiin Kwak" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Jiin Kwak</h3><p class="alumni-role">M.S. · 2023</p><p class="alumni-first"><strong>Current position:</strong> Data Scientist, LG Electronics</p><div class="alumni-links"><a href="https://www.linkedin.com/in/ji-in-kwak-762788200/" class="alumni-icon" target="_blank" rel="noopener" aria-label="Jiin Kwak on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/></svg>
+                          </a></div></article><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-gyeongjun-kim"><img src="/assets/members/alumni/gyeongjun-kim.jpg" alt="Gyeongjun Kim" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Gyeongjun Kim</h3><p class="alumni-role">M.S. · 2023</p><p class="alumni-first"><strong>Current position:</strong> Data Scientist, CJ Logistics</p></article><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-giheon-koh"><img src="/assets/members/alumni/giheon-koh.jpg" alt="Giheon Koh" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Giheon Koh</h3><p class="alumni-role">M.S. · 2023</p><p class="alumni-first"><strong>Current position:</strong> AI Researcher, LG Display</p><div class="alumni-links"><a href="https://www.linkedin.com/in/giheon-koh/" class="alumni-icon" target="_blank" rel="noopener" aria-label="Giheon Koh on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/></svg>
+                          </a></div></article><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-jitae-yoo"><img src="/assets/members/alumni/jitae-yoo.jpg" alt="Jitae Yoo" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Jitae Yoo</h3><p class="alumni-role">M.S. · 2023</p><p class="alumni-first"><strong>Current position:</strong> LX Hausys</p></article><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-jonghwan-moon"><img src="/assets/members/alumni/jonghwan-moon.jpg" alt="JongHwan Moon" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">JongHwan Moon</h3><p class="alumni-role">M.S. · 2023</p><p class="alumni-first"><strong>Current position:</strong> Data Scientist, LG Electronics</p></article></div>
+          </div><div class="year-block">
+            <h3 class="year-head">2022</h3>
+            <div class="alumni-grid"><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-kwonin-yoon"><img src="/assets/members/alumni/kwonin-yoon.jpg" alt="Kwonin Yoon" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Kwonin Yoon</h3><p class="alumni-role">M.S. · 2022</p><p class="alumni-first"><strong>Current position:</strong> Data Scientist, LG Electronics</p></article></div>
+          </div><div class="year-block">
+            <h3 class="year-head">2021</h3>
+            <div class="alumni-grid"><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-juyeong-lee"><img src="/assets/members/alumni/juyeong-lee.jpg" alt="Juyeong Lee" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Juyeong Lee</h3><p class="alumni-role">M.S. · 2021</p><p class="alumni-first"><strong>Current position:</strong> QRAFT</p></article><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-juhui-lee"><img src="/assets/members/alumni/juhui-lee.jpg" alt="Juhui Lee" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Juhui Lee</h3><p class="alumni-role">M.S. · 2021</p><p class="alumni-first"><strong>Current position:</strong> Data Scientist, THYROSCOPE Inc.</p></article></div>
+          </div><div class="year-block">
+            <h3 class="year-head">2020</h3>
+            <div class="alumni-grid"><!-- 카드 내용은 위와 동일 -->
+                  <article class="alumni-card" id="alumni-jaemin-park"><img src="/assets/members/alumni/jaemin-park.jpg" alt="Jaemin Park" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Jaemin Park</h3><p class="alumni-role">M.S. · 2020</p><p class="alumni-first"><strong>Current position:</strong> CEO, THYROSCOPE Inc.</p><div class="alumni-links"><a href="https://www.linkedin.com/in/jaemy-park/" class="alumni-icon" target="_blank" rel="noopener" aria-label="Jaemin Park on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/></svg>
+                          </a></div></article></div>
+          </div></div>
   </section>
 
   <!-- Interns -->
-  <section id="intern" class="alumni-wrap">
+  <section id="interns" class="alumni-wrap">
     <div class="container">
-      <div class="head">
-        <h2><span class="title-text">Interns</span></h2>
-      </div>
-      <div class="alumni-grid">
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            
-            <article class="alumni-card" id="alumni-namu-kim">
-              <img src="/assets/members/alumni/namu-kim.webp" alt="Namu Kim" class="alumni-photo" loading="lazy" decoding="async">
-              <h3 class="alumni-name">Namu Kim</h3>
-              <p class="alumni-role">Intern</p>
-              
-                <p class="alumni-first">
-                  <strong>Current position:</strong> POSCO
-                  
-                </p>
-              
-              
-            </article>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-        
-      </div>
-    </div>
+      <div class="head"><h2><span class="title-text">Interns</span></h2></div><div class="year-block">
+            <h3 class="year-head">2020</h3>
+            <div class="alumni-grid"><!-- 카드 동일 -->
+                  <article class="alumni-card" id="alumni-namu-kim"><img src="/assets/members/alumni/namu-kim.jpg" alt="Namu Kim" class="alumni-photo" loading="lazy" decoding="async"><h3 class="alumni-name">Namu Kim</h3><p class="alumni-role">Intern · 2020</p><p class="alumni-first"><strong>Current position:</strong> AI Researcher, KT</p><div class="alumni-links"><a href="https://www.linkedin.com/in/namu-kim-tree-kim/" class="alumni-icon" target="_blank" rel="noopener" aria-label="Namu Kim on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.41v1.56h.05c.47-.88 1.63-1.81 3.35-1.81 3.58 0 4.24 2.36 4.24 5.43v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/></svg>
+                          </a></div></article></div>
+          </div></div>
   </section>
 </main>
 
@@ -576,13 +260,26 @@
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

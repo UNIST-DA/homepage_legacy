@@ -101,20 +101,20 @@
 
 <style>
   /* 카드 전체가 hover에 반응하도록 (outer) */
-  .students-section a.card.card-pad {
+  .students-section .card.card-pad {
     display: block;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     background: transparent;   /* 배경 투명 */
-    padding: 16px;                    /* 바깥 카드가 패딩 담당 */
-    text-decoration: none;
+    padding: 16px;             /* 바깥 카드가 패딩 담당 */
     color: inherit;
     transition: box-shadow .15s ease, transform .15s ease;
+    position: relative;        /* stretched-link 기준 */
   }
-  
-  .students-section a.card.card-pad:hover {
+  .students-section .card.card-pad:hover {
     box-shadow: 0 6px 22px rgba(0,0,0,.06);  /* hover 시 카드 전체가 떠 보이게 */
   }
+
   /* 내부 row는 박스 느낌 없이 컨텐츠 배치만 */
   .student-row {
     display: flex;
@@ -134,10 +134,6 @@
   .student-meta {
     margin: 0 0 6px; color: #6b7280; font-size: 14px;
   }
-  .student-tags span {
-    display:inline-block;border:1px solid #e3e3e3;border-radius:999px;
-    padding:2px 8px;margin:0 6px 6px 0;font-size:12px;color:#6b7280;
-  }
   .student-grid { display: grid; gap: 16px; }
 
   @media (max-width: 720px) {
@@ -147,6 +143,46 @@
 
   /* 섹션 헤더 간 간격 */
   section.students-section + section.students-section { margin-top: 36px; }
+
+  /* 카드 전체 클릭을 위한 오버레이 링크 */
+  .students-section .stretched-link {
+    position: absolute; inset: 0; z-index: 1;
+    text-indent: -9999px; overflow: hidden;
+  }
+
+  /* 학생 카드 내 링크 칩(가로 나열) - 클릭 가능 */
+  .student-links {
+    position: relative;         /* 오버레이 위로 올라오게 */
+    z-index: 2;                 /* stretched-link(z-index:1) 보다 위 */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .student-links li { margin: 0; padding: 0; }
+  .student-links .chip {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1px solid #e3e3e3; border-radius: 999px;
+    padding: 2px 10px; font-size: 12px; line-height: 1.6;
+    color: #374151; background: #fff; text-decoration: none; white-space: nowrap;
+  }
+  /* 학생 카드 링크: 교수님 페이지 pill 스타일 매칭 */
+  .stud-pills{
+    list-style:none; padding:0; margin:6px 0 0;
+    display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center;
+    position:relative; z-index:2;  /* stretched-link( z-index:1 ) 위로 */
+  }
+  .stud-pills li{ margin:0; padding:0; }
+  .stud-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    border:1px solid #e5e7eb; border-radius:999px;
+    padding:6px 12px; font-size:14px;
+    color:#374151; background:#fff; text-decoration:none;
+  }
+  .stud-pill:hover{ background:#f9fafb; }
+  .stud-pill img, .stud-pill svg{ width:18px; height:18px; flex:0 0 auto; }
 </style>
 
 <main class="container">
@@ -166,16 +202,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="seungsu-kam"
-              href="/members/students/contents/seungsu-kam/"
               data-slug="seungsu-kam"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/seungsu-kam/" aria-label="View profile of SeungSu Kam"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/seungsu-kam.webp" alt="SeungSu Kam" class="student-photo">
+                  <img src="/assets/members/students/seungsu-kam.jpg" alt="SeungSu Kam" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">SeungSu Kam</h3>
@@ -186,11 +226,96 @@
                     </p>
                   
                   
-                    <p class="muted" style="margin:0 0 8px">Neural Differential Equation, Anomaly Detection, Irregularly-Sampled Time Series</p>
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                  
+                    
+                    
+                    
+                      <ul class="stud-pills">
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://scholar.google.co.kr/citations?hl=ko&user=yP1DmawAAAAJ" target="_blank" rel="noopener">
+                              <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">Google Scholar
+                            </a>
+                          </li>
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://github.com/SEUNGSUKAM" target="_blank" rel="noopener">
+                              <img src="https://github.com/favicon.ico" alt="GitHub">GitHub
+                            </a>
+                          </li>
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="www.linkedin.com/in/seungsu-kam-5b232327b" target="_blank" rel="noopener">
+                              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">LinkedIn
+                            </a>
+                          </li>
+                        
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://seungsukam.github.io/" target="_blank" rel="noopener">
+                              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20'/%3E%3C/svg%3E" alt="">homepage
+                            </a>
+                          </li>
+                        
+                      </ul>
+                    
                   
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -204,16 +329,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="yongmin-kim"
-              href="/members/students/contents/yongmin-kim/"
               data-slug="yongmin-kim"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/yongmin-kim/" aria-label="View profile of Yongmin Kim"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/yongmin-kim.webp" alt="Yongmin Kim" class="student-photo">
+                  <img src="/assets/members/students/yongmin-kim.jpg" alt="Yongmin Kim" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Yongmin Kim</h3>
@@ -226,9 +355,36 @@
                   
                     <p class="muted" style="margin:0 0 8px">Anomaly Detection, Time Series Classification, Quality Engineering and Management</p>
                   
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                    
+                    
+                    
+                  
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -236,16 +392,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="byeonghoon-jeon"
-              href="/members/students/contents/byeonghoon-jeon/"
               data-slug="byeonghoon-jeon"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/byeonghoon-jeon/" aria-label="View profile of Byeonghoon Jeon"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/byeonghoon-jeon.webp" alt="Byeonghoon Jeon" class="student-photo">
+                  <img src="/assets/members/students/byeonghoon-jeon.jpg" alt="Byeonghoon Jeon" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Byeonghoon Jeon</h3>
@@ -258,9 +418,60 @@
                   
                     <p class="muted" style="margin:0 0 8px">Multimodal learning, Multivariate Time Series Modeling</p>
                   
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                  
+                    
+                    
+                    
+                      <ul class="stud-pills">
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://github.com/nanbhi/project" target="_blank" rel="noopener">
+                              <img src="https://github.com/favicon.ico" alt="GitHub">GitHub
+                            </a>
+                          </li>
+                        
+                        
+                        
+                        
+                      </ul>
+                    
+                  
                 </div>
               </article>
-            </a>
+            </div>
+          
+        
+          
           
         
           
@@ -303,16 +514,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="hyejin-cho"
-              href="/members/students/contents/hyejin-cho/"
               data-slug="hyejin-cho"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/hyejin-cho/" aria-label="View profile of Hyejin Cho"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/hyejin-cho.webp" alt="Hyejin Cho" class="student-photo">
+                  <img src="/assets/members/students/hyejin-cho.jpg" alt="Hyejin Cho" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Hyejin Cho</h3>
@@ -323,12 +538,61 @@
                     </p>
                   
                   
-                    <p class="muted" style="margin:0 0 8px">Industrial Statistics, Data-driven Business Strategy, Machine Learning and Deep Learning</p>
                   
+                  
+                    <p class="muted" style="margin:0 0 8px">Time-Series Analysis, Data-driven Business Strategy</p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                  
+                    
+                    
+                    
+                      <ul class="stud-pills">
+                        
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://www.linkedin.com/in/hyejiinc/" target="_blank" rel="noopener">
+                              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">LinkedIn
+                            </a>
+                          </li>
+                        
+                        
+                        
+                      </ul>
+                    
                   
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -336,16 +600,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="seongjin-kim"
-              href="/members/students/contents/seongjin-kim/"
               data-slug="seongjin-kim"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/seongjin-kim/" aria-label="View profile of Seongjin Kim"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/seongjin-kim.webp" alt="Seongjin Kim" class="student-photo">
+                  <img src="/assets/members/students/seongjin-kim.jpg" alt="Seongjin Kim" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Seongjin Kim</h3>
@@ -356,12 +624,100 @@
                     </p>
                   
                   
-                    <p class="muted" style="margin:0 0 8px">Domain-Specific RAG, Time-Series Anomaly Detection, Root Cause Analysis</p>
                   
+                  
+                    <p class="muted" style="margin:0 0 8px">Domain-Specific RAG, Time-Series Anomaly Detection, Large Language Models</p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                  
+                    
+                    
+                    
+                      <ul class="stud-pills">
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://scholar.google.com/citations?user=jt983zsAAAAJ&hl=ko&oi=sra" target="_blank" rel="noopener">
+                              <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">Google Scholar
+                            </a>
+                          </li>
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://github.com/Sicari1/SeongJin-Kim" target="_blank" rel="noopener">
+                              <img src="https://github.com/favicon.ico" alt="GitHub">GitHub
+                            </a>
+                          </li>
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://www.linkedin.com/in/seongjin-kim-3205a2223" target="_blank" rel="noopener">
+                              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">LinkedIn
+                            </a>
+                          </li>
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://drive.google.com/file/d/1_JLYbniWsPzl-FIYtIhDFPJUnjcgm_Hn/view?usp=drive_link" target="_blank" rel="noopener">
+                              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-5h6v5'/%3E%3C/svg%3E" alt="CV">CV
+                            </a>
+                          </li>
+                        
+                        
+                      </ul>
+                    
                   
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -375,16 +731,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="chanbeom-hur"
-              href="/members/students/contents/chanbeom-hur/"
               data-slug="chanbeom-hur"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/chanbeom-hur/" aria-label="View profile of Chanbeom Hur"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/chanbeom-hur.webp" alt="Chanbeom Hur" class="student-photo">
+                  <img src="/assets/members/students/chanbeom-hur.jpg" alt="Chanbeom Hur" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Chanbeom Hur</h3>
@@ -395,12 +755,20 @@
                     </p>
                   
                   
+                  
+                  
                     <p class="muted" style="margin:0 0 8px">Statistical Machine Learning, Data Analysis</p>
                   
                   
+                  
+                  
+                  
+                  
+
+                  
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -408,16 +776,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="sieun-lee"
-              href="/members/students/contents/sieun-lee/"
               data-slug="sieun-lee"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/sieun-lee/" aria-label="View profile of Sieun Lee"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/sieun-lee.webp" alt="Sieun Lee" class="student-photo">
+                  <img src="/assets/members/students/sieun-lee.jpg" alt="Sieun Lee" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Sieun Lee</h3>
@@ -428,12 +800,74 @@
                     </p>
                   
                   
-                    <p class="muted" style="margin:0 0 8px">Anomaly Detection, Time Series Classification</p>
                   
+                  
+                    <p class="muted" style="margin:0 0 8px">Missingness, Time-Series Imputation, Diffusion Models</p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                      
+                      
+                      
+                  
+                      
+                    
+                      
+                      
+                  
+                    
+                    
+                    
+                      <ul class="stud-pills">
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://github.com/sieun-00" target="_blank" rel="noopener">
+                              <img src="https://github.com/favicon.ico" alt="GitHub">GitHub
+                            </a>
+                          </li>
+                        
+                        
+                          
+                          <li>
+                            <a class="stud-pill" href="https://www.linkedin.com/in/sieun-lee-5ba02b345/" target="_blank" rel="noopener">
+                              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">LinkedIn
+                            </a>
+                          </li>
+                        
+                        
+                        
+                      </ul>
+                    
                   
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -441,16 +875,20 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="heeyoon-lee"
-              href="/members/students/contents/heeyoon-lee/"
               data-slug="heeyoon-lee"
             >
+              
+                <a class="stretched-link" href="/members/students/contents/heeyoon-lee/" aria-label="View profile of Heeyoon Lee"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/heeyoon-lee.webp" alt="Heeyoon Lee" class="student-photo">
+                  <img src="/assets/members/students/heeyoon-lee.jpg" alt="Heeyoon Lee" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Heeyoon Lee</h3>
@@ -461,12 +899,43 @@
                     </p>
                   
                   
-                    <p class="muted" style="margin:0 0 8px">Anomaly Detection, Time Series Classification</p>
                   
+                  
+                    <p class="muted" style="margin:0 0 8px">Time Series Imputation, Statistical Analysis with Missing Data, Deep learning based Data Imputation</p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                    
+                    
+                    
                   
                 </div>
               </article>
-            </a>
+            </div>
+          
+        
+          
           
         
           
@@ -521,30 +990,63 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="jungwoo-yoo"
-              href="/members/students/contents/jungwoo-yoo/"
               data-slug="jungwoo-yoo"
             >
+              
+                <a class="stretched-link" href="/members/students/" aria-label="View profile of Jungwoo Yoo"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/jungwoo-yoo.webp" alt="Jungwoo Yoo" class="student-photo">
+                  <img src="/assets/members/students/jungwoo-yoo.jpg" alt="Jungwoo Yoo" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Jungwoo Yoo</h3>
                   
-                    <p class="student-meta">
+                    <p class="muted" style="margin: 0 0 6px; font-size: 14px">
                       Intern
                        · 2025.04 —
                     </p>
                   
                   
                   
+                    <p class="muted" style="margin:0 0 8px"></p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                    
+                    
+                    
+                  
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -552,30 +1054,63 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
-              id="yejin-cho"
-              href="/members/students/contents/yejin-cho/"
-              data-slug="yejin-cho"
+              id="yejin-jo"
+              data-slug="yejin-jo"
             >
+              
+                <a class="stretched-link" href="/members/students/" aria-label="View profile of Yejin Jo"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/yejin-cho.webp" alt="Yejin-Cho" class="student-photo">
+                  <img src="/assets/members/students/yejin-cho.jpg" alt="Yejin Jo" class="student-photo">
                 
                 <div class="student-body">
-                  <h3 style="margin:0 0 6px">Yejin-Cho</h3>
+                  <h3 style="margin:0 0 6px">Yejin Jo</h3>
                   
-                    <p class="student-meta">
+                    <p class="muted" style="margin: 0 0 6px; font-size: 14px">
                       Intern
                        · 2025.07 —
                     </p>
                   
                   
                   
+                    <p class="muted" style="margin:0 0 8px"></p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                    
+                    
+                    
+                  
                 </div>
               </article>
-            </a>
+            </div>
           
         
           
@@ -583,30 +1118,127 @@
             
             
             
-            <a
+
+            <div
               class="card card-pad"
               style="grid-column: span 6;"
               id="jihyun-ko"
-              href="/members/students/contents/jihyun-ko/"
               data-slug="jihyun-ko"
             >
+              
+                <a class="stretched-link" href="/members/students/" aria-label="View profile of Jihyun Ko"></a>
+              
+
               <article class="student-row">
                 
-                  <img src="/assets/members/students/jihyun-ko.webp" alt="Jihyun Ko" class="student-photo">
+                  <img src="/assets/members/students/jihyun-ko.jpg" alt="Jihyun Ko" class="student-photo">
                 
                 <div class="student-body">
                   <h3 style="margin:0 0 6px">Jihyun Ko</h3>
                   
-                    <p class="student-meta">
+                    <p class="muted" style="margin: 0 0 6px; font-size: 14px">
                       Intern
                        · 2025.08 —
                     </p>
                   
                   
                   
+                    <p class="muted" style="margin:0 0 8px"></p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                    
+                    
+                    
+                  
                 </div>
               </article>
-            </a>
+            </div>
+          
+        
+          
+          
+            
+            
+            
+
+            <div
+              class="card card-pad"
+              style="grid-column: span 6;"
+              id="euiyeob-kim"
+              data-slug="euiyeob-kim"
+            >
+              
+                <a class="stretched-link" href="/members/students/" aria-label="View profile of Euiyeob Kim"></a>
+              
+
+              <article class="student-row">
+                
+                  <img src="/assets/members/students/euiyeob-kim.jpg" alt="Euiyeob Kim" class="student-photo">
+                
+                <div class="student-body">
+                  <h3 style="margin:0 0 6px">Euiyeob Kim</h3>
+                  
+                    <p class="muted" style="margin: 0 0 6px; font-size: 14px">
+                      Intern
+                       · 2025.09 —
+                    </p>
+                  
+                  
+                  
+                    <p class="muted" style="margin:0 0 8px"></p>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  
+                    
+                    
+                    
+                  
+                </div>
+              </article>
+            </div>
           
         
         
@@ -636,13 +1268,26 @@
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

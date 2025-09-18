@@ -95,9 +95,17 @@
   /* 작은 카테고리 칩만 유지 */
   .pill{
     display:inline-block; margin-right:8px; padding:2px 8px; border-radius:999px;
-    font-size:.78rem; border:1px solid rgba(99,102,241,.30); background:rgba(99,102,241,.10);
+    font-size:.78rem;
+    --pill: 99,102,241;                 /* 기본 indigo */
+    color: rgb(var(--pill));
+    border:1px solid rgba(var(--pill), .30);
+    background: rgba(var(--pill), .10);
   }
 
+  
+  /* 카테고리별 색 지정 */
+  .pill--lab-seminar{ --pill: 99,102,241; }   /* indigo */
+  .pill--paper-review{ --pill: 16,185,129; }  /* emerald */
   /* 행 레이아웃: 좌(날짜+본문) | 우(노션 아이콘) */
 /* 행 레이아웃: 좌(날짜+본문) | 우(노션 아이콘) */
   .news-item{
@@ -179,7 +187,50 @@
     <div class="grid">
       
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-08-25-a-deep-learning-based-surrogate-model-for-thermal-signature-prediction-in-laser-metal-deposition">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-09-05-multiple-imputation-for-missing-data">
+          <div class="news-item">
+            <!-- 좌측(날짜 + 본문) -->
+            <div class="news-body">
+              <div class="news-date">2025-09-05</div>
+
+              <div>
+                <p class="news-title">
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
+                  Multiple Imputation for Missing Data  <!-- 제목 링크 없음 -->
+                </p>
+
+                
+                  <p class="news-meta">
+                    Presenter: 이희윤
+                    
+                       · 
+                      Keywords:
+                      
+                        <span class="kw">#imputation</span>
+                      
+                        <span class="kw">#Statistics</span>
+                      
+                    
+                  </p>
+                
+              </div>
+            </div>
+
+            <!-- 우측(노션 아이콘) -->
+            
+            <a class="notion-link" href="https://www.notion.so/264046396f7e8070b523c5b6c5eb8d73" target="_blank" rel="noopener" aria-label="Open in Notion: Multiple Imputation for Missing Data">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
+                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            
+          </div>
+        </article>
+      
+        <article class="card card-pad" style="grid-column: span 12" id="2025-08-25-a-deep-learning-based-surrogate-model-for-thermal-signature-prediction-in-laser-metal-deposition-ieee-t-ase-2023">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -187,8 +238,10 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  A Deep-Learning-Based Surrogate Model for Thermal Signature Prediction in Laser Metal Deposition  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  A Deep-Learning-Based Surrogate Model for Thermal Signature Prediction in Laser Metal Deposition (IEEE T-ASE 2023)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -212,7 +265,7 @@
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/25a046396f7e80a8a559e4613ee5ac1b" target="_blank" rel="noopener" aria-label="Open in Notion: A Deep-Learning-Based Surrogate Model for Thermal Signature Prediction in Laser Metal Deposition">
+            <a class="notion-link" href="https://www.notion.so/25a046396f7e80a8a559e4613ee5ac1b" target="_blank" rel="noopener" aria-label="Open in Notion: A Deep-Learning-Based Surrogate Model for Thermal Signature Prediction in Laser Metal Deposition (IEEE T-ASE 2023)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -222,7 +275,7 @@
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-08-13-quality-engineering-neural-network-control-chart-for-autocorrelated-multivariate-data">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-08-13-neural-network-control-chart-for-autocorrelated-multivariate-data-quality-engineering">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -230,8 +283,10 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  (Quality Engineering) Neural Network Control Chart for Autocorrelated Multivariate Data  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Neural Network Control Chart for Autocorrelated Multivariate Data (Quality Engineering)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -253,7 +308,7 @@
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/250046396f7e809397c2f33d41a3e440" target="_blank" rel="noopener" aria-label="Open in Notion: (Quality Engineering) Neural Network Control Chart for Autocorrelated Multivariate Data">
+            <a class="notion-link" href="https://www.notion.so/250046396f7e809397c2f33d41a3e440" target="_blank" rel="noopener" aria-label="Open in Notion: Neural Network Control Chart for Autocorrelated Multivariate Data (Quality Engineering)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -263,7 +318,7 @@
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-08-01-autoencoding-under-normalization-constraints">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-08-01-uncertainty-quantification-in-digital-twin-smo-2023">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -271,8 +326,51 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Autoencoding Under Normalization Constraints  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Uncertainty quantification in digital twin (SMO 2023)  <!-- 제목 링크 없음 -->
+                </p>
+
+                
+                  <p class="news-meta">
+                    Presenter: 전병훈
+                    
+                       · 
+                      Keywords:
+                      
+                        <span class="kw">#Uncertainty Estimation</span>
+                      
+                    
+                  </p>
+                
+              </div>
+            </div>
+
+            <!-- 우측(노션 아이콘) -->
+            
+            <a class="notion-link" href="https://www.notion.so/245046396f7e80779f84c6b7889bed8e" target="_blank" rel="noopener" aria-label="Open in Notion: Uncertainty quantification in digital twin (SMO 2023)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
+                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            
+          </div>
+        </article>
+      
+        <article class="card card-pad" style="grid-column: span 12" id="2025-08-01-autoencoding-under-normalization-constraints-pmlr-2021">
+          <div class="news-item">
+            <!-- 좌측(날짜 + 본문) -->
+            <div class="news-body">
+              <div class="news-date">2025-08-01</div>
+
+              <div>
+                <p class="news-title">
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Autoencoding Under Normalization Constraints (PMLR, 2021)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -294,7 +392,7 @@
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/23f046396f7e8014b2e5e4d83e1f3c27" target="_blank" rel="noopener" aria-label="Open in Notion: Autoencoding Under Normalization Constraints">
+            <a class="notion-link" href="https://www.notion.so/23f046396f7e8014b2e5e4d83e1f3c27" target="_blank" rel="noopener" aria-label="Open in Notion: Autoencoding Under Normalization Constraints (PMLR, 2021)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -304,46 +402,7 @@
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-08-01-smo-2023-uncertainty-quantification-in-digital-twin">
-          <div class="news-item">
-            <!-- 좌측(날짜 + 본문) -->
-            <div class="news-body">
-              <div class="news-date">2025-08-01</div>
-
-              <div>
-                <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  (SMO 2023) Uncertainty quantification in digital twin  <!-- 제목 링크 없음 -->
-                </p>
-
-                
-                  <p class="news-meta">
-                    Presenter: 전병훈
-                    
-                       · 
-                      Keywords:
-                      
-                        <span class="kw">#Uncertainty Estimation</span>
-                      
-                    
-                  </p>
-                
-              </div>
-            </div>
-
-            <!-- 우측(노션 아이콘) -->
-            
-            <a class="notion-link" href="https://www.notion.so/245046396f7e80779f84c6b7889bed8e" target="_blank" rel="noopener" aria-label="Open in Notion: (SMO 2023) Uncertainty quantification in digital twin">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
-                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
-              </svg>
-            </a>
-            
-          </div>
-        </article>
-      
-        <article class="card card-pad" style="grid-column: span 12" id="2025-07-14-multimodal-industrial-anomaly-detection-via-hybrid-fusion">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-07-14-multimodal-industrial-anomaly-detection-via-hybrid-fusion-cvpr-2023">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -351,8 +410,10 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Multimodal Industrial Anomaly Detection via Hybrid Fusion  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Multimodal Industrial Anomaly Detection via Hybrid Fusion (CVPR, 2023)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -374,7 +435,7 @@
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/230046396f7e801ab004e577c53cf802" target="_blank" rel="noopener" aria-label="Open in Notion: Multimodal Industrial Anomaly Detection via Hybrid Fusion">
+            <a class="notion-link" href="https://www.notion.so/230046396f7e801ab004e577c53cf802" target="_blank" rel="noopener" aria-label="Open in Notion: Multimodal Industrial Anomaly Detection via Hybrid Fusion (CVPR, 2023)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -384,7 +445,7 @@
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-07-07-jrssb-2001-bayesian-calibration-of-computer-models">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-07-07-bayesian-calibration-of-computer-models-jrssb-2001">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -392,8 +453,10 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  (JRSS:B 2001) Bayesian Calibration of Computer Models  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Bayesian Calibration of Computer Models (JRSS:B 2001)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -413,7 +476,7 @@
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/22d046396f7e804d9f54e4fc4a2e8f02" target="_blank" rel="noopener" aria-label="Open in Notion: (JRSS:B 2001) Bayesian Calibration of Computer Models">
+            <a class="notion-link" href="https://www.notion.so/22d046396f7e804d9f54e4fc4a2e8f02" target="_blank" rel="noopener" aria-label="Open in Notion: Bayesian Calibration of Computer Models (JRSS:B 2001)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -423,7 +486,7 @@
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-05-30-anomaly-transformer-time-series-anomaly-detection-with-association-discrepancy">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-05-30-anomaly-transformer-time-series-anomaly-detection-with-association-discrepancy-iclr-2022-spotlight">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -431,8 +494,10 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  ANOMALY TRANSFORMER: TIME SERIES ANOMALY DETECTION WITH ASSOCIATION DISCREPANCY  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  ANOMALY TRANSFORMER: TIME SERIES ANOMALY DETECTION WITH ASSOCIATION DISCREPANCY (ICLR 2022 Spotlight)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -454,7 +519,7 @@
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/1ff046396f7e80a091fad7ac557a98ac" target="_blank" rel="noopener" aria-label="Open in Notion: ANOMALY TRANSFORMER: TIME SERIES ANOMALY DETECTION WITH ASSOCIATION DISCREPANCY">
+            <a class="notion-link" href="https://www.notion.so/1ff046396f7e80a091fad7ac557a98ac" target="_blank" rel="noopener" aria-label="Open in Notion: ANOMALY TRANSFORMER: TIME SERIES ANOMALY DETECTION WITH ASSOCIATION DISCREPANCY (ICLR 2022 Spotlight)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -472,7 +537,9 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
                   Understanding Complex Missingness Mechanisms  <!-- 제목 링크 없음 -->
                 </p>
 
@@ -505,48 +572,7 @@
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-05-16-understanding-missingness-data">
-          <div class="news-item">
-            <!-- 좌측(날짜 + 본문) -->
-            <div class="news-body">
-              <div class="news-date">2025-05-16</div>
-
-              <div>
-                <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
-                  Understanding Missingness Data  <!-- 제목 링크 없음 -->
-                </p>
-
-                
-                  <p class="news-meta">
-                    Presenter: 이시은
-                    
-                       · 
-                      Keywords:
-                      
-                        <span class="kw">#imputation</span>
-                      
-                        <span class="kw">#missingness data</span>
-                      
-                    
-                  </p>
-                
-              </div>
-            </div>
-
-            <!-- 우측(노션 아이콘) -->
-            
-            <a class="notion-link" href="https://www.notion.so/1f5046396f7e8002a846c207d8021a74" target="_blank" rel="noopener" aria-label="Open in Notion: Understanding Missingness Data">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
-                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
-              </svg>
-            </a>
-            
-          </div>
-        </article>
-      
-        <article class="card card-pad" style="grid-column: span 12" id="2025-04-25-iclr-2025-kan-kolmogorov-arnold-networks">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-04-25-kan-kolmogorov-arnold-networks-iclr-2025">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -554,8 +580,10 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
-                  (ICLR 2025) KAN: Kolmogorov–Arnold Networks  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
+                  KAN: Kolmogorov–Arnold Networks (ICLR 2025)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -575,7 +603,7 @@
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/1c3046396f7e80edbad2e7d2b890e6fa" target="_blank" rel="noopener" aria-label="Open in Notion: (ICLR 2025) KAN: Kolmogorov–Arnold Networks">
+            <a class="notion-link" href="https://www.notion.so/1c3046396f7e80edbad2e7d2b890e6fa" target="_blank" rel="noopener" aria-label="Open in Notion: KAN: Kolmogorov–Arnold Networks (ICLR 2025)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -593,7 +621,9 @@
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
                   TIME-LLM: Reprogramming LLMs for Time Series
 Forecasting  <!-- 제목 링크 없음 -->
                 </p>
@@ -628,7 +658,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-04-11-cikm-2024-mtsci-a-conditional-diffusion-model-for-multivariate-time-series-consistent-imputation">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-04-11-mtsci-a-conditional-diffusion-model-for-multivariate-time-series-consistent-imputation-cikm-2024">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -636,8 +666,10 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
-                  (CIKM 2024) MTSCI: A Conditional Diffusion Model for Multivariate Time Series Consistent Imputation  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
+                  MTSCI: A Conditional Diffusion Model for Multivariate Time Series Consistent Imputation (CIKM 2024)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -661,7 +693,7 @@ Forecasting">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/1d1046396f7e8080983acdd19473ea9c" target="_blank" rel="noopener" aria-label="Open in Notion: (CIKM 2024) MTSCI: A Conditional Diffusion Model for Multivariate Time Series Consistent Imputation">
+            <a class="notion-link" href="https://www.notion.so/1d1046396f7e8080983acdd19473ea9c" target="_blank" rel="noopener" aria-label="Open in Notion: MTSCI: A Conditional Diffusion Model for Multivariate Time Series Consistent Imputation (CIKM 2024)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -671,7 +703,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-03-28-colm-2024-linear-time-sequence-modeling-with-selective-state-spaces">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-03-28-linear-time-sequence-modeling-with-selective-state-spaces-colm-2024">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -679,8 +711,10 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  (COLM 2024) Linear-Time Sequence Modeling with Selective State Spaces  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Linear-Time Sequence Modeling with Selective State Spaces (COLM 2024)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -704,7 +738,7 @@ Forecasting">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/1ae046396f7e803c8c56ec9756577d95" target="_blank" rel="noopener" aria-label="Open in Notion: (COLM 2024) Linear-Time Sequence Modeling with Selective State Spaces">
+            <a class="notion-link" href="https://www.notion.so/1ae046396f7e803c8c56ec9756577d95" target="_blank" rel="noopener" aria-label="Open in Notion: Linear-Time Sequence Modeling with Selective State Spaces (COLM 2024)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -714,7 +748,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-03-14-carla-self-supervised-contrastive-representation-learning-for-time-series-anomaly-detection">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-03-14-carla-self-supervised-contrastive-representation-learning-for-time-series-anomaly-detection-pattern-recognition-2025">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -722,8 +756,10 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
-                  CARLA: Self-supervised contrastive representation learning for time series anomaly detection  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
+                  CARLA: Self-supervised contrastive representation learning for time series anomaly detection (Pattern Recognition 2025)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -749,7 +785,7 @@ Forecasting">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/1525af7835be4d8a8f2ae5f5a350b9ce" target="_blank" rel="noopener" aria-label="Open in Notion: CARLA: Self-supervised contrastive representation learning for time series anomaly detection">
+            <a class="notion-link" href="https://www.notion.so/1525af7835be4d8a8f2ae5f5a350b9ce" target="_blank" rel="noopener" aria-label="Open in Notion: CARLA: Self-supervised contrastive representation learning for time series anomaly detection (Pattern Recognition 2025)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -759,7 +795,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-02-28-neural-sdes-as-infinite-dimensional-gans">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-02-28-neural-sdes-as-infinite-dimensional-gans-pmlr-2021">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -767,8 +803,10 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Neural SDEs as Infinite-Dimensional GANs  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Neural SDEs as Infinite-Dimensional GANs (PMLR, 2021)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -790,7 +828,7 @@ Forecasting">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/193046396f7e8060ae4df1ff7a564d8d" target="_blank" rel="noopener" aria-label="Open in Notion: Neural SDEs as Infinite-Dimensional GANs">
+            <a class="notion-link" href="https://www.notion.so/193046396f7e8060ae4df1ff7a564d8d" target="_blank" rel="noopener" aria-label="Open in Notion: Neural SDEs as Infinite-Dimensional GANs (PMLR, 2021)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -800,7 +838,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-02-13-iclr-2025-root-cause-analysis-of-anomalies-in-multivariate-time-series-through-granger-causal-discovery">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-02-13-root-cause-analysis-of-anomalies-in-multivariate-time-series-through-granger-causal-discovery-iclr-2025">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -808,8 +846,10 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
-                  (ICLR 2025) Root Cause Analysis of anomalies in multivariate time series through granger causal discovery  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
+                  Root Cause Analysis of anomalies in multivariate time series through granger causal discovery (ICLR 2025)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -833,7 +873,7 @@ Forecasting">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/199046396f7e80afac16f04606f1e35c" target="_blank" rel="noopener" aria-label="Open in Notion: (ICLR 2025) Root Cause Analysis of anomalies in multivariate time series through granger causal discovery">
+            <a class="notion-link" href="https://www.notion.so/199046396f7e80afac16f04606f1e35c" target="_blank" rel="noopener" aria-label="Open in Notion: Root Cause Analysis of anomalies in multivariate time series through granger causal discovery (ICLR 2025)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -851,7 +891,9 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
                   Current Research Topics in Survival Analysis  <!-- 제목 링크 없음 -->
                 </p>
 
@@ -882,7 +924,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-01-24-trajectory-flow-matching-with-applications-to-clinical-time-series-modelling">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-01-24-trajectory-flow-matching-with-applications-to-clinical-time-series-modelling-neurips-2024">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -890,8 +932,10 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Trajectory Flow Matching with Applications to Clinical Time Series Modelling  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Trajectory Flow Matching with Applications to Clinical Time Series Modelling (NeurIPS 2024)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -915,7 +959,7 @@ Forecasting">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/2017013160aa4616a9bbca865c34b07c" target="_blank" rel="noopener" aria-label="Open in Notion: Trajectory Flow Matching with Applications to Clinical Time Series Modelling">
+            <a class="notion-link" href="https://www.notion.so/2017013160aa4616a9bbca865c34b07c" target="_blank" rel="noopener" aria-label="Open in Notion: Trajectory Flow Matching with Applications to Clinical Time Series Modelling (NeurIPS 2024)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -925,7 +969,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-01-17-warpformer-a-multi-scale-modeling-approach-for-irregular-clinical-time-series">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-01-17-warpformer-a-multi-scale-modeling-approach-for-irregular-clinical-time-series-kdd-2023">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -933,8 +977,10 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Warpformer: A Multi-scale Modeling Approach for Irregular Clinical Time Series  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Warpformer: A Multi-scale Modeling Approach for Irregular Clinical Time Series (KDD 2023)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -960,7 +1006,7 @@ Forecasting">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/cb135695f2a148bfb39562f4c3b67934" target="_blank" rel="noopener" aria-label="Open in Notion: Warpformer: A Multi-scale Modeling Approach for Irregular Clinical Time Series">
+            <a class="notion-link" href="https://www.notion.so/cb135695f2a148bfb39562f4c3b67934" target="_blank" rel="noopener" aria-label="Open in Notion: Warpformer: A Multi-scale Modeling Approach for Irregular Clinical Time Series (KDD 2023)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -970,7 +1016,7 @@ Forecasting">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2025-01-10-neurips-2023-neural-frailty-machine-beyond-proportional-hazard-assumption-in-neural-survival-regressions">
+        <article class="card card-pad" style="grid-column: span 12" id="2025-01-10-neural-frailty-machine-beyond-proportional-hazard-assumption-in-neural-survival-regressions-neurips-2023">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -978,9 +1024,11 @@ Forecasting">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  (NeurIPS 2023) Neural Frailty Machine: Beyond proportional hazard
-assumption in neural survival regressions  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Neural Frailty Machine: Beyond proportional hazard
+assumption in neural survival regressions (NeurIPS 2023)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1002,8 +1050,8 @@ assumption in neural survival regressions  <!-- 제목 링크 없음 -->
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/c630db8facbb403db1d516dbde8c71ee" target="_blank" rel="noopener" aria-label="Open in Notion: (NeurIPS 2023) Neural Frailty Machine: Beyond proportional hazard
-assumption in neural survival regressions">
+            <a class="notion-link" href="https://www.notion.so/c630db8facbb403db1d516dbde8c71ee" target="_blank" rel="noopener" aria-label="Open in Notion: Neural Frailty Machine: Beyond proportional hazard
+assumption in neural survival regressions (NeurIPS 2023)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1013,7 +1061,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-12-20-climode-climate-and-weather-forecasting-with-physics-informed-neural-odes">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-12-20-climode-climate-and-weather-forecasting-with-physics-informed-neural-odes-iclr-2024">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1021,8 +1069,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  ClimODE: Climate and Weather Forecasting with Physics-Informed Neural ODEs  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  ClimODE: Climate and Weather Forecasting with Physics-Informed Neural ODEs (ICLR 2024)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1044,7 +1094,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/af709ee42967485c81cad818e7666e4e" target="_blank" rel="noopener" aria-label="Open in Notion: ClimODE: Climate and Weather Forecasting with Physics-Informed Neural ODEs">
+            <a class="notion-link" href="https://www.notion.so/af709ee42967485c81cad818e7666e4e" target="_blank" rel="noopener" aria-label="Open in Notion: ClimODE: Climate and Weather Forecasting with Physics-Informed Neural ODEs (ICLR 2024)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1062,7 +1112,9 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
                   Multi-Time Attention Networks for Irregularly Sampled Time Series (mTANs)  <!-- 제목 링크 없음 -->
                 </p>
 
@@ -1095,7 +1147,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-11-29-modulated-neural-odes">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-11-29-modulated-neural-odes-neurips-2023">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1103,8 +1155,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Modulated Neural ODEs  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Modulated Neural ODEs (NeurIPS 2023)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1124,7 +1178,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/3b92184defb44d7fa3e23500c0bd1acf" target="_blank" rel="noopener" aria-label="Open in Notion: Modulated Neural ODEs">
+            <a class="notion-link" href="https://www.notion.so/3b92184defb44d7fa3e23500c0bd1acf" target="_blank" rel="noopener" aria-label="Open in Notion: Modulated Neural ODEs (NeurIPS 2023)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1142,7 +1196,9 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
                   Physics-Informed Neural ODE with Heterogeneous Control Inputs (PINOHI) for Quality Prediction of Composite Adhesive Joints  <!-- 제목 링크 없음 -->
                 </p>
 
@@ -1175,7 +1231,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-11-01-prevent-an-unsupervised-approach-to-predict-software-failures-in-production">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-11-01-prevent-an-unsupervised-approach-to-predict-software-failures-in-production-ieee-trans-softw-eng-2025">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1183,8 +1239,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  PREVENT : An Unsupervised Approach to Predict Software Failures in Production  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  PREVENT : An Unsupervised Approach to Predict Software Failures in Production (IEEE Trans. Softw. Eng. 2025)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1210,7 +1268,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/f6c6ff4589e2469fb18a0c7b14e56cda" target="_blank" rel="noopener" aria-label="Open in Notion: PREVENT : An Unsupervised Approach to Predict Software Failures in Production">
+            <a class="notion-link" href="https://www.notion.so/f6c6ff4589e2469fb18a0c7b14e56cda" target="_blank" rel="noopener" aria-label="Open in Notion: PREVENT : An Unsupervised Approach to Predict Software Failures in Production (IEEE Trans. Softw. Eng. 2025)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1220,7 +1278,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-10-11-multi-view-integrative-attention-based-deep-representation-learning-for-irregular-clinical-time-series-data">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-10-11-multi-view-integrative-attention-based-deep-representation-learning-for-irregular-clinical-time-series-data-2022">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1228,8 +1286,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Multi-View Integrative Attention-Based Deep Representation Learning for Irregular Clinical Time-Series Data  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Multi-View Integrative Attention-Based Deep Representation Learning for Irregular Clinical Time-Series Data (2022)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1251,7 +1311,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/107046396f7e8084a72fd035f2df3d04" target="_blank" rel="noopener" aria-label="Open in Notion: Multi-View Integrative Attention-Based Deep Representation Learning for Irregular Clinical Time-Series Data">
+            <a class="notion-link" href="https://www.notion.so/107046396f7e8084a72fd035f2df3d04" target="_blank" rel="noopener" aria-label="Open in Notion: Multi-View Integrative Attention-Based Deep Representation Learning for Irregular Clinical Time-Series Data (2022)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1261,7 +1321,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-09-20-learning-with-imbalanced-noisy-data-by-preventing-bias-in-sample-selection">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-09-20-learning-with-imbalanced-noisy-data-by-preventing-bias-in-sample-selection-ieee-trans-multimed-2024">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1269,8 +1329,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Learning with Imbalanced Noisy Data by Preventing Bias in Sample Selection  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Learning with Imbalanced Noisy Data by Preventing Bias in Sample Selection (IEEE Trans. Multimed. 2024)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1296,7 +1358,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/360723a523d24f1bbda8ce9ac42badc0" target="_blank" rel="noopener" aria-label="Open in Notion: Learning with Imbalanced Noisy Data by Preventing Bias in Sample Selection">
+            <a class="notion-link" href="https://www.notion.so/360723a523d24f1bbda8ce9ac42badc0" target="_blank" rel="noopener" aria-label="Open in Notion: Learning with Imbalanced Noisy Data by Preventing Bias in Sample Selection (IEEE Trans. Multimed. 2024)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1306,7 +1368,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-08-30-precursor-of-anomaly-detection-for-irregular-time-series">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-08-30-precursor-of-anomaly-detection-for-irregular-time-series-kdd-2023">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1314,8 +1376,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Precursor-of-anomaly detection for irregular time series  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Precursor-of-anomaly detection for irregular time series (KDD, 2023)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1337,7 +1401,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/4487c7a8eef145b2bee224364228e398" target="_blank" rel="noopener" aria-label="Open in Notion: Precursor-of-anomaly detection for irregular time series">
+            <a class="notion-link" href="https://www.notion.so/4487c7a8eef145b2bee224364228e398" target="_blank" rel="noopener" aria-label="Open in Notion: Precursor-of-anomaly detection for irregular time series (KDD, 2023)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1355,7 +1419,9 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
                   Co-teaching: Robust Training of Deep Neural Networks with Extremely Noisy Labels  <!-- 제목 링크 없음 -->
                 </p>
 
@@ -1386,7 +1452,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-07-19-wind-turbine-gearbox-failure-detection-through-cumulative-sum-of-multivariate-time-series-data">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-07-19-wind-turbine-gearbox-failure-detection-through-cumulative-sum-of-multivariate-time-series-data-front-energy-res-2022">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1394,8 +1460,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Wind Turbine Gearbox Failure Detection Through Cumulative Sum of Multivariate Time Series Data  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Wind Turbine Gearbox Failure Detection Through Cumulative Sum of Multivariate Time Series Data (Front. Energy Res. 2022)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1417,7 +1485,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/f30971eb69e84bb2b790a481a66dea71" target="_blank" rel="noopener" aria-label="Open in Notion: Wind Turbine Gearbox Failure Detection Through Cumulative Sum of Multivariate Time Series Data">
+            <a class="notion-link" href="https://www.notion.so/f30971eb69e84bb2b790a481a66dea71" target="_blank" rel="noopener" aria-label="Open in Notion: Wind Turbine Gearbox Failure Detection Through Cumulative Sum of Multivariate Time Series Data (Front. Energy Res. 2022)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1427,7 +1495,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-07-05-machine-learning-for-survival-analysis-a-survey">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-07-05-machine-learning-for-survival-analysis-a-survey-2019">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1435,8 +1503,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Lab Seminar</span>
-                  Machine Learning for Survival Analysis: A Survey  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
+                  Machine Learning for Survival Analysis: A Survey (2019)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1456,7 +1526,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/de6084377bf84fc3bb66b345c658dbbe" target="_blank" rel="noopener" aria-label="Open in Notion: Machine Learning for Survival Analysis: A Survey">
+            <a class="notion-link" href="https://www.notion.so/de6084377bf84fc3bb66b345c658dbbe" target="_blank" rel="noopener" aria-label="Open in Notion: Machine Learning for Survival Analysis: A Survey (2019)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1466,7 +1536,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-06-21-quanttree-histograms-for-change-detection-in-multivariate-data-streams">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-06-21-quanttree-histograms-for-change-detection-in-multivariate-data-streams-icml-2018">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1474,8 +1544,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  QuantTree: Histograms for Change Detection in Multivariate Data Streams  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  QuantTree: Histograms for Change Detection in Multivariate Data Streams (ICML 2018)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1495,7 +1567,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/21e6ef86765544c6acc2591fe3b38c42" target="_blank" rel="noopener" aria-label="Open in Notion: QuantTree: Histograms for Change Detection in Multivariate Data Streams">
+            <a class="notion-link" href="https://www.notion.so/21e6ef86765544c6acc2591fe3b38c42" target="_blank" rel="noopener" aria-label="Open in Notion: QuantTree: Histograms for Change Detection in Multivariate Data Streams (ICML 2018)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1513,7 +1585,9 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
                   Attention-based Representation Learning for Time Series with Principal and Residual Space Monitoring  <!-- 제목 링크 없음 -->
                 </p>
 
@@ -1552,7 +1626,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-05-24-itransformer-inverted-transformers-are-effective-for-time-series-forecasting">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-05-24-itransformer-inverted-transformers-are-effective-for-time-series-forecasting-iclr-2024">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1560,8 +1634,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  ITRANSFORMER: Inverted Transformers Are Effective for Time Series Forecasting  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  ITRANSFORMER: Inverted Transformers Are Effective for Time Series Forecasting (ICLR, 2024)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1583,7 +1659,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/ce64ff05edfb418d887814bc3781424b" target="_blank" rel="noopener" aria-label="Open in Notion: ITRANSFORMER: Inverted Transformers Are Effective for Time Series Forecasting">
+            <a class="notion-link" href="https://www.notion.so/ce64ff05edfb418d887814bc3781424b" target="_blank" rel="noopener" aria-label="Open in Notion: ITRANSFORMER: Inverted Transformers Are Effective for Time Series Forecasting (ICLR, 2024)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1593,7 +1669,7 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2024-04-05-active-domain-adaptation-via-clustering-uncertainty-weighted-embeddings">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-04-05-active-domain-adaptation-via-clustering-uncertainty-weighted-embeddings-iccv-2021">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1601,8 +1677,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  Active Domain Adaptation via Clustering Uncertainty-Weighted Embeddings  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Active Domain Adaptation via Clustering Uncertainty-Weighted Embeddings (ICCV 2021)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1624,7 +1702,7 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/53d45668d7a7432db19c834b9255312d" target="_blank" rel="noopener" aria-label="Open in Notion: Active Domain Adaptation via Clustering Uncertainty-Weighted Embeddings">
+            <a class="notion-link" href="https://www.notion.so/53d45668d7a7432db19c834b9255312d" target="_blank" rel="noopener" aria-label="Open in Notion: Active Domain Adaptation via Clustering Uncertainty-Weighted Embeddings (ICCV 2021)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1634,7 +1712,52 @@ assumption in neural survival regressions">
           </div>
         </article>
       
-        <article class="card card-pad" style="grid-column: span 12" id="2023-12-01-cvpr-2019-efficient-parameter-free-clustering-using-first-neighbor-relations">
+        <article class="card card-pad" style="grid-column: span 12" id="2024-03-08-abc-auxiliary-balanced-classifier-for-class-imbalanced-semi-supervised-learning-neurips-2021">
+          <div class="news-item">
+            <!-- 좌측(날짜 + 본문) -->
+            <div class="news-body">
+              <div class="news-date">2024-03-08</div>
+
+              <div>
+                <p class="news-title">
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  ABC: Auxiliary Balanced Classifier for Class-imbalanced Semi-supervised Learning (NeurIPS 2021)  <!-- 제목 링크 없음 -->
+                </p>
+
+                
+                  <p class="news-meta">
+                    Presenter: Hyejin Cho
+                    
+                       · 
+                      Keywords:
+                      
+                        <span class="kw">#semi-supervised learning</span>
+                      
+                        <span class="kw">#Imbalanced Data</span>
+                      
+                        <span class="kw">#Decoupled Training</span>
+                      
+                    
+                  </p>
+                
+              </div>
+            </div>
+
+            <!-- 우측(노션 아이콘) -->
+            
+            <a class="notion-link" href="https://www.notion.so/daf0cb83b9e448e590e9f97b05ac63df" target="_blank" rel="noopener" aria-label="Open in Notion: ABC: Auxiliary Balanced Classifier for Class-imbalanced Semi-supervised Learning (NeurIPS 2021)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
+                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            
+          </div>
+        </article>
+      
+        <article class="card card-pad" style="grid-column: span 12" id="2023-12-01-efficient-parameter-free-clustering-using-first-neighbor-relations-cvpr-2019">
           <div class="news-item">
             <!-- 좌측(날짜 + 본문) -->
             <div class="news-body">
@@ -1642,8 +1765,10 @@ assumption in neural survival regressions">
 
               <div>
                 <p class="news-title">
-                  <span class="pill">Paper Review</span>
-                  (CVPR 2019) Efficient Parameter-free Clustering Using First Neighbor Relations  <!-- 제목 링크 없음 -->
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Efficient Parameter-free Clustering Using First Neighbor Relations (CVPR 2019)  <!-- 제목 링크 없음 -->
                 </p>
 
                 
@@ -1663,7 +1788,183 @@ assumption in neural survival regressions">
 
             <!-- 우측(노션 아이콘) -->
             
-            <a class="notion-link" href="https://www.notion.so/21cb9046df9c42949e613aa3362dfde1" target="_blank" rel="noopener" aria-label="Open in Notion: (CVPR 2019) Efficient Parameter-free Clustering Using First Neighbor Relations">
+            <a class="notion-link" href="https://www.notion.so/21cb9046df9c42949e613aa3362dfde1" target="_blank" rel="noopener" aria-label="Open in Notion: Efficient Parameter-free Clustering Using First Neighbor Relations (CVPR 2019)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
+                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            
+          </div>
+        </article>
+      
+        <article class="card card-pad" style="grid-column: span 12" id="2023-10-13-dcdetector-dual-attention-contrastive-representation-learning-for-time-series-anomaly-detection-kdd-2023">
+          <div class="news-item">
+            <!-- 좌측(날짜 + 본문) -->
+            <div class="news-body">
+              <div class="news-date">2023-10-13</div>
+
+              <div>
+                <p class="news-title">
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  DCdetector: Dual Attention Contrastive Representation Learning for Time Series Anomaly Detection (KDD 2023)  <!-- 제목 링크 없음 -->
+                </p>
+
+                
+                  <p class="news-meta">
+                    Presenter: Hyejin Cho
+                    
+                       · 
+                      Keywords:
+                      
+                        <span class="kw">#Time-series anomaly detection</span>
+                      
+                        <span class="kw">#Attention</span>
+                      
+                        <span class="kw">#Contrastive learning</span>
+                      
+                    
+                  </p>
+                
+              </div>
+            </div>
+
+            <!-- 우측(노션 아이콘) -->
+            
+            <a class="notion-link" href="https://www.notion.so/d781095fb55444249782941872b4f779" target="_blank" rel="noopener" aria-label="Open in Notion: DCdetector: Dual Attention Contrastive Representation Learning for Time Series Anomaly Detection (KDD 2023)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
+                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            
+          </div>
+        </article>
+      
+        <article class="card card-pad" style="grid-column: span 12" id="2023-08-18-introduction-to-gaussian-mixture-modelgmm-and-em-algorithm">
+          <div class="news-item">
+            <!-- 좌측(날짜 + 본문) -->
+            <div class="news-body">
+              <div class="news-date">2023-08-18</div>
+
+              <div>
+                <p class="news-title">
+                  
+                    <span class="pill pill--lab-seminar">Lab Seminar</span>
+                  
+                  Introduction to Gaussian Mixture Model(GMM) & EM Algorithm  <!-- 제목 링크 없음 -->
+                </p>
+
+                
+                  <p class="news-meta">
+                    Presenter: Hyejin Cho
+                    
+                       · 
+                      Keywords:
+                      
+                        <span class="kw">#Gaussian Mixture Model</span>
+                      
+                        <span class="kw">#EM Algorithm</span>
+                      
+                        <span class="kw">#UnsupervisedLearning</span>
+                      
+                    
+                  </p>
+                
+              </div>
+            </div>
+
+            <!-- 우측(노션 아이콘) -->
+            
+            <a class="notion-link" href="https://www.notion.so/8edbb35e58c84c39a912f006d7e9e12a" target="_blank" rel="noopener" aria-label="Open in Notion: Introduction to Gaussian Mixture Model(GMM) & EM Algorithm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
+                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            
+          </div>
+        </article>
+      
+        <article class="card card-pad" style="grid-column: span 12" id="2023-06-23-loyalty-formation-for-different-customer-journey-segments-2019">
+          <div class="news-item">
+            <!-- 좌측(날짜 + 본문) -->
+            <div class="news-body">
+              <div class="news-date">2023-06-23</div>
+
+              <div>
+                <p class="news-title">
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Loyalty Formation for Different Customer Journey Segments (2019)  <!-- 제목 링크 없음 -->
+                </p>
+
+                
+                  <p class="news-meta">
+                    Presenter: Hyejin Cho
+                    
+                       · 
+                      Keywords:
+                      
+                        <span class="kw">#Latent Class Analysis</span>
+                      
+                        <span class="kw">#UnsupervisedLearning</span>
+                      
+                    
+                  </p>
+                
+              </div>
+            </div>
+
+            <!-- 우측(노션 아이콘) -->
+            
+            <a class="notion-link" href="https://www.notion.so/082eb055f16c46329cc0e52147944480" target="_blank" rel="noopener" aria-label="Open in Notion: Loyalty Formation for Different Customer Journey Segments (2019)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
+                <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            
+          </div>
+        </article>
+      
+        <article class="card card-pad" style="grid-column: span 12" id="2023-04-28-attention-bottlenecks-for-multimodal-fusion-neurips-2021">
+          <div class="news-item">
+            <!-- 좌측(날짜 + 본문) -->
+            <div class="news-body">
+              <div class="news-date">2023-04-28</div>
+
+              <div>
+                <p class="news-title">
+                  
+                    <span class="pill pill--paper-review">Paper Review</span>
+                  
+                  Attention Bottlenecks for Multimodal Fusion (NeurIPS 2021)  <!-- 제목 링크 없음 -->
+                </p>
+
+                
+                  <p class="news-meta">
+                    Presenter: Hyejin Cho
+                    
+                       · 
+                      Keywords:
+                      
+                        <span class="kw">#multi-modal learning</span>
+                      
+                        <span class="kw">#Transformer</span>
+                      
+                    
+                  </p>
+                
+              </div>
+            </div>
+
+            <!-- 우측(노션 아이콘) -->
+            
+            <a class="notion-link" href="https://www.notion.so/f49d29b3e51c4dc59ecb14ec7089c18f" target="_blank" rel="noopener" aria-label="Open in Notion: Attention Bottlenecks for Multimodal Fusion (NeurIPS 2021)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" ry="3" stroke-width="1.5"/>
                 <path d="M8 7.5v9h2v-5.8h.1L14 16.5h2v-9h-2v5.7h-.1L10 7.5H8z" fill="currentColor" stroke="none"/>
@@ -1699,13 +2000,26 @@ assumption in neural survival regressions">
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

@@ -109,7 +109,7 @@
           <div class="news-item">
             <div class="news-date">2025-09-01</div>
             <div>
-              <div style="font-weight:600">M.S. Students Joined — Heeyoon Lee & Sieun Lee</div>
+              <div style="font-weight:600">Heeyoon Lee & Sieun Lee joined as M.S Student</div>
               <p class="muted">Heeyoon Lee (이희윤) and Sieun Lee (이시은) joined the Data Analytics Lab as M.S. students.
 Welcome aboard!
 </p>
@@ -488,13 +488,26 @@ hosted by the Korea Information Science Society.
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

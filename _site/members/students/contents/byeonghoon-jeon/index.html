@@ -180,6 +180,10 @@ aside a.tag{ color:var(--tag-color); }
       
 
       
+        <p style="margin:0 0 10px"><strong>Email</strong><br>
+          <a href="mailto:bhjeon@unist.ac.kr">bhjeon@unist.ac.kr</a>
+        </p>
+      
 
       
         <div style="margin-top:12px;">
@@ -191,6 +195,12 @@ aside a.tag{ color:var(--tag-color); }
             
             
             
+                    
+                    <li style="display:flex;align-items:center;gap:6px;">
+                      <img src="https://github.com/favicon.ico" alt="GitHub" width="18" height="18" style="flex:0 0 18px">
+                      <a href="https://github.com/nanbhi/project" target="_blank" rel="noopener">GitHub</a>
+                    </li>
+                  
             
             
             
@@ -200,7 +210,7 @@ aside a.tag{ color:var(--tag-color); }
 
       
         <div style="margin-top:8px">
-          <span class="tag">tags</span>
+          <span class="tag">Time series analysis</span><span class="tag">Generative AI</span>
         </div>
       
     </aside>
@@ -211,7 +221,7 @@ aside a.tag{ color:var(--tag-color); }
       
       <section class="card card-pad section-card">
         <h3 class="sec-title">About Me</h3>
-        <p class="muted" style="margin:0">I'm</p>
+        <p class="muted" style="margin:0">I'm a M.S/Ph.D. combined student in Industrial Engineering at UNIST data analytics lab. I am interested in spatio-temporal time-seires data analysis, and in leveraging generative models for missing value imputation and forecasting.</p>
       </section>
       
 
@@ -220,7 +230,7 @@ aside a.tag{ color:var(--tag-color); }
       <section class="card card-pad section-card">
         <h3 class="sec-title">Research Interests</h3>
         <ul style="margin:0">
-          <li>interests</li>
+          <li>Time series analysis</li><li>Generative AI</li>
         </ul>
       </section>
       
@@ -248,16 +258,43 @@ aside a.tag{ color:var(--tag-color); }
               <span class="time">
                 
                   
-                  <span class="time-start">2025.09</span>
+                  <span class="time-start">2021.02</span>
+                  <span class="time-end">– 2024.02</span>
                 
               </span>
       
               <span class="dot" aria-hidden="true"></span>
               <div class="body">
-                <div class="title">title</div>
-                <p>notes<br />
-notes<br />
-</p>
+                <div class="title">B.S. in Industrial Engineering</div>
+                <p>Konkuk University</p>
+              </div>
+            </li>
+          
+            
+            
+      
+            
+            
+      
+            
+            
+      
+            
+            
+      
+            <li class="timeline-item timeline-current">
+              <span class="time">
+                
+                  
+                  <span class="time-start">2024.09</span>
+                  <span class="time-end">–</span>
+                
+              </span>
+      
+              <span class="dot" aria-hidden="true"></span>
+              <div class="body">
+                <div class="title">M.S./Ph.D. Combined Program, Industrial Engineering</div>
+                <p>Ulsan National Institute of Science and Technology (UNIST)</p>
               </div>
             </li>
           
@@ -271,15 +308,8 @@ notes<br />
       
         <h3 id="current-work">Current Work</h3>
 <ul>
-  <li>This is an <strong>example!!</strong></li>
+  <li>Analyze AIS data considering weather conditions.</li>
 </ul>
-
-<h3 id="notes-for-collaboration">Notes for Collaboration</h3>
-<ol>
-  <li>This is an <strong>example!!</strong></li>
-  <li>This is an <strong>example!!</strong></li>
-  <li>This is an <strong>example!!</strong></li>
-</ol>
 
       
     </article>
@@ -307,13 +337,26 @@ notes<br />
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

@@ -75,6 +75,8 @@ header{position:sticky; top:0; z-index:50; background:color-mix(in oklab, var(--
   .menu-btn{display:block;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:12px;padding:8px 10px}
   .nav>ul{display:none}
   .nav.open>ul{display:flex;position:absolute;left:20px;right:20px;top:60px;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-lg);padding:10px}
+  /* 모바일: 메뉴 패널 고정 높이 + 내부 스크롤 */
+  .nav.open>ul{max-height:calc(100vh - 80px);overflow-y:auto;-webkit-overflow-scrolling:touch}
 }
 .has-dd>a::after{content:"▾";font-size:11px;margin-left:6px;opacity:.7}
 .nav>ul>li>.dropdown{position:absolute;top:100%;left:0;z-index:60;min-width:220px;padding:8px 8px 10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);display:none}
@@ -84,6 +86,7 @@ header{position:sticky; top:0; z-index:50; background:color-mix(in oklab, var(--
 .nav>ul>li>.dropdown a:hover{background:var(--primary-weak)}
 @media (hover:hover){
   .nav>ul>li.has-dd:hover>.dropdown,.nav>ul>li>.dropdown:hover{display:block}
+ /* .has-dd.open > .dropdown { display:block; } */
   .nav>ul>li.has-dd>.dropdown{transition:opacity .15s ease,visibility .15s ease;opacity:0;visibility:hidden}
   .nav>ul>li.has-dd:hover>.dropdown{opacity:1;visibility:visible;display:block}
 }
@@ -424,21 +427,18 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 }
 .has-dd > .dropdown { display: none; }
 .has-dd.open > .dropdown { display: block; }
-.has-dd > .dropdown { display: none; }
-.has-dd.open > .dropdown { display: block; }
 
 /* 데스크탑 hover 유지 */
-.has-dd:hover > .dropdown { display: block; }
+/* .has-dd:hover > .dropdown { display: block; } */
 
 /* 모바일에선 hover 비활성 */
 @media (hover: none) {
-  .has-dd:hover > .dropdown { display: none; }
+  /* .has-dd:hover > .dropdown { display: none; } */
+  /* .nav.open > ul > li > .dropdown { position: static; } */
 }
-.has-dd > .dropdown { display: none; }
-.has-dd.open > .dropdown { display: block; }
 
 /* 데스크탑 hover 유지 */
-.has-dd:hover > .dropdown { display: block; }
+/* .has-dd:hover > .dropdown { display: block; } */
 
 /* 모바일에서는 hover 비활성화 (토글만 유효) */
 @media (hover: none) {
@@ -451,12 +451,12 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 
 /* 데스크톱: hover로 열림 */
 @media (hover: hover) and (pointer: fine) {
-  .has-dd:hover > .dropdown { display: block; }
+  /* .has-dd:hover > .dropdown { display: block; } */
 }
 
 /* 모바일: hover 무력화 → JS 토글만 */
 @media (hover: none), (pointer: coarse) {
-  .has-dd:hover > .dropdown { display: none; }
+  /* .has-dd:hover > .dropdown { display: none; } */
 }
 
 /* 버튼을 링크처럼 보이게 */
@@ -473,8 +473,21 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 
 /* 데스크톱 hover 유지, 모바일에서 hover 무력화(선택) */
 @media (hover: hover) and (pointer: fine) {
-  .has-dd:hover > .dropdown { display: block; }
+  /* .has-dd:hover > .dropdown { display: block; } */
 }
 @media (hover: none), (pointer: coarse) {
   .has-dd:hover > .dropdown { display: none; }
+}
+
+/* open이면 무조건 보이게 */
+.has-dd.open > .dropdown { display: block !important; }
+
+/* 모바일 메뉴 펼침 상태에서 드롭다운을 문서 흐름으로 */
+@media (max-width: 860px){
+  #navbar.open > ul > li > .dropdown {
+    position: static !important;
+    left:auto !important; right:auto !important; top:auto !important;
+    width:100%;
+    box-shadow:none;
+  }
 }

@@ -402,17 +402,7 @@ Data pipelines for manufacturing & healthcare problems<br />
 
       <!-- Freeform markdown (no card) -->
       
-        <h3 id="current-work">Current Work</h3>
-<ul>
-  <li>This is an <strong>example!!</strong></li>
-</ul>
-
-<h3 id="notes-for-collaboration">Notes for Collaboration</h3>
-<ol>
-  <li>This is an <strong>example!!</strong></li>
-  <li>This is an <strong>example!!</strong></li>
-  <li>This is an <strong>example!!</strong></li>
-</ol>
+        
 
       
     </article>
@@ -440,13 +430,26 @@ Data pipelines for manufacturing & healthcare problems<br />
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

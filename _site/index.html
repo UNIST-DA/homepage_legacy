@@ -92,20 +92,32 @@
 <script defer src="/assets/main/theme.js?v="></script>
 
   <!-- ===================== Hero ===================== -->
-<section class="hero hero--boxed" aria-label="Lab highlights">
+<section class="hero hero--boxed hero--full" aria-label="Lab highlights">
   <div class="carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Hero carousel">
     <div class="slides no-crop" id="heroSlides">
-      <!-- 업로드할 이미지 5장 (없으면 남겨둬도 됨) -->
+      <!-- 비디오(cover 유지) -->
       <div class="slide cover-video">
-        <video autoplay loop muted playsinline>
+        <video autoplay muted playsinline preload="metadata">
           <source src="/assets/main/Welcome_DA_LAB.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="slide"><img src="/assets/main/%EA%B5%90%EC%88%98%EB%8B%98_IB_Faculty_crop.webp" alt="Lab hero 1"></div>
-      <div class="slide"><img src="/assets/main/%EC%8A%B9%EC%88%98_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C.webp" alt="Lab hero 2"></div>
-      <div class="slide"><img src="/assets/main/%EC%84%B1%EC%A7%84_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C.webp" alt="Lab hero 3"></div>
-      <div class="slide"><img src="/assets/main/%EC%B0%AC%EB%B2%94_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C.webp" alt="Lab hero 4"></div>
-      <div class="slide"><img src="/assets/main/%ED%98%9C%EC%A7%84_%EB%AF%B8%EA%B5%AD%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C.webp" alt="Lab hero 5"></div>
+
+      <!-- 이미지: 세로 100% + 좌우 블러 -->
+      <div class="slide fill" style="--img: url('/assets/main/%EC%8A%B9%EC%88%98_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp')">
+        <img src="/assets/main/%EC%8A%B9%EC%88%98_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp" alt="Lab hero 1">
+      </div>
+      <div class="slide fill" style="--img: url('/assets/main/%EC%84%B1%EC%A7%84_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp')">
+        <img src="/assets/main/%EC%84%B1%EC%A7%84_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp" alt="Lab hero 2">
+      </div>
+      <div class="slide fill" style="--img: url('/assets/main/%EC%B0%AC%EB%B2%94_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp')">
+        <img src="/assets/main/%EC%B0%AC%EB%B2%94_%EC%82%B0%EA%B3%B5%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp" alt="Lab hero 3">
+      </div>
+      <div class="slide fill" style="--img: url('/assets/main/%ED%98%9C%EC%A7%84_%EB%AF%B8%EA%B5%AD%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp')">
+        <img src="/assets/main/%ED%98%9C%EC%A7%84_%EB%AF%B8%EA%B5%AD%ED%95%99%ED%9A%8C%EB%B0%9C%ED%91%9C_1.webp" alt="Lab hero 4">
+      </div>
+      <div class="slide fill" style="--img: url('/assets/main/%EA%B5%90%EC%88%98%EB%8B%98_IB_Faculty_crop.webp')">
+        <img src="/assets/main/%EA%B5%90%EC%88%98%EB%8B%98_IB_Faculty_crop.webp" alt="Lab hero 5">
+      </div>
     </div>
 
     <!-- 화살표 -->
@@ -114,6 +126,7 @@
       <button class="arrow" id="heroNext" aria-label="Next">›</button>
     </div>
 
+    <!-- 오버레이 텍스트 -->
     <div class="hero-overlay">
       <div class="hero-copy">
         <div class="hero-kicker">Data Analytics Lab @ UNIST</div>
@@ -122,10 +135,10 @@
       </div>
     </div>
 
+    <!-- 점 컨트롤 -->
     <div class="hero-ctrl" id="heroDots" aria-label="Slide controls"></div>
   </div>
 </section>
-
 
 <!-- ===================== About ===================== -->
 <section id="about" class="about">
@@ -139,10 +152,13 @@
 
     <div class="grid">
       <div class="card card-pad" style="grid-column: span 7">
-        <a class="pill" href="https://ie.unist.ac.kr/" target="_blank" rel="noopener">UNIST · Industrial Engineering</a>
+        <a class="pill" href="https://ie.unist.ac.kr/" target="_blank" rel="noopener"
+           style="display:inline-flex!important;width:auto!important;flex:0 0 auto!important;white-space:nowrap">
+          UNIST Industrial Engineering
+        </a>
         <h3 style="margin:10px 0 6px">Data Analytics Lab</h3>
-        <p>UNIST 산업공학과 데이터애널리틱스 연구실은 데이터 기반 품질향상과 지능형 제조를 위한 통계적·기계학습 방법론을 연구합니다. 실제 산업 데이터를 통해 실효성 있는 모델을 만들고, 신뢰 가능한 의사결정을 지원합니다.</p>
-        <p class="muted">We build interpretable, reliable AI systems for quality engineering, process monitoring, and time‑series understanding.</p>
+        <p class="muted">The Data Analytics Lab conducts research on novel statistical and data science methodologies that leverage industrial statistics and DL/ML to solve complex engineering problems arising in diverse industrial settings. In particular, we focus on practical problem-solving in quality engineering, with an emphasis on quality improvement, system monitoring and anomaly detection, and time-series representation learning in the manufacturing and logistics domains.</p>
+        <p>UNIST 산업공학과 데이터 분석 연구실은 산업 통계와 딥러닝/기계학습을 기반으로 다양한 산업 현장에서 발생하는 복잡한 공학 문제를 해결하는 새로운 통계 및 데이터 사이언스 방법론을 연구합니다. 특히 제조와 물류 분야에서 발생하는 품질 향상, 시스템 모니터링·이상 탐지, 시계열 표현학습을 중심으로 품질 공학의 실제 문제 해결에 집중하고 있습니다.</p>
       </div>
       <div class="card card-pad" style="grid-column: span 5">
         <h4 style="margin:0 0 10px">Interests</h4>
@@ -150,12 +166,13 @@
           <div class="chip">Industrial Statistics</div>
           <div class="chip">Quality Engineering &amp; Management</div>
           <div class="chip">Machine Learning &amp; Data Mining</div>
+          <div class="chip">Time-Series Analytics</div>
         </div>
         <h4 style="margin:16px 0 10px">Research Areas</h4>
         <div class="area">
-          <div>• Artificial Intelligence in Quality Engineering</div>
+          <div>• AI in Quality Engineering</div>
           <div>• System Monitoring &amp; Anomaly Detection</div>
-          <div>• Time‑Series Representation</div>
+          <div>• Time‑Series Representation Learning</div>
         </div>
       </div>
     </div>
@@ -177,76 +194,62 @@
       <a class="card card-pad" href="/research/projects/contents/lg-lqc/"
          style="grid-column: span 4; display:block; text-decoration:none; color:inherit" id="home-lg-lqc">
         
-        <img src="/assets/research/projects/lg-lqc-fig6.webp" alt="LG LQC (Line Quality Control)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
+        <img src="/assets/research/projects/lg-lqc-1.png" alt="Fault Detection via Domain-Knowledge-Based Training Data Refinement" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
         
-        <h4 style="margin:0 0 6px">LG LQC (Line Quality Control)</h4>
-        <p class="muted">Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.</p>
-        <div class="muted" style="font-size:13px">2021–2024</div>
+        <h4 style="margin:0 0 6px">Fault Detection via Domain-Knowledge-Based Training Data Refinement</h4>
+        <p class="muted">A domain knowledge–based data refinement methodology for detecting defective products that cannot be filtered out in the LQC process.</p>
+        <div class="muted" style="font-size:13px">2023.07 – 2024.10</div>
       </a>
       
-      <a class="card card-pad" href="/research/projects/contents/scsc-fuel-opt/"
-         style="grid-column: span 4; display:block; text-decoration:none; color:inherit" id="home-scsc-fuel-opt">
+      <a class="card card-pad" href="/research/projects/contents/lg-pmo/"
+         style="grid-column: span 4; display:block; text-decoration:none; color:inherit" id="home-lg-pmo">
         
-        <img src="/assets/research/projects/none.webp" alt="Fuel Consumption Prediction & Optimization (SCSC)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
+        <img src="/assets/research/projects/lg-pmo-1.png" alt="Developing data-driven user engagement metrics for contents(functions) in Updatable home appliances" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
         
-        <h4 style="margin:0 0 6px">Fuel Consumption Prediction & Optimization (SCSC)</h4>
-        <p class="muted">AIS·기상·엔진 센서를 융합해 연료 소비를 예측하고 친환경 최적 운항 전략을 제시합니다.</p>
-        <div class="muted" style="font-size:13px">2023–</div>
+        <h4 style="margin:0 0 6px">Developing data-driven user engagement metrics for contents(functions) in Updatable home appliances</h4>
+        <p class="muted">Developing a new metric for measuring customer satisfaction based on user activity data</p>
+        <div class="muted" style="font-size:13px">2023.06 - 2024.05</div>
       </a>
       
-      <a class="card card-pad" href="/research/projects/contents/scsc-llm-maritime/"
-         style="grid-column: span 4; display:block; text-decoration:none; color:inherit" id="home-scsc-llm-maritime">
+      <a class="card card-pad" href="/research/projects/contents/maritime-ad/"
+         style="grid-column: span 4; display:block; text-decoration:none; color:inherit" id="home-maritime-ad">
         
-        <img src="/assets/research/projects/none.webp" alt="LLM Agent for Maritime Data Analysis (SCSC)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
+        <img src="/assets/research/projects/maritime-ad-1.png" alt="Maritime Anomaly Detection" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
         
-        <h4 style="margin:0 0 6px">LLM Agent for Maritime Data Analysis (SCSC)</h4>
-        <p class="muted">대용량 AIS·해양 데이터를 자연어로 질의·분석하고, 실시간 리스크·규정 위반을 자동 탐지합니다.</p>
-        <div class="muted" style="font-size:13px">2024–</div>
+        <h4 style="margin:0 0 6px">Maritime Anomaly Detection</h4>
+        <p class="muted">An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.</p>
+        <div class="muted" style="font-size:13px">2020.01 - 2022.01</div>
       </a>
       
     </div>
   </div>
 </section>
 
-<!-- ===================== Activity (Seminar · News · Events) ===================== -->
+<!-- ===================== Activity (News · Events · Seminar) ===================== -->
 <section id="activity">
   <div class="container">
     <div class="head">
       <h2>
         <span class="title-text">Activity</span>
-        <a href="https://unist-da.github.io/activity/Lab%20News/" class="more-info">– more info</a>
       </h2>
     </div>
 
     <div class="grid">
-      <!-- Seminar -->
-      <div class="card card-pad" style="grid-column: span 4">
-        <h4 style="margin:6px 0">Lab Seminar</h4>
-        <ul style="margin:8px 0 12px; padding-left:18px">
-          
-          <li>
-            <strong>2025-09-10</strong> — <a href="/activity/Lab%20Seminar/#sem-2025-09-10">TBA — Lab Seminar</a>
-          </li>
-          
-        </ul>
-        <a href="/activity/Lab%20Seminar/">View all →</a>
-      </div>
-
       <!-- News -->
       <div class="card card-pad" style="grid-column: span 4">
         <h4 style="margin:6px 0">Lab News</h4>
         <ul style="margin:8px 0 12px; padding-left:18px">
           
           <li>
-            <strong>2025-09-01</strong> — <a href="/activity/Lab%20News/#2025-09-01-members-joined">M.S. Students Joined — Heeyoon Lee & Sieun Lee</a>
+            <strong>2025-09-01</strong> <a href="/activity/Lab%20News/#2025-09-01-members-joined">Heeyoon Lee & Sieun Lee joined as M.S Student</a>
           </li>
           
           <li>
-            <strong>2025-08-05</strong> — <a href="/activity/Lab%20News/#2025-08-05-cikm-short-paper">Paper Accepted to CIKM 2025 🎉</a>
+            <strong>2025-08-05</strong> <a href="/activity/Lab%20News/#2025-08-05-cikm-short-paper">Paper Accepted to CIKM 2025 🎉</a>
           </li>
           
         </ul>
-        <a href="/activity/Lab%20News/">View all →</a>
+        <a class="view-all" href="/activity/Lab%20News/">View all →</a>
       </div>
 
       <!-- Events -->
@@ -255,15 +258,30 @@
         <ul style="margin:8px 0 12px; padding-left:18px">
           
           <li>
-            <strong></strong> — <a href="/activity/Lab%20Events/#2025-07-11-movie-night">Lab Movie Night</a>
+            <strong>2025-07-11</strong> 
+            <a href="/activity/Lab%20Events/#2025-07-11-movie-night">Lab Movie Night</a>
           </li>
           
           <li>
-            <strong></strong> — <a href="/activity/Lab%20Events/#2025-05-01-prof-birthday">Professor's Birthday Celebration</a>
+            <strong>2025-05-01</strong> 
+            <a href="/activity/Lab%20Events/#2025-05-01-prof-birthday">Professor's Birthday Celebration</a>
           </li>
           
         </ul>
-        <a href="/activity/Lab%20Events/">View all →</a>
+        <a class="view-all" href="/activity/Lab%20Events/">View all →</a>
+      </div>
+
+      <!-- Seminar -->
+      <div class="card card-pad" style="grid-column: span 4">
+        <h4 style="margin:6px 0">Lab Seminar</h4>
+        <ul style="margin:8px 0 12px; padding-left:18px">
+          
+          <li>
+            <strong>2025-08-25</strong> <a href="/activity/Lab%20Seminar/">A Deep-Learning-Based Surrogate Model for Thermal Signature Prediction in Laser Metal Deposition (IEEE T-ASE 2023)</a>
+          </li>
+          
+        </ul>
+        <a class="view-all" href="/activity/Lab%20Seminar/">View all →</a>
       </div>
     </div>
   </div>
@@ -275,22 +293,22 @@
     <div class="head">
       <h2>
         <span class="title-text">Contact</span>
-        <a href="https://unist-da.github.io/contact/" class="more-info">– more info</a>
       </h2>
     </div>
     <div class="grid">
       <div class="card card-pad" style="grid-column: span 7">
         <h4 style="margin:0 0 8px">Get in touch</h4>
+      
         <p class="muted">
           Email:
           <a href="mailto:sungil.kim@unist.ac.kr">sungil.kim@unist.ac.kr</a>
           · Address: 유니스트길 50, 112동 302-4
         </p>
+      
         <p class="muted">
-          For prospective students: Please email with CV, and interestsed project.
+          For prospective students <a href="https://unist-da.github.io/contact/" class="more-info-inline">→ more info</a>
         </p>
       </div>
-
       <div class="card card-pad" style="grid-column: span 5">
         <h4 style="margin:0 0 8px">Links</h4>
         <ul class="link-list" style="margin:0; padding-left:0; list-style:none">
@@ -361,7 +379,7 @@
 </style>
 
 <script>
-/* === Hero carousel: arrows + dots + autoplay + 키보드/스와이프 === */
+/* === Hero carousel: arrows + dots + autoplay(+video-once), swipe/drag === */
 (function(){
   const carousel = document.getElementById('heroCarousel');
   if(!carousel) return;
@@ -371,9 +389,13 @@
   const next   = document.getElementById('heroNext');
   const dotsEl = document.getElementById('heroDots');
   const slides = track ? track.children : [];
-
   if(!slides || !slides.length) return;
+
   let i = 0, N = slides.length, timer = null, hover = false;
+
+  // 현재 슬라이드의 <video> 핸들링을 위해 참조 저장
+  let currentVideo = null;
+  let currentVideoEndedHandler = null;
 
   function buildDots(){
     dotsEl.innerHTML = '';
@@ -394,21 +416,65 @@
     [...dotsEl.children].forEach((d,idx)=>d.classList.toggle('active', idx===i));
   }
 
+  function cleanupVideo(){
+    if (!currentVideo) return;
+    try {
+      currentVideo.pause();
+      currentVideo.currentTime = 0;
+      if (currentVideoEndedHandler) {
+        currentVideo.removeEventListener('ended', currentVideoEndedHandler);
+        currentVideoEndedHandler = null;
+      }
+    } catch(e){}
+    currentVideo = null;
+  }
+
+  function scheduleNext(){
+    // 비디오는 한 번만 재생 → 끝나고 2초 후 다음 슬라이드
+    const vid = slides[i].querySelector('video');
+    cleanupVideo();
+    stop(); // 기존 일반 타이머 제거
+
+    if (vid) {
+      currentVideo = vid;
+      // 일부 브라우저에서 수동 이동 시 재생 지점 보정
+      try { vid.currentTime = 0; } catch(e){}
+      // 자동재생 시도(무음이면 대체로 허용)
+      vid.play().catch(()=>{ /* autoplay 제한 시 그냥 정지 상태 유지 */ });
+
+      currentVideoEndedHandler = () => {
+        // 비디오가 끝나면 2초 대기 후 다음 슬라이드
+        setTimeout(() => { goto(i+1); }, 2000);
+      };
+      vid.addEventListener('ended', currentVideoEndedHandler);
+    } else {
+      // 일반 이미지 슬라이드: 5초마다 자동 이동
+      start();
+    }
+  }
+
   function goto(k){
-    i = (k+N)%N;
+    // 슬라이드 바꾸기 전에 비디오 정리
+    cleanupVideo();
+
+    i = (k+N) % N;
     track.classList.remove('dragging');   // 스냅 애니메이션 ON
     update(0);
+
+    // 새 슬라이드 상황에 맞게 다음 이동 예약
+    scheduleNext();
   }
 
   function start(){ stop(); timer = setInterval(()=>{ if(!hover) goto(i+1); }, 5000); }
-  function stop(){ if(timer) clearInterval(timer); }
+  function stop(){ if(timer) { clearInterval(timer); timer = null; } }
 
+  // 화살표
   prev.addEventListener('click', ()=>{ goto(i-1); hover=true; setTimeout(()=>hover=false, 1200); });
   next.addEventListener('click', ()=>{ goto(i+1); hover=true; setTimeout(()=>hover=false, 1200); });
   carousel.addEventListener('mouseenter', ()=>hover=true);
   carousel.addEventListener('mouseleave', ()=>hover=false);
 
-  // 키보드
+  // 키보드 내비
   carousel.setAttribute('tabindex','0');
   carousel.addEventListener('keydown', (e)=>{
     if(e.key==='ArrowLeft') goto(i-1);
@@ -428,6 +494,7 @@
     track.classList.add('dragging');          // transition off
     track.setPointerCapture?.(e.pointerId);
     hover = true; setTimeout(()=>hover=false, 1200);
+    stop(); // 드래그 중에는 자동이동 멈춤
   };
 
   const onPointerMove = (e) => {
@@ -435,7 +502,6 @@
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
     if (Math.abs(dy) > Math.abs(dx)) return;  // 세로 스크롤 우선
-
     const offsetPct = (dx / width) * 100;     // px → %
     update(offsetPct);                        // 손가락 따라오기
   };
@@ -452,6 +518,8 @@
       goto(dx < 0 ? i+1 : i-1);               // 스냅
     } else {
       update(0);                              // 원위치 스냅백
+      // 드래그 취소 시에도 현재 슬라이드 타입(비디오/이미지)에 맞게 다시 예약
+      scheduleNext();
     }
     track.releasePointerCapture?.(e.pointerId);
   };
@@ -463,7 +531,130 @@
   // 이미지 기본 드래그 방지
   track.addEventListener('dragstart', (e) => e.preventDefault());
 
-  buildDots(); update(0); start();
+  // 초기 렌더링 및 예약
+  buildDots(); update(0); scheduleNext();
+})();
+</script>
+
+<!-- === Hero carousel (arrows + dots + autoplay + swipe/drag) === -->
+<script>
+(function(){
+  const carousel = document.getElementById('heroCarousel');
+  if(!carousel) return;
+
+  const track  = document.getElementById('heroSlides');
+  const prev   = document.getElementById('heroPrev');
+  const next   = document.getElementById('heroNext');
+  const dotsEl = document.getElementById('heroDots');
+  const slides = track ? track.querySelectorAll('.slide') : [];
+  if(!slides || !slides.length) return;
+
+  let i = 0, N = slides.length, timer = null, hover = false;
+  let currentVideo = null, currentVideoEndedHandler = null;
+
+  function buildDots(){
+    dotsEl.innerHTML = '';
+    for(let k=0;k<N;k++){
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'dot' + (k===i ? ' active' : '');
+      b.setAttribute('aria-label', `Go to slide ${k+1}`);
+      b.addEventListener('click', ()=>goto(k));
+      dotsEl.appendChild(b);
+    }
+  }
+
+  const percentFor = index => -index * 100;
+
+  function update(offsetPct=0){
+    track.style.transform = `translateX(${percentFor(i) + offsetPct}%)`;
+    [...dotsEl.children].forEach((d,idx)=>d.classList.toggle('active', idx===i));
+  }
+
+  function cleanupVideo(){
+    if(!currentVideo) return;
+    try{
+      currentVideo.pause();
+      currentVideo.currentTime = 0;
+      if (currentVideoEndedHandler){
+        currentVideo.removeEventListener('ended', currentVideoEndedHandler);
+        currentVideoEndedHandler = null;
+      }
+    }catch(e){}
+    currentVideo = null;
+  }
+
+  function scheduleNext(){
+    const vid = slides[i].querySelector('video');
+    cleanupVideo(); stop();
+    if(vid){
+      currentVideo = vid;
+      try{ vid.currentTime = 0; }catch(e){}
+      vid.play().catch(()=>{});
+      currentVideoEndedHandler = () => setTimeout(()=>goto(i+1), 2000);
+      vid.addEventListener('ended', currentVideoEndedHandler);
+    }else{
+      start();
+    }
+  }
+
+  function goto(k){
+    cleanupVideo();
+    i = (k+N) % N;
+    track.classList.remove('dragging');
+    update(0);
+    scheduleNext();
+  }
+
+  function start(){ stop(); timer = setInterval(()=>{ if(!hover) goto(i+1); }, 5000); }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+
+  prev.addEventListener('click', ()=>{ goto(i-1); hover=true; setTimeout(()=>hover=false, 1200); });
+  next.addEventListener('click', ()=>{ goto(i+1); hover=true; setTimeout(()=>hover=false, 1200); });
+  carousel.addEventListener('mouseenter', ()=>hover=true);
+  carousel.addEventListener('mouseleave', ()=>hover=false);
+
+  carousel.setAttribute('tabindex','0');
+  carousel.addEventListener('keydown', (e)=>{
+    if(e.key==='ArrowLeft') goto(i-1);
+    if(e.key==='ArrowRight') goto(i+1);
+  });
+
+  /* === Swipe / Drag === */
+  const THRESH = 0.18;   // 화면 너비 대비 18% 이상 이동 시 넘김
+  let dragging=false, startX=0, startY=0, width=1;
+
+  track.addEventListener('pointerdown', (e)=>{
+    if(e.pointerType==='mouse' && e.button!==0) return;
+    width = carousel.clientWidth || 1;
+    dragging = true;
+    startX = e.clientX; startY = e.clientY;
+    track.classList.add('dragging');
+    track.setPointerCapture?.(e.pointerId);
+    hover = true; setTimeout(()=>hover=false, 1200);
+    stop();
+  });
+
+  track.addEventListener('pointermove', (e)=>{
+    if(!dragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    if(Math.abs(dy) > Math.abs(dx)) return; // 세로 스크롤 우선
+    update((dx/width)*100);
+  });
+
+  window.addEventListener('pointerup', (e)=>{
+    if(!dragging) return;
+    const dx = e.clientX - startX;
+    const movedRatio = Math.abs(dx)/width;
+    dragging = false;
+    track.classList.remove('dragging');
+    if(movedRatio > THRESH){ goto(dx<0 ? i+1 : i-1); }
+    else { update(0); scheduleNext(); }
+    track.releasePointerCapture?.(e.pointerId);
+  });
+
+  buildDots(); update(0); scheduleNext();
 })();
 </script>
 
@@ -488,13 +679,26 @@
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

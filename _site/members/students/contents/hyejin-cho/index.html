@@ -180,6 +180,10 @@ aside a.tag{ color:var(--tag-color); }
       
 
       
+        <p style="margin:0 0 10px"><strong>Email</strong><br>
+          <a href="mailto:hyejin.cho@unist.ac.kr">hyejin.cho@unist.ac.kr</a>
+        </p>
+      
 
       
         <div style="margin-top:12px;">
@@ -192,6 +196,12 @@ aside a.tag{ color:var(--tag-color); }
             
             
             
+                    
+                    <li style="display:flex;align-items:center;gap:6px;">
+                      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="18" height="18" style="flex:0 0 18px">
+                      <a href="https://www.linkedin.com/in/hyejiinc/" target="_blank" rel="noopener">LinkedIn</a>
+                    </li>
+                  
             
             
           </ul>
@@ -200,7 +210,7 @@ aside a.tag{ color:var(--tag-color); }
 
       
         <div style="margin-top:8px">
-          <span class="tag">tags</span>
+          <span class="tag">Time-Series Analysis</span><span class="tag">Data-driven Business Strategy</span>
         </div>
       
     </aside>
@@ -211,7 +221,7 @@ aside a.tag{ color:var(--tag-color); }
       
       <section class="card card-pad section-card">
         <h3 class="sec-title">About Me</h3>
-        <p class="muted" style="margin:0">I'm</p>
+        <p class="muted" style="margin:0">I'm interested in exploring the impact of digital technologies on business models and strategies, and driving innovation through data. My focus is on applying advanced ML/DL techniques, particularly in time-series analysis, to develop domain-specific architectures while solving impactful, real-world problems across diverse industries.</p>
       </section>
       
 
@@ -220,7 +230,7 @@ aside a.tag{ color:var(--tag-color); }
       <section class="card card-pad section-card">
         <h3 class="sec-title">Research Interests</h3>
         <ul style="margin:0">
-          <li>interests</li>
+          <li>Digital technologies & business model transformation</li><li>Data-driven innovation & strategy development</li><li>Time-series analysis & predictive modeling</li><li>Advanced ML/DL techniques for domain-specific architectures</li><li>Cross-industry applications in manufacturing, healthcare, and beyond</li>
         </ul>
       </section>
       
@@ -244,19 +254,51 @@ aside a.tag{ color:var(--tag-color); }
             
             
       
-            <li class="timeline-item ">
+            <li class="timeline-item timeline-current">
               <span class="time">
                 
                   
-                  <span class="time-start">2025.09</span>
+                  <span class="time-start">2023.02</span>
+                  <span class="time-end">–</span>
                 
               </span>
       
               <span class="dot" aria-hidden="true"></span>
               <div class="body">
-                <div class="title">title</div>
-                <p>notes<br />
-notes<br />
+                <div class="title">M.S. in Industrial Engineering</div>
+                <p>Ulsan National Institute of Science and Technology (UNIST)<br />
+Data Analytics Lab<br />
+</p>
+              </div>
+            </li>
+          
+            
+            
+      
+            
+            
+      
+            
+            
+      
+            
+            
+      
+            <li class="timeline-item ">
+              <span class="time">
+                
+                  
+                  <span class="time-start">2025.02</span>
+                  <span class="time-end">– 2025.07</span>
+                
+              </span>
+      
+              <span class="dot" aria-hidden="true"></span>
+              <div class="body">
+                <div class="title">Visiting Researcher</div>
+                <p>Georgia Institute of Technology (Georgia Tech)<br />
+Wearable Intelligent Systems and Healthcare (WISH) Center<br />
+Collaboration with Bio-Interfaced Translational Nanoengineering Group (BITN Lab)<br />
 </p>
               </div>
             </li>
@@ -269,17 +311,14 @@ notes<br />
 
       <!-- Freeform markdown (no card) -->
       
-        <h3 id="current-work">Current Work</h3>
+        <h3 id="conferences">Conferences</h3>
 <ul>
-  <li>This is an <strong>example!!</strong></li>
+  <li>Hyejin Cho, Seungsu Kam, Chanbeom Hur, and Sungil Kim, “Assessing user retention of Updatable home appliance”, Institute of Industrial and Systems Engineers, Atlanta GA, USA (May. 2025) - Oral</li>
+  <li>Hyejin Cho, Seungsu Kam, Byeonghoon Jeon, Geumyong Lee, and Sungil Kim, “Addressing Spatial Gaps in XCO2 Monitoring: A Machine Learning Approach for South Korea”, Korean Institute of Industrial Engineers, Seoul, Korea (Oct. 2024) - Oral</li>
+  <li>Hyejin Cho, Seungsu Kam, Chanbeom Hur, and Sungil Kim, “Statistical modeling methodology for user engagement measurement based on appliance usage data”, Korean Institute of Industrial Engineers, Yeosu, Korea (May. 2024) - Oral</li>
+  <li>Byungkook Koo, Hyejin Cho, Yongmin Kim, and Sungil Kim, “Early Fault Detection in Refrigerator Compressors Using Unlabeled Sensor Data”, Korean Institute of Industrial Engineers, Ulsan, Korea (Nov. 2023) - Oral</li>
 </ul>
 
-<h3 id="notes-for-collaboration">Notes for Collaboration</h3>
-<ol>
-  <li>This is an <strong>example!!</strong></li>
-  <li>This is an <strong>example!!</strong></li>
-  <li>This is an <strong>example!!</strong></li>
-</ol>
 
       
     </article>
@@ -307,13 +346,26 @@ notes<br />
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>

@@ -93,486 +93,313 @@
 
   <div class="page-hero">
   <div class="container">
-    <div class="breadcrumbs"><a href="/">Home</a> · <a href="/research/projects/">Research</a> · Projects</div>
+    <div class="breadcrumbs">
+      <a href="/">Home</a> ·
+      <a href="/research/projects/">Research</a> · Projects
+    </div>
     <h1 class="page-title">Projects</h1>
     <p class="muted">Selected sponsored and collaborative projects.</p>
   </div>
 </div>
 
+<style>
+  .proj-grid{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+  }
+  .proj-card{
+    grid-column: span 6;
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:14px;
+    transition:box-shadow .15s ease, transform .15s ease, border-color .15s ease;
+    background: transparent;
+  }
+  .proj-card:hover{
+    box-shadow:0 8px 28px rgba(0,0,0,.08);
+    transform:translateY(-2px);
+    border-color:#d1d5db;
+  }
+  .proj-thumb{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:contain;
+    border-radius:12px;
+    margin-bottom:10px;
+    background:#fff;
+  }
+
+  .proj-title{
+    margin:0 0 8px;
+    font-size:20px;
+    font-weight:700;
+    line-height:1.4;
+  }
+
+  /* category + organizer pill */
+  .proj-meta{
+    margin:10px 0 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    align-items:center;
+  }
+  .meta-pill{
+    display:inline-flex;
+    align-items:center;
+    padding:2px 8px;          /* 기존보다 약간 작게 유지 */
+    border-radius:999px;
+    font-size:12px;           /* 글씨 작게 */
+    font-weight:500;          /* 굵기 얇게 */
+    background:#e9f0fb;       /* 연한 하늘색 배경 유지 */
+    color:#0f1c48;            /* 남색 텍스트 */
+    border:1px solid transparent; /* 테두리는 눈에 안 띄게 */
+    line-height:1.3;
+  }
+
+  /* period 줄 (달력 아이콘 + 텍스트) */
+  .proj-period{
+    display:flex; 
+    align-items:center; 
+    gap:6px;
+    color:#6b7280;
+    font-size:13px;
+    margin-top:6px;
+  }
+  .proj-period svg{
+    width:14px; 
+    height:14px; 
+    flex:0 0 auto; 
+    color:#0f1c48;   
+  }
+
+  /* summary 더 작게 */
+  .proj-summary{ margin:6px 0 0; color:#6b7280; font-size:12px; line-height:1.4; }
+
+  @media (max-width: 860px){
+    .proj-card{ grid-column: span 12; }
+  }
+</style>
+
 <main class="container">
   <section>
-    <div class="grid">
+    <div class="proj-grid"><a
+              class="proj-card"
+              href="/research/projects/contents/scsc-ais-risk/"
+              id="scsc-ais-risk"
+              data-slug="scsc-ais-risk"
+            ><img class="proj-thumb" src="/assets/research/projects/scsc-ais-risk-1.webp" alt="Risk-Aware Imitation Learning with Environmental Context for AIS"><h3 class="proj-title">Risk-Aware Imitation Learning with Environmental Context for AIS</h3>
       
+              <div class="proj-meta"><span class="meta-pill">Time-Series Representation Learning</span><span class="meta-pill">Human Centered – Carbon Neutral Global Supply Chain Research Center</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2025.08 –
+                </div><p class="proj-summary">Imitation-learning anomaly detection for AIS is improved by adding environmental data (wind, waves), so the model can tell apart risky vessel behavior from safe weather-driven detours.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/scsc-llm-maritime/"
+              id="scsc-llm-maritime"
+              data-slug="scsc-llm-maritime"
+            ><img class="proj-thumb" src="/assets/research/projects/scsc-llm-maritime-1.webp" alt="LLM Agent for Maritime Data Analysis"><h3 class="proj-title">LLM Agent for Maritime Data Analysis</h3>
       
+              <div class="proj-meta"><span class="meta-pill">System Monitoring & Anomaly Detection</span><span class="meta-pill">SCSC</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2025.06 - 2025.08
+                </div><p class="proj-summary">This project develops a Hybrid Prompt Agent that enables natural-language analysis of maritime AIS data by combining query classification with dynamic prompting.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/iitp-bio/"
+              id="iitp-bio"
+              data-slug="iitp-bio"
+            ><img class="proj-thumb" src="/assets/research/projects/iitp-bio-1.webp" alt="Development of a robust and generalizable foundation model for bioelectrical signals"><h3 class="proj-title">Development of a robust and generalizable foundation model for bioelectrical signals</h3>
       
-      <a
-        class="card card-pad"
-        style="grid-column: span 6; display:block; text-decoration:none; color:inherit"
-        id="lg-lqc"
-        href="/research/projects/contents/lg-lqc/"
-        data-slug="lg-lqc"
-      >
-        
-          <img src="/assets/research/projects/lg-lqc-fig6.webp" alt="LG LQC (Line Quality Control)"
-               style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
-        
-
-        <h3 style="margin:0 0 6px">LG LQC (Line Quality Control)</h3>
-
-        <!-- 연도(기간) · 분류 -->
-        <p class="muted" style="margin:0 0 6px">
-          2021–2024
-           · Artificial Intelligence in Quality Engineering
-        </p>
-
-        <!-- 태그 칩 -->
-        
-          <p class="muted" style="margin:0 0 8px">
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Functional Data Analysis</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Sequential Transformations</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Outlier Detection</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Manufacturing AI</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Quality Inspection</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Refrigerator Compressor</span>
-            
-          </p>
-        
-
-        <!-- 요약 -->
-        
-          <p class="muted">Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.</p>
-        
-      </a>
+              <div class="proj-meta"><span class="meta-pill">Time-Series Representation Learning</span><span class="meta-pill">IITP</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2024.10 –
+                </div><p class="proj-summary">Foundation model development tailored to the unique characteristics of bioelectrical signal acquisition</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/scsc-fuel-est/"
+              id="scsc-fuel-est"
+              data-slug="scsc-fuel-est"
+            ><img class="proj-thumb" src="/assets/research/projects/scsc-fuel-est-1.png" alt="Fuel Consumption Estimation for Maritime Energy Efficiency"><h3 class="proj-title">Fuel Consumption Estimation for Maritime Energy Efficiency</h3>
       
+              <div class="proj-meta"></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2024.09 –
+                </div><p class="proj-summary">Data-driven surrogate model that infers fuel burn from AIS and environmental context - no engine sensors required.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/lg-lqc/"
+              id="lg-lqc"
+              data-slug="lg-lqc"
+            ><img class="proj-thumb" src="/assets/research/projects/lg-lqc-1.webp" alt="Fault Detection via Domain-Knowledge-Based Training Data Refinement"><h3 class="proj-title">Fault Detection via Domain-Knowledge-Based Training Data Refinement</h3>
       
+              <div class="proj-meta"><span class="meta-pill">System Monitoring & Anomaly Detection</span><span class="meta-pill">LG Electronics</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2023.07 - 2024.10
+                </div><p class="proj-summary">A domain knowledge–based data refinement methodology for detecting defective products that cannot be filtered out in the LQC process.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/lg-pmo/"
+              id="lg-pmo"
+              data-slug="lg-pmo"
+            ><img class="proj-thumb" src="/assets/research/projects/lg-pmo-1.webp" alt="Developing data-driven user engagement metrics for contents(functions) in Updatable home appliances"><h3 class="proj-title">Developing data-driven user engagement metrics for contents(functions) in Updatable home appliances</h3>
       
-      <a
-        class="card card-pad"
-        style="grid-column: span 6; display:block; text-decoration:none; color:inherit"
-        id="scsc-fuel-opt"
-        href="/research/projects/contents/scsc-fuel-opt/"
-        data-slug="scsc-fuel-opt"
-      >
-        
-          <img src="/assets/research/projects/none.webp" alt="Fuel Consumption Prediction & Optimization (SCSC)"
-               style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
-        
-
-        <h3 style="margin:0 0 6px">Fuel Consumption Prediction & Optimization (SCSC)</h3>
-
-        <!-- 연도(기간) · 분류 -->
-        <p class="muted" style="margin:0 0 6px">
-          2023–
-           · Time-Series Representation
-        </p>
-
-        <!-- 태그 칩 -->
-        
-          <p class="muted" style="margin:0 0 8px">
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">AIS</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Fuel Optimization</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Machine Learning</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Green Logistics</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Carbon Neutrality</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Maritime Analytics</span>
-            
-          </p>
-        
-
-        <!-- 요약 -->
-        
-          <p class="muted">AIS·기상·엔진 센서를 융합해 연료 소비를 예측하고 친환경 최적 운항 전략을 제시합니다.</p>
-        
-      </a>
+              <div class="proj-meta"><span class="meta-pill">System Monitoring & Anomaly Detection</span><span class="meta-pill">LG Electronics</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2023.06 – 2024.05
+                </div><p class="proj-summary">Developing a new metric for measuring customer satisfaction based on user activity data</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/scsc-fuel-pred/"
+              id="scsc-fuel-pred"
+              data-slug="scsc-fuel-pred"
+            ><img class="proj-thumb" src="/assets/research/projects/scsc-fuel-pred-1.webp" alt="Physics-Informed AI for Robust Ship Fuel Consumption Prediction"><h3 class="proj-title">Physics-Informed AI for Robust Ship Fuel Consumption Prediction</h3>
       
+              <div class="proj-meta"><span class="meta-pill">Time-Series Representation Learning</span><span class="meta-pill">Human Centered – Carbon Neutral Global Supply Chain Research Center</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2024.03 –
+                </div><p class="proj-summary">Development of a Ship Fuel Consumption Prediction Model Considering Environmental Factors</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/piston-lc/"
+              id="piston-lc"
+              data-slug="piston-lc"
+            ><img class="proj-thumb" src="/assets/research/projects/piston-lc-1.webp" alt="Deep Learning Approach for Behavior of Piston of Linear Compressor"><h3 class="proj-title">Deep Learning Approach for Behavior of Piston of Linear Compressor</h3>
       
+              <div class="proj-meta"><span class="meta-pill">Time-Series Representation Learning</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2022.12 – 2023.12
+                </div><p class="proj-summary">Deep learning–based sensorless control of linear compressor pistons with over 90% performance improvement.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/thyroid-dose/"
+              id="thyroid-dose"
+              data-slug="thyroid-dose"
+            ><img class="proj-thumb" src="/assets/research/projects/thyroid-dose-1.png" alt="Personalized Dose Determination for Patients with Thyroid Hormone Disorders"><h3 class="proj-title">Personalized Dose Determination for Patients with Thyroid Hormone Disorders</h3>
       
-      <a
-        class="card card-pad"
-        style="grid-column: span 6; display:block; text-decoration:none; color:inherit"
-        id="scsc-llm-maritime"
-        href="/research/projects/contents/scsc-llm-maritime/"
-        data-slug="scsc-llm-maritime"
-      >
-        
-          <img src="/assets/research/projects/none.webp" alt="LLM Agent for Maritime Data Analysis (SCSC)"
-               style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
-        
-
-        <h3 style="margin:0 0 6px">LLM Agent for Maritime Data Analysis (SCSC)</h3>
-
-        <!-- 연도(기간) · 분류 -->
-        <p class="muted" style="margin:0 0 6px">
-          2024–
-           · System Monitoring & Anomaly Detection
-        </p>
-
-        <!-- 태그 칩 -->
-        
-          <p class="muted" style="margin:0 0 8px">
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">LLM</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">RAG</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">AIS</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Real-time Monitoring</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Anomaly Detection</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Compliance</span>
-            
-          </p>
-        
-
-        <!-- 요약 -->
-        
-          <p class="muted">대용량 AIS·해양 데이터를 자연어로 질의·분석하고, 실시간 리스크·규정 위반을 자동 탐지합니다.</p>
-        
-      </a>
+              <div class="proj-meta"></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2022.01 – 2025.12
+                </div><p class="proj-summary">Optimal and Personalized Dose Determination for Patients with Thyroid Hormone Disorders Using Deep Learning-Based Survival Analysis</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/lqc-od/"
+              id="lqc-od"
+              data-slug="lqc-od"
+            ><img class="proj-thumb" src="/assets/research/projects/lqc-od-1.webp" alt="Domain Knowledge-Informed Functional Outlier Detection for LQC"><h3 class="proj-title">Domain Knowledge-Informed Functional Outlier Detection for LQC</h3>
       
+              <div class="proj-meta"><span class="meta-pill">System Monitoring & Anomaly Detection</span><span class="meta-pill">LG Electronics</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2022.01 – 2022.12
+                </div><p class="proj-summary">An ST-based method using failure pattern knowledge to detect tiny anomalies in manufacturing time-series data.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/tao-eye-detect/"
+              id="tao-eye-detect"
+              data-slug="tao-eye-detect"
+            ><img class="proj-thumb" src="/assets/research/projects/tao-eye-detect-1.webp" alt="Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs"><h3 class="proj-title">Active Thyroid-Associated Orbitopathy Detection on Frontal Eye Photographs</h3>
       
+              <div class="proj-meta"><span class="meta-pill">System Monitoring & Anomaly Detection</span><span class="meta-pill">Korea Innovation Foundation</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2021.08 – 2021.12
+                </div><p class="proj-summary">Developing a deep learning–based AI system for early monitoring and diagnosis of thyroid eye disease to enable timely treatment before irreversible damage.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/quasar-detect/"
+              id="quasar-detect"
+              data-slug="quasar-detect"
+            ><img class="proj-thumb" src="/assets/research/projects/quasar-detect-1.webp" alt="Real Time Changing-State Quasar Detection"><h3 class="proj-title">Real Time Changing-State Quasar Detection</h3>
       
-      <a
-        class="card card-pad"
-        style="grid-column: span 6; display:block; text-decoration:none; color:inherit"
-        id="df-ts-drift"
-        href="/research/projects/contents/df-ts-drift/"
-        data-slug="df-ts-drift"
-      >
-        
-          <img src="/assets/research/projects/none.webp" alt="Domain-free Time-Series Drift Management"
-               style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px">
-        
-
-        <h3 style="margin:0 0 6px">Domain-free Time-Series Drift Management</h3>
-
-        <!-- 연도(기간) · 분류 -->
-        <p class="muted" style="margin:0 0 6px">
-          2025.03–2028.02
-           · System Monitoring & Anomaly Detection
-        </p>
-
-        <!-- 태그 칩 -->
-        
-          <p class="muted" style="margin:0 0 8px">
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Time-Series Drift</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Concept Drift</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Covariate Shift</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Domain-free</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Robust Learning</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Neural DEs</span>
-            
-              <span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">Monitoring</span>
-            
-          </p>
-        
-
-        <!-- 요약 -->
-        
-          <p class="muted">도메인에 독립적인 시계열 드리프트 모니터링·탐지·보정 기술과 툴킷/플랫폼 SW 개발.</p>
-        
-      </a>
+              <div class="proj-meta"><span class="meta-pill">System Monitoring & Anomaly Detection</span><span class="meta-pill">AI HUB</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2021.01 – 2025.12
+                </div><p class="proj-summary">Real-Time Detection of Changing-State Quasars using a Mixture Density Network</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/traffic-cong/"
+              id="traffic-cong"
+              data-slug="traffic-cong"
+            ><img class="proj-thumb" src="/assets/research/projects/traffic-cong-1.webp" alt="Prediction of Traffic Congestion Propagation"><h3 class="proj-title">Prediction of Traffic Congestion Propagation</h3>
       
-    </div>
+              <div class="proj-meta"><span class="meta-pill">Time-Series Representation Learning</span><span class="meta-pill">NAVER</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2021.01 – 2024.02
+                </div><p class="proj-summary">Modeling and quantifying time-lagged accident-induced congestion using causal inference and bootstrap uncertainty analysis.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/cnn-gas/"
+              id="cnn-gas"
+              data-slug="cnn-gas"
+            ><img class="proj-thumb" src="/assets/research/projects/cnn-gas-1.webp" alt="CNN based Gas Mixture Classification"><h3 class="proj-title">CNN based Gas Mixture Classification</h3>
+      
+              <div class="proj-meta"><span class="meta-pill">Time‑Series Representation Learning</span><span class="meta-pill">Ulsan Industry-University Convergence Campus</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2020.03 - 2020.07
+                </div><p class="proj-summary">A CNN-based multi-channel time-series analysis method is proposed for accurate classification of gas mixtures using electronic nose sensor data.</p></a><a
+              class="proj-card"
+              href="/research/projects/contents/maritime-ad/"
+              id="maritime-ad"
+              data-slug="maritime-ad"
+            ><img class="proj-thumb" src="/assets/research/projects/maritime-ad-1.webp" alt="Maritime Anomaly Detection"><h3 class="proj-title">Maritime Anomaly Detection</h3>
+      
+              <div class="proj-meta"><span class="meta-pill">System Monitoring & Anomaly Detection</span></div><div class="proj-period">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                       stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  2020.01 – 2022.01
+                </div><p class="proj-summary">A statistical approach for route planning and anomaly detection to enhance maritime situational awareness.</p></a></div>
   </section>
 </main>
-
-<!-- (중요) 숨김 상세 섹션: 같은 페이지 안에 상세를 미리 심어둠 -->
-<div id="project-details-pool" style="display:none">
-  
-  <section id="detail-lg-lqc">
-    <div class="detail-payload">
-      
-      <figure style="margin:0 0 16px">
-        <img src="/assets/research/projects/lg-lqc-fig6.webp" alt="LG LQC (Line Quality Control)"
-             style="width:100%;max-height:460px;object-fit:cover;border-radius:12px">
-        <figcaption class="muted" style="margin-top:8px">Proposed monitoring framework integrating domain knowledge with functional outlier detection (Figure 2).</figcaption>
-      </figure>
-      
-
-      
-      <p class="lead" style="margin-bottom:18px">Detect latent defects on production lines by fusing domain knowledge with functional outlier detection.</p>
-      
-
-      <!-- description: projects.yml에 마크다운으로 넣어두면 자동 렌더 -->
-      <article class="prose">
-        
-          <p>Overview. 생산 라인 검사에서 잠재 결함을 사전 식별하기 위해, 함수형 데이터 해석 + 도메인 지식(temporal/directional/structural)을 통합한 이상치 탐지 프레임워크를 개발.</p>
-
-        
-      </article>
-    </div>
-
-    <!-- 메타(JSON) -->
-    <script type="application/json" id="meta-lg-lqc">
-    {
-      "title": "LG LQC (Line Quality Control)",
-      "period": "2021–2024",
-      "category": "Artificial Intelligence in Quality Engineering",
-      "tags": ["Functional Data Analysis","Sequential Transformations","Outlier Detection","Manufacturing AI","Quality Inspection","Refrigerator Compressor"],
-      "image": "/assets/research/projects/lg-lqc-fig6.webp",
-      "image_caption": "Proposed monitoring framework integrating domain knowledge with functional outlier detection (Figure 2)."
-    }
-    </script>
-  </section>
-  
-  <section id="detail-scsc-fuel-opt">
-    <div class="detail-payload">
-      
-      <figure style="margin:0 0 16px">
-        <img src="/assets/research/projects/none.webp" alt="Fuel Consumption Prediction & Optimization (SCSC)"
-             style="width:100%;max-height:460px;object-fit:cover;border-radius:12px">
-        <figcaption class="muted" style="margin-top:8px">Integrated AIS–weather–engine features for fuel prediction and eco-routing.</figcaption>
-      </figure>
-      
-
-      
-      <p class="lead" style="margin-bottom:18px">AIS·기상·엔진 센서를 융합해 연료 소비를 예측하고 친환경 최적 운항 전략을 제시합니다.</p>
-      
-
-      <!-- description: projects.yml에 마크다운으로 넣어두면 자동 렌더 -->
-      <article class="prose">
-        
-          <p>AIS·기상·해류·엔진 센서를 결합해 연료 소비를 예측하고, eco-routing/속도 정책으로 탄소 배출과 비용을 동시 최적화.</p>
-
-        
-      </article>
-    </div>
-
-    <!-- 메타(JSON) -->
-    <script type="application/json" id="meta-scsc-fuel-opt">
-    {
-      "title": "Fuel Consumption Prediction & Optimization (SCSC)",
-      "period": "2023–",
-      "category": "Time-Series Representation",
-      "tags": ["AIS","Fuel Optimization","Machine Learning","Green Logistics","Carbon Neutrality","Maritime Analytics"],
-      "image": "/assets/research/projects/none.webp",
-      "image_caption": "Integrated AIS–weather–engine features for fuel prediction and eco-routing."
-    }
-    </script>
-  </section>
-  
-  <section id="detail-scsc-llm-maritime">
-    <div class="detail-payload">
-      
-      <figure style="margin:0 0 16px">
-        <img src="/assets/research/projects/none.webp" alt="LLM Agent for Maritime Data Analysis (SCSC)"
-             style="width:100%;max-height:460px;object-fit:cover;border-radius:12px">
-        <figcaption class="muted" style="margin-top:8px">RAG-enabled maritime data agent for natural-language analytics and monitoring.</figcaption>
-      </figure>
-      
-
-      
-      <p class="lead" style="margin-bottom:18px">대용량 AIS·해양 데이터를 자연어로 질의·분석하고, 실시간 리스크·규정 위반을 자동 탐지합니다.</p>
-      
-
-      <!-- description: projects.yml에 마크다운으로 넣어두면 자동 렌더 -->
-      <article class="prose">
-        
-          <p>해양 규정/메타지식 인덱싱(RAG)과 스트리밍 분석으로 자연어 질의·시각화·알림을 지원, 운항 이상/위반을 실시간 탐지.</p>
-
-        
-      </article>
-    </div>
-
-    <!-- 메타(JSON) -->
-    <script type="application/json" id="meta-scsc-llm-maritime">
-    {
-      "title": "LLM Agent for Maritime Data Analysis (SCSC)",
-      "period": "2024–",
-      "category": "System Monitoring & Anomaly Detection",
-      "tags": ["LLM","RAG","AIS","Real-time Monitoring","Anomaly Detection","Compliance"],
-      "image": "/assets/research/projects/none.webp",
-      "image_caption": "RAG-enabled maritime data agent for natural-language analytics and monitoring."
-    }
-    </script>
-  </section>
-  
-  <section id="detail-df-ts-drift">
-    <div class="detail-payload">
-      
-      <figure style="margin:0 0 16px">
-        <img src="/assets/research/projects/none.webp" alt="Domain-free Time-Series Drift Management"
-             style="width:100%;max-height:460px;object-fit:cover;border-radius:12px">
-        <figcaption class="muted" style="margin-top:8px">Domain-free 시계열 드리프트 관리 통합 프레임워크.</figcaption>
-      </figure>
-      
-
-      
-      <p class="lead" style="margin-bottom:18px">도메인에 독립적인 시계열 드리프트 모니터링·탐지·보정 기술과 툴킷/플랫폼 SW 개발.</p>
-      
-
-      <!-- description: projects.yml에 마크다운으로 넣어두면 자동 렌더 -->
-      <article class="prose">
-        
-          <p>제조·헬스케어·물류·교통·금융 등 이기종 환경에서 분포/개념 변화에 강건한 드리프트 모니터링/탐지/보정 알고리즘과 플랫폼 SW 개발.</p>
-
-        
-      </article>
-    </div>
-
-    <!-- 메타(JSON) -->
-    <script type="application/json" id="meta-df-ts-drift">
-    {
-      "title": "Domain-free Time-Series Drift Management",
-      "period": "2025.03–2028.02",
-      "category": "System Monitoring & Anomaly Detection",
-      "tags": ["Time-Series Drift","Concept Drift","Covariate Shift","Domain-free","Robust Learning","Neural DEs","Monitoring"],
-      "image": "/assets/research/projects/none.webp",
-      "image_caption": "Domain-free 시계열 드리프트 관리 통합 프레임워크."
-    }
-    </script>
-  </section>
-  
-</div>
-
-<!-- 모달 UI -->
-<div id="project-modal" aria-hidden="true" style="position:fixed;inset:0;display:none;z-index:1000;">
-  <div id="modal-dim" style="position:absolute;inset:0;background:rgba(0,0,0,.45)"></div>
-  <div role="dialog" aria-modal="true"
-       style="position:relative;max-width:980px;margin:40px auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.2)">
-    <header style="padding:20px 24px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-      <div style="flex:1 1 auto;min-width:260px">
-        <h2 id="modal-title" style="margin:0 0 4px;font-size:22px;line-height:1.3"></h2>
-        <p class="muted" id="modal-meta" style="margin:0"></p>
-        <p class="muted" id="modal-tags" style="margin:6px 0 0"></p>
-      </div>
-      <button id="modal-close" aria-label="Close"
-              style="flex:0 0 auto;border:1px solid #e5e7eb;border-radius:10px;padding:8px 12px;background:#fff;cursor:pointer">
-        Close
-      </button>
-    </header>
-    <div id="modal-body" style="padding:20px 24px;max-height:70vh;overflow:auto"></div>
-  </div>
-</div>
-
-<!-- 스크립트: 클릭/해시/쿼리 모두 지원 -->
-<script>
-(function() {
-  const modal = document.getElementById('project-modal');
-  const modalBody = document.getElementById('modal-body');
-  const modalTitle = document.getElementById('modal-title');
-  const modalMeta  = document.getElementById('modal-meta');
-  const modalTags  = document.getElementById('modal-tags');
-  const dim = document.getElementById('modal-dim');
-  const btnClose = document.getElementById('modal-close');
-
-  function openProject(slug, push = true) {
-    const section = document.querySelector('#detail-' + slug);
-    const metaEl  = document.querySelector('#meta-' + slug);
-    if (!section || !metaEl) return;
-
-    const payload = section.querySelector('.detail-payload');
-    modalBody.innerHTML = payload ? payload.innerHTML : '<p class="muted">No detail.</p>';
-
-    try {
-      const meta = JSON.parse(metaEl.textContent);
-      modalTitle.textContent = meta.title || '';
-      const bits = [];
-      if (meta.period)   bits.push(meta.period);
-      if (meta.category) bits.push(meta.category);
-      modalMeta.textContent = bits.join(' · ') || '';
-      if (Array.isArray(meta.tags) && meta.tags.length) {
-        modalTags.innerHTML = meta.tags.map(t =>
-          '<span class="tag" style="display:inline-block;border:1px solid #e3e3e3;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px">'+t+'</span>'
-        ).join('');
-      } else {
-        modalTags.innerHTML = '';
-      }
-    } catch(e) {
-      modalTitle.textContent = '';
-      modalMeta.textContent = '';
-      modalTags.innerHTML = '';
-    }
-
-    modal.style.display = 'block';
-    modal.setAttribute('aria-hidden', 'false');
-
-    if (push) {
-      // 해시 앵커와 쿼리 둘 다 지원 (해시는 메인/서브 카드가 이미 쓰고 있어 호환성 좋음)
-      const url = new URL(window.location.href);
-      url.searchParams.set('project', slug);
-      url.hash = 'project-' + slug;
-      window.history.pushState({ project: slug }, '', url);
-    }
-  }
-
-  function closeProject(push = true) {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
-    if (push) {
-      const url = new URL(window.location.href);
-      url.searchParams.delete('project');
-      // 해시가 project-xxx이면 제거
-      if (url.hash && url.hash.startsWith('#project-')) url.hash = '';
-      window.history.pushState({}, '', url);
-    }
-  }
-
-  // 카드 클릭 → 모달
-  document.addEventListener('click', function(e) {
-    const a = e.target.closest('a.card');
-    if (!a) return;
-    const slug = a.getAttribute('data-slug');
-    if (!slug) return;
-    // 같은 페이지 내 모달 열기
-    if (a.getAttribute('href') && a.getAttribute('href').includes('#')) {
-      e.preventDefault();
-      openProject(slug);
-    } else if (a.getAttribute('href') && a.getAttribute('href').includes('?project=')) {
-      e.preventDefault();
-      openProject(slug);
-    }
-  });
-
-  // 닫기
-  dim.addEventListener('click', () => closeProject());
-  btnClose.addEventListener('click', () => closeProject());
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProject(); });
-
-  // popstate (뒤로/앞으로)
-  window.addEventListener('popstate', (ev) => {
-    const url = new URL(location.href);
-    const viaQuery = url.searchParams.get('project');
-    const viaHash  = (url.hash || '').replace(/^#project-/, '').replace(/^#/, '');
-    const slug = viaQuery || viaHash || '';
-    if (slug) {
-      openProject(slug, false);
-    } else {
-      closeProject(false);
-    }
-  });
-
-  // 초기 진입: 쿼리 or 해시로 열기
-  (function initialOpen() {
-    const url = new URL(location.href);
-    const viaQuery = url.searchParams.get('project');
-    const viaHash  = (url.hash || '').replace(/^#project-/, '').replace(/^#/, '');
-    const slug = viaQuery || viaHash || '';
-    if (slug) openProject(slug, false);
-  })();
-})();
-</script>
 
   <footer>
   <div class="container small muted">
@@ -595,13 +422,26 @@
 
   <!-- 모바일 드롭다운 토글 -->
   <script>
-    document.addEventListener('click', function(e){
-      if(e.target.matches('.dd-toggle')){
-        e.preventDefault();
-        const li = e.target.closest('.has-dd');
-        if(li) li.classList.toggle('open');
+    (function(){
+      function toggleFrom(target){
+        const link = target.closest('.has-dd > a');
+        if(!link) return false;
+        const nav = document.getElementById('navbar');
+        if(!nav || !nav.contains(link)) return false;
+    
+        const li = link.closest('.has-dd');
+        const expanded = li.classList.toggle('open');
+        link.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return true;
       }
-    });
-  </script>
+    
+      function onClick(e){
+        if (toggleFrom(e.target)) { e.preventDefault(); e.stopPropagation(); }
+      }
+    
+      // click만 사용 (중복 토글 방지)
+      document.addEventListener('click', onClick, true);
+    })();
+    </script>
 </body>
 </html>
