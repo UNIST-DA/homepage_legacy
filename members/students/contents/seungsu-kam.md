@@ -36,7 +36,7 @@ interests:
     
 milestone:
   - start: 2015.02
-  - end: 2022.02
+    end: 2022.02
     title: B.S. in Industrial Engineering
     note: |
       Industrial Engineering, Ajou University
