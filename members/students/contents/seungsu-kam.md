@@ -35,10 +35,15 @@ interests:
     
     
 milestone:
+  - start: 2015.02
+  - end: 2022.02
+    title: B.S. in Industrial Engineering
+    note: |
+      Industrial Engineering, Ajou University
   - start: 2022.02
     title: M.S.-Ph. D. in Industrial Engineering
     note: |
-      Ulsan National Institute of Science and Technology UNIST, Data Analytics Lab
+      Ulsan National Institute of Science and Technology, Data Analytics Lab
   - start: 2024.06
     title: Ph. D. Candidate in Industrial Engineering
     note: |
