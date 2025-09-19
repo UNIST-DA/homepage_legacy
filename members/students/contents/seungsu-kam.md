@@ -20,10 +20,10 @@ links:
     url: https://seungsukam.github.io/
 
 tags:
-  - Irregularly sampled time series
-  - Neural differential equations
-  - Anomaly detection
-  - Longitudinal survival analysis
+  - "Irregularly sampled time series"
+  - "Neural differential equations"
+  - "Anomaly detection"
+  - "Longitudinal survival analysis"
 
 about: I am a Ph.D. student in Industrial Engineering at UNIST under the supervision of Professor Sungil Kim. My work involves Neural Differential Equations, Conditional Density Estimation, and Survival Analysis, which I apply to problems such as real-time anomaly detection, astronomical object anomaly detection, longitudinal patient outcome prediction, and personalized thyroid hormone dosage recommendation.
 
