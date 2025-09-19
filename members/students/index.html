@@ -151,6 +151,9 @@ permalink: /members/students/
                   {% elsif s.summary %}
                     {% assign summary_text = s.summary %}
                   {% endif %}
+                  {% if summary_text %}
+                    <p class="muted" style="margin:0 0 8px">{{ summary_text }}</p>
+                  {% endif %}ㅍ
 
                   {%- comment -%} students/contents/<slug>.md에서 links 가져오기 {%- endcomment -%}
                   {% assign _p = nil %}
