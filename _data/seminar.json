@@ -38,6 +38,17 @@
   },
   {
     "date": "2025-08-01",
+    "title": "Uncertainty quantification in digital twin (SMO 2023)",
+    "slug": "2025-08-01-uncertainty-quantification-in-digital-twin-smo-2023",
+    "url": "https://www.notion.so/245046396f7e80779f84c6b7889bed8e",
+    "category": "Paper Review",
+    "presenter": "전병훈",
+    "keywords": [
+      "Uncertainty Estimation"
+    ]
+  },
+  {
+    "date": "2025-08-01",
     "title": "Autoencoding Under Normalization Constraints (PMLR, 2021)",
     "slug": "2025-08-01-autoencoding-under-normalization-constraints-pmlr-2021",
     "url": "https://www.notion.so/23f046396f7e8014b2e5e4d83e1f3c27",
@@ -46,17 +57,6 @@
     "keywords": [
       "Anomaly Detection",
       "Autoencoder"
-    ]
-  },
-  {
-    "date": "2025-08-01",
-    "title": "Uncertainty quantification in digital twin (SMO 2023)",
-    "slug": "2025-08-01-uncertainty-quantification-in-digital-twin-smo-2023",
-    "url": "https://www.notion.so/245046396f7e80779f84c6b7889bed8e",
-    "category": "Paper Review",
-    "presenter": "전병훈",
-    "keywords": [
-      "Uncertainty Estimation"
     ]
   },
   {
