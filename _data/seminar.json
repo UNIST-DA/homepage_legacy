@@ -416,6 +416,18 @@
     ]
   },
   {
+    "date": "2024-04-19",
+    "title": "Deep Anomaly Detection with Outlier Exposure (ICLR 2019)",
+    "slug": "2024-04-19-deep-anomaly-detection-with-outlier-exposure-iclr-2019",
+    "url": "https://www.notion.so/8242cb6b0a3341a3ba81729060c65519",
+    "category": "Paper Review",
+    "presenter": "강태원",
+    "keywords": [
+      "Anomaly Detection",
+      "outlier exposure"
+    ]
+  },
+  {
     "date": "2024-04-05",
     "title": "Active Domain Adaptation via Clustering Uncertainty-Weighted Embeddings (ICCV 2021)",
     "slug": "2024-04-05-active-domain-adaptation-via-clustering-uncertainty-weighted-embeddings-iccv-2021",
@@ -441,6 +453,42 @@
     ]
   },
   {
+    "date": "2024-01-26",
+    "title": "Neural ordinary differential equations(NeurIPS 2018)",
+    "slug": "2024-01-26-neural-ordinary-differential-equationsneurips-2018",
+    "url": "https://www.notion.so/46372e04c2194c79a6ead65ac7516f6a",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Neural Differential Equation"
+    ]
+  },
+  {
+    "date": "2024-01-12",
+    "title": "Moderate Coreset: A Universal Method of Data Selection for Real-world Data-efficient Deep Learning (ICLR 2023)",
+    "slug": "2024-01-12-moderate-coreset-a-universal-method-of-data-selection-for-real-world-data-efficient-deep-learning-iclr-2023",
+    "url": "https://www.notion.so/b405aaa3164f45108e644c490e701696",
+    "category": "Paper Review",
+    "presenter": "Jae Hun Cho",
+    "keywords": [
+      "Coreset selection",
+      "Dataset pruning",
+      "DeepLearning"
+    ]
+  },
+  {
+    "date": "2023-12-29",
+    "title": "Modeling Stochastic Variability in Multiband Time-series Data (AJ, 2020)",
+    "slug": "2023-12-29-modeling-stochastic-variability-in-multiband-time-series-data-aj-2020",
+    "url": "https://www.notion.so/6420828128be4a4caf5eaf1e1d69b424",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Irregular time series",
+      "Time Modeling"
+    ]
+  },
+  {
     "date": "2023-12-01",
     "title": "Efficient Parameter-free Clustering Using First Neighbor Relations (CVPR 2019)",
     "slug": "2023-12-01-efficient-parameter-free-clustering-using-first-neighbor-relations-cvpr-2019",
@@ -449,6 +497,29 @@
     "presenter": "Chanbeom",
     "keywords": [
       "Clustering"
+    ]
+  },
+  {
+    "date": "2023-11-24",
+    "title": "SAITS: Self-attention-based imputation for time series (ESWA 2023)",
+    "slug": "2023-11-24-saits-self-attention-based-imputation-for-time-series-eswa-2023",
+    "url": "https://www.notion.so/d412661c05fa48a3854e1938265cc9d6",
+    "category": "Paper Review",
+    "presenter": "Yongmin Kim",
+    "keywords": [
+      "Irregular time series",
+      "Self-attention"
+    ]
+  },
+  {
+    "date": "2023-11-13",
+    "title": "Towards Total Recall in Industrial Anomaly Detection (CVPR 2022)",
+    "slug": "2023-11-13-towards-total-recall-in-industrial-anomaly-detection-cvpr-2022",
+    "url": "https://www.notion.so/aa90edda3406416082be5c6d5b557339",
+    "category": "Paper Review",
+    "presenter": "강태원",
+    "keywords": [
+      "Anomaly Detection"
     ]
   },
   {
@@ -465,6 +536,43 @@
     ]
   },
   {
+    "date": "2023-09-22",
+    "title": "Domain Generalization for Medical Imaging Classification with Linear-Dependency Regularization (NeurIPS 2020)",
+    "slug": "2023-09-22-domain-generalization-for-medical-imaging-classification-with-linear-dependency-regularization-neurips-2020",
+    "url": "https://www.notion.so/abf6d219d41144c3a7e12ad64a38b5b1",
+    "category": "Paper Review",
+    "presenter": "Jae Hun Cho",
+    "keywords": [
+      "DeepLearning",
+      "Domain Generalization",
+      "Medical Imaging"
+    ]
+  },
+  {
+    "date": "2023-09-08",
+    "title": "Calibrating Histopathology Image Classifiers Using Label Smoothing (AIME 2022)",
+    "slug": "2023-09-08-calibrating-histopathology-image-classifiers-using-label-smoothing-aime-2022",
+    "url": "https://www.notion.so/d7a0ceaddd1d475fbd4bbb23a77eda63",
+    "category": "Paper Review",
+    "presenter": "Byungkook Koo",
+    "keywords": [
+      "Label Smoothing",
+      "Model Calibration"
+    ]
+  },
+  {
+    "date": "2023-09-01",
+    "title": "Neural Controlled Differential Equations for Online Prediction Tasks (2022)",
+    "slug": "2023-09-01-neural-controlled-differential-equations-for-online-prediction-tasks-2022",
+    "url": "https://www.notion.so/4880a44028114a7484c7431eafb47dbd",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Neural Differential Equation",
+      "Online Prediction"
+    ]
+  },
+  {
     "date": "2023-08-18",
     "title": "Introduction to Gaussian Mixture Model(GMM) & EM Algorithm",
     "slug": "2023-08-18-introduction-to-gaussian-mixture-modelgmm-and-em-algorithm",
@@ -475,6 +583,55 @@
       "Gaussian Mixture Model",
       "EM Algorithm",
       "UnsupervisedLearning"
+    ]
+  },
+  {
+    "date": "2023-08-11",
+    "title": "Deep-CSA: Deep Contrastive Learning for Dynamic Survival Analysis With Competing Risks (JBHI 2022)",
+    "slug": "2023-08-11-deep-csa-deep-contrastive-learning-for-dynamic-survival-analysis-with-competing-risks-jbhi-2022",
+    "url": "https://www.notion.so/f363a8c064884a2eba9ab2a67c8db2f2",
+    "category": "Paper Review",
+    "presenter": "Jae Hun Cho",
+    "keywords": [
+      "Survival Analysis",
+      "Contrastive learning",
+      "DeepLearning"
+    ]
+  },
+  {
+    "date": "2023-07-28",
+    "title": "SWAD: Domain Generalization by Seeking Flat Minima (NeurIPS 2021)",
+    "slug": "2023-07-28-swad-domain-generalization-by-seeking-flat-minima-neurips-2021",
+    "url": "https://www.notion.so/cc8ceca546ec49bb87d3bcf99db31c7e",
+    "category": "Paper Review",
+    "presenter": "Byungkook Koo",
+    "keywords": [
+      "Domain Generalization",
+      "optimization"
+    ]
+  },
+  {
+    "date": "2023-07-14",
+    "title": "SurvLatent ODE: A Neural ODE based time-to-event model with competing risks for longitudinal data improves cancer-associated Venous Thromboembolism (VTE) prediction (PMLR, 2022)",
+    "slug": "2023-07-14-survlatent-ode-a-neural-ode-based-time-to-event-model-with-competing-risks-for-longitudinal-data-improves-cancer-associated-venous-thromboembolism-vte-prediction-pmlr-2022",
+    "url": "https://www.notion.so/75b6db7c9ffb4064a7788dd1c2766a06",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Survival Analysis",
+      "Neural Differential Equation"
+    ]
+  },
+  {
+    "date": "2023-07-03",
+    "title": "Neural Flows: Efficient Alternative to Neural ODEs (NeurIPS 2021)",
+    "slug": "2023-07-03-neural-flows-efficient-alternative-to-neural-odes-neurips-2021",
+    "url": "https://www.notion.so/bc06c908cae541e9a9e9932388cc3054",
+    "category": "Paper Review",
+    "presenter": "YongKyung Oh",
+    "keywords": [
+      "Neural Differential Equation",
+      "Flow"
     ]
   },
   {
@@ -490,6 +647,29 @@
     ]
   },
   {
+    "date": "2023-06-09",
+    "title": "POEM: Polarization of Embeddings for Domain-Invariant Representations (AAAI 2023)",
+    "slug": "2023-06-09-poem-polarization-of-embeddings-for-domain-invariant-representations-aaai-2023",
+    "url": "https://www.notion.so/7b3ad0f90f9341a3b9dfafef17bf7416",
+    "category": "Paper Review",
+    "presenter": "Jae Hun Cho",
+    "keywords": [
+      "Domain Generalization"
+    ]
+  },
+  {
+    "date": "2023-06-02",
+    "title": "Bidirectional Learning for Domain Adaptation of Semantic Segmentation (CVPR 2019)",
+    "slug": "2023-06-02-bidirectional-learning-for-domain-adaptation-of-semantic-segmentation-cvpr-2019",
+    "url": "https://www.notion.so/e53d3067cc4141c182013e66c78167e9",
+    "category": "Paper Review",
+    "presenter": "Byungkook Koo",
+    "keywords": [
+      "Domain adaptation",
+      "Bidirectional learning"
+    ]
+  },
+  {
     "date": "2023-04-28",
     "title": "Attention Bottlenecks for Multimodal Fusion (NeurIPS 2021)",
     "slug": "2023-04-28-attention-bottlenecks-for-multimodal-fusion-neurips-2021",
@@ -499,6 +679,189 @@
     "keywords": [
       "multi-modal learning",
       "Transformer"
+    ]
+  },
+  {
+    "date": "2023-04-21",
+    "title": "DeepSurv: personalized treatment recommender system using a Cox proportional hazards deep neural network (ICML WCB 2016)",
+    "slug": "2023-04-21-deepsurv-personalized-treatment-recommender-system-using-a-cox-proportional-hazards-deep-neural-network-icml-wcb-2016",
+    "url": "https://www.notion.so/b4dc9b0161c14f7cb2460b51ebf15ebb",
+    "category": "Paper Review",
+    "presenter": "Jae Hun Cho",
+    "keywords": []
+  },
+  {
+    "date": "2023-04-07",
+    "title": "(Neural Comput & Applic 2021) One-class graph neural networks for anomaly detection in attributed networks",
+    "slug": "2023-04-07-neural-comput-and-applic-2021-one-class-graph-neural-networks-for-anomaly-detection-in-attributed-networks",
+    "url": "https://www.notion.so/eb06e7e311814e4086a48acdaf49ed98",
+    "category": "Paper Review",
+    "presenter": "Ji In Kwak",
+    "keywords": [
+      "Graph Anomaly Detection",
+      "UnsupervisedLearning",
+      "One-class classification"
+    ]
+  },
+  {
+    "date": "2023-03-31",
+    "title": "A Simple Framework for Contrastive Learning of Visual Representations (ICML 2020)",
+    "slug": "2023-03-31-a-simple-framework-for-contrastive-learning-of-visual-representations-icml-2020",
+    "url": "https://www.notion.so/d433b50be9f949ff86dc36951387a49f",
+    "category": "Lab Seminar",
+    "presenter": "유지태",
+    "keywords": [
+      "Contrastive learning",
+      "visual representation",
+      "Self-supervised Learning"
+    ]
+  },
+  {
+    "date": "2023-03-17",
+    "title": "High-Resolution Image Synthesis With Latent Diffusion Models (CVPR 2022)",
+    "slug": "2023-03-17-high-resolution-image-synthesis-with-latent-diffusion-models-cvpr-2022",
+    "url": "https://www.notion.so/1583405649a3491588ad909c912f12c7",
+    "category": "Paper Review",
+    "presenter": "Byungkook Koo",
+    "keywords": [
+      "Diffusion Model",
+      "Text-to-Image",
+      "Generative Model"
+    ]
+  },
+  {
+    "date": "2023-03-07",
+    "title": "Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness (NeurIPS 2020)",
+    "slug": "2023-03-07-simple-and-principled-uncertainty-estimation-with-deterministic-deep-learning-via-distance-awareness-neurips-2020",
+    "url": "https://www.notion.so/e6456123f01840a7b13250e9b5521805",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "DeepLearning",
+      "Uncertainty Estimation"
+    ]
+  },
+  {
+    "date": "2023-03-03",
+    "title": "Unsupervised Label Noise Modeling and Loss Correction (ICML 2019)",
+    "slug": "2023-03-03-unsupervised-label-noise-modeling-and-loss-correction-icml-2019",
+    "url": "https://www.notion.so/0af52a38cb0e4404b2e5746fcab6580b",
+    "category": "Paper Review",
+    "presenter": "YongKyung Oh",
+    "keywords": [
+      "Noisy label learning"
+    ]
+  },
+  {
+    "date": "2023-02-17",
+    "title": "EXPLAINABLE DEEP ONE-CLASS CLASSIFICATION (ICLR 2021)",
+    "slug": "2023-02-17-explainable-deep-one-class-classification-iclr-2021",
+    "url": "https://www.notion.so/6860c9169b3a4d1baae8e9c00c32c237",
+    "category": "Paper Review",
+    "presenter": "유지태",
+    "keywords": [
+      "outlier exposure",
+      "Anomaly Detection",
+      "XAI"
+    ]
+  },
+  {
+    "date": "2023-02-10",
+    "title": "Transfusion: Understanding Transfer Learning for Medical Imaging (NeurIPS 2019)",
+    "slug": "2023-02-10-transfusion-understanding-transfer-learning-for-medical-imaging-neurips-2019",
+    "url": "https://www.notion.so/b0fd0ca6eef7470fbdcb3f239c80a394",
+    "category": "Paper Review",
+    "presenter": "Byungkook Koo",
+    "keywords": [
+      "Medical Imaging",
+      "Transfer Learning",
+      "XAI"
+    ]
+  },
+  {
+    "date": "2023-02-01",
+    "title": "Deep Semi-Supervised Anomaly Detection (ICLR 2020)",
+    "slug": "2023-02-01-deep-semi-supervised-anomaly-detection-iclr-2020",
+    "url": "https://www.notion.so/57b52b9eac5540bca06ba1bbe2f51a91",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Anomaly Detection",
+      "semi-supervised learning"
+    ]
+  },
+  {
+    "date": "2023-01-13",
+    "title": "Image Style Transfer Using Convolutional Neural Networks (CVPR 2016)",
+    "slug": "2023-01-13-image-style-transfer-using-convolutional-neural-networks-cvpr-2016",
+    "url": "https://www.notion.so/f4e420685a4a44af8ab7bf3c71c922ad",
+    "category": "Paper Review",
+    "presenter": "Byungkook Koo",
+    "keywords": [
+      "Style Transfer",
+      "CNN",
+      "Image Representation"
+    ]
+  },
+  {
+    "date": "2022-12-29",
+    "title": "Constructing a Control Chart Using Functional Data (Mathematics 2020)",
+    "slug": "2022-12-29-constructing-a-control-chart-using-functional-data-mathematics-2020",
+    "url": "https://www.notion.so/f6d644e023124cc59c0c186b86c5ac2b",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Functional Data",
+      "Functional depth",
+      "ControlChart"
+    ]
+  },
+  {
+    "date": "2022-10-28",
+    "title": "Conditional score-based diffusion models for probabilistic time series imputation (NeurIPS 2021)",
+    "slug": "2022-10-28-conditional-score-based-diffusion-models-for-probabilistic-time-series-imputation-neurips-2021",
+    "url": "https://www.notion.so/6cd9b6c0b23b4640bfe57ea80c782c1f",
+    "category": "Lab Seminar",
+    "presenter": "YongKyung Oh",
+    "keywords": [
+      "Generative Model",
+      "Diffusion Model"
+    ]
+  },
+  {
+    "date": "2022-10-21",
+    "title": "SwinIR: Image Restoration Using Swin Transformer (ICCVW 2021)",
+    "slug": "2022-10-21-swinir-image-restoration-using-swin-transformer-iccvw-2021",
+    "url": "https://www.notion.so/4b98dd29607e43eaaa422512cca85ef5",
+    "category": "Paper Review",
+    "presenter": "Byungkook Koo",
+    "keywords": [
+      "Image Super Resolution",
+      "Swin Transformer",
+      "Image Restoration",
+      "Vision Transformer"
+    ]
+  },
+  {
+    "date": "2022-10-14",
+    "title": "End-to-end unsupervised fault detection using a flow based model (RESS 2021)",
+    "slug": "2022-10-14-end-to-end-unsupervised-fault-detection-using-a-flow-based-model-ress-2021",
+    "url": "https://www.notion.so/7dd2282ca76541aaa1c98c6e1b2c9e85",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Normalizing Flow"
+    ]
+  },
+  {
+    "date": "2022-10-07",
+    "title": "Latent ODE + ODE-GRU/ ODE-LSTM (NeurIPS 2019)",
+    "slug": "2022-10-07-latent-ode-ode-gru-ode-lstm-neurips-2019",
+    "url": "https://www.notion.so/88ec37b018cf4bb8b74d67aea230abed",
+    "category": "Paper Review",
+    "presenter": "",
+    "keywords": [
+      "Neural Differential Equation"
     ]
   }
 ]
