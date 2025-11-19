@@ -225,7 +225,54 @@ news:
 
 
 events:
+ -  slug: 2025-10-28-INFORMS-Annual-Meeting
+    start: "2025-10-28"
+    title: "INFORMS 2025"
+    detail: |
+      Lab members attended the INFORMS 2025.
+    image: "/assets/activity/Lab_Events/INFORMS_10_28.jpg"
+    url: "/activity/Lab%20Events/#2025-10-28-INFORMS-Annual-Meeting"
 
+  - slug: 2025-11-08-KIIE-Fall-Conference
+    start: "2025-11-08"
+    title: "2025 KIIE Fall Conference"
+    detail: |
+      Participated in the 2025 KIIE Fall Conference held in KAIST.
+    image: "/assets/activity/Lab_Events/KIIE_11_8.jpg"
+    url: "/activity/Lab%20Events/#2025-11-08-KIIE-Fall-Conference"
+
+  - slug: 2025-11-11-CIKM-Tutorial
+    start: "2025-11-11"
+    title: "CIKM 2025 Tutorial Session"
+    detail: |
+      Tutorial sessions at CIKM 2025 in Seoul.
+    image: "/assets/activity/Lab_Events/CIKM_tutorial_11_11.jpg"
+    url: "/activity/Lab%20Events/#2025-11-11-CIKM-Tutorial"
+
+  - slug: 2025-11-12-CIKM-Poster-Presentation
+    start: "2025-11-12"
+    title: "CIKM 2025 Poster Presentation"
+    detail: |
+      Presented a short research paper on Modeling Irregular Astronomical Time Series at CIKM 2025.
+    image: "/assets/activity/Lab_Events/CIKM_poster_11_12.jpg"
+    url: "/activity/Lab%20Events/#2025-11-12-CIKM-Poster-Presentation"
+
+  - slug: 2025-11-14-CIKM-Group-Photo
+    start: "2025-11-14"
+    title: "CIKM 2025 Participation"
+    detail: |
+      DA Lab members gathered together at CIKM 2025 Seoul.
+    image: "/assets/activity/Lab_Events/CIKM_group_11_14.jpg"
+    url: "/activity/Lab%20Events/#2025-11-14-CIKM-Group-Photo"
+
+  - slug: 2025-11-14-DA-Lab-Homecoming
+    start: "2025-11-14"
+    title: "2025 DA Lab Homecoming"
+    detail: |
+      Held the 2025 DA Lab Homecoming event with professors, students, and alumni.
+    image: "/assets/activity/Lab_Events/Homecoming_11_14.jpg"
+    url: "/activity/Lab%20Events/#2025-11-14-DA-Lab-Homecoming"
+    
   - slug: 2025-10-30-IE-Talk-Concert
     start: "2025-10-30"
     title: "IE Talk Concert"
