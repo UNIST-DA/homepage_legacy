@@ -226,6 +226,14 @@ news:
 
 events:
 
+  - slug: 2025-10-30-IE-Talk-Concert
+    start: "2025-10-30"
+    title: "IE Talk Concert"
+    detail: |
+      Professor introduced DA lab at Talk concert.
+    image: "/assets/activity/Lab_Events/talk_concert.jpg"
+    url: "/activity/Lab%20Events/#2025-10-30-IE-Talk-Concert"
+
   - slug: 2025-07-11-movie-night
     start: "2025-07-11"
     title: "Lab Movie Night"
