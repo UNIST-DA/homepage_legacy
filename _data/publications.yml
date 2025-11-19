@@ -1,5 +1,23 @@
 # 각 항목: id, year, type(journal|conference), title, authors(list), venue, url
 
+
+
+- id: 2024
+  year: 2024
+  type: journal
+  title: "Spatially-correlated time series clustering using location-dependent Dirichlet process mixture model"
+  authors: ["Junsub Jung", "Heeyoung Kim", "Sungil Kim"]
+  venue: "Statistical Analysis And Data Mining"
+  url: "https://doi.org/10.1002/sam.11649"
+
+- id: 2024-vae-ad-ais
+  year: 2024
+  type: journal
+  title: "Comparative evaluation of VAE-based monitoring statistics for real-time anomaly detection in AIS data"
+  authors: ["YongKyung Oh", "Sungil Kim", "Kwonin Yoon", "Jaemin Park"]
+  venue: "Maritime Policy & Management"
+  url: "https://doi.org/10.1080/03088839.2024.2388177"
+  
 - id: 2024-lifelog-fusion
   year: 2024
   type: journal
