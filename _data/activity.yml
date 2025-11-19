@@ -15,8 +15,42 @@ news:
 
 
 
+  - slug: 2025-11-08-KIIE-Fall-Conference
+    date: "2025-11-08"
+    title: "Participated in 2025 KIIE Fall Conference"
+    detail: |
+      Lab members participated in the 2025 KIIE (Korean Institute of Industrial Engineers) Fall Conference.
+    url: "/activity/Lab%20News/#2025-11-08-KIIE-Fall-Conference"
+ 
+  - slug: 2025-11-08-AAAI-2026-Accept
+    date: "2025-11-08"
+    title: "Two papers accepted to AAAI 2026"
+    detail: |
+      Two papers have been accepted to AAAI 2026:
+      1. "Continuum Dropout for Neural Differential Equations" by Jonghun Lee, YongKyung Oh, Sungil Kim, Dongyoung Lim
+      2. "FlowPath: Learning Data-Driven Manifolds with Invertible Flows for Robust Irregularly-sampled Time Series Classification" by YongKyung Oh, Dongyoung Lim, Sungil Kim
+    url: "/activity/Lab%20News/#2025-11-08-AAAI-2026-Accept"
 
+  - slug: 2025-11-11-CIKM-Tutorial
+    date: "2025-11-11"
+    title: "Dr. Oh successfully conducted CIKM 2025 Tutorial"
+    detail: |
+      Dr. Oh successfully finished the tutorial session at CIKM 2025.
+    url: "/activity/Lab%20News/#2025-11-11-CIKM-Tutorial"
 
+  - slug: 2025-11-12-CIKM-Poster
+    date: "2025-11-12"
+    title: "Seungsu Kam presented poster at CIKM 2025"
+    detail: |
+      Researcher Seungsu Kam successfully finished the poster presentation at CIKM 2025.
+    url: "/activity/Lab%20News/#2025-11-12-CIKM-Poster"
+
+  - slug: 2025-11-14-Homecoming
+    date: "2025-11-14"
+    title: "2025 DA Lab Homecoming"
+    detail: |
+      Held the 2025 Homecoming event with professors, alumni, and students.
+    url: "/activity/Lab%20News/#2025-11-14-Homecoming"
 
 
   - slug: 2025-09-01-members-joined
