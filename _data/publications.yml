@@ -1,8 +1,47 @@
 # 각 항목: id, year, type(journal|conference), title, authors(list), venue, url
 
+- id: 2026-aaai-flowpath
+  year: 2025
+  type: journal
+  title: "FlowPath: Learning Data-Driven Manifolds with Invertible Flows for Robust Irregularly-sampled Time Series Classification"
+  authors: ["YongKyung Oh", "Dong-Young Lim", "Sungil Kim"]
+  venue: "The Association for the Advancement of Artificial Intelligence (AAAI)"
+  url: "https://doi.org/10.48550/arXiv.2511.10841"
 
+- id: 2026-aaai-nde
+  year: 2025
+  type: journal
+  title: "Continuum Dropout for Neural Differential Equations"
+  authors: ["Jonghun Lee", "YongKyung Oh", "Sungil Kim", "Dong-Young Lim"]
+  venue: "The Association for the Advancement of Artificial Intelligence (AAAI)"
+  url: "https://doi.org/10.48550/arXiv.2511.10446"
 
-- id: 2024
+- id: 2025-cik-nsde
+  year: 2025
+  type: conference
+  title: "Modeling Irregular Astronomical Time Series with Neural Stochastic Delay Differential Equations"
+  authors: ["YongKyung Oh", "Seungsu Kam", "Sungil Kim", "Dong-Young Lim"]
+  venue: "The Conference on Information and Knowledge Management (CIKM)"
+  url: "https://doi.org/10.48550/arXiv.2508.17521"
+
+- id: 2025-taod-net
+  year: 2025
+  type: journal
+  title: "TAOD-Net: Automated detection and analysis of thyroid-associated orbitopathy in facial imagery"
+  authors: ["YongKyung Oh", "Sungil Kim", "Giheon Koh", "Jiin Kwak", "Kyubo Shin", "Gi-Soo Kim", 
+"Min Joung Lee", "Hokyung Choung", "Namju Kim", "Jae Hoon Moon"]
+  venue: "Computers&Industrial Engineering"
+  url: "https://doi.org/10.1016/j.cie.2025.111024"
+
+- id: 2025-review-nde-ts
+  year: 2025
+  type: journal
+  title: "Comprehensive Review of Neural Differential Equations for Time Series Analysis"
+  authors: ["YongKyung Oh", "Sungil Kim", "Alex A.T.Bui", "Seungsu Kam", "Jonghun Lee", "Dong-Young Lim"]
+  venue: "International Joint Conference on Artificial Intelligence (IJCAI)"
+  url: "https://doi.org/10.48550/arXiv.2502.09885"
+
+- id: 2024-cluster-dirichlet
   year: 2024
   type: journal
   title: "Spatially-correlated time series clustering using location-dependent Dirichlet process mixture model"
@@ -42,8 +81,8 @@
   venue: "Computers & Industrial Engineering"
   url: "https://doi.org/10.1016/j.cie.2024.109936"
 
-- id: 2023-ais-bbb
-  year: 2023
+- id: 2024-ais-bbb
+  year: 2024
   type: journal
   title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors from AIS Data in Maritime Logistics"
   authors: ["YongKyung Oh", "Sungil Kim"]
@@ -66,8 +105,8 @@
   venue: "Electronic Research Archive"
   url: "https://doi.org/10.48550/arXiv.2108.06717"
 
-- id: 2022-mcnn-gas-mixture-aor
-  year: 2022
+- id: 2024-mcnn-gas-mixture-aor
+  year: 2024
   type: journal
   title: "Multichannel Convolution Neural Network for Gas Mixture Classification"
   authors: ["YongKyung Oh", "Chieheyon Lim", "Junghye Lee", "Sewon Kim", "Sungil Kim"]
