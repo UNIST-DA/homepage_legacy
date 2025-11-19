@@ -225,7 +225,7 @@ news:
 
 
 events:
- -  slug: 2025-10-28-INFORMS-Annual-Meeting
+  - slug: 2025-10-28-INFORMS-Annual-Meeting
     start: "2025-10-28"
     title: "INFORMS 2025"
     detail: |
