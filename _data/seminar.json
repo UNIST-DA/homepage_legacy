@@ -1,5 +1,66 @@
 [
   {
+    "date": "2025-11-17",
+    "title": "Using Explainable Artificial Intelligence to Improve Process Quality:\nEvidence from Semiconductor Manufacturing (Management Science, 2022)",
+    "slug": "2025-11-17-using-explainable-artificial-intelligence-to-improve-process-quality-evidence-from-semiconductor-manufacturing-management-science-2022",
+    "url": "https://www.notion.so/2b5046396f7e80fba149cf48245431af",
+    "category": "Paper Review",
+    "presenter": "유정우",
+    "keywords": [
+      "Gradient Boost Tree",
+      "QualityMonitoring"
+    ]
+  },
+  {
+    "date": "2025-11-03",
+    "title": "EconAgent: Large Language Model-Empowered Agents for Simulating Macroeconomic Activities",
+    "slug": "2025-11-03-econagent-large-language-model-empowered-agents-for-simulating-macroeconomic-activities",
+    "url": "https://www.notion.so/2a2046396f7e80149abbe62a2cbfc7c2",
+    "category": "Lab Seminar",
+    "presenter": "Euiyeob",
+    "keywords": [
+      "LLM",
+      "Macroeconomic"
+    ]
+  },
+  {
+    "date": "2025-10-13",
+    "title": "Large Language Models can Deliver Accurate and Interpretable\nTime Series Anomaly Detection",
+    "slug": "2025-10-13-large-language-models-can-deliver-accurate-and-interpretable-time-series-anomaly-detection",
+    "url": "https://www.notion.so/28c046396f7e80e28a4de0b911e5cf9a",
+    "category": "Lab Seminar",
+    "presenter": "Ji_hyun",
+    "keywords": [
+      "LLM",
+      "Anomaly Detection"
+    ]
+  },
+  {
+    "date": "2025-09-29",
+    "title": "Diffusion-based Multivariate Time-Series Imputation",
+    "slug": "2025-09-29-diffusion-based-multivariate-time-series-imputation",
+    "url": "https://www.notion.so/2b5046396f7e8092ac68caa0e06ad697",
+    "category": "Lab Seminar",
+    "presenter": "이시은",
+    "keywords": [
+      "imputation",
+      "Statistics",
+      "Diffusion Model"
+    ]
+  },
+  {
+    "date": "2025-09-29",
+    "title": "An advanced retrieval-augmented generation system for manufacturing quality control (2025)",
+    "slug": "2025-09-29-an-advanced-retrieval-augmented-generation-system-for-manufacturing-quality-control-2025",
+    "url": "https://www.notion.so/28c046396f7e8055a688de5b111161f0",
+    "category": "Lab Seminar",
+    "presenter": "Seongjin",
+    "keywords": [
+      "LLM",
+      "Retrieval Augmented Generation"
+    ]
+  },
+  {
     "date": "2025-09-05",
     "title": "Multiple Imputation for Missing Data",
     "slug": "2025-09-05-multiple-imputation-for-missing-data",
