@@ -1,5 +1,29 @@
 [
   {
+    "date": "2025-11-24",
+    "title": "Survival Models to Estimate User Engagement in Online Experiments",
+    "slug": "2025-11-24-survival-models-to-estimate-user-engagement-in-online-experiments",
+    "url": "https://www.notion.so/2b5046396f7e80238e82e8683189818a",
+    "category": "Paper Review",
+    "presenter": "Hyejin Cho",
+    "keywords": [
+      "Survival Analysis",
+      "User Engagement"
+    ]
+  },
+  {
+    "date": "2025-11-17",
+    "title": "Uncertainty Estimation by Density Aware Evidential Deep Learning",
+    "slug": "2025-11-17-uncertainty-estimation-by-density-aware-evidential-deep-learning",
+    "url": "https://www.notion.so/2b6046396f7e8054abe0c494fc931413",
+    "category": "Lab Seminar",
+    "presenter": "조예진",
+    "keywords": [
+      "DeepLearning",
+      "Uncertainty Estimation"
+    ]
+  },
+  {
     "date": "2025-11-17",
     "title": "Using Explainable Artificial Intelligence to Improve Process Quality:\nEvidence from Semiconductor Manufacturing (Management Science, 2022)",
     "slug": "2025-11-17-using-explainable-artificial-intelligence-to-improve-process-quality-evidence-from-semiconductor-manufacturing-management-science-2022",
