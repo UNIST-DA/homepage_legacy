@@ -492,21 +492,11 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   }
 }
 
-/* Activity 섹션: 3열 균등 배치 */
-#activity .grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 18px;
-    align-items: stretch;
-}
-
-#activity .grid > .card {
-    grid-column: span 1 !important;
-    height: 100%;
-}
-
-@media (max-width: 860px) {
-    #activity .grid {
-        grid-template-columns: 1fr !important;
-    }
+//* Activity 목록 항목 (Lab News, Events, Seminar) 제목 한 줄 제한 및 말줄임표 처리 */
+#activity ul li a {
+    white-space: nowrap;      /* 내용이 길어도 강제로 한 줄에 표시 */
+    overflow: hidden;         /* 카드를 넘어가는 부분은 숨김 */
+    text-overflow: ellipsis;  /* 숨겨진 내용 자리에 '...' 표시 */
+    display: block;           /* width와 overflow 속성을 적용하기 위해 블록 요소로 변경 */
+    /* width: 100%; */        /* (선택 사항, 필요 시 활성화) 부모 요소의 너비 전체를 사용하도록 강제 */
 }
