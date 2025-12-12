@@ -492,37 +492,44 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   }
 }
 
-//* Activity 목록 항목 (Lab News, Events, Seminar) 제목 한 줄 제한 및 말줄임표 처리 */
-#activity ul li a {
-    white-space: nowrap;      /* 내용이 길어도 강제로 한 줄에 표시 */
-    overflow: hidden;         /* 카드를 넘어가는 부분은 숨김 */
-    text-overflow: ellipsis;  /* 숨겨진 내용 자리에 '...' 표시 */
-    display: block;           /* width와 overflow 속성을 적용하기 위해 블록 요소로 변경 */
-    /* width: 100%; */        /* (선택 사항, 필요 시 활성화) 부모 요소의 너비 전체를 사용하도록 강제 */
-}
-/* Activity 섹션: 3열 강제 및 높이 통일 재조정 (가장 확실한 방법) */
-#activity .grid {
-    display: grid !important; 
-    grid-template-columns: repeat(12, 1fr) !important; /* 원래 12-컬럼 그리드를 유지 */
-    gap: 18px !important;
-    align-items: stretch !important; /* 높이 통일 */
+/* 1. Activity 섹션 제목을 왼쪽으로 정렬하고 텍스트 정렬 문제를 해결합니다. */
+#activity .head {
+    /* 원래 .head는 제목과 'more info'를 좌우 정렬하는 flexbox 컨테이너였으나,
+       제목만 남았다면 제목을 왼쪽으로 확실히 정렬합니다. */
+    display: flex !important;
+    justify-content: flex-start !important; /* 내부 요소를 왼쪽으로 정렬 */
+    margin-bottom: 24px; /* 원래 섹션의 하단 여백 유지 */
 }
 
-/* 개별 카드의 컬럼 강제 및 높이 100% 적용 */
+/* 2. 카드 내부 목록 텍스트 (제목) 띄어쓰기 및 줄바꿈 복구 */
+/* 텍스트가 강제 줄바꿈 없이 정상적인 띄어쓰기를 사용하도록 복구합니다. */
+#activity ul li a {
+    white-space: normal !important; /* 띄어쓰기/줄바꿈 정상화 */
+    overflow: visible !important;   /* 넘치는 내용 숨김 해제 */
+    text-overflow: clip !important; /* 말줄임표 제거 */
+    display: inline !important;     /* 기본 인라인 요소로 되돌림 */
+}
+
+/* 3. 카드 레이아웃 (3열 배치 및 높이 통일) 강제 복구 */
+/* 카드가 수직으로 붕 뜨지 않고, 3열로 나란히 배치되도록 강제합니다. */
+#activity .grid {
+    display: grid !important; 
+    grid-template-columns: repeat(12, 1fr) !important; /* 12-컬럼 그리드 유지 */
+    gap: 18px !important;
+    align-items: stretch !important; /* 카드의 높이를 가장 긴 카드에 맞춤 */
+}
+
+/* 4. 개별 카드의 컬럼 강제 및 수직 붕뜸 방지 */
 #activity .grid > .card {
-    grid-column: span 4 !important; /* 각 카드가 4 컬럼씩 차지하도록 강제 */
+    grid-column: span 4 !important; /* 각 카드가 4 컬럼씩 차지하도록 강제 (3열) */
     grid-row: 1 / 2 !important;     /* 모든 카드를 첫 번째 행에 강제 배치 (수직 붕뜸 방지) */
     height: 100% !important;        /* 카드의 높이를 꽉 채웁니다. */
     width: auto !important;         /* 너비 자동 조절 */
 }
 
-/* 모바일 레이아웃 (860px 이하에서는 1열로 돌아가도록 설정) */
-@media (max-width: 860px){
-    #activity .grid {
-        grid-template-columns: 1fr !important;
-    }
-    #activity .grid > .card {
-        grid-column: 1 / -1 !important; /* 1열로 펼치기 */
-        grid-row: auto !important;      /* 행 제한 해제 */
-    }
+/* 5. Activity 제목 텍스트 중앙 정렬 방지 */
+.head h2 {
+    text-align: left !important; /* 텍스트 자체를 왼쪽 정렬로 강제 */
+    width: auto !important;
+    margin: 0 !important;
 }
