@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-12-08",
+    "title": "OIL-AD: An anomaly detection framework for decision-making sequences",
+    "slug": "2025-12-08-oil-ad-an-anomaly-detection-framework-for-decision-making-sequences",
+    "url": "https://www.notion.so/2bc046396f7e806dab28eb0090bf7390",
+    "category": "Lab Seminar",
+    "presenter": "Yongmin Kim",
+    "keywords": [
+      "reinforcement learning",
+      "Time-series anomaly detection",
+      "UnsupervisedLearning"
+    ]
+  },
+  {
     "date": "2025-11-24",
     "title": "Survival Models to Estimate User Engagement in Online Experiments",
     "slug": "2025-11-24-survival-models-to-estimate-user-engagement-in-online-experiments",
