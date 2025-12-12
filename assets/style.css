@@ -547,3 +547,6 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
         grid-row: auto !important;      /* 행 제한 해제 */
     }
 }
+#activity .card-pad {
+    padding: 12px !important; /* 내부 여백을 18px에서 12px로 줄여 크기 축소 */
+}
