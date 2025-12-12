@@ -493,13 +493,8 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 }
 
 #activity .grid {
-    display: flex;        /* Grid 대신 Flexbox를 사용합니다. */
-    flex-wrap: wrap;      /* 모바일 레이아웃 등을 위해 줄 바꿈을 허용합니다. */
-    align-items: stretch; /* 모든 카드(flex items)의 높이를 가장 높은 카드에 맞춥니다. (핵심) */
-}
-
-/* 2. 카드가 부모의 높이를 꽉 채우도록 보장합니다. */
-/* 이미 .card-pad에 flex-direction:column이 있으므로, 이 설정을 통해 높이가 통일됩니다. */
-#activity .card {
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+    align-items: stretch;
 }
