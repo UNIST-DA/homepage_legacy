@@ -492,31 +492,39 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   }
 }
 
-/* 1. Activity 섹션 제목을 왼쪽으로 정렬하고 텍스트 정렬 문제를 해결합니다. */
+/* 1. Activity 섹션 제목을 왼쪽으로 밀착 정렬합니다. (image_af2497.png처럼) */
 #activity .head {
     /* 원래 .head는 제목과 'more info'를 좌우 정렬하는 flexbox 컨테이너였으나,
-       제목만 남았다면 제목을 왼쪽으로 확실히 정렬합니다. */
+       이 설정으로 제목만 남았을 때도 왼쪽으로 확실히 정렬되도록 강제합니다. */
     display: flex !important;
     justify-content: flex-start !important; /* 내부 요소를 왼쪽으로 정렬 */
-    margin-bottom: 24px; /* 원래 섹션의 하단 여백 유지 */
+    width: 100% !important;
+    margin-bottom: 24px !important;
 }
 
-/* 2. 카드 내부 목록 텍스트 (제목) 띄어쓰기 및 줄바꿈 복구 */
-/* 텍스트가 강제 줄바꿈 없이 정상적인 띄어쓰기를 사용하도록 복구합니다. */
+#activity .head h2 {
+    /* 제목 자체의 텍스트도 왼쪽으로 정렬합니다. */
+    text-align: left !important; 
+    margin: 0 !important;
+}
+
+/* 2. 카드 내부 텍스트 띄어쓰기 및 줄바꿈 복구 (카드가 커지는 원인 제거) */
+/* 텍스트가 강제로 줄바꿈되면서 카드가 수직으로 커지는 현상을 막고, 띄어쓰기를 정상화합니다. */
 #activity ul li a {
-    white-space: normal !important; /* 띄어쓰기/줄바꿈 정상화 */
-    overflow: visible !important;   /* 넘치는 내용 숨김 해제 */
-    text-overflow: clip !important; /* 말줄임표 제거 */
-    display: inline !important;     /* 기본 인라인 요소로 되돌림 */
+    white-space: normal !important; /* 띄어쓰기/줄바꿈 정상화 (핵심) */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; /* 넘치는 내용은 ... 처리 */
+    display: inline-block !important;
+    max-width: 100% !important; /* 너비를 제한하여 무한정 늘어나는 것 방지 */
+    line-height: 1.35; /* (선택 사항) 행간을 살짝 줄여서 덜 답답하게 만듭니다. */
 }
 
-/* 3. 카드 레이아웃 (3열 배치 및 높이 통일) 강제 복구 */
-/* 카드가 수직으로 붕 뜨지 않고, 3열로 나란히 배치되도록 강제합니다. */
+/* 3. 카드 레이아웃 (3열 배치 및 높이 통일) 강제 복구 및 크기 고정 */
 #activity .grid {
     display: grid !important; 
     grid-template-columns: repeat(12, 1fr) !important; /* 12-컬럼 그리드 유지 */
     gap: 18px !important;
-    align-items: stretch !important; /* 카드의 높이를 가장 긴 카드에 맞춤 */
+    align-items: stretch !important; /* 카드의 높이를 가장 긴 카드에 맞춰 통일 */
 }
 
 /* 4. 개별 카드의 컬럼 강제 및 수직 붕뜸 방지 */
@@ -525,11 +533,17 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
     grid-row: 1 / 2 !important;     /* 모든 카드를 첫 번째 행에 강제 배치 (수직 붕뜸 방지) */
     height: 100% !important;        /* 카드의 높이를 꽉 채웁니다. */
     width: auto !important;         /* 너비 자동 조절 */
+    /* (선택 사항) padding을 줄여서 카드 크기 자체를 미세 조정할 수 있습니다. */
+    /* padding: 14px !important; */
 }
 
-/* 5. Activity 제목 텍스트 중앙 정렬 방지 */
-.head h2 {
-    text-align: left !important; /* 텍스트 자체를 왼쪽 정렬로 강제 */
-    width: auto !important;
-    margin: 0 !important;
+/* 모바일 레이아웃 (860px 이하에서는 1열로 돌아가도록 설정) */
+@media (max-width: 860px){
+    #activity .grid {
+        grid-template-columns: 1fr !important;
+    }
+    #activity .grid > .card {
+        grid-column: 1 / -1 !important; /* 1열로 펼치기 */
+        grid-row: auto !important;      /* 행 제한 해제 */
+    }
 }
