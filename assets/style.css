@@ -492,7 +492,7 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
   }
 }
 
-/* Activity 섹션: 3열 균등 배치 + 높이 통일 */
+/* Activity 섹션: 3열 균등 배치 */
 #activity .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -501,7 +501,6 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
 }
 
 #activity .grid > .card {
-    grid-column: span 1;
     height: 100%;
 }
 
