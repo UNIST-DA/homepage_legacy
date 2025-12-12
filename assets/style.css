@@ -500,3 +500,29 @@ html[data-theme="dark"] #galaxy-canvas{opacity:1}
     display: block;           /* width와 overflow 속성을 적용하기 위해 블록 요소로 변경 */
     /* width: 100%; */        /* (선택 사항, 필요 시 활성화) 부모 요소의 너비 전체를 사용하도록 강제 */
 }
+/* Activity 섹션: 3열 강제 및 높이 통일 재조정 (가장 확실한 방법) */
+#activity .grid {
+    display: grid !important; 
+    grid-template-columns: repeat(12, 1fr) !important; /* 원래 12-컬럼 그리드를 유지 */
+    gap: 18px !important;
+    align-items: stretch !important; /* 높이 통일 */
+}
+
+/* 개별 카드의 컬럼 강제 및 높이 100% 적용 */
+#activity .grid > .card {
+    grid-column: span 4 !important; /* 각 카드가 4 컬럼씩 차지하도록 강제 */
+    grid-row: 1 / 2 !important;     /* 모든 카드를 첫 번째 행에 강제 배치 (수직 붕뜸 방지) */
+    height: 100% !important;        /* 카드의 높이를 꽉 채웁니다. */
+    width: auto !important;         /* 너비 자동 조절 */
+}
+
+/* 모바일 레이아웃 (860px 이하에서는 1열로 돌아가도록 설정) */
+@media (max-width: 860px){
+    #activity .grid {
+        grid-template-columns: 1fr !important;
+    }
+    #activity .grid > .card {
+        grid-column: 1 / -1 !important; /* 1열로 펼치기 */
+        grid-row: auto !important;      /* 행 제한 해제 */
+    }
+}
