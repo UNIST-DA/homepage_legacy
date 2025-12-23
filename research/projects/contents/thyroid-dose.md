@@ -1,7 +1,7 @@
 ---
 layout: project
 
-slug: throid-dose
+slug: thyroid-dose
 permalink: /research/projects/contents/thyroid-dose/
 image: /assets/research/projects/thyroid-dose-1.webp
 
