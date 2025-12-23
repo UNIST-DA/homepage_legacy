@@ -65,30 +65,30 @@ permalink: /research/projects/
   .meta-pill{
     display:inline-flex;
     align-items:center;
-    padding:2px 8px;          /* 기존보다 약간 작게 유지 */
+    padding:2px 8px;
     border-radius:999px;
-    font-size:12px;           /* 글씨 작게 */
-    font-weight:500;          /* 굵기 얇게 */
-    background:#e9f0fb;       /* 연한 하늘색 배경 유지 */
-    color:#0f1c48;            /* 남색 텍스트 */
-    border:1px solid transparent; /* 테두리는 눈에 안 띄게 */
+    font-size:12px;
+    font-weight:500;
+    background:#e9f0fb;
+    color:#0f1c48;
+    border:1px solid transparent;
     line-height:1.3;
   }
 
   /* period 줄 (달력 아이콘 + 텍스트) */
   .proj-period{
-    display:flex; 
-    align-items:center; 
+    display:flex;
+    align-items:center;
     gap:6px;
     color:#6b7280;
     font-size:13px;
     margin-top:6px;
   }
   .proj-period svg{
-    width:14px; 
-    height:14px; 
-    flex:0 0 auto; 
-    color:#0f1c48;   
+    width:14px;
+    height:14px;
+    flex:0 0 auto;
+    color:#0f1c48;
   }
 
   /* summary 더 작게 */
@@ -97,9 +97,52 @@ permalink: /research/projects/
   @media (max-width: 860px){
     .proj-card{ grid-column: span 12; }
   }
+
+  /* =========================
+     Projects Toolbar (tabs + search)
+     ========================= */
+  .proj-section:first-of-type { margin-top: 0px; }
+  .proj-section + .proj-section { margin-top: 0px; }
+
+  /* 툴바 카드 */
+  .toolbar-card { padding: 10px 12px; border-radius: 12px; }
+
+  /* 탭 */
+  .tab { padding:6px 10px; border:1px solid var(--line); border-radius:10px; background:#fff; cursor:pointer; font-size:14px; }
+  .tab + .tab { margin-left:6px; }
+  .tab.active { background:#111; color:#fff; border-color:#111; }
+
+  /* 검색창 */
+  #proj-search{
+    width:100%;
+    padding:8px 10px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-size:14px;
+    line-height:1.4;
+  }
+
+  @media (max-width: 720px){
+    .proj-section:first-of-type { margin-top: 24px; }
+    .proj-section + .proj-section { margin-top: 12px; }
+  }
 </style>
 
 <main class="container">
+  <!-- Toolbar -->
+  <section class="proj-section">
+    <div class="card card-pad toolbar-card" id="proj-toolbar">
+      <div class="tabs" role="tablist" aria-label="Project category tabs" style="margin:0 0 8px">
+        <button class="tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="tab" data-filter="industrial-statistics" role="tab" aria-selected="false">Industrial Statistics</button>
+        <button class="tab" data-filter="quality-engineering-management" role="tab" aria-selected="false">Quality Engineering &amp; Management</button>
+        <button class="tab" data-filter="machine-learning-data-mining" role="tab" aria-selected="false">Machine Learning &amp; Data Mining</button>
+        <button class="tab" data-filter="time-series-analytics" role="tab" aria-selected="false">Time-Series Analytics</button>
+      </div>
+      <input id="proj-search" type="search" placeholder="Search title / organizer / category / period…" aria-label="Search projects">
+    </div>
+  </section>
+
   <section>
     <div class="proj-grid">
 
@@ -142,6 +185,8 @@ permalink: /research/projects/
               href="{{ '/research/projects/contents/' | append: p.slug | append: '/' | relative_url }}"
               id="{{ p.slug }}"
               data-slug="{{ p.slug }}"
+              data-category="{{ card_category | default: '' | slugify }}"
+              data-text="{{ card_title | escape }} {{ card_organizer | escape }} {{ card_category | escape }} {{ card_period | escape }} {{ card_summary | escape }}"
             >
               {%- if card_image -%}
                 <img class="proj-thumb" src="{{ card_image | relative_url }}" alt="{{ card_title }}">
@@ -180,3 +225,45 @@ permalink: /research/projects/
     </div>
   </section>
 </main>
+
+<script>
+  // Tabs (category filter)
+  const projToolbar = document.getElementById('proj-toolbar');
+  const tabs = projToolbar ? projToolbar.querySelectorAll('.tabs .tab') : [];
+  const items = document.querySelectorAll('.proj-card');
+  let activeCategory = 'all';
+
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      tabs.forEach(x => {
+        x.classList.remove('active');
+        x.setAttribute('aria-selected', 'false');
+      });
+      t.classList.add('active');
+      t.setAttribute('aria-selected', 'true');
+      activeCategory = t.dataset.filter;
+      applyFilter();
+    });
+  });
+
+  // Search
+  const q = document.getElementById('proj-search');
+  if (q) q.addEventListener('input', applyFilter);
+
+  function applyFilter() {
+    const term = ((q && q.value) ? q.value : '').toLowerCase().trim();
+
+    items.forEach(it => {
+      const cat = (it.dataset.category || '');
+      const matchCat = (activeCategory === 'all' || cat === activeCategory);
+
+      const text = (it.dataset.text || '').toLowerCase();
+      const matchText = text.indexOf(term) !== -1;
+
+      const visible = matchCat && matchText;
+      it.style.display = visible ? '' : 'none';
+    });
+  }
+
+  applyFilter();
+</script>
