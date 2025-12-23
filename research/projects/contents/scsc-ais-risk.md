@@ -7,7 +7,7 @@ image: /assets/research/projects/scsc-ais-risk-1.webp
 
 title: Risk-Aware Imitation Learning with Environmental Context for AIS
 summary: Imitation-learning anomaly detection for AIS is improved by adding environmental data (wind, waves), so the model can tell apart risky vessel behavior from safe weather-driven detours.
-organizer: Human Centered – Carbon Neutral Global Supply Chain Research Center
+organizer: SCSC
 period: 2025.08 – 
 category: Time-Series Representation Learning
 tags:
