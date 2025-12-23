@@ -7,7 +7,7 @@ image: /assets/research/projects/scsc-fuel-pred-1.webp
 
 title: Physics-Informed AI for Robust Ship Fuel Consumption Prediction
 summary: Development of a Ship Fuel Consumption Prediction Model Considering Environmental Factors
-organizer: Human Centered – Carbon Neutral Global Supply Chain Research Center
+organizer: SCSC
 period: 2024.03 – 
 category: Time-Series Representation Learning
 tags:
