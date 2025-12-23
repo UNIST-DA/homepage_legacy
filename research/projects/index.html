@@ -184,8 +184,8 @@ permalink: /research/projects/
               href="{{ '/research/projects/contents/' | append: p.slug | append: '/' | relative_url }}"
               id="{{ p.slug }}"
               data-slug="{{ p.slug }}"
-              data-category="{{ p.category | default: '' | slugify }}"
-              data-text="{{ card_title | escape }} {{ card_organizer | escape }} {{ p.category | escape }} {{ card_period | escape }} {{ card_summary | escape }}"
+              data-category="{{ card_category | default: '' | slugify: 'latin' }}"
+              data-text="{{ card_title | escape }} {{ card_organizer | escape }} {{ card_category | escape }} {{ card_period | escape }} {{ card_summary | escape }}"
             >
               {%- if card_image -%}
                 <img class="proj-thumb" src="{{ card_image | relative_url }}" alt="{{ card_title }}">
