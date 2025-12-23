@@ -7,7 +7,7 @@ image: /assets/research/projects/thyroid-dose-1.webp
 
 title: Personalized Dose Determination for Patients with Thyroid Hormone Disorders
 summary: Optimal and Personalized Dose Determination for Patients with Thyroid Hormone Disorders Using Deep Learning-Based Survival Analysis
-organizer: Thyroscope
+organizer: THYROSCOPE
 period: 2022.01 – 2025.12
 category: AI in Quality Engineering
 tags:
