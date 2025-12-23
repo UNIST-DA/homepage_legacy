@@ -184,8 +184,8 @@ permalink: /research/projects/
               href="{{ '/research/projects/contents/' | append: p.slug | append: '/' | relative_url }}"
               id="{{ p.slug }}"
               data-slug="{{ p.slug }}"
-              data-category="{{ card_category | default: '' | slugify }}"
-              data-text="{{ card_title | escape }} {{ card_organizer | escape }} {{ card_category | escape }} {{ card_period | escape }} {{ card_summary | escape }}"
+              data-category="{{ p.category | default: '' | slugify }}"
+              data-text="{{ card_title | escape }} {{ card_organizer | escape }} {{ p.category | escape }} {{ card_period | escape }} {{ card_summary | escape }}"
             >
               {%- if card_image -%}
                 <img class="proj-thumb" src="{{ card_image | relative_url }}" alt="{{ card_title }}">
@@ -226,7 +226,7 @@ permalink: /research/projects/
 </main>
 
 <script>
-  // Tabs (category filter)
+  // Tabs (category filter) - based on p.category (site.data.projects)
   const projToolbar = document.getElementById('proj-toolbar');
   const tabs = projToolbar ? projToolbar.querySelectorAll('.tabs .tab') : [];
   const items = document.querySelectorAll('.proj-card');
@@ -259,8 +259,7 @@ permalink: /research/projects/
       const text = (it.dataset.text || '').toLowerCase();
       const matchText = text.indexOf(term) !== -1;
 
-      const visible = matchCat && matchText;
-      it.style.display = visible ? '' : 'none';
+      it.style.display = (matchCat && matchText) ? '' : 'none';
     });
   }
 
