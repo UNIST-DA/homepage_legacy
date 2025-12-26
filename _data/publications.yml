@@ -49,7 +49,7 @@
   url: "https://doi.org/10.1016/j.cie.2025.111024"
 
 - id: 2025-review-nde-ts
-  date: 2025-01-01
+  date: 2025-12-01
   year: 2025
   type: journal
   title: "Comprehensive Review of Neural Differential Equations for Time Series Analysis"
