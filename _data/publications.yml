@@ -94,6 +94,7 @@
   venue: "International Conference on Learning Representations (ICLR) spotlight"
   url: "https://doi.org/10.48550/arXiv.2402.14989"
 
+# v
 - id: 2024-functional-outlier-cie
   date: 2024-03-01   # Issued (Available 2024-02-01)
   year: 2024
@@ -103,62 +104,69 @@
   venue: "Computers & Industrial Engineering"
   url: "https://doi.org/10.1016/j.cie.2024.109936"
 
+# v
 - id: 2024-ais-bbb
-  date: 2024-01-01
+  date: 2024-10-01   # Issued (Published 2023-11-07)
   year: 2024
-  type: journal
-  title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors from AIS Data in Maritime Logistics"
+  type: conference
+  title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics"
   authors: ["YongKyung Oh", "Sungil Kim"]
   venue: "IEEE Transactions on Automation Science and Engineering"
-  url: https://doi.org/10.1109/TASE.2023.3329041
+  url: "https://doi.org/10.1109/TASE.2023.3329041"
 
+# vq
 - id: 2023-sensor-drift-comp
-  date: 2023-01-01
+  date: 2023-10-01   # Issued (Published 2023-04-20)
   year: 2023
   type: journal
-  title: Sensor Drift Compensation for Gas Mixture Classification in Batch Experiments"
-  authors: ["YongKyung Oh", "Juhui Lee", "Sunghyee Lee", "Sewon Kim", "Sungil Kim"]
+  title: "Sensor drift compensation for gas mixture classification in batch experiments"
+  authors: ["YongKyung Oh", "Juhui Lee", "Sunghyee Lee", "Sewon Kim", "Sungil Kim"]   # "Sunghyee Lee", "Sewon Kim"
   venue: "Quality and Reliability Engineering International"
-  url: https://doi.org/10.1002/qre.3354
+  url: "https://doi.org/10.1002/qre.3354"
 
+# v
 - id: 2023-traffic-delay-causality
   date: 2023-02-01   # Issued (Published 2022-11-12)
   year: 2023
   type: journal
-  title: Time delay estimation of traffic congestion propagation due to accidents based on statistical causality
+  title: "Time Delay Estimation of Traﬃc Congestion Propagation Due to Accidents Based on Statistical Causality"
   authors: ["YongKyung Oh", "Jiin Kwak", "Sungil Kim"]
-  venue: Electronic Research Archive
-  url: https://doi.org/10.48550/arXiv.2108.06717
+  venue: "Electronic Research Archive"
+  url: "https://doi.org/10.48550/arXiv.2108.06717"
 
+# v
 - id: 2024-mcnn-gas-mixture-aor
-  date: 2024-01-01
+  date: 2024-08-01   # Issued (Published 2022-04-26)
   year: 2024
   type: journal
-  title: "Multichannel Convolution Neural Network for Gas Mixture Classification"
+  title: "Multichannel convolution neural network for gas mixture classification"
   authors: ["YongKyung Oh", "Chieheyon Lim", "Junghye Lee", "Sewon Kim", "Sungil Kim"]
   venue: "Annals of Operations Research"
   url: "https://doi.org/10.1007/s10479-022-04715-2"
 
+# v
 - id: 2022-transport-dynamics
-  date: 2022-01-01
+  date: 2022-08-18   # Published (Issued 2023)
   year: 2022
   type: journal
-  title: "Quantifying Incident Impacts and Identifying Influential Factors on Urban Traffic Networks"
+  title: "Quantifying incident impacts and identifying influential features in urban traffic networks"
   authors: ["JuYeong Lee", "Jiin Kwak", "YongKyung Oh", "Sungil Kim"]
   venue: "Transportmetrica B: Transport Dynamics"
   url: "https://doi.org/10.1080/21680566.2022.2063205"
 
+# v
 - id: 2021-mcnn-icdmw
-  date: 2021-01-01
+  date: 2021-12-07   # Conference (Available 2022-01-20)
   year: 2021
   type: conference
   title: "Multi-channel Convolution Neural Network for Gas Mixture Classification"
   authors: ["YongKyung Oh", "Sungil Kim"]
-  venue: " ICDMW (International Conference on Data Mining Workshops)"
+  venue: "International Conference on Data Mining Workshops (ICDMW)"
   url: "https://doi.org/10.1109/ICDMW53433.2021.00143"
 
+# v
 - id: 2021-mfe-informationsciences
-  date: 2021-01-01
+  date: 2021-10-01   # Issued (Available 2021-04-09)
   year: 2021
   type: journal
   title: "Maximum feasibility estimation"
@@ -166,26 +174,28 @@
   venue: "Information Sciences"
   url: "https://doi.org/10.1016/j.ins.2021.04.012"
 
+# v
 - id: 2021-tl-mixture-gas
-  date: 2021-01-01
+  date: 2021-04-01   # Issued (Available 2020-12-04)
   year: 2021
   type: journal
-  title: "Transfer-Learning based approach for mixture gas classification"
+  title: "Transfer Learning based Approach for Mixture Gas Classification"   # 혼합 가스 분류를 위한 전이학습 기반 방법 
   authors: ["YongKyung Oh", "Namu Kim", "Sungil Kim"]
-  venue: "Journal of the Korean Institute of Industrial Engineers"
+  venue: "Journal of the Korean Institute of Industrial Engineers"   # 대한산업공학회지
   url: "https://doi.org/10.7232/JKIIE.2021.47.2.144"
 
 - id: 2021-anomaly-nuclear-reactors
-  date: 2021-01-01
+  date: 2021-04-01   # Issued (Available 2021-02-03)
   year: 2021
   type: journal
-  title: "Simulation-based Anomaly Detection in Nuclear Reactors"
+  title: "Simulation-based Anomaly Detection in Nuclear Reactors"   # 시뮬레이션 데이터 생성을 통한 기계학습 기반 원자로 노심 이상 탐지 방법론
   authors: ["YongKyung Oh", "Hanjoo Kim", "Deokjung Lee", "Sungil Kim"]
-  venue: "Journal of the Korean Institute of Industrial Engineers"
-  url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10505830"
+  venue: "Journal of the Korean Institute of Industrial Engineers"   # 대한산업공학회지
+  url: "https://doi.org/10.7232/JKIIE.2021.47.2.130"
 
+# v
 - id: 2020-multifidelity-spatial
-  date: 2020-01-01
+  date: 2020-10-01   # Issued (Available 2020-07-30)
   year: 2020
   type: journal
   title: "Multiresolution spatial generalized linear mixed model for integrating multi-fidelity spatial count data without common identifiers between data sources"
@@ -193,17 +203,18 @@
   venue: "Spatial Statistics"
   url: "https://doi.org/10.1016/j.spasta.2020.100467"
 
+# v
 - id: 2020-vae-cusum
-  date: 2020-01-01
+  date: 2020-08-01   # Issued (Available 2020-07-01)
   year: 2020
   type: journal
-  title: "Maritime anomaly detection based on VAE–CUSUM monitoring system"
+  title: "Maritime Anomaly Detection Based on VAE–CUSUM Monitoring System"   # 선박 이상 탐지를 위한 VAE-CUSUM 기반 모니터링 방법론
   authors: ["Jaemin Park", "Sungil Kim"]
-  venue: "Journal of the Korean Institute of Industrial Engineers"
+  venue: "Journal of the Korean Institute of Industrial Engineers"   # 대한산업공학회지
   url: "http://doi.org/10.7232/JKIIE.2020.46.4.432"
 
 - id: 2019-stockouts-impact
-  date: 2019-01-01
+  date: 2019-03-23
   year: 2019
   type: journal
   title: "A practical approach to measuring the impacts of stockouts on demand"
