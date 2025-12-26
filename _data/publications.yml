@@ -2,6 +2,7 @@
 
 
 - id: 2025-non-recurrent
+  date: 2025-01-01
   year: 2025
   type: journal
   title: "Predicting non-recurrent congestion impact: A pattern-based approach for speed drop ratio prediction using weighted K-nearest neighbors"
@@ -11,6 +12,7 @@
 
 
 - id: 2026-aaai-flowpath
+  date: 2025-01-01
   year: 2025
   type: journal
   title: "FlowPath: Learning Data-Driven Manifolds with Invertible Flows for Robust Irregularly-sampled Time Series Classification"
@@ -19,6 +21,7 @@
   url: "https://doi.org/10.48550/arXiv.2511.10841"
 
 - id: 2026-aaai-nde
+  date: 2025-01-01
   year: 2025
   type: journal
   title: "Continuum Dropout for Neural Differential Equations"
@@ -27,6 +30,7 @@
   url: "https://doi.org/10.48550/arXiv.2511.10446"
 
 - id: 2025-cik-nsde
+  date: 2025-01-01
   year: 2025
   type: conference
   title: "Modeling Irregular Astronomical Time Series with Neural Stochastic Delay Differential Equations"
@@ -35,6 +39,7 @@
   url: "https://doi.org/10.48550/arXiv.2508.17521"
 
 - id: 2025-taod-net
+  date: 2025-01-01
   year: 2025
   type: journal
   title: "TAOD-Net: Automated detection and analysis of thyroid-associated orbitopathy in facial imagery"
@@ -44,6 +49,7 @@
   url: "https://doi.org/10.1016/j.cie.2025.111024"
 
 - id: 2025-review-nde-ts
+  date: 2025-01-01
   year: 2025
   type: journal
   title: "Comprehensive Review of Neural Differential Equations for Time Series Analysis"
@@ -52,6 +58,7 @@
   url: "https://doi.org/10.48550/arXiv.2502.09885"
 
 - id: 2024-cluster-dirichlet
+  date: 2024-01-01
   year: 2024
   type: journal
   title: "Spatially-correlated time series clustering using location-dependent Dirichlet process mixture model"
@@ -60,6 +67,7 @@
   url: "https://doi.org/10.1002/sam.11649"
 
 - id: 2024-vae-ad-ais
+  date: 2024-01-01
   year: 2024
   type: journal
   title: "Comparative evaluation of VAE-based monitoring statistics for real-time anomaly detection in AIS data"
@@ -68,6 +76,7 @@
   url: "https://doi.org/10.1080/03088839.2024.2388177"
   
 - id: 2024-lifelog-fusion
+  date: 2024-01-01
   year: 2024
   type: journal
   title: "Multi-modal lifelog data fusion for improved human activity recognition: A hybrid approach"
@@ -76,6 +85,7 @@
   url: "https://doi.org/10.1016/j.inffus.2024.102464"
 
 - id: 2024-snsde-itsc
+  date: 2024-01-01
   year: 2024
   type: conference
   title: "Stable Neural Stochastic Differential Equations for Irregular Time Series Classification"
@@ -84,6 +94,7 @@
   url: "https://doi.org/10.48550/arXiv.2402.14989"
 
 - id: 2024-functional-outlier-cie
+  date: 2024-01-01
   year: 2024
   type: journal
   title: "Domain Knowledge-Informed Functional Outlier Detection in the Refrigerator Inspection Lanes"
@@ -92,6 +103,7 @@
   url: "https://doi.org/10.1016/j.cie.2024.109936"
 
 - id: 2024-ais-bbb
+  date: 2024-01-01
   year: 2024
   type: journal
   title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors from AIS Data in Maritime Logistics"
@@ -100,6 +112,7 @@
   url: "https://doi.org/10.1109/TASE.2023.3329041"
 
 - id: 2023-sensor-drift-comp
+  date: 2023-01-01
   year: 2023
   type: journal
   title: "Sensor Drift Compensation for Gas Mixture Classification in Batch Experiments"
@@ -108,6 +121,7 @@
   url: "https://doi.org/10.1002/qre.3354"
 
 - id: 2023-traffic-delay-causality
+  date: 2023-01-01
   year: 2023
   type: journal
   title: "Time Delay Estimation of Traffic Congestion Propagation due to Accidents based on Statistical Causality"
@@ -116,6 +130,7 @@
   url: "https://doi.org/10.48550/arXiv.2108.06717"
 
 - id: 2024-mcnn-gas-mixture-aor
+  date: 2024-01-01
   year: 2024
   type: journal
   title: "Multichannel Convolution Neural Network for Gas Mixture Classification"
@@ -124,6 +139,7 @@
   url: "https://doi.org/10.1007/s10479-022-04715-2"
 
 - id: 2022-transport-dynamics
+  date: 2022-01-01
   year: 2022
   type: journal
   title: "Quantifying Incident Impacts and Identifying Influential Factors on Urban Traffic Networks"
@@ -132,6 +148,7 @@
   url: "https://doi.org/10.1080/21680566.2022.2063205"
 
 - id: 2021-mcnn-icdmw
+  date: 2021-01-01
   year: 2021
   type: conference
   title: "Multi-channel Convolution Neural Network for Gas Mixture Classification"
@@ -140,6 +157,7 @@
   url: "https://doi.org/10.1109/ICDMW53433.2021.00143"
 
 - id: 2021-mfe-informationsciences
+  date: 2021-01-01
   year: 2021
   type: journal
   title: "Maximum feasibility estimation"
@@ -148,6 +166,7 @@
   url: "https://doi.org/10.1016/j.ins.2021.04.012"
 
 - id: 2021-tl-mixture-gas
+  date: 2021-01-01
   year: 2021
   type: journal
   title: "Transfer-Learning based approach for mixture gas classification"
@@ -156,6 +175,7 @@
   url: "https://doi.org/10.7232/JKIIE.2021.47.2.144"
 
 - id: 2021-anomaly-nuclear-reactors
+  date: 2021-01-01
   year: 2021
   type: journal
   title: "Simulation-based Anomaly Detection in Nuclear Reactors"
@@ -164,6 +184,7 @@
   url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10505830"
 
 - id: 2020-multifidelity-spatial
+  date: 2020-01-01
   year: 2020
   type: journal
   title: "Multiresolution spatial generalized linear mixed model for integrating multi-fidelity spatial count data without common identifiers between data sources"
@@ -172,6 +193,7 @@
   url: "https://doi.org/10.1016/j.spasta.2020.100467"
 
 - id: 2020-vae-cusum
+  date: 2020-01-01
   year: 2020
   type: journal
   title: "Maritime anomaly detection based on VAE–CUSUM monitoring system"
@@ -180,6 +202,7 @@
   url: "http://doi.org/10.7232/JKIIE.2020.46.4.432"
 
 - id: 2019-stockouts-impact
+  date: 2019-01-01
   year: 2019
   type: journal
   title: "A practical approach to measuring the impacts of stockouts on demand"
@@ -188,6 +211,7 @@
   url: "https://doi.org/10.1108/JBIM-04-2018-0126"
 
 - id: 2019-smart-home-info
+  date: 2019-01-01
   year: 2019
   type: journal
   title: "Revealing household characteristics using connected home products"
@@ -196,6 +220,7 @@
   url: "https://doi.org/10.1016/j.ins.2019.02.033"
 
 - id: 2019-copula-mobility
+  date: 2019-01-01
   year: 2019
   type: journal
   title: "Spatial cluster detection in mobility networks: a copula approach"
@@ -204,6 +229,7 @@
   url: "https://doi.org/10.1111/rssc.12307"
 
 - id: 2017-batch-seq-energy
+  date: 2017-01-01
   year: 2017
   type: journal
   title: "Batch sequential minimum energy design with design-region adaptation"
@@ -212,6 +238,7 @@
   url: "https://doi.org/10.1080/00224065.2017.11918182"
   
 - id: 2017-holistic-model
+  date: 2017-01-01
   year: 2017
   type: journal
   title: "An integrated holistic model of a complex process"
@@ -220,6 +247,7 @@
   url: "https://link.springer.com/article/10.1007/s00170-016-9088-0"
 
 - id: 2017-vessel-delay
+  date: 2017-01-01
   year: 2017
   type: journal
   title: "Early detection of vessel delays using combined historical and real-time information"
@@ -228,6 +256,7 @@
   url: "https://link.springer.com/article/10.1057/s41274-016-0104-4"
 
 - id: 2017-local-approach
+  date: 2017-01-01
   year: 2017
   type: journal
   title: "Incorporation of engineering knowledge into the modeling process: a local approach"
@@ -236,6 +265,7 @@
   url: "https://doi.org/10.1080/00207543.2016.1278082"
 
 - id: 2016-mape-intermittent
+  date: 2016-01-01
   year: 2016
   type: journal
   title: "A new metric of absolute percentage error for intermittent demand forecasts"
@@ -244,6 +274,7 @@
   url: "https://doi.org/10.1016/j.ijforecast.2015.12.003"
 
 - id: 2016-ordinal-imbalance
+  date: 2016-01-01
   year: 2016
   type: journal
   title: "Ordinal classification of imbalanced data with application in emergency and disaster information services"
@@ -252,6 +283,7 @@
   url: "https://doi.org/10.1109/MIS.2016.27"
 
 - id: 2015-adaptive-combined-spacefilling
+  date: 2015-01-01
   year: 2015
   type: journal
   title: "Adaptive combined space-filling and D-optimal designs"
@@ -260,6 +292,7 @@
   url: "https://doi.org/10.1080/00207543.2015.1037067"
 
 - id: 2015-layers-adaptive-combined
+  date: 2015-01-01
   year: 2015
   type: journal
   title: "Layers of experiments with adaptive combined design"
@@ -268,6 +301,7 @@
   url: "https://doi.org/10.1002/nav.21618"
 
 - id: 2012-co2-np-sequential-adaptive
+  date: 2012-01-01
   year: 2012
   type: journal
   title: "Optimization of a carbon dioxide-assisted nanoparticle deposition process using sequential experimental design with adaptive design space"
@@ -276,6 +310,7 @@
   url: "http://dx.doi.org/10.1021/ie2028574"
   
 - id: 2012-co2-np-uncertain-space
+  date: 2012-01-01
   year: 2012
   type: conference
   title: "Optimization of carbon dioxide-assisted nanoparticle deposition process with uncertain design space"
@@ -284,6 +319,7 @@
   url: "http://dx.doi.org/10.1016/B978-0-444-59506-5.50069-9"
 
 - id: 2005-cursor-movement-path-constraints
+  date: 2005-01-01
   year: 2005
   type: journal
   title: "A time prediction model of cursor movement with path constraints"
