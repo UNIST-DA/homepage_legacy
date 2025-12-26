@@ -1,5 +1,15 @@
 # 각 항목: id, year, type(journal|conference), title, authors(list), venue, url
 
+
+- id: 2025-non-recurrent
+  year: 2025
+  type: journal
+  title: "Predicting non-recurrent congestion impact: A pattern-based approach for speed drop ratio prediction using weighted K-nearest neighbors"
+  authors: ["YongKyung Oh", "Jiin Kwak", "Sungil Kim"]
+  venue: "Computers & Industrial Engineering"
+  url: "https://doi.org/10.1016/j.cie.2025.111769"
+
+
 - id: 2026-aaai-flowpath
   year: 2025
   type: journal
