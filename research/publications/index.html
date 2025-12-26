@@ -46,7 +46,7 @@ permalink: /research/publications/
                tabindex="0"
                aria-label="Open publication: {{ p.title }}"
                data-type="{{ p.type | default: 'journal' }}"
-               data-year="{{ p.year }}"
+               data-year="{{ p.date | date: '%Y' }}"
                data-text="{{ p.title | escape }} {{ authors_text | escape }} {{ p.venue | escape }}"
                data-url="{{ p.url | default: '' }}">
         <div style="display:flex;gap:14px;align-items:flex-start">
@@ -55,7 +55,7 @@ permalink: /research/publications/
               {{ p.title }}
             </div>
             <div class="muted">{{ authors_text }}</div>
-            <div class="muted"><em>{{ p.venue }}</em>, {{ p.year }}</div>
+            <div class="muted"><em>{{ p.venue }}</em>, {{ p.date | date: '%Y.%m' }}</div>
           </div>
           <div class="muted" style="white-space:nowrap">
             <span class="tag">{{ p.type | default: 'journal' }}</span>
