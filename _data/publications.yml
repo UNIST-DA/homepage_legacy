@@ -1,97 +1,98 @@
 # 각 항목: id, year, type(journal|conference), title, authors(list), venue, url
+# date는 published (온라인 공개) 날짜로 (월까지만 있으면 일은 임의로 채워서 YYYY-MM-DD 형식 맞추기)
+# 
 
-
-- id: 2025-non-recurrent
-  date: 2025-12-01
+- id: 2025-non-rec
+  date: 2025-12-18   # Available online
   year: 2025
   type: journal
-  title: "Predicting non-recurrent congestion impact: A pattern-based approach for speed drop ratio prediction using weighted K-nearest neighbors"
+  title: Predicting non-recurrent congestion impact: A pattern-based approach for speed drop ratio prediction using weighted K-nearest neighbors
   authors: ["YongKyung Oh", "Jiin Kwak", "Sungil Kim"]
-  venue: "Computers & Industrial Engineering"
-  url: "https://doi.org/10.1016/j.cie.2025.111769"
+  venue: Computers & Industrial Engineering
+  url: https://doi.org/10.1016/j.cie.2025.111769
 
 
 - id: 2026-aaai-flowpath
-  date: 2025-01-01
+  date: 2025-11-13   # arXiv Submitted on
   year: 2025
-  type: journal
-  title: "FlowPath: Learning Data-Driven Manifolds with Invertible Flows for Robust Irregularly-sampled Time Series Classification"
+  type: conference
+  title: FlowPath: Learning Data-Driven Manifolds with Invertible Flows for Robust Irregularly-sampled Time Series Classification
   authors: ["YongKyung Oh", "Dong-Young Lim", "Sungil Kim"]
-  venue: "The Association for the Advancement of Artificial Intelligence (AAAI)"
-  url: "https://doi.org/10.48550/arXiv.2511.10841"
+  venue: The Association for the Advancement of Artificial Intelligence (AAAI)
+  url: https://doi.org/10.48550/arXiv.2511.10841
 
 - id: 2026-aaai-nde
-  date: 2025-01-01
-  year: 2025
-  type: journal
-  title: "Continuum Dropout for Neural Differential Equations"
-  authors: ["Jonghun Lee", "YongKyung Oh", "Sungil Kim", "Dong-Young Lim"]
-  venue: "The Association for the Advancement of Artificial Intelligence (AAAI)"
-  url: "https://doi.org/10.48550/arXiv.2511.10446"
-
-- id: 2025-cik-nsde
-  date: 2025-01-01
+  date: 2025-11-18   # arXiv Submitted on
   year: 2025
   type: conference
-  title: "Modeling Irregular Astronomical Time Series with Neural Stochastic Delay Differential Equations"
+  title: Continuum Dropout for Neural Differential Equations
+  authors: ["Jonghun Lee", "YongKyung Oh", "Sungil Kim", "Dong-Young Lim"]
+  venue: The Association for the Advancement of Artificial Intelligence (AAAI)
+  url: https://doi.org/10.48550/arXiv.2511.10446
+
+- id: 2025-cikm-nsde
+  date: 2025-08-24   # arXiv Submitted on
+  year: 2025
+  type: conference
+  title: Modeling Irregular Astronomical Time Series with Neural Stochastic Delay Differential Equations
   authors: ["YongKyung Oh", "Seungsu Kam", "Sungil Kim", "Dong-Young Lim"]
-  venue: "The Conference on Information and Knowledge Management (CIKM)"
-  url: "https://doi.org/10.48550/arXiv.2508.17521"
+  venue: The Conference on Information and Knowledge Management (CIKM)
+  url: https://doi.org/10.48550/arXiv.2508.17521
 
 - id: 2025-taod-net
-  date: 2025-01-01
+  date: 2025-05-10   # Available online
   year: 2025
   type: journal
-  title: "TAOD-Net: Automated detection and analysis of thyroid-associated orbitopathy in facial imagery"
-  authors: ["YongKyung Oh", "Sungil Kim", "Giheon Koh", "Jiin Kwak", "Kyubo Shin", "Gi-Soo Kim", 
-"Min Joung Lee", "Hokyung Choung", "Namju Kim", "Jae Hoon Moon"]
-  venue: "Computers&Industrial Engineering"
-  url: "https://doi.org/10.1016/j.cie.2025.111024"
+  title: TAOD-Net: Automated detection and analysis of thyroid-associated orbitopathy in facial imagery
+  authors: ["YongKyung Oh", "Giheon Koh", "Jiin Kwak", "Kyubo Shin", "Gi-Soo Kim", 
+"Min Joung Lee", "Hokyung Choung", "Namju Kim", "Jae Hoon Moon", "Sungil Kim"]
+  venue: Computers & Industrial Engineering
+  url: https://doi.org/10.1016/j.cie.2025.111024
 
-- id: 2025-review-nde-ts
-  date: 2025-12-01
+- id: 2025-ijcai-nde-ts
+  date: 2025-02-14   # arXiv Submitted on
   year: 2025
-  type: journal
-  title: "Comprehensive Review of Neural Differential Equations for Time Series Analysis"
-  authors: ["YongKyung Oh", "Sungil Kim", "Alex A.T.Bui", "Seungsu Kam", "Jonghun Lee", "Dong-Young Lim"]
-  venue: "International Joint Conference on Artificial Intelligence (IJCAI)"
-  url: "https://doi.org/10.48550/arXiv.2502.09885"
+  type: conference
+  title: Comprehensive Review of Neural Differential Equations for Time Series Analysis
+  authors: ["YongKyung Oh", "Seungsu Kam", "Jonghun Lee", "Dong-Young Lim", "Sungil Kim", "Alex A.T.Bui"]
+  venue: International Joint Conference on Artificial Intelligence (IJCAI)
+  url: https://doi.org/10.48550/arXiv.2502.09885
 
 - id: 2024-cluster-dirichlet
-  date: 2024-01-01
+  date: 2024-02-26   # Available online
   year: 2024
   type: journal
-  title: "Spatially-correlated time series clustering using location-dependent Dirichlet process mixture model"
-  authors: ["Junsub Jung", "Heeyoung Kim", "Sungil Kim"]
-  venue: "Statistical Analysis And Data Mining"
-  url: "https://doi.org/10.1002/sam.11649"
+  title: Spatially-correlated time series clustering using location-dependent Dirichlet process mixture model
+  authors: ["Junsub Jung", "Sungil Kim", "Heeyoung Kim"]
+  venue: Statistical Analysis And Data Mining
+  url: https://doi.org/10.1002/sam.11649
 
 - id: 2024-vae-ad-ais
-  date: 2024-01-01
+  date: 2024-08-21   # Published online
   year: 2024
   type: journal
-  title: "Comparative evaluation of VAE-based monitoring statistics for real-time anomaly detection in AIS data"
-  authors: ["YongKyung Oh", "Sungil Kim", "Kwonin Yoon", "Jaemin Park"]
-  venue: "Maritime Policy & Management"
-  url: "https://doi.org/10.1080/03088839.2024.2388177"
+  title: Comparative evaluation of VAE-based monitoring statistics for real-time anomaly detection in AIS data
+  authors: ["YongKyung Oh", "Kwonin Yoon", "Jaemin Park", "Sungil Kim"]
+  venue: Maritime Policy & Management
+  url: https://doi.org/10.1080/03088839.2024.2388177
   
 - id: 2024-lifelog-fusion
-  date: 2024-01-01
+  date: 2024-10-01   # Published online 정렬용 (Available 2024-03-08)
   year: 2024
   type: journal
-  title: "Multi-modal lifelog data fusion for improved human activity recognition: A hybrid approach"
+  title: Multi-modal lifelog data fusion for improved human activity recognition: A hybrid approach
   authors: ["YongKyung Oh", "Sungil Kim"]
-  venue: "Information Fusion"
-  url: "https://doi.org/10.1016/j.inffus.2024.102464"
+  venue: Information Fusion
+  url: https://doi.org/10.1016/j.inffus.2024.102464
 
-- id: 2024-snsde-itsc
-  date: 2024-01-01
+- id: 2024-iclr-snsde-itsc
+  date: 2024-02-22   # arXiv Submitted on
   year: 2024
   type: conference
-  title: "Stable Neural Stochastic Differential Equations for Irregular Time Series Classification"
-  authors: ["YongKyung Oh", "Dongyouny Lim", "Sungil Kim"]
-  venue: "ICLR (spotlight)"
-  url: "https://doi.org/10.48550/arXiv.2402.14989"
+  title: Stable Neural Stochastic Differential Equations for Irregular Time Series Classification
+  authors: ["YongKyung Oh", "Dong-Young Lim", "Sungil Kim"]
+  venue: International Conference on Learning Representations (ICLR) spotlight
+  url: https://doi.org/10.48550/arXiv.2402.14989
 
 - id: 2024-functional-outlier-cie
   date: 2024-01-01
