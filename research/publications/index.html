@@ -32,14 +32,15 @@ permalink: /research/publications/
 
   <!-- Publication List -->
   <section id="pub-list" class="pub-section">
-    {%- assign pubs = site.data.publications | sort: "year" | reverse -%}
-    {%- assign groups = pubs | group_by: "year" -%}
+    {%- assign pubs = site.data.publications | sort: "date" | reverse -%}
+    {%- assign groups = pubs | group_by_exp: "p", "p.date | date: '%Y'" -%}
 
     {%- for g in groups -%}
     <div class="year-block" data-year="{{ g.name }}">
       <h3 style="margin:0 0 10px">{{ g.name }}</h3>
 
-      {%- for p in g.items -%}
+      {%- assign items_sorted = g.items | sort: "date" | reverse -%}
+      {%- for p in items_sorted -%}
       {%- assign authors_text = p.authors | join: ", " -%}
       <article class="card card-pad pub-item"
                role="link"
@@ -124,8 +125,12 @@ permalink: /research/publications/
 
   tabs.forEach(t=>{
     t.addEventListener('click', ()=>{
-      tabs.forEach(x=>x.classList.remove('active'));
+      tabs.forEach(x=>{
+        x.classList.remove('active');
+        x.setAttribute('aria-selected', 'false');
+      });
       t.classList.add('active');
+      t.setAttribute('aria-selected', 'true');
       activeType = t.dataset.filter;
       applyFilter();
     });
@@ -156,8 +161,7 @@ permalink: /research/publications/
   items.forEach(it=>{
     const url = it.dataset.url;
     if(url){
-      it.addEventListener('click', (e)=>{
-        // 내부의 링크 요소를 따로 두지 않으므로 바로 이동
+      it.addEventListener('click', ()=>{
         window.open(url, '_blank', 'noopener');
       });
       // 키보드 접근성(Enter/Space)
@@ -168,7 +172,6 @@ permalink: /research/publications/
         }
       });
     } else {
-      // URL이 없으면 클릭 비활성화
       it.style.cursor = 'default';
       it.setAttribute('aria-disabled', 'true');
     }
