@@ -2,7 +2,7 @@
 
 
 - id: 2025-non-recurrent
-  date: 2025-01-01
+  date: 2025-12-01
   year: 2025
   type: journal
   title: "Predicting non-recurrent congestion impact: A pattern-based approach for speed drop ratio prediction using weighted K-nearest neighbors"
