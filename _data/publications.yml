@@ -77,7 +77,7 @@
   url: https://doi.org/10.1080/03088839.2024.2388177
   
 - id: 2024-lifelog-fusion
-  date: 2024-10-01   # Published online 정렬용 (Available 2024-03-08)
+  date: 2024-10-01   # Issued (Available 2024-03-08)
   year: 2024
   type: journal
   title: Multi-modal lifelog data fusion for improved human activity recognition: A hybrid approach
@@ -95,40 +95,40 @@
   url: https://doi.org/10.48550/arXiv.2402.14989
 
 - id: 2024-functional-outlier-cie
-  date: 2024-01-01
+  date: 2024-03-01   # Issued (Available 2024-02-01)
   year: 2024
   type: journal
-  title: "Domain Knowledge-Informed Functional Outlier Detection in the Refrigerator Inspection Lanes"
+  title: Domain-knowledge-informed functional outlier detection for line quality control systems
   authors: ["Jonghwan Mun", "Jitae Yoo", "Heesun Kim", "Nayi Ryu", "Sungil Kim"]
-  venue: "Computers & Industrial Engineering"
-  url: "https://doi.org/10.1016/j.cie.2024.109936"
+  venue: Computers & Industrial Engineering
+  url: https://doi.org/10.1016/j.cie.2024.109936
 
 - id: 2024-ais-bbb
   date: 2024-01-01
   year: 2024
   type: journal
-  title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors from AIS Data in Maritime Logistics"
+  title: Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors from AIS Data in Maritime Logistics
   authors: ["YongKyung Oh", "Sungil Kim"]
   venue: "IEEE Transactions on Automation Science and Engineering"
-  url: "https://doi.org/10.1109/TASE.2023.3329041"
+  url: https://doi.org/10.1109/TASE.2023.3329041
 
 - id: 2023-sensor-drift-comp
   date: 2023-01-01
   year: 2023
   type: journal
-  title: "Sensor Drift Compensation for Gas Mixture Classification in Batch Experiments"
+  title: Sensor Drift Compensation for Gas Mixture Classification in Batch Experiments"
   authors: ["YongKyung Oh", "Juhui Lee", "Sunghyee Lee", "Sewon Kim", "Sungil Kim"]
   venue: "Quality and Reliability Engineering International"
-  url: "https://doi.org/10.1002/qre.3354"
+  url: https://doi.org/10.1002/qre.3354
 
 - id: 2023-traffic-delay-causality
-  date: 2023-01-01
+  date: 2023-02-01   # Issued (Published 2022-11-12)
   year: 2023
   type: journal
-  title: "Time Delay Estimation of Traffic Congestion Propagation due to Accidents based on Statistical Causality"
-  authors: ["YongKyung Oh", "Jiin Kwak", "JuYeong Lee", "Sungil Kim"]
-  venue: "Electronic Research Archive"
-  url: "https://doi.org/10.48550/arXiv.2108.06717"
+  title: Time delay estimation of traffic congestion propagation due to accidents based on statistical causality
+  authors: ["YongKyung Oh", "Jiin Kwak", "Sungil Kim"]
+  venue: Electronic Research Archive
+  url: https://doi.org/10.48550/arXiv.2108.06717
 
 - id: 2024-mcnn-gas-mixture-aor
   date: 2024-01-01
