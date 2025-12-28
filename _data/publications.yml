@@ -108,7 +108,7 @@
 - id: 2024-ais-bbb
   date: 2024-10-01   # Issued (Published 2023-11-07)
   year: 2024
-  type: conference
+  type: journal
   title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics"
   authors: ["YongKyung Oh", "Sungil Kim"]
   venue: "IEEE Transactions on Automation Science and Engineering"
