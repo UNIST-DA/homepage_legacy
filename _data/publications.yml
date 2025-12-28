@@ -184,6 +184,7 @@
   venue: "Journal of the Korean Institute of Industrial Engineers"   # 대한산업공학회지
   url: "https://doi.org/10.7232/JKIIE.2021.47.2.144"
 
+# v
 - id: 2021-anomaly-nuclear-reactors
   date: 2021-04-01   # Issued (Available 2021-02-03)
   year: 2021
@@ -213,8 +214,9 @@
   venue: "Journal of the Korean Institute of Industrial Engineers"   # 대한산업공학회지
   url: "http://doi.org/10.7232/JKIIE.2020.46.4.432"
 
+# v
 - id: 2019-stockouts-impact
-  date: 2019-03-23
+  date: 2019-06-02   # Issued (Available 2019-05-23)
   year: 2019
   type: journal
   title: "A practical approach to measuring the impacts of stockouts on demand"
@@ -222,8 +224,9 @@
   venue: "Journal of Business & Industrial Marketing"
   url: "https://doi.org/10.1108/JBIM-04-2018-0126"
 
+# v
 - id: 2019-smart-home-info
-  date: 2019-01-01
+  date: 2019-06-01   # Issued (Available 2019-02)
   year: 2019
   type: journal
   title: "Revealing household characteristics using connected home products"
@@ -231,44 +234,49 @@
   venue: "Information Sciences"
   url: "https://doi.org/10.1016/j.ins.2019.02.033"
 
+# v
 - id: 2019-copula-mobility
-  date: 2019-01-01
+  date: 2019-01-01   # Issued (Published 2018-08-26)
   year: 2019
   type: journal
-  title: "Spatial cluster detection in mobility networks: a copula approach"
+  title: "Spatial Cluster Detection in Mobility Networks: A Copula Approach"
   authors: ["Heeyoung Kim", "Rong Duan", "Sungil Kim", "Jaehwan Lee", "Guang-Qin Ma"]
-  venue: "Journal of the Royal Statistical Society: Series C"
+  venue: "Journal of the Royal Statistical Society: Series C (Applied Statistics)"
   url: "https://doi.org/10.1111/rssc.12307"
 
+# v
 - id: 2017-batch-seq-energy
-  date: 2017-01-01
+  date: 2017-11-01   # Issued (Published 2017-11-21)
   year: 2017
   type: journal
-  title: "Batch sequential minimum energy design with design-region adaptation"
+  title: "Batch Sequential Minimum Energy Design with Design-Region Adaptation"
   authors: ["Heeyoung Kim", "Justin T. Vastola", "Sungil Kim", "Jye-Chyi Lu", "Martha A. Grover"]
   venue: "Journal of Quality Technology"
   url: "https://doi.org/10.1080/00224065.2017.11918182"
-  
+
+# v
 - id: 2017-holistic-model
-  date: 2017-01-01
+  date: 2017-03-01   # Issued (Published 2016-07-19)
   year: 2017
   type: journal
   title: "An integrated holistic model of a complex process"
-  authors: ["Heeyoung Kim", "Sungil Kim", "Jian Deng", "Jye-Chyi Lu", "K. Wang", "C. Zhang", "Martha A. Grover", "B. Wang"]
+  authors: ["Heeyoung Kim", "Sungil Kim", "Jianxin Deng", "Jye-Chyi Lu", "Kan Wang", "Chunk Zhang", "Martha A. Grover", "Ben Wang"]
   venue: "The International Journal of Advanced Manufacturing Technology"
-  url: "https://link.springer.com/article/10.1007/s00170-016-9088-0"
+  url: "https://doi.org/10.1007/s00170-016-9088-0"
 
+# v
 - id: 2017-vessel-delay
-  date: 2017-01-01
+  date: 2017-02-01   # Issued (Published 2016-09-21)
   year: 2017
   type: journal
   title: "Early detection of vessel delays using combined historical and real-time information"
   authors: ["Sungil Kim", "Heeyoung Kim", "Yongro Park"]
   venue: "Journal of the Operational Research Society"
-  url: "https://link.springer.com/article/10.1057/s41274-016-0104-4"
+  url: "https://doi.org/10.1057/s41274-016-0104-4"
 
+# v
 - id: 2017-local-approach
-  date: 2017-01-01
+  date: 2017-10-18   # Issued (Published 2017-01-13)
   year: 2017
   type: journal
   title: "Incorporation of engineering knowledge into the modeling process: a local approach"
@@ -276,8 +284,9 @@
   venue: "International Journal of Production Research"
   url: "https://doi.org/10.1080/00207543.2016.1278082"
 
+# v
 - id: 2016-mape-intermittent
-  date: 2016-01-01
+  date: 2016-07-01   # Issued (Published 2016-07-01)
   year: 2016
   type: journal
   title: "A new metric of absolute percentage error for intermittent demand forecasts"
@@ -285,17 +294,19 @@
   venue: "International Journal of Forecasting"
   url: "https://doi.org/10.1016/j.ijforecast.2015.12.003"
 
+# v
 - id: 2016-ordinal-imbalance
-  date: 2016-01-01
+  date: 2016-09-01   # Issued (Published 2016-03-18)
   year: 2016
   type: journal
-  title: "Ordinal classification of imbalanced data with application in emergency and disaster information services"
+  title: "Ordinal Classification of Imbalanced Data with Application in Emergency and Disaster Information Services"
   authors: ["Sungil Kim", "Heeyoung Kim", "Younghwan Namkoong"]
   venue: "IEEE Intelligent Systems"
   url: "https://doi.org/10.1109/MIS.2016.27"
 
+# v
 - id: 2015-adaptive-combined-spacefilling
-  date: 2015-01-01
+  date: 2015-09-01   # Issued (Published 2015-04-29)
   year: 2015
   type: journal
   title: "Adaptive combined space-filling and D-optimal designs"
@@ -303,38 +314,42 @@
   venue: "International Journal of Production Research"
   url: "https://doi.org/10.1080/00207543.2015.1037067"
 
+# v
 - id: 2015-layers-adaptive-combined
-  date: 2015-01-01
+  date: 2015-03-01   # Issued (Published 2015-02-20)
   year: 2015
   type: journal
-  title: "Layers of experiments with adaptive combined design"
-  authors: ["Sungil Kim", "Heeyoung Kim", "Richard W. Lu", "Jye-Chyi Lu", "Michael J. Casciato", "Martha A. Grover"]
-  venue: "Naval Research Logistics"
+  title: "Layers of Experiments with Adaptive Combined Design"
+  authors: ["Sungil Kim", "Heeyoung Kim", "Jye-Chyi Lu", "Michael J. Casciato", "Martha A. Grover", "Dennis W. Hess", "Richard W. Lu", "Xin Wang"]
+  venue: "Naval Research Logistics (NRL)"
   url: "https://doi.org/10.1002/nav.21618"
 
+# v
 - id: 2012-co2-np-sequential-adaptive
-  date: 2012-01-01
+  date: 2012-03-21   # Issued (Published 2012-02-23)
   year: 2012
   type: journal
-  title: "Optimization of a carbon dioxide-assisted nanoparticle deposition process using sequential experimental design with adaptive design space"
+  title: "Optimization of a Carbon Dioxide-Assisted Nanoparticle Deposition Process Using Sequential Experimental Design with Adaptive Design Space"
   authors: ["Michael J. Casciato", "Sungil Kim", "Jye-Chyi Lu", "Dennis W. Hess", "Martha A. Grover"]
   venue: "Industrial & Engineering Chemistry Research"
-  url: "http://dx.doi.org/10.1021/ie2028574"
-  
-- id: 2012-co2-np-uncertain-space
-  date: 2012-01-01
-  year: 2012
-  type: conference
-  title: "Optimization of carbon dioxide-assisted nanoparticle deposition process with uncertain design space"
-  authors: ["Michael J. Casciato", "Sungil Kim", "Jye-Chyi Lu", "Dennis W. Hess", "Martha A. Grover"]
-  venue: "Computer Aided Chemical Engineering"
-  url: "http://dx.doi.org/10.1016/B978-0-444-59506-5.50069-9"
+  url: "http://doi.org/10.1021/ie2028574"
 
+# REMOVED
+# - id: 2012-co2-np-uncertain-space
+#   date: 2012-01-01
+#   year: 2012
+#   type: conference
+#   title: "Optimization of carbon dioxide-assisted nanoparticle deposition process with uncertain design space"
+#   authors: ["Michael J. Casciato", "Sungil Kim", "Jye-Chyi Lu", "Dennis W. Hess", "Martha A. Grover"]
+#   venue: "Computer Aided Chemical Engineering"
+#   url: "http://dx.doi.org/10.1016/B978-0-444-59506-5.50069-9"
+
+# v
 - id: 2005-cursor-movement-path-constraints
-  date: 2005-01-01
+  date: 2005-12-01   # Issued (Published 2005-12-30)
   year: 2005
   type: journal
-  title: "A time prediction model of cursor movement with path constraints"
+  title: "A Time Prediction Model of Cursor Movement with Path Constraints"   # 궤도상을 이동하는 커서 이동시간의 예측 모델
   authors: ["Seung-Kweon Hong", "Sungil Kim"]
-  venue: "Journal of Korean Institute of Industrial Engineers"
-  url: "https://koreascience.kr/article/JAKO200510103463043.view"
+  venue: "Journal of Korean Institute of Industrial Engineers"   # 대한산업공학회지
+  url: "https://koreascience.kr/article/JAKO200510103463043.view"   # doi 없음
