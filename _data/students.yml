@@ -184,6 +184,27 @@
     - "Deep learning based Data Imputation"
   order: 80
 
+- slug: jihyun-ko
+  name: Jihyun Ko
+  role: MS Student
+  period: "2025.08 —"
+  photo: /assets/members/students/jihyun-ko.jpg
+  url: /members/students/
+  email: 
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  
+  tags:
+    - 
+  order: 90
+
 - slug: jungwoo-yoo
   name: Jungwoo Yoo
   role: Intern
@@ -205,65 +226,5 @@
     - 
   order: 100
 
-- slug: yejin-jo
-  name: Yejin Jo
-  role: Intern
-  period: "2025.07 —"
-  photo: /assets/members/students/yejin-cho.jpg
-  url: /members/students/
-  email: 
-  links:
-    - label: Google Scholar
-      url: 
-    - label: GitHub
-      url: 
-    - label: LinkedIn
-      url: 
-    - label: CV
-      url: 
-  
-  tags:
-    - 
-  order: 110
 
-- slug: jihyun-ko
-  name: Jihyun Ko
-  role: Intern
-  period: "2025.08 —"
-  photo: /assets/members/students/jihyun-ko.jpg
-  url: /members/students/
-  email: 
-  links:
-    - label: Google Scholar
-      url: 
-    - label: GitHub
-      url: 
-    - label: LinkedIn
-      url: 
-    - label: CV
-      url: 
-  
-  tags:
-    - 
-  order: 120
 
-- slug: euiyeob-kim
-  name: Euiyeob Kim
-  role: Intern
-  period: "2025.09 —"
-  photo: /assets/members/students/euiyeob-kim.jpg
-  url: /members/students/
-  email: 
-  links:
-    - label: Google Scholar
-      url: 
-    - label: GitHub
-      url: 
-    - label: LinkedIn
-      url: 
-    - label: CV
-      url: 
-  
-  tags:
-    - 
-  order: 130
