@@ -128,7 +128,7 @@
   year: 2023
   type: journal
   title: "Sensor drift compensation for gas mixture classification in batch experiments"
-  authors: ["YongKyung Oh", "Juhui Lee", "Sunghyee Lee", "Sewon Kim", "Sungil Kim"]   # "Sunghyee Lee", "Sewon Kim"
+  authors: ["YongKyung Oh", "Juhui Lee", "Sunghyee Lee", "Sewon Kim", "Sungil Kim"]
   venue: "Quality and Reliability Engineering International"
   url: "https://doi.org/10.1002/qre.3354"
 
@@ -341,16 +341,6 @@
   authors: ["Michael J. Casciato", "Sungil Kim", "Jye-Chyi Lu", "Dennis W. Hess", "Martha A. Grover"]
   venue: "Industrial & Engineering Chemistry Research"
   url: "http://doi.org/10.1021/ie2028574"
-
-# REMOVED
-# - id: 2012-co2-np-uncertain-space
-#   date: 2012-01-01
-#   year: 2012
-#   type: conference
-#   title: "Optimization of carbon dioxide-assisted nanoparticle deposition process with uncertain design space"
-#   authors: ["Michael J. Casciato", "Sungil Kim", "Jye-Chyi Lu", "Dennis W. Hess", "Martha A. Grover"]
-#   venue: "Computer Aided Chemical Engineering"
-#   url: "http://dx.doi.org/10.1016/B978-0-444-59506-5.50069-9"
 
 # v
 - id: 2005-cursor-movement-path-constraints
