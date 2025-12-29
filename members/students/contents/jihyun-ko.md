@@ -5,7 +5,7 @@ permalink: /members/students/contents/jihyun-ko/
 title: Jihyun Ko
 name: Jihyun Ko
 role: MS Student
-period: "2026.02 —"
+period: "2026.02 (Scheduled) —"
 photo: /assets/members/students/jihyun-ko.webp
 
 email: kjh1337@unist.ac.kr
