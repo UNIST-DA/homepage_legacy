@@ -20,7 +20,7 @@ links:
     url: 
 
 tags:
-  - "Missingness"
+  - "Missingness Mechanisms"
   - "Time-Series Imputation"
   - "Diffusion Models"
 
