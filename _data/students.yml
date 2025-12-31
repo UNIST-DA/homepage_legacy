@@ -4,20 +4,18 @@
   period: "2022.02—"
   photo: /assets/members/students/seungsu-kam.jpg
   url: /members/students/contents/seungsu-kam/
-  
   email: lewki83@unist.ac.kr
   links:
-  - label: Google Scholar
-    url: https://scholar.google.co.kr/citations?hl=ko&user=yP1DmawAAAAJ
-  - label: GitHub
-    url: https://github.com/SEUNGSUKAM
-  - label: LinkedIn
-    url: www.linkedin.com/in/seungsu-kam-5b232327b
-  - label: homepage
-    url: https://seungsukam.github.io/
-  - label: CV
-    url: 
-    
+    - label: Google Scholar
+      url: https://scholar.google.co.kr/citations?hl=ko&user=yP1DmawAAAAJ
+    - label: GitHub
+      url: https://github.com/SEUNGSUKAM
+    - label: LinkedIn
+      url: www.linkedin.com/in/seungsu-kam-5b232327b
+    - label: homepage
+      url: https://seungsukam.github.io/
+    - label: CV
+      url: 
   tags:
     - "Irregularly sampled time series"
     - "Neural differential equations"
@@ -30,7 +28,6 @@
   period: "2023.03 —"
   photo: /assets/members/students/hyejin-cho.jpg
   url: /members/students/contents/hyejin-cho/
-
   email: hyejin.cho@unist.ac.kr
   links:
     - label: Google Scholar
@@ -41,7 +38,6 @@
       url: https://www.linkedin.com/in/hyejiinc/
     - label: CV
       url: 
-  
   tags:
     - "Time-Series Analysis"
     - "Data-driven Business Strategy"
@@ -53,7 +49,6 @@
   period: "2024.03 —"
   photo: /assets/members/students/seongjin-kim.jpg
   url: /members/students/contents/seongjin-kim/
-
   email: kimsj7597@unist.ac.kr
   links:
     - label: Google Scholar
@@ -64,7 +59,6 @@
       url: https://www.linkedin.com/in/seongjin-kim-3205a2223
     - label: CV
       url: https://drive.google.com/file/d/1_JLYbniWsPzl-FIYtIhDFPJUnjcgm_Hn/view?usp=drive_link
-  
   tags:
     - "Domain-Specific RAG"
     - "Time-Series Anomaly Detection"
@@ -77,7 +71,6 @@
   period: "2024.09 —"
   photo: /assets/members/students/yongmin-kim.jpg
   url: /members/students/contents/yongmin-kim/
-  summary: Anomaly Detection, Time Series Classification, Quality Engineering and Management
   email: kyoungm0709@unist.ac.kr
   links:
     - label: Google Scholar
@@ -88,7 +81,6 @@
       url: 
     - label: CV
       url: 
-  
   tags:
     - "Anomaly Detection"
     - "Time-Series Data"
@@ -100,9 +92,7 @@
   role: Combined Master-Doctor
   period: "2024.09 —"
   photo: /assets/members/students/byeonghoon-jeon.jpg
-  url: /members/students/contents/byeonghoon-jeon/
-  summary: Multimodal learning, Multivariate Time Series Modeling
-  
+  url: /members/students/contents/byeonghoon-jeon/  
   email: bhjeon@unist.ac.kr
   links:
     - label: Google Scholar
@@ -113,7 +103,6 @@
       url: 
     - label: CV
       url: 
-  
   tags:
     - Time series analysis
     - Generative AI
@@ -125,14 +114,20 @@
   period: "2025.03 —"
   photo: /assets/members/students/chanbeom-hur.jpg
   url: /members/students/contents/chanbeom-hur/
-  summary: Statistical Machine Learning, Data Analysis
-  email:
-  website:
-  github:
-  scholar:
-  linkedin:
-  cv:
-  projects: []
+  email: back2thebaz1c@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: https://drive.google.com/file/d/12pHyKbL6vdhOZb8KyyYXpg_gh3tkRJt9/view?usp=sharing
+  tags:
+    - "Statistical Machine Learning"
+    - "Survival Analysis"
+    - "Applied Data Science"
   order: 60
 
 - slug: sieun-lee
@@ -141,8 +136,6 @@
   period: "2025.09 —"
   photo: /assets/members/students/sieun-lee.jpg
   url: /members/students/contents/sieun-lee/
-  summary: Anomaly Detection, Time Series Classification
-
   email: sieun5548@unist.ac.kr
   links:
     - label: Google Scholar
@@ -153,9 +146,8 @@
       url: https://www.linkedin.com/in/sieun-lee-5ba02b345/
     - label: CV
       url: 
-  
   tags:
-    - "Missingness"
+    - "Missingness Mechanisms"
     - "Time-Series Imputation"
     - "Diffusion Models"
   order: 70
@@ -166,7 +158,6 @@
   period: "2025.09 —"
   photo: /assets/members/students/heeyoon_revised.jpg
   url: /members/students/contents/heeyoon-lee/
-  summary: Anomaly Detection, Time Series Classification
   email: heeyoonrobot@unist.ac.kr
   links:
     - label: Google Scholar
@@ -177,7 +168,6 @@
       url: 
     - label: CV
       url: 
-  
   tags:
     - "Time Series Imputation"
     - "Statistical Analysis with Missing Data"
@@ -190,20 +180,20 @@
   period: "2026.02 (Scheduled) —"
   photo: /assets/members/students/jihyun-ko.jpg
   url: /members/students/contents/jihyun-ko/
-  summary:
   email: kjh1337@unist.ac.kr
   links:
     - label: Google Scholar
       url: 
     - label: GitHub
-      url: 
+      url: https://github.com/Kjh1337
     - label: LinkedIn
-      url: 
+      url: https://www.linkedin.com/in/%EC%A7%80%ED%98%84-%EA%B3%A0-1296a0300/
     - label: CV
-      url: 
-  
+      url: https://typhoon-fuschia-c95.notion.site/b2a2b6a9b1f945baafa0db23df05d5e8?pvs=74
   tags:
-    - 
+    - "LLM for Time-Series Forecasting"
+    - "Anomaly Detection"
+    - "AI Agent"
   order: 90
 
 - slug: jungwoo-yoo
@@ -222,7 +212,6 @@
       url: 
     - label: CV
       url: 
-  
   tags:
     - 
   order: 100
