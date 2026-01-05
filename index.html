@@ -136,56 +136,58 @@ description: Data Analytics Lab at UNIST (Industrial Engineering). Industrial St
 
 <!-- ===================== Activity (News · Events · Seminar) ===================== -->
 <section id="activity">
-  <div class="container">
-    <div class="head">
+  <div class="container">
+    <div class="head">
       <h2>
         <span class="title-text">Activity</span>
         <a href="https://unist-da.github.io/activity/" class="more-info">– more info</a>
       </h2>
     </div>
 
-    <div class="grid">
-            <div class="card card-pad" style="grid-column: span 4">
-        <h4 style="margin:6px 0">Lab News</h4>
-        <ul style="margin:8px 0 12px; padding-left:18px">
-          {% assign news_list = site.data.activity.news | sort: 'date' | reverse %}
-          {% for it in news_list limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a class="view-all" href="{{ '/activity/Lab%20News/' | relative_url }}">View all →</a>
-      </div>
+    <div class="grid">
+      <div class="card card-pad">
+        <h4>Lab News</h4>
+        <ul>
+          {% assign news_list = site.data.activity.news | sort: 'date' | reverse %}
+          {% for it in news_list limit:2 %}
+          <li>
+            <strong>{{ it.date }}</strong> 
+            <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <a class="view-all" href="{{ '/activity/Lab%20News/' | relative_url }}">View all →</a>
+      </div>
 
-            <div class="card card-pad" style="grid-column: span 4">
-        <h4 style="margin:6px 0">Lab Events</h4>
-        <ul style="margin:8px 0 12px; padding-left:18px">
-          {% assign events_list = site.data.activity.events | sort: 'start' | reverse %}
-          {% for it in events_list limit:2 %}
-          <li>
-            {% if it.start %}<strong>{{ it.start }}</strong> {% endif %}
-            <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a class="view-all" href="{{ '/activity/Lab%20Events/' | relative_url }}">View all →</a>
-      </div>
+      <div class="card card-pad">
+        <h4>Lab Events</h4>
+        <ul>
+          {% assign events_list = site.data.activity.events | sort: 'start' | reverse %}
+          {% for it in events_list limit:2 %}
+          <li>
+            {% if it.start %}<strong>{{ it.start }}</strong> {% endif %}
+            <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <a class="view-all" href="{{ '/activity/Lab%20Events/' | relative_url }}">View all →</a>
+      </div>
 
-            <div class="card card-pad" style="grid-column: span 4">
-        <h4 style="margin:6px 0">Lab Seminar</h4>
-        <ul style="margin:8px 0 12px; padding-left:18px">
-          {% assign seminar_list = site.data.activity.seminar | sort: 'date' | reverse %}
-          {% for it in seminar_list limit:2 %}
-          <li>
-            <strong>{{ it.date }}</strong> <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a class="view-all" href="{{ '/activity/Lab%20Seminar/' | relative_url }}">View all →</a>
-      </div>
-    </div>
-  </div>
+      <div class="card card-pad">
+        <h4>Lab Seminar</h4>
+        <ul>
+          {% assign seminar_list = site.data.activity.seminar | sort: 'date' | reverse %}
+          {% for it in seminar_list limit:2 %}
+          <li>
+            <strong>{{ it.date }}</strong> 
+            <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <a class="view-all" href="{{ '/activity/Lab%20Seminar/' | relative_url }}">View all →</a>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- ===================== Contact ===================== -->
 <section id="contact">
