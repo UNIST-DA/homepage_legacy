@@ -1,5 +1,16 @@
 [
   {
+    "date": "2025-12-15",
+    "title": "Reversible instance normalization for accurate time-series forecasting against distribution shift",
+    "slug": "2025-12-15-reversible-instance-normalization-for-accurate-time-series-forecasting-against-distribution-shift",
+    "url": "https://www.notion.so/2c4046396f7e806bb025d114b98d780c",
+    "category": "Paper Review",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "time-series forecasting"
+    ]
+  },
+  {
     "date": "2025-12-08",
     "title": "OIL-AD: An anomaly detection framework for decision-making sequences",
     "slug": "2025-12-08-oil-ad-an-anomaly-detection-framework-for-decision-making-sequences",
@@ -30,7 +41,7 @@
     "slug": "2025-11-17-uncertainty-estimation-by-density-aware-evidential-deep-learning",
     "url": "https://www.notion.so/2b6046396f7e8054abe0c494fc931413",
     "category": "Lab Seminar",
-    "presenter": "조예진",
+    "presenter": "",
     "keywords": [
       "DeepLearning",
       "Uncertainty Estimation"
@@ -54,7 +65,7 @@
     "slug": "2025-11-03-econagent-large-language-model-empowered-agents-for-simulating-macroeconomic-activities",
     "url": "https://www.notion.so/2a2046396f7e80149abbe62a2cbfc7c2",
     "category": "Lab Seminar",
-    "presenter": "Euiyeob",
+    "presenter": "",
     "keywords": [
       "LLM",
       "Macroeconomic"
