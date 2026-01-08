@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-01-05",
+    "title": "Uncertainty quantification based on conformal prediction for industrial time series with distribution shift, IEEE Transactions on Industrial Informatics",
+    "slug": "2026-01-05-uncertainty-quantification-based-on-conformal-prediction-for-industrial-time-series-with-distribution-shift-ieee-transactions-on-industrial-informatics",
+    "url": "https://www.notion.so/2a2046396f7e802d9d80e9ded668ea75",
+    "category": "Lab Seminar",
+    "presenter": "전병훈",
+    "keywords": [
+      "Uncertainty Estimation"
+    ]
+  },
+  {
     "date": "2025-12-15",
     "title": "Reversible instance normalization for accurate time-series forecasting against distribution shift",
     "slug": "2025-12-15-reversible-instance-normalization-for-accurate-time-series-forecasting-against-distribution-shift",
