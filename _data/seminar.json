@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-01-16",
+    "title": "Deep Latent Variable Models for Missing Data",
+    "slug": "2026-01-16-deep-latent-variable-models-for-missing-data",
+    "url": "https://www.notion.so/2ea046396f7e802f9e5dc790c1b362e5",
+    "category": "Lab Seminar",
+    "presenter": "이희윤",
+    "keywords": [
+      "VAE",
+      "variational inference",
+      "DeepLearning",
+      "imputation"
+    ]
+  },
+  {
     "date": "2026-01-05",
     "title": "Uncertainty quantification based on conformal prediction for industrial time series with distribution shift, IEEE Transactions on Industrial Informatics",
     "slug": "2026-01-05-uncertainty-quantification-based-on-conformal-prediction-for-industrial-time-series-with-distribution-shift-ieee-transactions-on-industrial-informatics",
