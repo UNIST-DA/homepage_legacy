@@ -43,7 +43,7 @@ milestone:
       Nonparametric and Recurrent Survival Models for User Retention
 
   - start: 2025.10
-  - end: 2025.8
+  - end: 2026.8
     title: Visiting Researcher at Georgia Institute of Technology
     note: |
       Advised by Prof. Kamran Paynabar (ISyE department)
