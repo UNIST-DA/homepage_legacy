@@ -1,23 +1,23 @@
 ---
 layout: student
 slug: chanbeom-hur
-permalink: /members/students/contents/chanbeom-hur/
+permalink: members/students/contents/chanbeom-hur/
 title: Chanbeom Hur
 name: Chanbeom Hur
 role: MS Student
 photo: /assets/members/students/chanbeom-hur.webp
 period: "2025.03 —"
 
-email: back2thebaz1c@unist.ac.kr
+email: chanbeom.hur@gmail.com 
 links:
   - label: Google Scholar
-    url: 
+    url: https://scholar.google.com/citations?user=R2oYGIUAAAAJ&hl=ko&inst=7707536466893209563&oi=ao
   - label: GitHub
-    url: 
+    url: https://github.com/chanbeomhur
   - label: LinkedIn
     url: 
   - label: CV
-    url: https://drive.google.com/file/d/12pHyKbL6vdhOZb8KyyYXpg_gh3tkRJt9/view?usp=sharing
+    url: https://github.com/chanbeomhur/cv/releases/latest/download/CV_ChanbeomHur.pdf
 
 tags:
   - "Statistical Machine Learning"
@@ -32,32 +32,52 @@ interests:
   - Applied Data Science
     
 milestone:
+  - start: 2026.05
+    title: IISE Annual Conference & Expo 2026 (Texas, USA)
+    note: |
+      The Grace Period Kaplan-Meier (GP-KM): A Consistent Survival Estimator for Customer Retention
+
+  - start: 2025.10
+    title: INFORMS Annual Meeting 2025 (Atlanta, USA)
+    note: |
+      Nonparametric and Recurrent Survival Models for User Retention
+
+  - start: 2025.10
+    title: Visiting Researcher at Georgia Institute of Technology
+    note: |
+      Advised by Prof. Kamran Paynabar (ISyE department)
+
+  - start: 2025.07
+    end: 2025.08
+    title: AI Consultant at Rinno Aluminum Co., Ltd.
+    note: |
+      Project: Process optimization using LightGBM and SHAP interpretation
+
   - start: 2025.06
-    title: 2025 Spring Joint Academic Conference (대한산업공학회)
+    title: 2025 Spring Joint Academic Conference (Jeju Island)
     note: |
       Statistical Modeling of Rolling Retention via Recurrent Survival Analysis
 
-  - start: 2025.02
+  - start: 2025.03
     title: M.S. in Industrial Engineering
     note: |
       Ulsan National Institute of Science and Technology (UNIST)
 
   - start: 2019.02
     end: 2025.02
-    title: B.S. in Industrial Engineering
+    title: B.S. in Industrial Engineering (Summa Cum Laude)
     note: |
       Ulsan National Institute of Science and Technology (UNIST)
 
   - start: 2024.05
-    title: 2024 Spring Korea Data Mining Society (한국데이터마이닝학회)
+    title: 2024 Spring Korea Data Mining Society
     note: |
       Assessing User Retention of Connected Home Appliances: Survival Analysis
 
-  - start: 2023.09
-    end: 2025.02
-    title: Research Intern in Data Analytics Lab
+  - start: 2023.10
+    end: 2024.06
+    title: Undergraduate Researcher at UNIST Data Analytics Lab
     note: |
-      Project: Developing user satisfaction metrics in LG Upgradable home appliances
+      Project: Developing user satisfaction metrics for LG Upgradable home appliances
     
 ---
-
