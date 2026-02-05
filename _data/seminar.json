@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-02-04",
+    "title": "Quantitative Evaluation of Public Transit Route Quality (NAVER)",
+    "slug": "2026-02-04-quantitative-evaluation-of-public-transit-route-quality-naver",
+    "url": "https://www.notion.so/2fd046396f7e805a89e9c6574b301c5c",
+    "category": "Lab Seminar",
+    "presenter": "이시은",
+    "keywords": [
+      "Route Recommendation",
+      "Graph Embedding",
+      "Deep Learning"
+    ]
+  },
+  {
     "date": "2026-01-16",
     "title": "Deep Latent Variable Models for Missing Data",
     "slug": "2026-01-16-deep-latent-variable-models-for-missing-data",
