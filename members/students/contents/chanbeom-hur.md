@@ -33,16 +33,17 @@ interests:
     
 milestone:
   - start: 2026.05
-    title: IISE Annual Conference & Expo 2026 (Texas, USA)
+    title: IISE Annual Conference & Expo 2026
     note: |
       The Grace Period Kaplan-Meier (GP-KM): A Consistent Survival Estimator for Customer Retention
 
   - start: 2025.10
-    title: INFORMS Annual Meeting 2025 (Atlanta, USA)
+    title: INFORMS Annual Meeting 2025 
     note: |
       Nonparametric and Recurrent Survival Models for User Retention
 
   - start: 2025.10
+  - end: 2025.8
     title: Visiting Researcher at Georgia Institute of Technology
     note: |
       Advised by Prof. Kamran Paynabar (ISyE department)
@@ -54,7 +55,7 @@ milestone:
       Project: Process optimization using LightGBM and SHAP interpretation
 
   - start: 2025.06
-    title: 2025 Spring Joint Academic Conference (Jeju Island)
+    title: 2025 Spring Joint Academic Conference 
     note: |
       Statistical Modeling of Rolling Retention via Recurrent Survival Analysis
 
@@ -65,7 +66,7 @@ milestone:
 
   - start: 2019.02
     end: 2025.02
-    title: B.S. in Industrial Engineering (Summa Cum Laude)
+    title: B.S. in Industrial Engineering
     note: |
       Ulsan National Institute of Science and Technology (UNIST)
 
