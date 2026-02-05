@@ -114,16 +114,16 @@
   period: "2025.03 —"
   photo: /assets/members/students/chanbeom-hur.jpg
   url: /members/students/contents/chanbeom-hur/
-  email: back2thebaz1c@unist.ac.kr
+  email: chanbeom.hur@gmail.com
   links:
     - label: Google Scholar
-      url: 
+      url: https://scholar.google.com/citations?hl=ko&user=R2oYGIUAAAAJ&inst=7707536466893209563
     - label: GitHub
-      url: 
+      url: https://github.com/chanbeomhur
     - label: LinkedIn
       url: 
     - label: CV
-      url: https://drive.google.com/file/d/12pHyKbL6vdhOZb8KyyYXpg_gh3tkRJt9/view?usp=sharing
+      url: https://github.com/chanbeomhur/cv/releases/latest/download/CV_ChanbeomHur.pdf
   tags:
     - "Statistical Machine Learning"
     - "Survival Analysis"
