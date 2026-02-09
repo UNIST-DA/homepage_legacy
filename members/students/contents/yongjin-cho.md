@@ -20,12 +20,12 @@ links:
     url: 
 
 tags:
-  - "Reinforcement Learning"
+  - "."
 
 about: I am currently exploring various fields to narrow down my research interests.
 
 interests:
-  - Reinforcement Learning
+  - .
 
 milestone:
   - start: 2019.02
