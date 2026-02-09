@@ -131,6 +131,7 @@
   role: "M.S."
   grad_year: 2026
   current_position: "Reseacher, UNIST"
+  linkedin: "https://www.linkedin.com/in/hyejiinc/"
   photo: /assets/members/alumni/hyejin-cho.webp
   order: 160
 
@@ -139,5 +140,6 @@
   role: "M.S."
   grad_year: 2026
   current_position: "Data Scientist, BNK"
+  linkedin: "https://www.linkedin.com/in/seongjin-kim-3205a2223"
   photo: /assets/members/alumni/seongjin-kim.webp
   order: 170
