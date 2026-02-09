@@ -56,13 +56,3 @@ milestone:
       Ulsan National Institute of Science and Technology (UNIST)
       Data Analytics Lab
 ---
-
-
-
-  - start: 2025.09
-    end: 
-    title: M.S. in Industrial Engineering
-    note: |
-      Ulsan National Institute of Science and Technology (UNIST)
-      Data Analytics Lab
-
