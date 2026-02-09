@@ -131,7 +131,7 @@
   role: "M.S."
   grad_year: 2026
   current_position: "Reseacher, UNIST"
-  photo: /assets/members/alumni/hyejin-cho.jpg
+  photo: /assets/members/alumni/hyejin-cho.webp
   order: 160
 
 - slug: Seongjin-Kim
@@ -139,5 +139,5 @@
   role: "M.S."
   grad_year: 2026
   current_position: "Data Scientist, BNK"
-  photo: /assets/members/alumni/seongjin-kim.jpg
+  photo: /assets/members/alumni/seongjin-kim.webp
   order: 170
