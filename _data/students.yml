@@ -22,48 +22,48 @@
     - "Anomaly detection"
   order: 10
 
-- slug: hyejin-cho
-  name: Hyejin Cho
-  role: MS Student
-  period: "2023.03 —"
-  photo: /assets/members/students/hyejin-cho.jpg
-  url: /members/students/contents/hyejin-cho/
-  email: hyejin.cho@unist.ac.kr
-  links:
-    - label: Google Scholar
-      url: 
-    - label: GitHub
-      url: 
-    - label: LinkedIn
-      url: https://www.linkedin.com/in/hyejiinc/
-    - label: CV
-      url: 
-  tags:
-    - "Time-Series Analysis"
-    - "Data-driven Business Strategy"
-  order: 20
+# - slug: hyejin-cho
+#   name: Hyejin Cho
+#   role: MS Student
+#   period: "2023.03 —"
+#   photo: /assets/members/students/hyejin-cho.jpg
+#   url: /members/students/contents/hyejin-cho/
+#   email: hyejin.cho@unist.ac.kr
+#   links:
+#     - label: Google Scholar
+#       url: 
+#     - label: GitHub
+#       url: 
+#     - label: LinkedIn
+#       url: https://www.linkedin.com/in/hyejiinc/
+#     - label: CV
+#       url: 
+#   tags:
+#     - "Time-Series Analysis"
+#     - "Data-driven Business Strategy"
+#   order: 20
 
-- slug: seongjin-kim
-  name: Seongjin Kim
-  role: MS Student
-  period: "2024.03 —"
-  photo: /assets/members/students/seongjin-kim.jpg
-  url: /members/students/contents/seongjin-kim/
-  email: kimsj7597@unist.ac.kr
-  links:
-    - label: Google Scholar
-      url: https://scholar.google.com/citations?user=jt983zsAAAAJ&hl=ko&oi=sra
-    - label: GitHub
-      url: https://github.com/Sicari1/SeongJin-Kim
-    - label: LinkedIn
-      url: https://www.linkedin.com/in/seongjin-kim-3205a2223
-    - label: CV
-      url: https://drive.google.com/file/d/1_JLYbniWsPzl-FIYtIhDFPJUnjcgm_Hn/view?usp=drive_link
-  tags:
-    - "Domain-Specific RAG"
-    - "Time-Series Anomaly Detection"
-    - "Large Language Models"
-  order: 30
+# - slug: seongjin-kim
+#   name: Seongjin Kim
+#   role: MS Student
+#   period: "2024.03 —"
+#   photo: /assets/members/students/seongjin-kim.jpg
+#   url: /members/students/contents/seongjin-kim/
+#   email: kimsj7597@unist.ac.kr
+#   links:
+#     - label: Google Scholar
+#       url: https://scholar.google.com/citations?user=jt983zsAAAAJ&hl=ko&oi=sra
+#     - label: GitHub
+#       url: https://github.com/Sicari1/SeongJin-Kim
+#     - label: LinkedIn
+#       url: https://www.linkedin.com/in/seongjin-kim-3205a2223
+#     - label: CV
+#       url: https://drive.google.com/file/d/1_JLYbniWsPzl-FIYtIhDFPJUnjcgm_Hn/view?usp=drive_link
+#   tags:
+#     - "Domain-Specific RAG"
+#     - "Time-Series Anomaly Detection"
+#     - "Large Language Models"
+#   order: 30
 
 - slug: yongmin-kim
   name: Yongmin Kim
