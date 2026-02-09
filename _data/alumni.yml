@@ -125,3 +125,19 @@
   current_position: "Engineer, Posco Future M"
   photo: /assets/members/alumni/taewon-kang.jpg
   order: 150
+
+- slug: Hyejin-Cho
+  name: "Hyejin Cho"
+  role: "M.S."
+  grad_year: 2026
+  current_position: "Reseacher, UNIST"
+  photo: /assets/members/alumni/hyejin-cho.jpg
+  order: 160
+
+- slug: Seongjin-Kim
+  name: "Seongjin Kim"
+  role: "M.S."
+  grad_year: 2026
+  current_position: "Data Scientist, BNK"
+  photo: /assets/members/alumni/seongjin-kim.jpg
+  order: 170
