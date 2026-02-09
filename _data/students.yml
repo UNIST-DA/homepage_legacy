@@ -215,6 +215,26 @@
   tags:
     - 
   order: 100
+  
+  - slug: yongjin-cho
+  name: Yongjin Cho
+  role: MS Student
+  period: "2026.02 —"
+  photo: /assets/members/students/yongjincho.jpg
+  url: /members/students/contents/yongjin-cho/
+  email: whdydwls66@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: https://github.com/Yong1647
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  tags:
+    - "."
+  order: 110
 
 
 
