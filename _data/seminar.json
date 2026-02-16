@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-02-13",
+    "title": "AutoTimes: Autoregressive Time Series Forecasters via Large Language Models",
+    "slug": "2026-02-13-autotimes-autoregressive-time-series-forecasters-via-large-language-models",
+    "url": "https://www.notion.so/308046396f7e80bf8076d85df7673d72",
+    "category": "Lab Seminar",
+    "presenter": "Ji_hyun",
+    "keywords": [
+      "LLM",
+      "time-series forecasting",
+      "Multi-variate"
+    ]
+  },
+  {
     "date": "2026-02-04",
     "title": "Quantitative Evaluation of Public Transit Route Quality (NAVER)",
     "slug": "2026-02-04-quantitative-evaluation-of-public-transit-route-quality-naver",
