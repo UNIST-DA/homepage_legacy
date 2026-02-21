@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-02-20",
+    "title": "SensorSCAN: Self-supervised learning and deep clustering for fault diagnosis in chemical processes",
+    "slug": "2026-02-20-sensorscan-self-supervised-learning-and-deep-clustering-for-fault-diagnosis-in-chemical-processes",
+    "url": "https://www.notion.so/30d046396f7e8067b1a8fd6e57230a7d",
+    "category": "Paper Review",
+    "presenter": "유정우",
+    "keywords": [
+      "Contrastive learning",
+      "Time-series anomaly detection",
+      "Transformer"
+    ]
+  },
+  {
     "date": "2026-02-13",
     "title": "AutoTimes: Autoregressive Time Series Forecasters via Large Language Models",
     "slug": "2026-02-13-autotimes-autoregressive-time-series-forecasters-via-large-language-models",
