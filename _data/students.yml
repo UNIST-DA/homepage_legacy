@@ -196,13 +196,13 @@
     - "AI Agent"
   order: 90
 
-- slug: jungwoo-yoo
-  name: Jungwoo Yoo
+- slug: jeongwoo-yoo
+  name: Jeongwoo Yoo
   role: Intern
   period: "2025.04 —"
-  photo: /assets/members/students/jungwoo-yoo.jpg
+  photo: /assets/members/students/jeongwoo-yoo.jpg
   url: /members/students/
-  email: 
+  email: youriya1@unist.ac.kr
   links:
     - label: Google Scholar
       url: 
@@ -220,7 +220,7 @@
   name: Yongjin Cho
   role: MS Student
   period: "2026.02 —"
-  photo: /assets/members/students/yongjincho.jpg
+  photo: /assets/members/students/yongjin-cho.jpg
   url: /members/students/contents/yongjin-cho/
   email: whdydwls66@unist.ac.kr
   links:
@@ -237,4 +237,44 @@
   order: 110
 
 
+- slug: donghyun-yu
+  name: Donghyun Yu
+  role: Intern
+  period: "2026.01 —"
+  photo: /assets/members/students/donghyun-yu.jpg
+  url: /members/students/
+  email: ydh1736@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  tags:
+    - 
+  order: 120
+
+  
+- slug: yuseong-lee
+  name: Yuseong Lee
+  role: Intern
+  period: "2026.01 —"
+  photo: /assets/members/students/yuseong-lee.jpg
+  url: /members/students/
+  email: youstar21@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  tags:
+    - 
+  order: 130
 
