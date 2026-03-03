@@ -259,6 +259,14 @@ news:
 
 
 events:
+  - slug: 2026-02-27-Spring-Unity
+    start: "2026-02-27"
+    title: "Spring Unity Get-Together"
+    detail: |
+      Enjoyed borad games, team games at the arcade together with lab members.
+    image: "/assets/activity/Lab_Events/2026-spring-unity.jpg"
+    url: "/activity/Lab%20Events/#2026-02-27-Spring-Unity"
+    
   - slug: 2025-10-28-INFORMS-Annual-Meeting
     start: "2025-10-28"
     title: "INFORMS 2025"
