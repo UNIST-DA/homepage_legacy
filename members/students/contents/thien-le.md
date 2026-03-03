@@ -20,12 +20,12 @@ links:
     url: 
 
 tags:
-  - Please Add
+  - (Please Add)
 
 about: (Please Add)
 
 interests:
-  - Please Add
+  - (Please Add)
     
 milestone:
   - start: 2019.03
