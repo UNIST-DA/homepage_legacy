@@ -108,6 +108,26 @@
     - Generative AI
   order: 50
 
+- slug: thien-le
+  name: Thien Le
+  role: Ph.D Student
+  period: "2026.03 —"
+  photo: /assets/members/students/thien-le.jpg
+  url: /members/students/
+  email: thienlb@unist.ac.kr
+  links:
+    - label: Google Scholar
+      url: 
+    - label: GitHub
+      url: 
+    - label: LinkedIn
+      url: 
+    - label: CV
+      url: 
+  tags:
+    - 
+  order: 55
+  
 - slug: chanbeom-hur
   name: Chanbeom Hur
   role: MS Student
