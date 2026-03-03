@@ -117,15 +117,18 @@
   email: thienlb@unist.ac.kr
   links:
     - label: Google Scholar
-      url: 
+      url: https://scholar.google.com/citations?user=EeuAZ-IAAAAJ&hl=en
     - label: GitHub
       url: 
     - label: LinkedIn
-      url: 
+      url: www.linkedin.com/in/thienleba
     - label: CV
       url: 
   tags:
-    - 
+    - "Data Analytics"
+    - "Business Intelligence"
+    - "Data Architecture"
+    - "Machine Learning"
   order: 55
   
 - slug: chanbeom-hur
