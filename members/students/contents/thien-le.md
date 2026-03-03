@@ -1,7 +1,7 @@
 ---
 layout: student
 slug: thien-le
-permalink: /members/students/contents/thien/
+permalink: /members/students/contents/thien-le/
 title: Thien Le
 name: Thien Le
 role: Ph.D Student
