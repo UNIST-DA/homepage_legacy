@@ -6,7 +6,7 @@ title: Thien Le
 name: Thien Le
 role: Ph.D Student
 period: "2026.03 —"
-photo: /assets/members/students/thien-le.png
+photo: /assets/members/students/thien-le.jpg
 
 email: thienlb@unist.ac.kr
 links:
