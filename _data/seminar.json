@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-13",
+    "title": "IdealTSF: Can Non-Ideal Data Contribute to Enhancing the Performance of Time Series Forecasting Models?",
+    "slug": "2026-03-13-idealtsf-can-non-ideal-data-contribute-to-enhancing-the-performance-of-time-series-forecasting-models",
+    "url": "https://www.notion.so/322046396f7e8082a345e977cb2f5b61",
+    "category": "Lab Seminar",
+    "presenter": "Yongmin Kim",
+    "keywords": [
+      "optimization",
+      "Forecasting",
+      "time series"
+    ]
+  },
+  {
     "date": "2026-02-20",
     "title": "SensorSCAN: Self-supervised learning and deep clustering for fault diagnosis in chemical processes",
     "slug": "2026-02-20-sensorscan-self-supervised-learning-and-deep-clustering-for-fault-diagnosis-in-chemical-processes",
