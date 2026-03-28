@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-27",
+    "title": "Deep Learning Longitudinal Survival Analysis with Competing Risk",
+    "slug": "2026-03-27-deep-learning-longitudinal-survival-analysis-with-competing-risk",
+    "url": "https://www.notion.so/32f046396f7e80b6807fe5be4ea9f2d9",
+    "category": "Lab Seminar",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Survival Analysis",
+      "Deep Learning",
+      "Irregular time series"
+    ]
+  },
+  {
     "date": "2026-03-13",
     "title": "IdealTSF: Can Non-Ideal Data Contribute to Enhancing the Performance of Time Series Forecasting Models?",
     "slug": "2026-03-13-idealtsf-can-non-ideal-data-contribute-to-enhancing-the-performance-of-time-series-forecasting-models",
