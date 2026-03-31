@@ -13,6 +13,18 @@
     ]
   },
   {
+    "date": "2026-03-20",
+    "title": "A Survey of Uncertainty Estimation Methods on Large Language Models",
+    "slug": "2026-03-20-a-survey-of-uncertainty-estimation-methods-on-large-language-models",
+    "url": "https://www.notion.so/308046396f7e80ad84d0db477b870e1d",
+    "category": "Lab Seminar",
+    "presenter": "전병훈",
+    "keywords": [
+      "Uncertainty Estimation",
+      "LLM"
+    ]
+  },
+  {
     "date": "2026-03-13",
     "title": "IdealTSF: Can Non-Ideal Data Contribute to Enhancing the Performance of Time Series Forecasting Models?",
     "slug": "2026-03-13-idealtsf-can-non-ideal-data-contribute-to-enhancing-the-performance-of-time-series-forecasting-models",
