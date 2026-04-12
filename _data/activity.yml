@@ -259,6 +259,22 @@ news:
 
 
 events:
+  - slug: 2026-04-07-Picnic
+    start: "2026-04-07"
+    title: "Cherry Blossom Pizza Picnic"
+    detail: |
+      Lab Members enjoyed picnic with delicious pizza.
+    image: "/assets/activity/Lab_Events/Picnic.jpg"
+    url: "/activity/Lab%20Events/#2026-04-07-Picnic"
+    
+  - slug: 2026-04-07-Cherry-Blossom
+    start: "2026-04-07"
+    title: "Cherry Blossom Lab Photo"
+    detail: |
+      Lab Members took picture under beautiful cherry blossom.
+    image: "/assets/activity/Lab_Events/cherry_1.jpg"
+    url: "/activity/Lab%20Events/#2026-04-07-Cherry-Blossom"
+    
   - slug: 2026-02-27-Spring-Unity
     start: "2026-02-27"
     title: "Spring Unity Get-Together"
