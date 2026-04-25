@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-24",
+    "title": "Can a society of generative agents simulate human behavior and inform public health policy? A case study on vaccine hesitancy. In Proceedings of the Conference on Language Modeling",
+    "slug": "2026-04-24-can-a-society-of-generative-agents-simulate-human-behavior-and-inform-public-health-policy-a-case-study-on-vaccine-hesitancy-in-proceedings-of-the-conference-on-language-modeling",
+    "url": "https://www.notion.so/34c046396f7e8073a480e19fff727112",
+    "category": "Lab Seminar",
+    "presenter": "Ji_hyun",
+    "keywords": [
+      "LLM",
+      "Agent Based Modeling",
+      "Simulation"
+    ]
+  },
+  {
     "date": "2026-04-10",
     "title": "Are labels informative in semi-supervised learning?",
     "slug": "2026-04-10-are-labels-informative-in-semi-supervised-learning",
