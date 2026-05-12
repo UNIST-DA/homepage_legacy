@@ -152,18 +152,6 @@
   },
   {
     "date": "2025-11-17",
-    "title": "Uncertainty Estimation by Density Aware Evidential Deep Learning",
-    "slug": "2025-11-17-uncertainty-estimation-by-density-aware-evidential-deep-learning",
-    "url": "https://www.notion.so/2b6046396f7e8054abe0c494fc931413",
-    "category": "Lab Seminar",
-    "presenter": "",
-    "keywords": [
-      "DeepLearning",
-      "Uncertainty Estimation"
-    ]
-  },
-  {
-    "date": "2025-11-17",
     "title": "Using Explainable Artificial Intelligence to Improve Process Quality:\nEvidence from Semiconductor Manufacturing (Management Science, 2022)",
     "slug": "2025-11-17-using-explainable-artificial-intelligence-to-improve-process-quality-evidence-from-semiconductor-manufacturing-management-science-2022",
     "url": "https://www.notion.so/2b5046396f7e80fba149cf48245431af",
@@ -172,6 +160,18 @@
     "keywords": [
       "Gradient Boost Tree",
       "QualityMonitoring"
+    ]
+  },
+  {
+    "date": "2025-11-17",
+    "title": "Uncertainty Estimation by Density Aware Evidential Deep Learning",
+    "slug": "2025-11-17-uncertainty-estimation-by-density-aware-evidential-deep-learning",
+    "url": "https://www.notion.so/2b6046396f7e8054abe0c494fc931413",
+    "category": "Lab Seminar",
+    "presenter": "",
+    "keywords": [
+      "DeepLearning",
+      "Uncertainty Estimation"
     ]
   },
   {
@@ -200,6 +200,18 @@
   },
   {
     "date": "2025-09-29",
+    "title": "An advanced retrieval-augmented generation system for manufacturing quality control (2025)",
+    "slug": "2025-09-29-an-advanced-retrieval-augmented-generation-system-for-manufacturing-quality-control-2025",
+    "url": "https://www.notion.so/28c046396f7e8055a688de5b111161f0",
+    "category": "Lab Seminar",
+    "presenter": "Seongjin",
+    "keywords": [
+      "LLM",
+      "Retrieval Augmented Generation"
+    ]
+  },
+  {
+    "date": "2025-09-29",
     "title": "Diffusion-based Multivariate Time-Series Imputation",
     "slug": "2025-09-29-diffusion-based-multivariate-time-series-imputation",
     "url": "https://www.notion.so/2b5046396f7e8092ac68caa0e06ad697",
@@ -209,18 +221,6 @@
       "imputation",
       "Statistics",
       "Diffusion Model"
-    ]
-  },
-  {
-    "date": "2025-09-29",
-    "title": "An advanced retrieval-augmented generation system for manufacturing quality control (2025)",
-    "slug": "2025-09-29-an-advanced-retrieval-augmented-generation-system-for-manufacturing-quality-control-2025",
-    "url": "https://www.notion.so/28c046396f7e8055a688de5b111161f0",
-    "category": "Lab Seminar",
-    "presenter": "Seongjin",
-    "keywords": [
-      "LLM",
-      "Retrieval Augmented Generation"
     ]
   },
   {
@@ -262,17 +262,6 @@
   },
   {
     "date": "2025-08-01",
-    "title": "Uncertainty quantification in digital twin (SMO 2023)",
-    "slug": "2025-08-01-uncertainty-quantification-in-digital-twin-smo-2023",
-    "url": "https://www.notion.so/245046396f7e80779f84c6b7889bed8e",
-    "category": "Paper Review",
-    "presenter": "전병훈",
-    "keywords": [
-      "Uncertainty Estimation"
-    ]
-  },
-  {
-    "date": "2025-08-01",
     "title": "Autoencoding Under Normalization Constraints (PMLR, 2021)",
     "slug": "2025-08-01-autoencoding-under-normalization-constraints-pmlr-2021",
     "url": "https://www.notion.so/23f046396f7e8014b2e5e4d83e1f3c27",
@@ -281,6 +270,17 @@
     "keywords": [
       "Anomaly Detection",
       "Autoencoder"
+    ]
+  },
+  {
+    "date": "2025-08-01",
+    "title": "Uncertainty quantification in digital twin (SMO 2023)",
+    "slug": "2025-08-01-uncertainty-quantification-in-digital-twin-smo-2023",
+    "url": "https://www.notion.so/245046396f7e80779f84c6b7889bed8e",
+    "category": "Paper Review",
+    "presenter": "전병훈",
+    "keywords": [
+      "Uncertainty Estimation"
     ]
   },
   {
