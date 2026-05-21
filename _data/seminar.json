@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-05-22",
+    "title": "Intelligent early-warning quality control for electromagnets based on long short-term memory network with Bayesian optimisation and exponentially weighted moving average chart",
+    "slug": "2026-05-22-intelligent-early-warning-quality-control-for-electromagnets-based-on-long-short-term-memory-network-with-bayesian-optimisation-and-exponentially-weighted-moving-average-chart",
+    "url": "https://www.notion.so/366046396f7e80679d94d9db776976f8",
+    "category": "Lab Seminar",
+    "presenter": "Thien Le",
+    "keywords": [
+      "ControlChart",
+      "DeepLearning",
+      "LSTM"
+    ]
+  },
+  {
     "date": "2026-04-24",
     "title": "Can a society of generative agents simulate human behavior and inform public health policy? A case study on vaccine hesitancy. In Proceedings of the Conference on Language Modeling",
     "slug": "2026-04-24-can-a-society-of-generative-agents-simulate-human-behavior-and-inform-public-health-policy-a-case-study-on-vaccine-hesitancy-in-proceedings-of-the-conference-on-language-modeling",
