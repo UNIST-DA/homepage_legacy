@@ -95,3 +95,10 @@
   image:  /assets/research/projects/scsc-fuel-est-1.png
   summary: Development of a Ship Fuel Consumption Prediction Model Considering Environmental Factors
   period: 2024.03 – 
+
+- slug: navermap-transport
+  title: User-Centered Evaluation of Public Transit Route Recommendations
+  url: /research/projects/contents/navermap-transport
+  image:  /assets/research/projects/none.png
+  summary: Evaluating whether public transit route recommendations provide practically useful choices for users
+  period: 2026.03 – 
