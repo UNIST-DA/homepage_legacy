@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-05-29",
+    "title": "A Survey on Concept Drift Adaptation",
+    "slug": "2026-05-29-a-survey-on-concept-drift-adaptation",
+    "url": "https://www.notion.so/36f046396f7e8017974bfff55bd3618a",
+    "category": "Lab Seminar",
+    "presenter": "Yongmin Kim",
+    "keywords": [
+      "Concept Drift",
+      "Adaptation"
+    ]
+  },
+  {
     "date": "2026-05-22",
     "title": "Intelligent early-warning quality control for electromagnets based on long short-term memory network with Bayesian optimisation and exponentially weighted moving average chart",
     "slug": "2026-05-22-intelligent-early-warning-quality-control-for-electromagnets-based-on-long-short-term-memory-network-with-bayesian-optimisation-and-exponentially-weighted-moving-average-chart",
