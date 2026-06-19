@@ -1,10 +1,21 @@
 [
   {
+    "date": "2026-06-19",
+    "title": "NEURAL DELAY DIFFERENTIAL EQUATIONS",
+    "slug": "2026-06-19-neural-delay-differential-equations",
+    "url": "https://www.notion.so/376046396f7e8088baf2f3b2abcfd642",
+    "category": "Lab Seminar",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Neural Differential Equation"
+    ]
+  },
+  {
     "date": "2026-05-29",
     "title": "A Survey on Concept Drift Adaptation",
     "slug": "2026-05-29-a-survey-on-concept-drift-adaptation",
     "url": "https://www.notion.so/36f046396f7e8017974bfff55bd3618a",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "Yongmin Kim",
     "keywords": [
       "Concept Drift",
