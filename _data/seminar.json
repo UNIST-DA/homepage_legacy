@@ -11,6 +11,17 @@
     ]
   },
   {
+    "date": "2026-06-12",
+    "title": "Accurate predictions on small data with a tabular foundation model",
+    "slug": "2026-06-12-accurate-predictions-on-small-data-with-a-tabular-foundation-model",
+    "url": "https://www.notion.so/37c046396f7e80fbb44cc6db8b653ae9",
+    "category": "Paper Review",
+    "presenter": "전병훈",
+    "keywords": [
+      "foundation model"
+    ]
+  },
+  {
     "date": "2026-05-29",
     "title": "A Survey on Concept Drift Adaptation",
     "slug": "2026-05-29-a-survey-on-concept-drift-adaptation",
@@ -33,6 +44,20 @@
       "ControlChart",
       "DeepLearning",
       "LSTM"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "AXIS: Explainable Time Series Anomaly Detection With Large Language Models",
+    "slug": "2026-05-08-axis-explainable-time-series-anomaly-detection-with-large-language-models",
+    "url": "https://www.notion.so/35a046396f7e805692b2f1c0726b7750",
+    "category": "Lab Seminar",
+    "presenter": "조용진",
+    "keywords": [
+      "XAI",
+      "Anomaly Detection",
+      "LLM",
+      "soft prompting"
     ]
   },
   {
