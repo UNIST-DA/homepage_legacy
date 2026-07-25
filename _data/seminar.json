@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-07-10",
+    "title": "Probabilistic remaining useful life prediction without lifetime labels",
+    "slug": "2026-07-10-probabilistic-remaining-useful-life-prediction-without-lifetime-labels",
+    "url": "https://www.notion.so/398046396f7e80218428cece11ec9a22",
+    "category": "Lab Seminar",
+    "presenter": "이희윤",
+    "keywords": [
+      "RUL",
+      "Deep Learning",
+      "stochastic process",
+      "Uncertainty Estimation"
+    ]
+  },
+  {
     "date": "2026-06-19",
     "title": "NEURAL DELAY DIFFERENTIAL EQUATIONS",
     "slug": "2026-06-19-neural-delay-differential-equations",
