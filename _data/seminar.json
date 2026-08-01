@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-07-29",
+    "title": "Fast Greedy MAP Inference for Determinantal Point Process to Improve Recommendation Diversity",
+    "slug": "2026-07-29-fast-greedy-map-inference-for-determinantal-point-process-to-improve-recommendation-diversity",
+    "url": "https://www.notion.so/3ac046396f7e8003900cfbdcc1a98788",
+    "category": "Lab Seminar",
+    "presenter": "이시은",
+    "keywords": [
+      "Recommendation system",
+      "Relevance-diversity"
+    ]
+  },
+  {
     "date": "2026-07-10",
     "title": "Probabilistic remaining useful life prediction without lifetime labels",
     "slug": "2026-07-10-probabilistic-remaining-useful-life-prediction-without-lifetime-labels",
