@@ -16,7 +16,7 @@
     "title": "Fast Greedy MAP Inference for Determinantal Point Process to Improve Recommendation Diversity",
     "slug": "2026-07-29-fast-greedy-map-inference-for-determinantal-point-process-to-improve-recommendation-diversity",
     "url": "https://www.notion.so/3ac046396f7e8003900cfbdcc1a98788",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "이시은",
     "keywords": [
       "Recommendation system",
@@ -76,7 +76,7 @@
     "title": "Intelligent early-warning quality control for electromagnets based on long short-term memory network with Bayesian optimisation and exponentially weighted moving average chart",
     "slug": "2026-05-22-intelligent-early-warning-quality-control-for-electromagnets-based-on-long-short-term-memory-network-with-bayesian-optimisation-and-exponentially-weighted-moving-average-chart",
     "url": "https://www.notion.so/366046396f7e80679d94d9db776976f8",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "Thien Le",
     "keywords": [
       "ControlChart",
@@ -89,7 +89,7 @@
     "title": "AXIS: Explainable Time Series Anomaly Detection With Large Language Models",
     "slug": "2026-05-08-axis-explainable-time-series-anomaly-detection-with-large-language-models",
     "url": "https://www.notion.so/35a046396f7e805692b2f1c0726b7750",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "조용진",
     "keywords": [
       "XAI",
@@ -103,7 +103,7 @@
     "title": "Can a society of generative agents simulate human behavior and inform public health policy? A case study on vaccine hesitancy. In Proceedings of the Conference on Language Modeling",
     "slug": "2026-04-24-can-a-society-of-generative-agents-simulate-human-behavior-and-inform-public-health-policy-a-case-study-on-vaccine-hesitancy-in-proceedings-of-the-conference-on-language-modeling",
     "url": "https://www.notion.so/34c046396f7e8073a480e19fff727112",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "고지현",
     "keywords": [
       "LLM",
@@ -166,7 +166,7 @@
     "title": "IdealTSF: Can Non-Ideal Data Contribute to Enhancing the Performance of Time Series Forecasting Models?",
     "slug": "2026-03-13-idealtsf-can-non-ideal-data-contribute-to-enhancing-the-performance-of-time-series-forecasting-models",
     "url": "https://www.notion.so/322046396f7e8082a345e977cb2f5b61",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "Yongmin Kim",
     "keywords": [
       "optimization",
@@ -192,7 +192,7 @@
     "title": "AutoTimes: Autoregressive Time Series Forecasters via Large Language Models",
     "slug": "2026-02-13-autotimes-autoregressive-time-series-forecasters-via-large-language-models",
     "url": "https://www.notion.so/308046396f7e80bf8076d85df7673d72",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "고지현",
     "keywords": [
       "LLM",
@@ -219,7 +219,7 @@
     "title": "Uncertainty quantification based on conformal prediction for industrial time series with distribution shift, IEEE Transactions on Industrial Informatics",
     "slug": "2026-01-05-uncertainty-quantification-based-on-conformal-prediction-for-industrial-time-series-with-distribution-shift-ieee-transactions-on-industrial-informatics",
     "url": "https://www.notion.so/2a2046396f7e802d9d80e9ded668ea75",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "전병훈",
     "keywords": [
       "Uncertainty Estimation"
@@ -241,7 +241,7 @@
     "title": "OIL-AD: An anomaly detection framework for decision-making sequences",
     "slug": "2025-12-08-oil-ad-an-anomaly-detection-framework-for-decision-making-sequences",
     "url": "https://www.notion.so/2bc046396f7e806dab28eb0090bf7390",
-    "category": "Lab Seminar",
+    "category": "Paper Review",
     "presenter": "Yongmin Kim",
     "keywords": [
       "reinforcement learning",
