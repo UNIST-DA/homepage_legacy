@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-08-14",
+    "title": "LoRA: Low Rank Adaptation of large language models",
+    "slug": "2026-08-14-lora-low-rank-adaptation-of-large-language-models",
+    "url": "https://www.notion.so/3bc046396f7e80318271f0cdd7098a3e",
+    "category": "Lab Seminar",
+    "presenter": "조용진",
+    "keywords": [
+      "LLM",
+      "Parameter Efficient Fine Tuning",
+      "fine tuning"
+    ]
+  },
+  {
     "date": "2026-08-05",
     "title": "LAMBDA: A Large Model Based Data Agent",
     "slug": "2026-08-05-lambda-a-large-model-based-data-agent",
