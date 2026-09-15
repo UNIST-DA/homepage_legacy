@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-09-11",
+    "title": "Transformers Can Do Bayesian Inference",
+    "slug": "2026-09-11-transformers-can-do-bayesian-inference",
+    "url": "https://www.notion.so/3d8046396f7e8051933edf8f63db57ca",
+    "category": "Paper Review",
+    "presenter": "Yongmin Kim",
+    "keywords": [
+      "Bayesian Inference",
+      "foundation model"
+    ]
+  },
+  {
     "date": "2026-08-14",
     "title": "LoRA: Low Rank Adaptation of large language models",
     "slug": "2026-08-14-lora-low-rank-adaptation-of-large-language-models",
