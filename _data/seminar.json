@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-02",
+    "title": "Physically-Constrained Mamba-SDE for Remaining Useful Life Prediction under Irregular Observations",
+    "slug": "2026-10-02-physically-constrained-mamba-sde-for-remaining-useful-life-prediction-under-irregular-observations",
+    "url": "https://www.notion.so/3ea046396f7e8086b298c0007fdef429",
+    "category": "Lab Seminar",
+    "presenter": "SeungSu Kam",
+    "keywords": [
+      "Neural Differential Equation",
+      "Irregular time series",
+      "RUL"
+    ]
+  },
+  {
     "date": "2026-09-11",
     "title": "Transformers Can Do Bayesian Inference",
     "slug": "2026-09-11-transformers-can-do-bayesian-inference",
